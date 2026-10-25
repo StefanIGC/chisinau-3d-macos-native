@@ -17,6 +17,7 @@ const noise=(a:number)=>{const n=Math.sin(a*12.9898)*43758.5453;return n-Math.fl
 
 /** Deferred, fixed-world architecture; nothing is parented to the moving camera. */
 export function createColumnaDistrict(scene:T.Scene,ground:(x:number,z:number)=>number,loaded:(x:number,z:number)=>boolean){
+  const nativeExport=Array.isArray((globalThis as any).__CHISINAU_NATIVE_STREET_MESHES__);
   const matte=new T.MeshStandardMaterial({name:'Columna · piatră și tencuială',vertexColors:true,roughness:.91});
   const glass=new T.MeshStandardMaterial({name:'Columna · geamuri',vertexColors:true,roughness:.36,metalness:.12});
   const paving=new T.MeshStandardMaterial({name:'Columna · pavaj',vertexColors:true,roughness:.96});
@@ -40,7 +41,7 @@ export function createColumnaDistrict(scene:T.Scene,ground:(x:number,z:number)=>
   let target:T.Group,physical:T.Group,parts:Part[]=[];
   const colors=new Map<string,T.Color>(),unitBox=new T.BoxGeometry(1,1,1).toNonIndexed();unitBox.deleteAttribute('uv');
   function put(g:T.BufferGeometry,color:string,fine=false,kind=0,collide=false){
-    if(collide)physical.add(new T.Mesh(g.clone(),collisionMaterial));
+    if(collide&&!nativeExport)physical.add(new T.Mesh(g.clone(),collisionMaterial));
     const flat=g.index?g.toNonIndexed():g;if(flat!==g)g.dispose();flat.deleteAttribute('uv');
     let c=colors.get(color);if(!c){c=new T.Color(color);colors.set(color,c);}
     const values=new Float32Array(flat.attributes.position.count*3);for(let i=0;i<values.length;i+=3){values[i]=c.r;values[i+1]=c.g;values[i+2]=c.b;}
@@ -54,7 +55,7 @@ export function createColumnaDistrict(scene:T.Scene,ground:(x:number,z:number)=>
       yield;
     }
     parts=[];
-    physical.updateMatrixWorld(true);yield* prepareLandmarkCollision(physical);target.userData.groundRings=groundRings;groundRings=[];
+    physical.updateMatrixWorld(true);if(!nativeExport)yield* prepareLandmarkCollision(physical);target.userData.groundRings=groundRings;groundRings=[];
   }
   function box(x:number,y:number,z:number,w:number,h:number,d:number,color:string,fine=false,collide=false,angle=0,kind=0){const g=unitBox.clone();g.scale(w,h,d);g.rotateY(angle);g.translate(x,y,z);put(g,color,fine,kind,collide);}
   function line(a:T.Vector3,b:T.Vector3,r:number,color:string,fine=true){const delta=b.clone().sub(a),g=new T.CylinderGeometry(r,r,delta.length(),5);g.applyQuaternion(new T.Quaternion().setFromUnitVectors(new T.Vector3(0,1,0),delta.normalize()));g.translate((a.x+b.x)/2,(a.y+b.y)/2,(a.z+b.z)/2);put(g,color,fine);}
@@ -300,7 +301,19 @@ export function createColumnaDistrict(scene:T.Scene,ground:(x:number,z:number)=>
     box(-29.5,y+5.7,-355,9.4,1.0,1.1,C.cream,false,true);box(-29.5,y+6.25,-355,10.1,.24,1.45,C.trim);yield;
   });
   const frustum=new T.Frustum(),matrix=new T.Matrix4(),sphere=new T.Sphere();let active:Job|undefined;
-  return{objects,collisionObjects,replacements,treeOverrides,
+  function buildAllForNativeExport(){
+    if(!nativeExport)throw new Error('Native export is not active.');
+    for(const selected of jobs){
+      if(selected.done)continue;
+      active=selected;target=selected.root;physical=selected.collision;
+      selected.iterator=(function*(){yield* selected.run();yield* flush();})();
+      while(!selected.iterator.next().done){}
+      selected.done=true;selected.root.visible=true;selected.root.updateMatrixWorld(true);
+      for(const replacement of replacements)if(selected.ids.includes(replacement.id))replacement.ready=true;
+      active=undefined;
+    }
+  }
+  const api={objects,collisionObjects,replacements,treeOverrides,buildAllForNativeExport,
     get ready(){return jobs.every(j=>j.done);},
     readyNear(x:number,z:number,r=420){return jobs.every(j=>{const [cx,cz]=centroid(j.points);return Math.hypot(x-cx,z-cz)>r||j.done;});},
     update(camera:T.PerspectiveCamera,_now:number){
@@ -315,4 +328,6 @@ export function createColumnaDistrict(scene:T.Scene,ground:(x:number,z:number)=>
     },
     dispose(){unitBox.dispose();for(const root of[...objects,...collisionObjects]){scene.remove(root);root.traverse(o=>{if(o instanceof T.Mesh)o.geometry.dispose();});}parts.forEach(p=>p.g.dispose());[...materials,collisionMaterial].forEach(m=>m.dispose());}
   };
+  if(nativeExport)(globalThis as any).__CHISINAU_NATIVE_STREET_MESHES__.push(api);
+  return api;
 }

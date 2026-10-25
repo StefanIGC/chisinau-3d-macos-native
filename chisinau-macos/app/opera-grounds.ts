@@ -10,6 +10,7 @@ const FOUNTAIN_IDS=['w39889217','w39889218'];
 const TREES:XY[]=[[-413,-22],[-400,-23],[-387,-22],[-374,-23],[-409,-35],[-397,-33],[-382,-32],[-412,-51],[-350,-23],[-321,-23],[-307,-24],[-303,-34],[-321,-34],[-394,-80],[-307,-79]];
 
 export function createOperaGrounds(scene:T.Scene,ground:(x:number,z:number)=>number,loaded:(x:number,z:number)=>boolean){
+  const nativeExport=Array.isArray((globalThis as any).__CHISINAU_NATIVE_STREET_MESHES__);
   const root=new T.Group();root.name='Opera · peluze și fântâni';root.visible=false;scene.add(root);
   const lawn=new T.MeshStandardMaterial({name:'Opera · peluză',color:'#4f773b',roughness:1});
   const stone=new T.MeshStandardMaterial({name:'Opera · borduri și bazine',color:'#aaa99a',roughness:.9});
@@ -17,8 +18,8 @@ export function createOperaGrounds(scene:T.Scene,ground:(x:number,z:number)=>num
   const spray=new T.MeshStandardMaterial({name:'Opera · jeturi',color:'#c3deda',roughness:.35,emissive:'#45645f',emissiveIntensity:.12});
   const bark=new T.MeshStandardMaterial({color:'#706654',roughness:1});
   const collisionMaterial=new T.MeshBasicMaterial({side:T.DoubleSide});
-  const texture=new T.TextureLoader().load('/government/fir.png');texture.colorSpace=T.SRGBColorSpace;texture.flipY=false;
-  const evergreen=new T.MeshStandardMaterial({map:texture,side:T.DoubleSide,alphaTest:.5,roughness:.95});
+  const texture=nativeExport?undefined:new T.TextureLoader().load('/government/fir.png');if(texture){texture.colorSpace=T.SRGBColorSpace;texture.flipY=false;}
+  const evergreen=new T.MeshStandardMaterial({map:texture??null,color:nativeExport?'#365a35':'#ffffff',side:T.DoubleSide,alphaTest:.5,roughness:.95});
   const materials=[lawn,stone,water,spray,bark,collisionMaterial,evergreen];
   const geometries=new Set<T.BufferGeometry>(),visuals:{mesh:T.Mesh;fine:boolean}[]=[];
   const collisionObjects=FOUNTAIN_IDS.map(id=>{const g=new T.Group();g.name=`Opera · bazin ${id}`;return g;});
@@ -87,7 +88,11 @@ export function createOperaGrounds(scene:T.Scene,ground:(x:number,z:number)=>num
     put(trunks,bark,'Opera · trunchiuri');put(trees,evergreen,'Opera · conifere');
   }});
   const frustum=new T.Frustum(),matrix=new T.Matrix4();let disposed=false,nextBuild=0;
-  return{objects:[root],collisionObjects,treeOverrides:TREES.map(([x,z])=>({x,z,radius:2,height:0,texture:1})),
+  function buildAllForNativeExport(){
+    if(!nativeExport)throw new Error('Native export is not active.');
+    while(jobs.length)jobs.shift()!.build();root.visible=true;root.updateMatrixWorld(true);
+  }
+  const api={objects:[root],collisionObjects,treeOverrides:TREES.map(([x,z])=>({x,z,radius:2,height:0,texture:1})),replacements:[],buildAllForNativeExport,
     readyNear(x:number,z:number,r=420){return jobs.every(j=>j.points.every(p=>Math.hypot(x-p[0],z-p[1])>r));},
     update(camera:T.PerspectiveCamera,now:number){
       if(disposed)return;
@@ -97,6 +102,8 @@ export function createOperaGrounds(scene:T.Scene,ground:(x:number,z:number)=>num
       frustum.setFromProjectionMatrix(matrix.multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse));
       for(const {mesh,fine}of visuals){const sphere=mesh.geometry.boundingSphere!,distance=camera.position.distanceTo(sphere.center)-sphere.radius;mesh.visible=distance<(fine?150:camera.far)&&frustum.intersectsSphere(sphere);mesh.castShadow=mesh.visible&&distance<80&&mesh.material!==water&&mesh.material!==spray;}
     },
-    dispose(){disposed=true;scene.remove(root);geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());texture.dispose();}
+    dispose(){disposed=true;scene.remove(root);geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());texture?.dispose();}
   };
+  if(nativeExport)(globalThis as any).__CHISINAU_NATIVE_STREET_MESHES__.push(api);
+  return api;
 }

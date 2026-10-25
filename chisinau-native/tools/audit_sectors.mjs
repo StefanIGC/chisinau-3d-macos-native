@@ -58,14 +58,19 @@ for(const value of Object.values(corridors)){
 }
 
 const inventories={sciusev:familyInventory('sciusev-'),bucuresti:familyInventory('bucuresti-bu'),columna:familyInventory('columna-')};
+const expectedRestoredFamilies=['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete'];
+const restoredVectorFeatures=manifest.restoredVectorFeatures??{};
 const passed=inventories.sciusev.modules===16&&inventories.bucuresti.modules===11&&inventories.columna.modules===1&&
   inventories.sciusev.building_footprints===432&&inventories.bucuresti.building_footprints===357&&inventories.columna.building_footprints===66&&
   Object.values(corridors).every(value=>value.asphalt_triangles>0&&value.detail_tiles>0&&value.min_y_m>-.012)&&
-  manifest.authoredArchitecture?.solidShellVertices>0&&
+  manifest.authoredArchitecture?.solidShellVertices>0&&manifest.authoredArchitecture?.layers>=190&&
+  expectedRestoredFamilies.every(name=>manifest.authoredArchitecture?.restoredFamilies?.includes(name))&&
+  manifest.operaModelVertices>0&&manifest.landmarkModels===25&&
+  ['barriers','waterways','treeRows','highwayAreas','railways','streetFurniture'].every(name=>restoredVectorFeatures[name]>0)&&
   manifest.authoredArchitecture?.spatiallySuppressedBuildings>0&&manifest.authoredArchitecture?.collisionOnlyBuildings>0;
 const report={
-  version:'2.9.0',
-  compiled_world:{base_tiles:manifest.tiles,detail_tiles:manifest.authoredArchitecture.tiles,base_vertices:manifest.vertices,authored_vertices:manifest.authoredArchitecture.vertices,solid_shell_vertices:manifest.authoredArchitecture.solidShellVertices,authored_layers:manifest.authoredArchitecture.layers,authored_meshes:manifest.authoredArchitecture.meshes,collision_segments:manifest.collisions,spatially_suppressed_osm_buildings:manifest.authoredArchitecture.spatiallySuppressedBuildings,collision_only_authored_buildings:manifest.authoredArchitecture.collisionOnlyBuildings},
+  version:'2.11.0',
+  compiled_world:{base_tiles:manifest.tiles,detail_tiles:manifest.authoredArchitecture.tiles,base_vertices:manifest.vertices,authored_vertices:manifest.authoredArchitecture.vertices,solid_shell_vertices:manifest.authoredArchitecture.solidShellVertices,authored_layers:manifest.authoredArchitecture.layers,authored_meshes:manifest.authoredArchitecture.meshes,landmark_models:manifest.landmarkModels,opera_model_vertices:manifest.operaModelVertices,restored_authored_families:manifest.authoredArchitecture.restoredFamilies,restored_vector_features:restoredVectorFeatures,collision_segments:manifest.collisions,spatially_suppressed_osm_buildings:manifest.authoredArchitecture.spatiallySuppressedBuildings,collision_only_authored_buildings:manifest.authoredArchitecture.collisionOnlyBuildings},
   authored_sector_inventory:inventories,
   authoritative_surface_scan:corridors,
   base_fallback_road_y_m:-.012,

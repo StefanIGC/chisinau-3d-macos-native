@@ -21,6 +21,7 @@ const rect=(x:number,z:number,w:number,d:number):XY[]=>[[x-w/2,z-d/2],[x+w/2,z-d
 const variation=(x:number,z:number)=>{const n=Math.sin(x*12.9898+z*78.233)*43758.5453;return n-Math.floor(n);};
 
 export function createCathedralPark(scene:T.Scene,ground:(x:number,z:number)=>number,loaded:(x:number,z:number)=>boolean,plazaReady:()=>boolean,plazaLevel:(x:number,z:number)=>number){
+  const nativeExport=Array.isArray((globalThis as any).__CHISINAU_NATIVE_STREET_MESHES__);
   // Retain the DEM's gentle rise, while each clipped tread owns its boundary.
   const patchLevel=(x:number,z:number,rise:number)=>ground(x,z)+(rise-parkTerrace(x,z))*parkStepWeight(x,z);
   // One ground shader per cell carries its surface family as a vertex attribute.
@@ -42,10 +43,10 @@ export function createCathedralPark(scene:T.Scene,ground:(x:number,z:number)=>nu
       const selected=parts.filter(p=>(p.kind===6?1:0)===kind&&p.fine===fine);if(!selected.length)continue;
       const g=mergeGeometries(selected.map(p=>p.geometry))!;g.computeBoundingBox();g.computeBoundingSphere();
       const mesh=new T.Mesh(g,materials[kind]);mesh.name=target.name+(fine?' · detalii':' · suprafețe');mesh.receiveShadow=true;target.add(mesh);visuals.push({mesh,fine});
-      const solid=selected.filter(p=>p.physical);if(solid.length){const g=mergeGeometries(solid.map(p=>p.geometry))!;physical.add(new T.Mesh(g,physicalMaterial));}
+      const solid=selected.filter(p=>p.physical);if(!nativeExport&&solid.length){const g=mergeGeometries(solid.map(p=>p.geometry))!;physical.add(new T.Mesh(g,physicalMaterial));}
       selected.forEach(p=>p.geometry.dispose());yield;
     }
-    parts=[];physical.updateMatrixWorld(true);yield* prepareLandmarkCollision(physical);
+    parts=[];physical.updateMatrixWorld(true);if(!nativeExport)yield* prepareLandmarkCollision(physical);
     target.userData.groundRings=groundRings;groundRings=[];
   }
   function job(name:string,x:number,z:number,run:()=>Generator<void>){const root=new T.Group(),collision=new T.Group();root.name=`Parcul Catedralei · ${name}`;root.visible=false;collision.name=root.name+' · coliziune';scene.add(root);objects.push(root);collisionObjects.push(collision);jobs.push({root,collision,x,z,run,done:false});}
@@ -179,7 +180,17 @@ export function createCathedralPark(scene:T.Scene,ground:(x:number,z:number)=>nu
     return{x,z,radius:.8,height:Number(p.t.height)||(conifer?8+r*3:z>-73?5.2+r*1.8:10+r*4),texture:conifer?1:[0,2,3,4][Math.floor(r*4)]};
   });
   const frustum=new T.Frustum(),matrix=new T.Matrix4(),sphere=new T.Sphere();let active:Job|undefined;
-  return{objects,collisionObjects,treeOverrides,replacements:[],get ready(){return jobs.every(j=>j.done);},
+  function buildAllForNativeExport(){
+    if(!nativeExport)throw new Error('Native export is not active.');
+    for(const selected of jobs){
+      if(selected.done)continue;
+      active=selected;target=selected.root;physical=selected.collision;
+      selected.iterator=(function*(){yield* selected.run();yield* flush();})();
+      while(!selected.iterator.next().done){}
+      selected.done=true;selected.root.visible=true;selected.root.updateMatrixWorld(true);active=undefined;
+    }
+  }
+  const api={objects,collisionObjects,treeOverrides,replacements:[],buildAllForNativeExport,get ready(){return jobs.every(j=>j.done);},
     readyNear(x:number,z:number,r=420){return jobs.every(j=>Math.hypot(x-j.x,z-j.z)>r||j.done);},
     update(camera:T.PerspectiveCamera,_now:number){
       if(disposed)return;
@@ -193,4 +204,6 @@ export function createCathedralPark(scene:T.Scene,ground:(x:number,z:number)=>nu
     },
     dispose(){unitBox.dispose();disposed=true;for(const root of[...objects,...collisionObjects]){scene.remove(root);root.traverse(o=>{if(o instanceof T.Mesh)o.geometry.dispose();});}parts.forEach(p=>p.geometry.dispose());[...materials,physicalMaterial].forEach(m=>m.dispose());}
   };
+  if(nativeExport)(globalThis as any).__CHISINAU_NATIVE_STREET_MESHES__.push(api);
+  return api;
 }

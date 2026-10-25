@@ -15,10 +15,12 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <memory>
 #include <mutex>
 #include <numeric>
 #include <sstream>
 #include <string>
+#include <thread>
 #include <vector>
 
 using namespace simd;
@@ -47,6 +49,18 @@ static_assert(sizeof(TileHeader) == 64);
 
 struct CollisionSegment { float ax,az,bx,bz,radius,height; };
 static_assert(sizeof(CollisionSegment) == 24);
+static constexpr int kCollisionGridDimension=10;
+static constexpr float kCollisionGridHalfExtent=640.f;
+static constexpr float kCollisionGridCellSize=(kCollisionGridHalfExtent*2.f)/kCollisionGridDimension;
+static constexpr int kCollisionGridCells=kCollisionGridDimension*kCollisionGridDimension;
+using CollisionGridOffsets=std::array<uint32_t,kCollisionGridCells+1>;
+
+static int collisionGridCoordinate(float value,float center) {
+  return std::clamp((int)std::floor((value-(center-kCollisionGridHalfExtent))/kCollisionGridCellSize),0,kCollisionGridDimension-1);
+}
+static size_t collisionGridIndex(float x,float z,float centerX,float centerZ) {
+  return (size_t)collisionGridCoordinate(z,centerZ)*kCollisionGridDimension+collisionGridCoordinate(x,centerX);
+}
 
 struct MeshHeader {
   uint32_t magic,version,vertexCount,reserved0;
@@ -221,7 +235,10 @@ fragment float4 cityFragment(Raster in [[stage_in]], constant Uniforms &u [[buff
     else if(abs(base.r-base.g)<.10&&abs(base.g-base.b)<.10&&luminance>.28)materialClass=4u;
   }
   float distanceToCamera=distance(in.world,u.cameraAndFogStart.xyz),detailFade=1.0-smoothstep(38.0,125.0,distanceToCamera);
-  base=materialDetail(base,in.world,n,materialClass,detailFade,asphaltTexture,pavementTexture,grassTexture,surfaceSampler);
+  // Texture/noise detail has faded completely after 125 m. Skipping those
+  // samples for coherent distant fragments preserves the same image while
+  // leaving substantially more GPU budget for the no-fog city horizon.
+  if(detailFade>0.001)base=materialDetail(base,in.world,n,materialClass,detailFade,asphaltTexture,pavementTexture,grassTexture,surfaceSampler);
   float skyAmount=clamp(n.y*.5+.5,0.0,1.0);
   float3 hemisphere=mix(float3(.216,.184,.130),float3(.716,.855,1.0),skyAmount)*1.65;
   float ndotl=max(0.0,dot(n,sun));
@@ -531,14 +548,21 @@ struct TileMeta {
   std::vector<TileBufferChunk> chunks;
   size_t visibleChunks=0;
   std::vector<CollisionSegment> collisions;
+  CollisionGridOffsets collisionGridOffsets{};
+  std::vector<uint32_t> collisionGridIndices;
+  float maxCollisionHeight=0;
   double lastNear=0;
 };
 struct PendingTile {
   size_t index=0;
-  std::vector<uint8_t> bytes;
+  std::unique_ptr<uint8_t[]> bytes;
+  size_t byteCount=0;
   std::vector<TileBufferChunk> chunks;
   uint32_t vertexCount=0,nextVertex=0;
   std::vector<CollisionSegment> collisions;
+  CollisionGridOffsets collisionGridOffsets{};
+  std::vector<uint32_t> collisionGridIndices;
+  float maxCollisionHeight=0;
   bool ok=false;
 };
 
@@ -716,12 +740,26 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   if(stream){
     auto size=stream.tellg();
     if(size>=(std::streamoff)sizeof(TileHeader)){
-      ready.bytes.resize((size_t)size);stream.seekg(0);stream.read(reinterpret_cast<char*>(ready.bytes.data()),size);
-      if(stream){
-        auto*h=reinterpret_cast<const TileHeader*>(ready.bytes.data());size_t vertexBytes=(size_t)h->vertexCount*sizeof(PackedVertex),collisionBytes=(size_t)h->collisionCount*sizeof(CollisionSegment);
-        if(h->magic==0x4c495443&&h->version==1&&sizeof(TileHeader)+vertexBytes+collisionBytes<=ready.bytes.size()){
+      // Avoid vector::resize zeroing a 10-20 MB tile in one memory-bandwidth
+      // burst. Read it in small pieces and yield between pieces so unified
+      // memory traffic cannot steal a render frame on Apple Silicon.
+      ready.byteCount=(size_t)size;ready.bytes.reset(new uint8_t[ready.byteCount]);stream.seekg(0);size_t cursor=0;BOOL complete=YES;
+      constexpr size_t readChunkBytes=512*1024;
+      while(cursor<ready.byteCount){size_t amount=std::min(readChunkBytes,ready.byteCount-cursor);stream.read(reinterpret_cast<char*>(ready.bytes.get()+cursor),(std::streamsize)amount);if(!stream){complete=NO;break;}cursor+=amount;if(cursor<ready.byteCount)std::this_thread::sleep_for(std::chrono::microseconds(750));}
+      if(complete){
+        auto*h=reinterpret_cast<const TileHeader*>(ready.bytes.get());size_t vertexBytes=(size_t)h->vertexCount*sizeof(PackedVertex),collisionBytes=(size_t)h->collisionCount*sizeof(CollisionSegment);
+        size_t gridIndexCount=h->reserved[1]==kCollisionGridDimension?h->reserved[0]:0,gridBytes=gridIndexCount?(kCollisionGridCells+1+gridIndexCount)*sizeof(uint32_t):0;
+        if(h->magic==0x4c495443&&h->version==1&&sizeof(TileHeader)+vertexBytes+collisionBytes+gridBytes<=ready.byteCount){
           ready.vertexCount=h->vertexCount;ready.collisions.resize(h->collisionCount);
-          std::memcpy(ready.collisions.data(),ready.bytes.data()+sizeof(TileHeader)+vertexBytes,collisionBytes);ready.ok=true;
+          std::memcpy(ready.collisions.data(),ready.bytes.get()+sizeof(TileHeader)+vertexBytes,collisionBytes);
+          std::memcpy(&ready.maxCollisionHeight,&h->reserved[2],sizeof(float));
+          if(gridIndexCount){
+            const uint8_t*grid=ready.bytes.get()+sizeof(TileHeader)+vertexBytes+collisionBytes;
+            std::memcpy(ready.collisionGridOffsets.data(),grid,ready.collisionGridOffsets.size()*sizeof(uint32_t));ready.collisionGridIndices.resize(gridIndexCount);std::memcpy(ready.collisionGridIndices.data(),grid+ready.collisionGridOffsets.size()*sizeof(uint32_t),gridIndexCount*sizeof(uint32_t));
+            bool valid=ready.collisionGridOffsets.back()==gridIndexCount;for(size_t i=1;i<ready.collisionGridOffsets.size();i++)valid=valid&&ready.collisionGridOffsets[i]>=ready.collisionGridOffsets[i-1];for(uint32_t index:ready.collisionGridIndices)valid=valid&&index<h->collisionCount;if(!valid){ready.collisionGridIndices.clear();ready.collisionGridOffsets.fill(0);}
+          }
+          if(!std::isfinite(ready.maxCollisionHeight)||ready.maxCollisionHeight<0)ready.maxCollisionHeight=0;for(const auto&segment:ready.collisions)ready.maxCollisionHeight=std::max(ready.maxCollisionHeight,segment.height);
+          ready.ok=true;
         }
       }
     }
@@ -738,7 +776,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   std::vector<PendingTile> deferred;
   for(auto&ready:work){
     if(ready.index>=_tiles.size())continue;auto&tile=_tiles[ready.index];
-    if(!ready.ok||ready.bytes.size()<sizeof(TileHeader)){tile.state=0;continue;}
+    if(!ready.ok||!ready.bytes||ready.byteCount<sizeof(TileHeader)){tile.state=0;continue;}
     BOOL detailTile=tile.detail;
     // With the whole base city retained for the no-fog horizon, cap distant
     // base uploads at one per frame. Nearby authored detail may still use the
@@ -754,18 +792,16 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
     constexpr uint32_t maxChunkVertices=6000;
     uint32_t count=std::min(maxChunkVertices,ready.vertexCount-ready.nextVertex);count-=count%3;
     TileBufferChunk chunk;chunk.vertexCount=count;
-    chunk.buffer=[_device newBufferWithBytes:ready.bytes.data()+sizeof(TileHeader)+(size_t)ready.nextVertex*sizeof(PackedVertex) length:(size_t)count*sizeof(PackedVertex) options:MTLResourceStorageModeShared];
+    chunk.buffer=[_device newBufferWithBytes:ready.bytes.get()+sizeof(TileHeader)+(size_t)ready.nextVertex*sizeof(PackedVertex) length:(size_t)count*sizeof(PackedVertex) options:MTLResourceStorageModeShared];
     driverOperations++;if(!detailTile)baseUploads++;
     if(!chunk.buffer||!count){tile.state=0;continue;}
     ready.chunks.push_back(std::move(chunk));ready.nextVertex+=count;
     if(ready.nextVertex>=ready.vertexCount){
-      tile.chunks=std::move(ready.chunks);tile.visibleChunks=0;tile.collisions=std::move(ready.collisions);tile.state=2;
-      // A dense authored tile can retain tens of megabytes of source bytes.
-      // Destroying that vector here produced a repeatable frame spike when the
-      // no-fog streamer reached the denser central pages. Release it away from
-      // the render thread after the Metal buffers own their copies.
-      auto*retiredBytes=new std::vector<uint8_t>(std::move(ready.bytes));
-      dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY,0),^{delete retiredBytes;});
+      tile.chunks=std::move(ready.chunks);tile.visibleChunks=0;tile.collisions=std::move(ready.collisions);tile.collisionGridOffsets=ready.collisionGridOffsets;tile.collisionGridIndices=std::move(ready.collisionGridIndices);tile.maxCollisionHeight=ready.maxCollisionHeight;tile.state=2;
+      // A dense tile can retain tens of megabytes of source bytes. Release it
+      // away from the render thread after the Metal buffers own their copies.
+      auto*retiredBytes=ready.bytes.release();
+      dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY,0),^{delete[] retiredBytes;});
     }else deferred.push_back(std::move(ready));
   }
   if(!deferred.empty()){std::lock_guard<std::mutex>guard(_pendingMutex);for(auto&ready:deferred)_pending.push_back(std::move(ready));}
@@ -780,18 +816,24 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
 }
 
 - (BOOL)blockedAt:(vector_float3)p radius:(float)radius {
-  for(const auto&tile:_tiles)if(tile.state==2&&std::abs(tile.centerX-p.x)<560.f&&std::abs(tile.centerZ-p.z)<560.f)for(const auto&b:tile.collisions)if(p.y<b.height+.4f){float combined=radius+b.radius;if(pointSegmentDistanceSquared(p.x,p.z,b)<combined*combined)return YES;}
+  for(const auto&tile:_tiles)if(tile.state==2&&p.y<tile.maxCollisionHeight+.4f&&std::abs(tile.centerX-p.x)<560.f&&std::abs(tile.centerZ-p.z)<560.f){
+    auto blocked=[&](const CollisionSegment&b){if(p.y>=b.height+.4f)return false;float combined=radius+b.radius;return pointSegmentDistanceSquared(p.x,p.z,b)<combined*combined;};
+    if(tile.collisionGridIndices.empty()){for(const auto&b:tile.collisions)if(blocked(b))return YES;}
+    else{size_t cell=collisionGridIndex(p.x,p.z,tile.centerX,tile.centerZ);for(uint32_t at=tile.collisionGridOffsets[cell];at<tile.collisionGridOffsets[cell+1];at++)if(blocked(tile.collisions[tile.collisionGridIndices[at]]))return YES;}
+  }
   return NO;
 }
 
 - (BOOL)carBlockedAtX:(float)x z:(float)z yaw:(float)yaw {
   constexpr float halfWidth=.87f,halfLength=2.22f;
   float c=std::cos(yaw),s=std::sin(yaw);
-  for(const auto&tile:_tiles)if(tile.state==2&&std::abs(tile.centerX-x)<560.f&&std::abs(tile.centerZ-z)<560.f)for(const auto&b:tile.collisions){
-    if(b.height<.12f)continue;
+  for(const auto&tile:_tiles)if(tile.state==2&&std::abs(tile.centerX-x)<560.f&&std::abs(tile.centerZ-z)<560.f){
+    auto blocked=[&](const CollisionSegment&b){if(b.height<.12f)return false;
     float adx=b.ax-x,adz=b.az-z,bdx=b.bx-x,bdz=b.bz-z;
     float ax=adx*c-adz*s,az=adx*s+adz*c,bx=bdx*c-bdz*s,bz=bdx*s+bdz*c;
-    if(segmentIntersectsRect(ax,az,bx,bz,halfWidth+b.radius,halfLength+b.radius))return YES;
+    return segmentIntersectsRect(ax,az,bx,bz,halfWidth+b.radius,halfLength+b.radius);};
+    if(tile.collisionGridIndices.empty()){for(const auto&b:tile.collisions)if(blocked(b))return YES;}
+    else{size_t cell=collisionGridIndex(x,z,tile.centerX,tile.centerZ);for(uint32_t at=tile.collisionGridOffsets[cell];at<tile.collisionGridOffsets[cell+1];at++)if(blocked(tile.collisions[tile.collisionGridIndices[at]]))return YES;}
   }
   return NO;
 }
@@ -1069,12 +1111,15 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
     auto&t=_tiles[i];float radius=t.detail?(_mode==PlayerMode::Helicopter?900.f:700.f):worldRadius,evict=radius+(t.detail?320.f:850.f);float current=std::hypot(t.centerX-p.position.x,t.centerZ-p.position.z),ahead=std::hypot(t.centerX-forecast.x,t.centerZ-forecast.z),priority=std::min(current,ahead*(t.detail?.72f:.78f));
     if(priority<radius)t.lastNear=now;if(t.state==1){if(t.detail)detailLoading++;else baseLoading++;}
     if(t.state==0&&priority<radius)(t.detail?detailCandidates:baseCandidates).push_back({priority,i});
-    if(t.state==2&&current>evict&&now-t.lastNear>8){for(auto&chunk:t.chunks)_retiredChunks.push_back(std::move(chunk));t.chunks.clear();t.visibleChunks=0;t.collisions.clear();t.state=0;}
+    if(t.state==2&&current>evict&&now-t.lastNear>8){for(auto&chunk:t.chunks)_retiredChunks.push_back(std::move(chunk));t.chunks.clear();t.visibleChunks=0;t.collisions.clear();t.collisionGridIndices.clear();t.collisionGridOffsets.fill(0);t.maxCollisionHeight=0;t.state=0;}
   }
   std::sort(baseCandidates.begin(),baseCandidates.end());std::sort(detailCandidates.begin(),detailCandidates.end());
   int baseSlots=std::max(0,2-baseLoading);for(int n=0;n<baseSlots&&n<(int)baseCandidates.size();n++){
     size_t index=baseCandidates[n].second;_tiles[index].state=1;std::string file=_tiles[index].path;
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED,0),^{[self enqueueTile:index path:file];});
+    // The no-fog horizon can queue the whole base city. Keep those large,
+    // distant file reads below the render thread's priority; nearby authored
+    // detail still uses user-initiated QoS and therefore appears first.
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY,0),^{[self enqueueTile:index path:file];});
   }
   int detailSlots=std::max(0,2-detailLoading);for(int n=0;n<detailSlots&&n<(int)detailCandidates.size();n++){
     size_t index=detailCandidates[n].second;_tiles[index].state=1;std::string file=_tiles[index].path;
@@ -1218,7 +1263,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   id<MTLDevice>device=MTLCreateSystemDefaultDevice();if(!device){NSAlert*a=[NSAlert new];a.messageText=@"Metal nu este disponibil pe acest Mac.";[a runModal];[NSApp terminate:nil];return;}
   NSRect frame=NSMakeRect(0,0,1280,800);self.window=[[NSWindow alloc]initWithContentRect:frame styleMask:NSWindowStyleMaskTitled|NSWindowStyleMaskClosable|NSWindowStyleMaskMiniaturizable|NSWindowStyleMaskResizable backing:NSBackingStoreBuffered defer:NO];
   self.window.title=@"Chișinău 3D · Native Metal";self.window.minSize=NSMakeSize(900,580);self.window.collectionBehavior=NSWindowCollectionBehaviorFullScreenPrimary;
-  self.gameView=[[GameView alloc]initWithFrame:frame device:device];self.gameView.autoresizingMask=NSViewWidthSizable|NSViewHeightSizable;self.gameView.colorPixelFormat=MTLPixelFormatBGRA8Unorm_sRGB;self.gameView.depthStencilPixelFormat=MTLPixelFormatDepth32Float;self.gameView.sampleCount=1;self.gameView.preferredFramesPerSecond=60;self.gameView.paused=NO;self.gameView.enableSetNeedsDisplay=NO;
+  self.gameView=[[GameView alloc]initWithFrame:frame device:device];self.gameView.autoresizingMask=NSViewWidthSizable|NSViewHeightSizable;self.gameView.colorPixelFormat=MTLPixelFormatBGRA8Unorm_sRGB;self.gameView.depthStencilPixelFormat=MTLPixelFormatDepth32Float;self.gameView.sampleCount=1;self.gameView.preferredFramesPerSecond=120;self.gameView.paused=NO;self.gameView.enableSetNeedsDisplay=NO;
   self.renderer=[[CityRenderer alloc]initWithView:self.gameView resourcePath:NSBundle.mainBundle.resourcePath benchmarkKind:self.benchmarkKind];if(!self.renderer){[NSApp terminate:nil];return;}self.gameView.delegate=self.renderer;self.window.contentView=self.gameView;[self.window center];[self.window makeKeyAndOrderFront:nil];[NSApp activateIgnoringOtherApps:YES];
 }
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication*)sender{return YES;}

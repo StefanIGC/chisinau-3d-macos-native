@@ -27,6 +27,9 @@ const GROUND_SCALE = Math.cos(ORIGIN_LAT * Math.PI / 180);
 const ROTATION = 0.7793683518335637;
 const ROT_C = Math.cos(ROTATION);
 const ROT_S = Math.sin(ROTATION);
+const COLLISION_GRID_DIMENSION = 10;
+const COLLISION_GRID_HALF_EXTENT = 640;
+const COLLISION_GRID_CELL_SIZE = COLLISION_GRID_HALF_EXTENT * 2 / COLLISION_GRID_DIMENSION;
 
 if (!fs.existsSync(vectorRoot)) throw new Error(`Missing vector tiles: ${vectorRoot}`);
 fs.mkdirSync(outputRoot, {recursive: true});
@@ -74,6 +77,18 @@ function tileForPoint(point) {
 function number(value, fallback = 0) {
   const result = typeof value === 'number' ? value : Number.parseFloat(value);
   return Number.isFinite(result) ? result : fallback;
+}
+
+function compileCollisionGrid(collisions, center) {
+  const cells=Array.from({length:COLLISION_GRID_DIMENSION**2},()=>[]),coordinate=(value,axis)=>Math.max(0,Math.min(COLLISION_GRID_DIMENSION-1,Math.floor((value-(center[axis]-COLLISION_GRID_HALF_EXTENT))/COLLISION_GRID_CELL_SIZE)));
+  let maxHeight=0;
+  for(let i=0;i<collisions.length;i+=6){
+    const ax=collisions[i],az=collisions[i+1],bx=collisions[i+2],bz=collisions[i+3],margin=collisions[i+4]+3.5;maxHeight=Math.max(maxHeight,collisions[i+5]);
+    const minX=coordinate(Math.min(ax,bx)-margin,0),maxX=coordinate(Math.max(ax,bx)+margin,0),minZ=coordinate(Math.min(az,bz)-margin,1),maxZ=coordinate(Math.max(az,bz)+margin,1),index=i/6;
+    for(let z=minZ;z<=maxZ;z++)for(let x=minX;x<=maxX;x++)cells[z*COLLISION_GRID_DIMENSION+x].push(index);
+  }
+  const offsets=[0],indices=[];for(const cell of cells){indices.push(...cell);offsets.push(indices.length);}
+  return{offsets,indices,maxHeight};
 }
 
 function colorFromHex(value, fallback) {
@@ -250,6 +265,45 @@ function addBox(bucket, x, y, z, sx, sy, sz, color) {
   for(const f of faces){triangle(o,f[0],f[1],f[2],f[4],color);triangle(o,f[0],f[2],f[3],f[4],color);}
 }
 
+function addVerticalRibbon(bucket, points, minHeight, height, color) {
+  const bottom=number(minHeight,0),top=Math.max(bottom+.08,number(height,1.5)),out=bucket.vertices;
+  for(let i=1;i<points.length;i++){
+    const a=points[i-1],b=points[i],dx=b[0]-a[0],dz=b[1]-a[1],length=Math.hypot(dx,dz);if(length<.04)continue;
+    const normal=[dz/length,0,-dx/length];
+    triangle(out,[a[0],bottom,a[1]],[b[0],bottom,b[1]],[b[0],top,b[1]],normal,color);
+    triangle(out,[a[0],bottom,a[1]],[b[0],top,b[1]],[a[0],top,a[1]],normal,color);
+  }
+}
+
+function addRailway(bucket, points, gauge) {
+  const width=Math.max(1,number(gauge,1435)/1000),ballast=[.27,.255,.235,materialCode(0,1,0)],rail=[.24,.255,.25,materialCode(6,.42,.72)];
+  addRoad(bucket,points,width+1.25,ballast);
+  for(const side of[-1,1]){
+    const shifted=[];
+    for(let i=0;i<points.length;i++){
+      const a=points[Math.max(0,i-1)],b=points[Math.min(points.length-1,i+1)],dx=b[0]-a[0],dz=b[1]-a[1],length=Math.hypot(dx,dz)||1;
+      shifted.push([points[i][0]-dz/length*width*.5*side,points[i][1]+dx/length*width*.5*side]);
+    }
+    addRoad(bucket,shifted,.095,rail);
+  }
+}
+
+function addMappedObject(bucket,type,x,z,seed,properties={}){
+  const stone=[.47,.46,.42,materialCode(0,.92,0)],dark=[.22,.25,.23,materialCode(6,.58,.5)],wood=[.40,.28,.17,materialCode(0,.82,0)],metal=[.36,.40,.38,materialCode(6,.46,.58)];
+  if(type==='bench'){
+    addBox(bucket,x,.52,z,1.8,.13,.54,wood);addBox(bucket,x,.93,z+.24,1.8,.62,.10,wood);
+    for(const side of[-1,1])addBox(bucket,x+side*.66,.27,z,.10,.54,.46,dark);
+  }else if(type==='picnicTable'){
+    addBox(bucket,x,.74,z,1.75,.14,.82,wood);for(const side of[-1,1])addBox(bucket,x,.42,z+side*.72,1.75,.12,.30,wood);
+    for(const side of[-1,1])addBox(bucket,x+side*.58,.35,z,.10,.70,.10,dark);
+  }else if(type==='memorial'||type==='statue'||type==='sculpture'){
+    const height=Math.max(type==='memorial'?2.4:1.8,number(properties.height,type==='memorial'?3.2:2.4));
+    addBox(bucket,x,.20,z,1.35,.40,1.15,stone);addBox(bucket,x,.58,z,.92,.36,.82,shade(stone,.9));
+    if(type==='memorial')addBox(bucket,x,.58+height*.5,z,.48,height,.42,stone);
+    else{addBox(bucket,x,1.05+height*.28,z,.48,height*.56,.36,metal);addTreeCrown(bucket,x,1.22+height*.58,z,.20,.25,.18,metal,(seed%17)*.2);}
+  }
+}
+
 function addTreeCrown(bucket,x,y,z,rx,ry,rz,color,phase=0){
   const latitude=5,longitude=8,out=bucket.vertices;
   for(let row=0;row<latitude;row++){
@@ -311,6 +365,31 @@ function addLandmarkModel(spec) {
   const offset=localPoint([24+(spec.offset?.[0]??0),-15+(spec.offset?.[2]??0)]),lift=number(spec.lift,0)+number(spec.groundOffset,0)+.035;
   for(const v of raw)vertex(bucket.vertices,[center[0]+offset[0]+v.p[0],v.p[1]-minY+lift,center[1]+offset[1]+v.p[2]],v.n,v.c);
   bucket.sources.add(`map.md · ${spec.title}`);return true;
+}
+
+// The Opera uses a surveyed, anisotropic footprint alignment that cannot be
+// represented by the generic map.md transform. Reproduce the exact transform
+// from opera-house.ts so the native edition keeps the same detailed GLB rather
+// than an empty collision-only footprint.
+function addOperaModel(){
+  const file=path.join(sourceRoot,'public/models/opera-maria-biesu/opera.glb');if(!fs.existsSync(file))return 0;
+  const glb=readCompressedGlb(file),triangles=[];
+  function visit(index,parent){const node=glb.json.nodes[index],world=multiplyMatrix(parent,gltfNodeMatrix(node));if(node.mesh!==undefined)for(const primitive of glb.json.meshes[node.mesh].primitives){if((primitive.mode??4)!==4||primitive.attributes.POSITION===undefined)continue;const positions=gltfAccessor(glb,primitive.attributes.POSITION),indices=primitive.indices!==undefined?gltfAccessor(glb,primitive.indices).map(x=>x[0]):positions.map((_,i)=>i);
+    for(let k=0;k+2<indices.length;k+=3){const p=[0,1,2].map(j=>transformGltfPoint(world,positions[indices[k+j]])),ab=p[1].map((v,i)=>v-p[0][i]),ac=p[2].map((v,i)=>v-p[0][i]),n=[ab[1]*ac[2]-ab[2]*ac[1],ab[2]*ac[0]-ab[0]*ac[2],ab[0]*ac[1]-ab[1]*ac[0]],length=Math.hypot(...n)||1;triangles.push({p,n:n.map(v=>v/length)});}
+  }for(const child of node.children??[])visit(child,world);}
+  for(const root of glb.json.scenes[glb.json.scene??0]?.nodes??[])visit(root,identityMatrix());if(!triangles.length)return 0;
+  const left=[-384.64,-86.34],right=[-318.69,-85.63],wx=right[0]-left[0],wz=right[1]-left[1],width=Math.hypot(wx,wz),front=[(left[0]+right[0])/2,(left[1]+right[1])/2],forward=[-wz/width,wx/width],depth=-((-383.51-left[0])*forward[0]+(-191.43-left[1])*forward[1]);
+  const scale=[depth/(9.753+33.89),2*HALF_WORLD/((HALF_WORLD/180/111195)/Math.cos(ORIGIN_LAT*Math.PI/180))*8.9445e-8,width/(7.70318+13.585428)],yaw=Math.atan2(-forward[1],forward[0]),cy=Math.cos(yaw),sy=Math.sin(yaw);
+  const transformed=(p)=>{const x=p[0]*scale[0],y=p[1]*scale[1],z=p[2]*scale[2];return[x*cy+z*sy,y,-x*sy+z*cy];},sourceFront=transformed([9.753,0,(7.70318-13.585428)/2]);
+  let minY=Infinity;for(const t of triangles)for(const p of t.p)minY=Math.min(minY,transformed(p)[1]);
+  const center=localPoint(front),tile=tileForPoint(center),bucket=tileData.get(`${tile[0]}/${tile[1]}`);if(!bucket)return 0;
+  const palette=['#d7d4c7','#444039','#aa9770','#758e87','#93958e','#a1a49e','#5e4b37'].map((hex,i)=>{const c=colorFromHex(hex,[.7,.7,.7,1]),kind=(i===2||i===3)?1:(i===1||i===6)?6:0,roughness=(i===2||i===3) ? .3 : (i===4||i===5) ? .95 : .82,metalness=i===1 ? .32 : (i===2||i===3) ? .2 : i===6 ? .13 : 0;return[srgbChannelToLinear(c[0]),srgbChannelToLinear(c[1]),srgbChannelToLinear(c[2]),materialCode(kind,roughness,metalness)];});
+  for(const t of triangles){const centroid=t.p.reduce((sum,p)=>sum.map((v,i)=>v+p[i]/3),[0,0,0]),min=Math.min(...t.p.map(p=>p[1])),max=Math.max(...t.p.map(p=>p[1])),[x,y,z]=centroid,n=t.n;let material=0;
+    if(min>9.42&&max<10.52&&(x>9.29||z>7.18||z<-13.07))material=1;else if(x>4.30&&x<4.48&&y>6.19&&y<8.95&&Math.abs(n[0])>.9)material=2;else if(x>4.51&&x<4.60&&y>3.36&&y<5.27&&Math.abs(n[0])>.9)material=z>-3.73&&z<-1.59?6:3;else if(Math.abs(n[2])>.9&&x<-9.7&&x>-33.3&&y>4.63&&y<8.91&&(Math.abs(z-7.244)<.035||Math.abs(z+12.966)<.035))material=3;else if(x>9.25&&y<3.4&&z>-9.075&&z<3.78&&(Math.abs(n[0])>.9||n[1]>.8))material=4;else if(n[1]>.7&&y>10)material=5;
+    const normalScaled=[n[0]/scale[0],n[1]/scale[1],n[2]/scale[2]],normalLength=Math.hypot(...normalScaled)||1,nn=normalScaled.map(v=>v/normalLength),onlineNormal=[nn[0]*cy+nn[2]*sy,nn[1],-nn[0]*sy+nn[2]*cy],nativeNormal=[ROT_C*onlineNormal[0]-ROT_S*onlineNormal[2],onlineNormal[1],ROT_S*onlineNormal[0]+ROT_C*onlineNormal[2]];
+    for(const p of t.p){const q=transformed(p),native=localPoint([front[0]-sourceFront[0]+q[0],front[1]-sourceFront[2]+q[2]]);vertex(bucket.vertices,[native[0],q[1]-minY+.025,native[1]],nativeNormal,palette[material]);}
+  }
+  bucket.sources.add('Teatrul de Operă · GLB fotografiat');return triangles.length*3;
 }
 
 function collectCustomData() {
@@ -444,6 +523,7 @@ const pbfFiles = fs.readdirSync(vectorRoot, {recursive:true})
   .sort();
 
 let spatiallySuppressedBuildings=0,collisionOnlyAuthoredBuildings=0;
+const restoredVectorFeatures={barriers:0,waterways:0,treeRows:0,highwayAreas:0,railways:0,streetFurniture:0};
 for (const file of pbfFiles) {
   const relative = path.relative(vectorRoot, file).split(path.sep);
   if (relative.length !== 2) continue;
@@ -464,18 +544,34 @@ for (const file of pbfFiles) {
         const wall = palette[seed % palette.length];
         if (geometry[0]) addExtrusion(bucket, geometry[0], height, wall, shade(wall,.62));
       } else if (layerName === 'highways' && feature.type === 2) {
-        const width = roadWidth(properties);
-        const walkway = ['pedestrian','footway','path','cycleway','steps'].includes(properties.pathType);
-        const surface = walkway ? [.42,.40,.36,materialCode(4,1,0)] : [.19,.205,.215,materialCode(3,1,0)];
-        for (const line of geometry) addRoad(bucket, line, width, surface);
+        if(properties.type==='railway'){
+          for(const line of geometry)addRailway(bucket,line,properties.gauge);restoredVectorFeatures.railways++;
+        }else{
+          const width = roadWidth(properties);
+          const walkway = ['pedestrian','footway','path','cycleway','steps'].includes(properties.pathType);
+          const surface = walkway ? [.42,.40,.36,materialCode(4,1,0)] : [.19,.205,.215,materialCode(3,1,0)];
+          for (const line of geometry) addRoad(bucket, line, width, surface);
+        }
+      } else if(layerName==='highways'&&feature.type===3){
+        const walkway=['pedestrian','footway','path','cycleway','steps'].includes(properties.pathType),surface=walkway?[.42,.40,.36,materialCode(4,1,0)]:[.19,.205,.215,materialCode(3,1,0)];
+        for(const ring of geometry.slice(0,1))addFlatPolygon(bucket,ring,-.01,surface);restoredVectorFeatures.highwayAreas++;
+      } else if(layerName==='barriers'&&feature.type===2){
+        const wall=properties.type==='wall',height=number(properties.height,wall?3:properties.fenceType==='wood'?2:properties.fenceType==='chain_link'||properties.fenceType==='wire'?3:1.5),color=wall?[.45,.45,.41,materialCode(0,1,0)]:[.30,.34,.32,materialCode(6,.7,.45)];
+        for(const line of geometry)addVerticalRibbon(bucket,line,0,height,color);restoredVectorFeatures.barriers++;
       } else if (layerName === 'water' && feature.type === 3) {
         for (const ring of geometry) addFlatPolygon(bucket, ring, .045, [.12,.34,.48,materialCode(7,.3,.14)]);
+      } else if(layerName==='water'&&feature.type===2){
+        const widths={river:10,stream:2,canal:8,drain:1,ditch:1},width=number(properties.width,widths[properties.waterwayType]??0);if(width>0){for(const line of geometry)addRoad(bucket,line,width,[.12,.34,.48,materialCode(7,.3,.14)]);restoredVectorFeatures.waterways++;}
       } else if ((layerName === 'common' || layerName === 'natural') && feature.type === 3) {
         const type = properties.type;
-        const c = type === 'pitch' ? [.20,.39,.20,materialCode(5,1,0)] : [.18,.33,.18,materialCode(5,1,0)];
+        const c = type === 'parking' ? [.25,.255,.25,materialCode(3,1,0)] : ['bridge','pier'].includes(type) ? [.43,.42,.39,materialCode(4,1,0)] : ['construction','brownfield'].includes(type) ? [.40,.32,.23,materialCode(0,1,0)] : type === 'sand' ? [.62,.54,.36,materialCode(0,1,0)] : type === 'pitch'||type === 'playground' ? [.20,.39,.20,materialCode(5,1,0)] : [.18,.33,.18,materialCode(5,1,0)];
         for (const ring of geometry.slice(0,1)) addFlatPolygon(bucket, ring, .035, c);
+      } else if(layerName==='natural'&&feature.type===2&&properties.type==='treeRow'){
+        for(const line of geometry)for(let j=1;j<line.length;j++){const a=line[j-1],b=line[j],length=Math.hypot(b[0]-a[0],b[1]-a[1]),count=Math.max(1,Math.floor(length/10));for(let k=0;k<count;k++){const t=(k+.5)/count;addTree(bucket,a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,Number(properties.osmId??i)+j*31+k);}}
+        restoredVectorFeatures.treeRows++;
       } else if (layerName === 'point' && feature.type === 1) {
         if (properties.type === 'tree') for (const group of geometry) for (const point of group) addTree(bucket, point[0], point[1], Number(properties.osmId ?? i));
+        else if(['bench','picnicTable','memorial','statue','sculpture'].includes(properties.type)){for(const group of geometry)for(const point of group)addMappedObject(bucket,properties.type,point[0],point[1],Number(properties.osmId??i),properties);restoredVectorFeatures.streetFurniture++;}
       }
     }
   }
@@ -483,9 +579,11 @@ for (const file of pbfFiles) {
 
 let landmarkCount=0;
 for (const spec of landmarkCatalog) {
+  if(spec.title==='Scuarul Catedralei')continue;
   const p=geoNative(spec.lat,spec.lon);
   if(Math.hypot(p[0],p[1])<10000&&addLandmarkModel(spec))landmarkCount++;
 }
+const operaModelVertices=addOperaModel();
 
 // The high-detail, manually curated project data supersedes its OSM bodies.
 for (const feature of customFeatures.values()) {
@@ -501,6 +599,22 @@ for (const feature of customFeatures.values()) {
     const width=number(tags.width,roadWidth({pathType:tags.highway,lanes:tags.lanes}));
     const walkway=['pedestrian','footway','path','cycleway','steps'].includes(tags.highway);
     addRoad(bucket,points,width,walkway?[.46,.43,.38,materialCode(4,1,0)]:[.18,.195,.205,materialCode(3,1,0)]);
+  } else if (tags.barrier==='fence'||tags.barrier==='wall') {
+    const wall=tags.barrier==='wall',height=number(tags.height,wall?3:tags.fence_type==='wood'?2:tags.fence_type==='chain_link'||tags.fence_type==='wire'?3:1.5);
+    addVerticalRibbon(bucket,points,number(tags.min_height,0),height,wall?[.45,.45,.41,materialCode(0,1,0)]:[.30,.34,.32,materialCode(6,.7,.45)]);restoredVectorFeatures.barriers++;
+  } else if(tags.waterway){
+    const widths={river:10,stream:2,canal:8,drain:1,ditch:1},width=number(tags.width,widths[tags.waterway]??0);if(width>0){addRoad(bucket,points,width,[.12,.34,.48,materialCode(7,.3,.14)]);restoredVectorFeatures.waterways++;}
+  } else if(tags.natural==='tree_row'){
+    for(let j=1;j<points.length;j++){const a=points[j-1],b=points[j],length=Math.hypot(b[0]-a[0],b[1]-a[1]),count=Math.max(1,Math.floor(length/10));for(let k=0;k<count;k++){const t=(k+.5)/count;addTree(bucket,a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,j*37+k);}}
+    restoredVectorFeatures.treeRows++;
+  } else if(tags.amenity==='parking'){
+    addFlatPolygon(bucket,points,.025,[.25,.255,.25,materialCode(3,1,0)]);
+  } else if(tags.natural==='water'||tags.landuse==='basin'||tags.amenity==='fountain'||tags.leisure==='swimming_pool'){
+    addFlatPolygon(bucket,points,.045,[.12,.34,.48,materialCode(7,.3,.14)]);
+  } else if(['pitch','playground','sports_centre','stadium'].includes(tags.leisure)){
+    addFlatPolygon(bucket,points,.035,[.20,.39,.20,materialCode(5,1,0)]);
+  } else if(['construction','brownfield'].includes(tags.landuse)){
+    addFlatPolygon(bucket,points,.025,[.40,.32,.23,materialCode(0,1,0)]);
   } else if (['park','garden'].includes(tags.leisure) || ['grass','forest','meadow'].includes(tags.landuse) || tags.natural==='wood') {
     addFlatPolygon(bucket,points,.05,[.17,.36,.18,materialCode(5,1,0)]);
   }
@@ -526,19 +640,22 @@ let totalVertices=0,totalCollisions=0,totalBytes=0;
 for (const bucket of [...tileData.values()].sort((a,b)=>a.x-b.x||a.y-b.y)) {
   const center=projectedPoint(bucket.x,bucket.y,65536,{x:32768,y:32768});
   const vertexCount=bucket.vertices.length/10,collisionCount=bucket.collisions.length/6;
-  const bytes=64+bucket.vertices.length*4+bucket.collisions.length*4;
+  const collisionGrid=compileCollisionGrid(bucket.collisions,center),gridBytes=(collisionGrid.offsets.length+collisionGrid.indices.length)*4;
+  const bytes=64+bucket.vertices.length*4+bucket.collisions.length*4+gridBytes;
   const buffer=Buffer.allocUnsafe(bytes);buffer.fill(0);
   buffer.writeUInt32LE(0x4c495443,0);buffer.writeUInt32LE(1,4);buffer.writeInt32LE(bucket.x,8);buffer.writeInt32LE(bucket.y,12);
   buffer.writeFloatLE(center[0],16);buffer.writeFloatLE(center[1],20);buffer.writeUInt32LE(vertexCount,24);buffer.writeUInt32LE(collisionCount,28);
-  let offset=64;for(const value of bucket.vertices){buffer.writeFloatLE(value,offset);offset+=4;}for(const value of bucket.collisions){buffer.writeFloatLE(value,offset);offset+=4;}
+  buffer.writeUInt32LE(collisionGrid.indices.length,32);buffer.writeUInt32LE(COLLISION_GRID_DIMENSION,36);buffer.writeFloatLE(collisionGrid.maxHeight,40);
+  let offset=64;for(const value of bucket.vertices){buffer.writeFloatLE(value,offset);offset+=4;}for(const value of bucket.collisions){buffer.writeFloatLE(value,offset);offset+=4;}for(const value of collisionGrid.offsets){buffer.writeUInt32LE(value,offset);offset+=4;}for(const value of collisionGrid.indices){buffer.writeUInt32LE(value,offset);offset+=4;}
   fs.writeFileSync(path.join(outputRoot,`${bucket.x}_${bucket.y}.ctile`),buffer);
   totalVertices+=vertexCount;totalCollisions+=collisionCount;totalBytes+=bytes;
 }
 
 const attribution = {
   format:'Chișinău Native Tile 1', zoom:ZOOM, origin:[ORIGIN_LAT,ORIGIN_LON],
-  tiles:tileData.size, vertices:totalVertices, collisions:totalCollisions, landmarkModels:landmarkCount, bytes:totalBytes,
-  authoredArchitecture:{...architectureTiles,layers:authoredArchitecture.layers,meshes:authoredArchitecture.meshes,solidShellVertices:number(architectureExport.solidShellVertices,0),replacementIds:authoredArchitecture.replacementCount,spatiallySuppressedBuildings,collisionOnlyBuildings:collisionOnlyAuthoredBuildings},
+  tiles:tileData.size, vertices:totalVertices, collisions:totalCollisions, landmarkModels:landmarkCount, operaModelVertices, bytes:totalBytes,
+  authoredArchitecture:{...architectureTiles,layers:authoredArchitecture.layers,meshes:authoredArchitecture.meshes,solidShellVertices:number(architectureExport.solidShellVertices,0),replacementIds:authoredArchitecture.replacementCount,restoredFamilies:architectureExport.restoredFamilies??[],spatiallySuppressedBuildings,collisionOnlyBuildings:collisionOnlyAuthoredBuildings},
+  restoredVectorFeatures,
   sources:['© OpenStreetMap contributors · ODbL 1.0','Chișinău · Centru 3D project datasets','Street View/photo-authored architecture modules','map.md placement catalog'],
   generated:new Date().toISOString(),
 };

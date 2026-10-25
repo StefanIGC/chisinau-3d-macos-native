@@ -1,13 +1,30 @@
 {
-  "version": "2.9.0",
+  "version": "2.11.0",
   "compiled_world": {
     "base_tiles": 240,
     "detail_tiles": 222,
-    "base_vertices": 5803230,
-    "authored_vertices": 35515023,
+    "base_vertices": 6317382,
+    "authored_vertices": 36567828,
     "solid_shell_vertices": 701412,
-    "authored_layers": 185,
-    "authored_meshes": 14777,
+    "authored_layers": 190,
+    "authored_meshes": 15305,
+    "landmark_models": 25,
+    "opera_model_vertices": 15018,
+    "restored_authored_families": [
+      "Guvern",
+      "Columna Pușkin–Bodoni",
+      "Parcul Catedralei",
+      "terenul Operei",
+      "parcări de biciclete"
+    ],
+    "restored_vector_features": {
+      "barriers": 6385,
+      "waterways": 258,
+      "treeRows": 69,
+      "highwayAreas": 140,
+      "railways": 472,
+      "streetFurniture": 828
+    },
     "collision_segments": 231004,
     "spatially_suppressed_osm_buildings": 2790,
     "collision_only_authored_buildings": 8497

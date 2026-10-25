@@ -1,0 +1,10 @@
+{
+  "test": "offline map and teleport",
+  "map_asset_loaded": true,
+  "map_opened": true,
+  "teleport_requested": true,
+  "destination_ready": true,
+  "destination_error_m": 0.00,
+  "walker_mode_restored": true,
+  "passed": true
+}

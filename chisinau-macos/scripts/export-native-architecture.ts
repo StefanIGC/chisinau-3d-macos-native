@@ -15,6 +15,8 @@ import {createSegmentEightFrontages} from '../app/segment-eight-frontages';
 import {createBoulevardCompletion} from '../app/boulevard-completion';
 import {createPuskinDistrict} from '../app/puskin-district';
 import {createBodoniDistrict} from '../app/bodoni-district';
+import {createGovernmentDistrict} from '../app/government-district';
+import {createColumnaDistrict} from '../app/columna-district';
 import {createEugenDoga} from '../app/eugen-doga';
 import {createMuseumQuarter} from '../app/museum-quarter';
 import {createAlexandruSector} from '../app/alexandru-sector';
@@ -72,6 +74,9 @@ import {createBucurestiBu10} from '../app/bucuresti-bu10';
 import {createBucurestiBu11} from '../app/bucuresti-bu11';
 import {createCentralInfill} from '../app/central-infill';
 import {createCourtyardGates} from '../app/courtyard-gates';
+import {createCentralStreetObjects} from '../app/central-street-objects';
+import {createCathedralPark} from '../app/cathedral-park';
+import {createOperaGrounds} from '../app/opera-grounds';
 
 type ExportLayer={
   objects:T.Group[];
@@ -93,6 +98,8 @@ const scene=new T.Scene(),ground=()=>0,loaded=()=>true,ready=()=>true;
 // This mirrors the hand-authored architecture layers in world.ts. Readiness
 // callbacks matter only to the interactive replacement lifecycle; all source
 // geometry is deliberately compiled here.
+createGovernmentDistrict(scene,ground,loaded);
+createColumnaDistrict(scene,ground,loaded);
 createPuskinDistrict(scene,ground,loaded);
 const bodoni=createBodoniDistrict(scene,ground,loaded);
 createEugenDoga(scene,ground,loaded);
@@ -152,6 +159,9 @@ createBucurestiBu11(scene,ground,loaded,ready,ready,()=>true,()=>true);
 createBucurestiBu07(scene,ground,loaded,ready);
 createCentralInfill(scene,ground,loaded);
 createCourtyardGates(scene,ground,loaded);
+createCentralStreetObjects(scene,ground,loaded);
+createOperaGrounds(scene,ground,loaded);
+createCathedralPark(scene,ground,loaded,ready,(x,z)=>ground(x,z)+.115);
 createStefanPark(scene,ground,loaded);
 const boulevard=createBoulevard(scene,ground,loaded);
 createBoulevardMonuments(scene,boulevard.ground,loaded);
@@ -248,4 +258,4 @@ for(const mesh of meshes){
 }
 fs.closeSync(descriptor);
 if(written!==vertexCount)throw new Error(`Architecture vertex count mismatch: ${written} != ${vertexCount}`);
-console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),meshes:meshes.length,vertices:vertexCount,solidShellVertices,replacementIds:replacementIds.length,bytes:fs.statSync(output).size,largestLayers:layerVertices.slice(0,24)}));
+console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),restoredFamilies:['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete'],meshes:meshes.length,vertices:vertexCount,solidShellVertices,replacementIds:replacementIds.length,bytes:fs.statSync(output).size,largestLayers:layerVertices.slice(0,24)}));

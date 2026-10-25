@@ -16,8 +16,12 @@ Joc open-world 3D al centrului Chișinăului, cu motor nativ C++20 / Objective-C
 - 11 module BUC01–BUC11 pe strada București;
 - Columna între Tighina și Ismail;
 - arhitectura și suprafețele originale compilate din proiectul de autor;
+- Guvernul, Columna Pușkin–Bodoni, Parcul Catedralei, terenul Operei și parcările centrale de biciclete, restaurate din scena online;
+- garduri și ziduri, cursuri de apă, aliniamente de arbori, suprafețe de drum, căi ferate și mobilier urban din datele originale;
+- modelul 3D detaliat al Teatrului de Operă, cu transformarea exactă din proiect;
 - corpuri de clădire închise sub fațadele detaliate, fără golurile produse de eliminarea pereților și acoperișurilor;
 - vizibilitate fără fog până la 7 km, cu orașul de bază păstrat la orizont;
+- prezentare Metal de până la 120 Hz pe ecranele ProMotion, cu revenire automată la rata ecranului;
 - executabil universal Apple Silicon `arm64` + Intel `x86_64`.
 
 ## Structură
@@ -62,7 +66,7 @@ BIN="chisinau-native/build/Chișinău 3D Native/Chișinău 3D.app/Contents/MacOS
 "$BIN" --test-spawn
 ```
 
-Pe sistemul de verificare Apple M1 Pro, traseele fără fog Centru și Șciusev și testul mașinii au rulat la aproximativ 60 FPS, fără cadre peste 25 ms. Vezi [noutățile versiunii 2.10.0](docs/RELEASE-v2.10.0.md) și [auditul lumii](docs/WORLD-AUDIT.json).
+Pe sistemul de verificare Apple M1 Pro, traseele fără fog Centru, Columna, Șciusev și București și testul mașinii sunt verificate la aproximativ 60 FPS. Vezi [noutățile versiunii 2.11.0](docs/RELEASE-v2.11.0.md) și [auditul lumii](docs/WORLD-AUDIT.json).
 
 ## Date și licențe
 

@@ -1,0 +1,9 @@
+{
+  "test": "vehicle interaction",
+  "car_entry": true,
+  "car_exit": true,
+  "helicopter_entry": true,
+  "helicopter_exit_after_landing": true,
+  "walker_restored": true,
+  "passed": true
+}

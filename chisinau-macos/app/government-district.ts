@@ -11,6 +11,7 @@ type Batch={material:T.Material;geometries:T.BufferGeometry[];fine:boolean;land:
 
 /** Photographic reconstruction on the existing OSM footprint; references in docs/government-references.md. */
 export function createGovernmentDistrict(scene:T.Scene,ground:(x:number,z:number)=>number,loaded:(x:number,z:number)=>boolean){
+  const nativeExport=Array.isArray((globalThis as any).__CHISINAU_NATIVE_STREET_MESHES__);
   const building=new T.Group(),landscape=new T.Group();building.name='Casa Guvernului · fațade și acoperiș';landscape.name='Guvern · grădini și trepte';
   building.visible=landscape.visible=false;scene.add(building,landscape);
   const stone=new T.MeshStandardMaterial({color:'#c8c3b7',roughness:.84});
@@ -41,6 +42,7 @@ export function createGovernmentDistrict(scene:T.Scene,ground:(x:number,z:number
   const shape=(p:XY[])=>{const s=new T.Shape();p.forEach(([x,z],i)=>i?s.lineTo(x,-z):s.moveTo(x,-z));s.closePath();return s;};
   function solid(p:XY[],height:number,y=0){const g=new T.ExtrudeGeometry(shape(p),{depth:height,bevelEnabled:false,steps:1});g.rotateX(-Math.PI/2);g.translate(0,y,0);return g;}
   function physical(g:T.BufferGeometry,land=false){
+    if(nativeExport)return;
     const mesh=new T.Mesh(g.clone(),collisionMaterial);g.computeBoundingBox();const center=g.boundingBox!.getCenter(new T.Vector3());
     const group=land?collisionBuckets.get(`${Math.floor(center.x/32)}/${Math.floor(center.z/32)}`):buildingCollision;
     group?.add(mesh);if(!group)mesh.geometry.dispose();
@@ -133,17 +135,17 @@ export function createGovernmentDistrict(scene:T.Scene,ground:(x:number,z:number
   for(let x=-53;x<108;x+=20){box(x,20.48,104.9,1.4,.58,.8,metal);box(x,20.8,104.9,1.65,.08,1.05,darkMetal);}
   for(const x of[-57,108])for(let z=117;z<152;z+=14)box(x,20.45,z,1.05,.5,.85,metal);
 
-  const loader=new T.TextureLoader();
-  const firTexture=loader.load('/government/fir.png');firTexture.colorSpace=T.SRGBColorSpace;firTexture.flipY=false;textures.push(firTexture);
-  const firMaterial=new T.MeshStandardMaterial({map:firTexture,side:T.DoubleSide,alphaTest:.5,roughness:.95});materials.push(firMaterial);
+  const loader=nativeExport?null:new T.TextureLoader();
+  const firTexture=loader?.load('/government/fir.png');if(firTexture){firTexture.colorSpace=T.SRGBColorSpace;firTexture.flipY=false;textures.push(firTexture);}
+  const firMaterial=new T.MeshStandardMaterial({map:firTexture??null,color:nativeExport?'#365a35':'#ffffff',side:T.DoubleSide,alphaTest:.5,roughness:.95});materials.push(firMaterial);
   const firGeometry=new T.BufferGeometry();firGeometry.setAttribute('position',new T.Float32BufferAttribute(firMesh.POSITION,3));firGeometry.setAttribute('normal',new T.Float32BufferAttribute(firMesh.NORMAL,3));firGeometry.setAttribute('uv',new T.Float32BufferAttribute(firMesh.TEXCOORD_0,2));firGeometry.setIndex(firMesh.indices);
-  const signTexture=loader.load('/government/entrance-sign.svg');signTexture.colorSpace=T.SRGBColorSpace;textures.push(signTexture);
-  const signMaterial=new T.MeshStandardMaterial({map:signTexture,roughness:.7});materials.push(signMaterial);
+  const signTexture=loader?.load('/government/entrance-sign.svg');if(signTexture){signTexture.colorSpace=T.SRGBColorSpace;textures.push(signTexture);}
+  const signMaterial=new T.MeshStandardMaterial({map:signTexture??null,color:nativeExport?'#b59b66':'#ffffff',roughness:.7});materials.push(signMaterial);
   const sign=new T.PlaneGeometry(3.9,.43);sign.rotateY(Math.PI);sign.translate(24.69,3.5,94.57);put(sign,signMaterial);
-  const flagTexture=loader.load('/government/flag-md.svg');flagTexture.colorSpace=T.SRGBColorSpace;textures.push(flagTexture);
-  const flagMaterial=new T.MeshStandardMaterial({map:flagTexture,side:T.DoubleSide,roughness:.88});materials.push(flagMaterial);
-  const crestTexture=loader.load('/government/coat-md.svg');crestTexture.colorSpace=T.SRGBColorSpace;textures.push(crestTexture);
-  const crestMaterial=new T.MeshStandardMaterial({map:crestTexture,transparent:true,alphaTest:.25,roughness:.6,metalness:.3});
+  const flagTexture=loader?.load('/government/flag-md.svg');if(flagTexture){flagTexture.colorSpace=T.SRGBColorSpace;textures.push(flagTexture);}
+  const flagMaterial=new T.MeshStandardMaterial({map:flagTexture??null,color:nativeExport?'#315c99':'#ffffff',side:T.DoubleSide,roughness:.88});materials.push(flagMaterial);
+  const crestTexture=loader?.load('/government/coat-md.svg');if(crestTexture){crestTexture.colorSpace=T.SRGBColorSpace;textures.push(crestTexture);}
+  const crestMaterial=new T.MeshStandardMaterial({map:crestTexture??null,color:nativeExport?'#b49a62':'#ffffff',transparent:!nativeExport,alphaTest:.25,roughness:.6,metalness:.3});
   crestMaterial.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>','#include <map_fragment>\n diffuseColor.rgb = vec3(0.64 + dot(diffuseColor.rgb, vec3(0.299,0.587,0.114))*0.3);');};
   materials.push(crestMaterial);
   const disk=new T.CylinderGeometry(1.48,1.48,.22,40);disk.rotateX(Math.PI/2);disk.translate(24.69,20.48,94.63);put(disk,darkMetal);
@@ -249,7 +251,14 @@ export function createGovernmentDistrict(scene:T.Scene,ground:(x:number,z:number
   });
   const frustum=new T.Frustum(),matrix=new T.Matrix4(),sphere=new T.Sphere(),worldCenter=new T.Vector3();
   const replacements=[{id:GOVERNMENT.id,x:24.7,z:111,radius:0,ready:false}];
-  return{objects:[building,landscape],collisionObjects,replacements,treeOverrides,
+  function buildAllForNativeExport(){
+    if(!nativeExport)throw new Error('Native export is not active.');
+    building.position.y=entryFloor()-.22;building.updateMatrixWorld(true);
+    while(jobs.length)jobs.shift()!();flush();
+    built=ready=true;replacements[0].ready=true;building.visible=landscape.visible=true;
+    landscape.updateMatrixWorld(true);
+  }
+  const api={objects:[building,landscape],collisionObjects,replacements,treeOverrides,buildAllForNativeExport,
     get ready(){return ready&&built;},
     readyNear(x:number,z:number,r=420){return Math.hypot(x-25,z-100)>r+140||ready&&built;},
     update(camera:T.PerspectiveCamera,now:number){
@@ -268,4 +277,6 @@ export function createGovernmentDistrict(scene:T.Scene,ground:(x:number,z:number
     },
     dispose(){for(const root of[building,landscape,...collisionObjects]){scene.remove(root);root.traverse(o=>{if(o instanceof T.Mesh)o.geometry.dispose();});}for(const batch of batches.values())batch.geometries.forEach(g=>g.dispose());firGeometry.dispose();materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());}
   };
+  if(nativeExport)(globalThis as any).__CHISINAU_NATIVE_STREET_MESHES__.push(api);
+  return api;
 }
