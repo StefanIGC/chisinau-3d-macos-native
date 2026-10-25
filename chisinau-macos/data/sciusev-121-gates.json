@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Stere10 · poartă laterală",
+    "a": [
+      -872.8,
+      756.5
+    ],
+    "b": [
+      -872.8,
+      758.2
+    ],
+    "height": 1.9,
+    "baseOffset": -0.34,
+    "color": "#776a62",
+    "post": "#c0c0ad",
+    "solidHeight": 1.65,
+    "arch": false,
+    "source": "September2025 Street View. Width and metric position inferred."
+  }
+]

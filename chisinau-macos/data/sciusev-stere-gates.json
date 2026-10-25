@@ -1,0 +1,223 @@
+[
+  {
+    "name": "Dinamo · intrare centrală",
+    "a": [
+      -851.5,
+      615.62
+    ],
+    "b": [
+      -841.6,
+      615.62
+    ],
+    "height": 2.7,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.13,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · intrare pietonală vest",
+    "a": [
+      -854.3,
+      615.65
+    ],
+    "b": [
+      -852.0,
+      615.65
+    ],
+    "height": 2.7,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.13,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · intrare pietonală est",
+    "a": [
+      -841.1,
+      615.57
+    ],
+    "b": [
+      -838.65,
+      615.57
+    ],
+    "height": 2.7,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.13,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · pistă sud-vest",
+    "a": [
+      -917.3343429498583,
+      578.6498682984463
+    ],
+    "b": [
+      -917.2790356090358,
+      576.8000215155049
+    ],
+    "height": 1.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · pistă nord-vest",
+    "a": [
+      -913.8858730122311,
+      494.1824463464097
+    ],
+    "b": [
+      -913.8962178780428,
+      492.0858923437332
+    ],
+    "height": 1.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · pistă nord-est",
+    "a": [
+      -781.7072261831904,
+      490.80013111901036
+    ],
+    "b": [
+      -781.6649300538344,
+      493.10028545923234
+    ],
+    "height": 1.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · acces București",
+    "a": [
+      -915.7,
+      485.7
+    ],
+    "b": [
+      -912.3,
+      485.7
+    ],
+    "height": 2.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Șciusev111 · curte",
+    "a": [
+      -782.75,
+      635.3
+    ],
+    "b": [
+      -776.1,
+      635.3
+    ],
+    "height": 2.1,
+    "color": "#756757",
+    "post": "#b5ae99",
+    "solidHeight": 1.55,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Stere1 · curte sud",
+    "a": [
+      -850.8,
+      715
+    ],
+    "b": [
+      -850.8,
+      719
+    ],
+    "height": 2.2,
+    "color": "#6b5b4e",
+    "post": "#b5ae99",
+    "solidHeight": 1.6,
+    "arch": true,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Stere5 · curte",
+    "a": [
+      -849.1,
+      739.2
+    ],
+    "b": [
+      -849.1,
+      742.6
+    ],
+    "height": 2.2,
+    "color": "#6f7163",
+    "post": "#b5ae99",
+    "solidHeight": 1.5,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · teren mic vest",
+    "a": [
+      -906.086826937974,
+      602.0006147747279
+    ],
+    "b": [
+      -906.0720365326717,
+      604.0005600849579
+    ],
+    "height": 2.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "Mapped mini-football court boundary; side opening location and finishes are estimated for safe pedestrian access, not confirmed by a current close photograph."
+  },
+  {
+    "name": "Dinamo · teren mic est",
+    "a": [
+      -787.3352325580416,
+      604.0004308537674
+    ],
+    "b": [
+      -787.3564841546273,
+      602.000543764544
+    ],
+    "height": 2.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "Mapped mini-football court boundary; side opening location and finishes are estimated for safe pedestrian access, not confirmed by a current close photograph."
+  },
+  {
+    "name": "Stere · acces colț Șciusev",
+    "a": [
+      -850.6,
+      643
+    ],
+    "b": [
+      -850.6,
+      647.6
+    ],
+    "height": 2.1,
+    "color": "#858779",
+    "post": "#b5ae99",
+    "solidHeight": 1.55,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  }
+]

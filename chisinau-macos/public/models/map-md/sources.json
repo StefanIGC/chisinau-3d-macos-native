@@ -1,0 +1,2879 @@
+{
+  "source": "https://map.md/ro",
+  "retrieved": "2026-09-25",
+  "catalog": [
+    {
+      "object_id": "",
+      "id": "5d11db065283670019bd82bd",
+      "visible": true,
+      "deleted": false,
+      "title": "fosfor",
+      "viewport": {
+        "ambient_light": 0.544,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.088082e-06,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.27,
+          "scale": 4.7417e-08
+        }
+      },
+      "lat": 47.09087139084511,
+      "lng": 28.737107442097738,
+      "gltf_file_id": "740ae03b5a9e067ac6cf38242d3629b5.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d19d074668de700173db7e5",
+      "visible": true,
+      "deleted": false,
+      "title": "AfganPark",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -2.2918999999999998e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.89,
+          "scale": 8.68114e-09
+        }
+      },
+      "lat": 47.05002073946304,
+      "lng": 28.86535924422526,
+      "gltf_file_id": "3ae73124805b9123f145cb22399d4ad4.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d19eb03668de700173db7e6",
+      "visible": true,
+      "deleted": false,
+      "title": "Artcor",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 6.814e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 2.41,
+          "scale": 3.000000003e-10
+        }
+      },
+      "lat": 47.02695449532547,
+      "lng": 28.822594453618905,
+      "gltf_file_id": "14b0286dfc7288c753e380c2dd4e2c0b.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d19f9fb668de700173db7e7",
+      "visible": true,
+      "deleted": false,
+      "title": "Catedrala",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -8.1145e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.78,
+          "scale": 1.32867e-08
+        }
+      },
+      "lat": 47.025724717914756,
+      "lng": 28.834031605290278,
+      "gltf_file_id": "1ed6cbf0c1731c002770c996412b102c.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d19fcc2668de700173db7e8",
+      "visible": true,
+      "deleted": false,
+      "title": "Catedrala_arca",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 3.02279e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.76,
+          "scale": 4.503999999999999e-10
+        }
+      },
+      "lat": 47.02472800200826,
+      "lng": 28.832577417608377,
+      "gltf_file_id": "82da3ac80160312249b4466ff22bf7f7.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d19fdd2668de700173db7e9",
+      "visible": true,
+      "deleted": false,
+      "title": "Catedrala-sobor",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 8.263130000000001e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.79,
+          "scale": 1.76226e-08
+        }
+      },
+      "lat": 47.02610653567015,
+      "lng": 28.834557106713476,
+      "gltf_file_id": "e997bfb9705d3cce37c110c8e7f99f9d.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d19fe49668de700173db7ea",
+      "visible": true,
+      "deleted": false,
+      "title": "Catedrala-colocol",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 4.335999999999999e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.76,
+          "scale": 1.10567e-08
+        }
+      },
+      "lat": 47.025576431092475,
+      "lng": 28.833809874487542,
+      "gltf_file_id": "8cd8cd6b45bba498b492bd698dfb9555.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d1a00547c5cdc0019e82227",
+      "visible": true,
+      "deleted": false,
+      "title": "cityhall",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.8e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.01,
+          "scale": 1.302032e-07
+        }
+      },
+      "lat": 47.022785331901446,
+      "lng": 28.834751520427403,
+      "gltf_file_id": "94d4bcdc80311b29e94cf66ee04b49a8.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d1a0f7e668de700173db7ec",
+      "visible": true,
+      "deleted": false,
+      "title": "Gate",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 9.999e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.57,
+          "scale": 9.90866e-08
+        }
+      },
+      "lat": 46.9767174292823,
+      "lng": 28.871484496801486,
+      "gltf_file_id": "216a7569a12dc6cbee2db9bebee2c9a2.gltf",
+      "year": 0,
+      "info": {
+        "title": {
+          "ru": "",
+          "ro": ""
+        },
+        "description": {
+          "ru": "",
+          "ro": ""
+        }
+      }
+    },
+    {
+      "object_id": "",
+      "id": "5d1a1160668de700173db7ed",
+      "visible": true,
+      "deleted": false,
+      "title": "Memorial",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -9.2914e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 1.83,
+          "scale": 1.89432e-08
+        }
+      },
+      "lat": 47.00914712156566,
+      "lng": 28.832989318239925,
+      "gltf_file_id": "1156ed8c7999073e96feb591342f5a5a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d1af5da7c5cdc0019e82228",
+      "visible": true,
+      "deleted": false,
+      "title": "Simpals",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.6724e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -2.21,
+          "scale": 1e-07
+        }
+      },
+      "lat": 47.044330634962336,
+      "lng": 28.848233206074866,
+      "gltf_file_id": "776f5f596b44deeb739195f464c24542.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d1b04a7668de700173db7ee",
+      "visible": true,
+      "deleted": false,
+      "title": "Parlament",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -3.4316199999999996e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 2.39,
+          "scale": 3.504e-10
+        }
+      },
+      "lat": 47.02728739946946,
+      "lng": 28.826500370757827,
+      "gltf_file_id": "e62f83bddfa2b684b27db86cd1435aef.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d1c5a187c5cdc0019e82229",
+      "visible": true,
+      "deleted": false,
+      "title": "Prisidential",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -1.4866e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.05,
+          "scale": 3.52e-10
+        }
+      },
+      "lat": 47.02848989157485,
+      "lng": 28.828372584209802,
+      "gltf_file_id": "d4f4f5fbfcf4ae872394ba25b3530a8c.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d1f0266b220f800150b7203",
+      "visible": true,
+      "deleted": false,
+      "title": "efes1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.438558e-06,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.51,
+          "scale": 9.185040000000001e-08
+        }
+      },
+      "lat": 46.99795801077596,
+      "lng": 28.900325268425206,
+      "gltf_file_id": "aa4a4516f7e40d23eb14253dc9fbb126.gltf",
+      "year": 0,
+      "info": {
+        "title": {
+          "ru": "",
+          "ro": ""
+        },
+        "description": {
+          "ru": "",
+          "ro": ""
+        }
+      }
+    },
+    {
+      "object_id": "",
+      "id": "5d1f561150b86a0019fbe202",
+      "visible": true,
+      "deleted": false,
+      "title": "efes2",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.438558e-06,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 2.65,
+          "scale": 9.0038e-08
+        }
+      },
+      "lat": 46.99844466414865,
+      "lng": 28.899738205956623,
+      "gltf_file_id": "05c9abf5e32af7c89a5eb5e971f91751.gltf",
+      "year": 0,
+      "info": {
+        "title": {
+          "ru": "",
+          "ro": ""
+        },
+        "description": {
+          "ru": "",
+          "ro": ""
+        }
+      }
+    },
+    {
+      "object_id": "",
+      "id": "5d2dc75b260b6100164e67fb",
+      "visible": true,
+      "deleted": false,
+      "title": "etno muzei",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.8e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.76,
+          "scale": 3.4718800000000004e-08
+        }
+      },
+      "lat": 47.02337528211771,
+      "lng": 28.820014661651214,
+      "gltf_file_id": "fd57642803d4dc05733ef46c9eaf8a07.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d2ef876260b6100164e67fc",
+      "visible": true,
+      "deleted": false,
+      "title": "Stefan cel Mare",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.8e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 1.64,
+          "scale": 1e-07
+        }
+      },
+      "lat": 47.02550319513338,
+      "lng": 28.83045580970014,
+      "gltf_file_id": "e57dba1b9bbdbeafb8204060f949dc74.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d3168cb93286c0017ba672a",
+      "visible": true,
+      "deleted": false,
+      "title": "oazis",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.8e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.08,
+          "scale": 6.531e-09
+        }
+      },
+      "lat": 47.04298878668246,
+      "lng": 28.858118669482877,
+      "gltf_file_id": "e2a976006212fd93ea2f7222d9ed3948.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d31698493286c0017ba672b",
+      "visible": true,
+      "deleted": false,
+      "title": "oazis1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.8e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.08,
+          "scale": 6.531e-09
+        }
+      },
+      "lat": 47.042975033980184,
+      "lng": 28.858120822568793,
+      "gltf_file_id": "910bf296beabdeda350ce311bfde569a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d35748e93286c0017ba672c",
+      "visible": true,
+      "deleted": false,
+      "title": "cetatea Soroca",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 4.39699e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -2.14,
+          "scale": 2.2014361e-07
+        }
+      },
+      "lat": 48.16134321040093,
+      "lng": 28.30527517778171,
+      "gltf_file_id": "3d986e224ccebf9a0831a79092a1347d.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d5131cc992b610017b5a62c",
+      "visible": true,
+      "deleted": false,
+      "title": "Tank",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.9882099999999995e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.6,
+          "scale": 3.79e-10
+        }
+      },
+      "lat": 47.76088791940046,
+      "lng": 27.92747911086508,
+      "gltf_file_id": "ddebe52b0fd02a6217b239a81047d13a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d51345c992b610017b5a62d",
+      "visible": true,
+      "deleted": false,
+      "title": "Severnii Vokzal",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 8e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.53,
+          "scale": 5.25818e-08
+        }
+      },
+      "lat": 47.78546803884055,
+      "lng": 27.92545836617228,
+      "gltf_file_id": "b30c83a93be0004148439dd4f2fdcd90.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d67933ab9ce96001753a431",
+      "visible": true,
+      "deleted": false,
+      "title": "Locomotiv",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -4.0752e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.9,
+          "scale": 9.03635e-10
+        }
+      },
+      "lat": 47.78588477858432,
+      "lng": 27.92295041356047,
+      "gltf_file_id": "1482e22a6c64050aa3d1b04cc7221f73.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d776d6d81d1f600145e1b06",
+      "visible": true,
+      "deleted": false,
+      "title": "Kolokol",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.55,
+          "scale": 2.0472e-08
+        }
+      },
+      "lat": 47.763263209149045,
+      "lng": 27.92825810029308,
+      "gltf_file_id": "c394ce1c953f06562e9758966688526b.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d8891cc81d1f600145e1b07",
+      "visible": true,
+      "deleted": false,
+      "title": "Mati",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -1.90019871e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.77,
+          "scale": 2.1870400000000002e-08
+        }
+      },
+      "lat": 47.744376932896046,
+      "lng": 27.953129413533873,
+      "gltf_file_id": "7d53ad846bf4ae305c8b1147ec6ed5d7.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d9c4b27d77e770016ef5407",
+      "visible": true,
+      "deleted": false,
+      "title": "Sala cu Orga",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -3.4068000000000004e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 2.37,
+          "scale": 7.306500000000001e-09
+        }
+      },
+      "lat": 47.02245307552914,
+      "lng": 28.83530806661372,
+      "gltf_file_id": "8449fe59629808bec77dcbaacf149404.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5d9ca34bd77e770016ef5408",
+      "visible": true,
+      "deleted": false,
+      "title": "muzei natsionalinii",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.8e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.01,
+          "scale": 5.5004999999999995e-08
+        }
+      },
+      "lat": 47.02261587081338,
+      "lng": 28.828074810334414,
+      "gltf_file_id": "3146f290163fb7892f9ca04d3328afe5.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5dad5ca181d1f6004c51ffb9",
+      "visible": true,
+      "deleted": false,
+      "title": "Suvorov",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -1.23885e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.06,
+          "scale": 2.30999e-08
+        }
+      },
+      "lat": 46.83678291588441,
+      "lng": 29.611075436321244,
+      "gltf_file_id": "4600dfd356225c2bc2de512e4aa2206a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5dbaa92681d1f6004c51ffba",
+      "visible": true,
+      "deleted": false,
+      "title": "Bender",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -3.4068000000000004e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.04,
+          "scale": 5.148739e-07
+        }
+      },
+      "lat": 46.837947445765906,
+      "lng": 29.48758468736142,
+      "gltf_file_id": "a2eabd41afbf6faa8aa8c056aeef3a0a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5dbaa927d77e7700509d3a8e",
+      "visible": true,
+      "deleted": false,
+      "title": "Bender",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -3.4068000000000004e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.04,
+          "scale": 5.148739e-07
+        }
+      },
+      "lat": 46.837947445765906,
+      "lng": 29.48758468736142,
+      "gltf_file_id": "a2eabd41afbf6faa8aa8c056aeef3a0a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5dccf96881d1f6004c51ffbc",
+      "visible": true,
+      "deleted": false,
+      "title": "Posta Moldovei",
+      "viewport": {
+        "ambient_light": 0.494,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.31300000000002e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.01,
+          "scale": 1.235317e-07
+        }
+      },
+      "lat": 47.0230669689098,
+      "lng": 28.835301166879077,
+      "gltf_file_id": "15676fca1af533d9e57c243889ac3108.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5dccfcd1d77e7700509d3a8f",
+      "visible": true,
+      "deleted": false,
+      "title": "Fontan",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.679999999999996e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.81,
+          "scale": 9.043600000000001e-09
+        }
+      },
+      "lat": 47.025493733941886,
+      "lng": 28.828033778288386,
+      "gltf_file_id": "9d1b2a7a7249ba5b188f11a3edb2f94d.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5dd4f1c1323c7d0016a4b03a",
+      "visible": true,
+      "deleted": false,
+      "title": "Biserica",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 7.666e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.01,
+          "scale": 5.410630000000001e-08
+        }
+      },
+      "lat": 47.02064604204071,
+      "lng": 28.83278420958274,
+      "gltf_file_id": "238114fe1e46af4670f5800c2978b586.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ddcf241323c7d0016a4b03b",
+      "visible": true,
+      "deleted": false,
+      "title": "Puskin House",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 3.414e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.16,
+          "scale": 4.695202e-08
+        }
+      },
+      "lat": 47.03182084385972,
+      "lng": 28.83669509182937,
+      "gltf_file_id": "1a043cd95112ecb15b0a68f6a6de2de2.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5df1f468323c7d0016a4b03c",
+      "visible": true,
+      "deleted": false,
+      "title": "JD_vokzal",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 6.27116e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.83,
+          "scale": 5.13414e-08
+        }
+      },
+      "lat": 47.01268467114363,
+      "lng": 28.86007284469548,
+      "gltf_file_id": "9364344ff603878bbf9c89c071dd534a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5e43ea2a323c7d0016a4b03d",
+      "visible": true,
+      "deleted": false,
+      "title": "teatr",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.2119917e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -2.37,
+          "scale": 8.944499999999999e-08
+        }
+      },
+      "lat": 47.0277484266623,
+      "lng": 28.829911079694597,
+      "gltf_file_id": "abf86a26ab79ff3e6f2ec3bcafb2b32a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5e553cc14edbca0017e0417a",
+      "visible": true,
+      "deleted": false,
+      "title": "Rudi1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.5486e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.16,
+          "scale": 3.1649700000000006e-08
+        }
+      },
+      "lat": 48.34566519957352,
+      "lng": 27.89096810255819,
+      "gltf_file_id": "5082b7148431c6fb1a463f2efeb8b387.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5e553e4e9bcecd00184be459",
+      "visible": true,
+      "deleted": false,
+      "title": "Rudi2",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.7323e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.76,
+          "scale": 3.02168e-08
+        }
+      },
+      "lat": 48.345426591172924,
+      "lng": 27.89037770115712,
+      "gltf_file_id": "f660e0af196aa966c8260686f690f4e0.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5e5546049bcecd00184be45a",
+      "visible": true,
+      "deleted": false,
+      "title": "Teodorovici",
+      "viewport": {
+        "ambient_light": 0.433,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -1.42468e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 2.42,
+          "scale": 6.7827e-09
+        }
+      },
+      "lat": 47.018252379555975,
+      "lng": 28.822386218226683,
+      "gltf_file_id": "463e1c292cc36c0fb9e64708162a1f53.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5e8c83d1f4814b0018a43460",
+      "visible": true,
+      "deleted": false,
+      "title": "Filarmony",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -9.2914e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -2.33,
+          "scale": 4.98504e-08
+        }
+      },
+      "lat": 47.02311368694825,
+      "lng": 28.839356631235063,
+      "gltf_file_id": "808dd145f1179d785bfd78d8a1eccd0d.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5e8c850b61022e0016d5cb9a",
+      "visible": true,
+      "deleted": false,
+      "title": "JD Ocnita",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -9.2914e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 3,
+          "scale": 3.9880400000000006e-08
+        }
+      },
+      "lat": 48.40549358806439,
+      "lng": 27.484562872765196,
+      "gltf_file_id": "d14ff99a792e3aa239994522ec098697.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ea7eb1561022e0018caf70e",
+      "visible": true,
+      "deleted": false,
+      "title": "Svecea Blagodareniea",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.285399999999999e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 1.68,
+          "scale": 2.6919200000000002e-08
+        }
+      },
+      "lat": 48.137203424259866,
+      "lng": 28.304800612316427,
+      "gltf_file_id": "6695198115e49f393a08421ff992a2a8.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5eb28a625cb0f1001a314b03",
+      "visible": true,
+      "deleted": false,
+      "title": "Biserica Shila",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.985e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 2.37,
+          "scale": 3.1904299999999995e-08
+        }
+      },
+      "lat": 47.02095892853839,
+      "lng": 28.830313954782753,
+      "gltf_file_id": "e73aa0b35dc1e4a587a0e6f3861acf7b.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ecf8f8237013c0016878764",
+      "visible": true,
+      "deleted": false,
+      "title": "Purcari",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.925200000000004e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 2.7,
+          "scale": 5.57295e-08
+        }
+      },
+      "lat": 46.52972598623725,
+      "lng": 29.87207342943603,
+      "gltf_file_id": "a7f883fcdf8868526ceab691d72b2ac0.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5eda02b816e75e0016f8f137",
+      "visible": true,
+      "deleted": false,
+      "title": "Mimi",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -2.5e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.36,
+          "scale": 3.28863e-08
+        }
+      },
+      "lat": 46.892189489210836,
+      "lng": 29.29210863900437,
+      "gltf_file_id": "addd210696656da8309a947e08857f97.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5edf527d16e75e0016f8f138",
+      "visible": true,
+      "deleted": false,
+      "title": "Cricova4",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.8355e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.38,
+          "scale": 3.989230000000001e-08
+        }
+      },
+      "lat": 47.14890743048218,
+      "lng": 28.858638003046195,
+      "gltf_file_id": "bb1d2f2be8531d4e61a3234a0c9c7017.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5edf53385113420016712938",
+      "visible": true,
+      "deleted": false,
+      "title": "Cricova3",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 4.8355e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 2.35,
+          "scale": 2.3292300000000007e-08
+        }
+      },
+      "lat": 47.148275097401296,
+      "lng": 28.86076389830052,
+      "gltf_file_id": "43b9700f9ea90a2e5a2aad6063d54cd3.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5edf53ec5113420016712939",
+      "visible": true,
+      "deleted": false,
+      "title": "Cricova2",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.0355e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 2.32,
+          "scale": 3.02721e-08
+        }
+      },
+      "lat": 47.14808143728695,
+      "lng": 28.861487818758803,
+      "gltf_file_id": "61dfc7fb1eacce3008676f6ff29108f2.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5edf55d316e75e0016f8f139",
+      "visible": true,
+      "deleted": false,
+      "title": "Cricova1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.0355e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.6,
+          "scale": 3.02721e-08
+        }
+      },
+      "lat": 47.148533090005486,
+      "lng": 28.86034029712326,
+      "gltf_file_id": "db0358d2f9abc9985ca412094a867f6a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ee3a86e16e75e0016f8f13a",
+      "visible": true,
+      "deleted": false,
+      "title": "Milestii Mici1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -2.29551e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.01,
+          "scale": 9.5761e-09
+        }
+      },
+      "lat": 46.92121520924994,
+      "lng": 28.819922670897114,
+      "gltf_file_id": "0cc236c021f7c574032a9c8fae307e91.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ee3aa4016e75e0016f8f13b",
+      "visible": true,
+      "deleted": false,
+      "title": "Milestii Mici f1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -4e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -2.52,
+          "scale": 1.52342e-08
+        }
+      },
+      "lat": 46.92137978132229,
+      "lng": 28.81983854267,
+      "gltf_file_id": "5e03c047ebf0760d18e1296c8c345c4e.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ee3aafa511342001671293a",
+      "visible": true,
+      "deleted": false,
+      "title": "Milestii Mici f2",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -4e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -2.52,
+          "scale": 1.52342e-08
+        }
+      },
+      "lat": 46.92117951664207,
+      "lng": 28.820013260881836,
+      "gltf_file_id": "5e03c047ebf0760d18e1296c8c345c4e.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ee3e789511342001671293e",
+      "visible": true,
+      "deleted": false,
+      "title": "Milestii Mici3",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -9.2953e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.65,
+          "scale": 8.97488e-08
+        }
+      },
+      "lat": 46.920602430156805,
+      "lng": 28.82058907228344,
+      "gltf_file_id": "277007236109671ace0ae855d0bfd7e8.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ee9d41016e75e0016f8f140",
+      "visible": true,
+      "deleted": false,
+      "title": "Chateau Vartelly1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -1.4955100000000001e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.34,
+          "scale": 1.11665e-07
+        }
+      },
+      "lat": 47.38029005997441,
+      "lng": 28.833786190531953,
+      "gltf_file_id": "47ef2a9ce3e327aab6011b2cbdb4fd2d.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ee9fd55511342001671293f",
+      "visible": true,
+      "deleted": false,
+      "title": "Chateau Vartelly",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.77999e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 1.22,
+          "scale": 3.1904299999999995e-08
+        }
+      },
+      "lat": 47.38065172550489,
+      "lng": 28.834389740395352,
+      "gltf_file_id": "e48c6653d341ed6e8258f3e0e2e56c7e.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ef249c016e75e0014a10a25",
+      "visible": true,
+      "deleted": false,
+      "title": "Asconi Winery2",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -2.185e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1,
+          "scale": 3.49073e-08
+        }
+      },
+      "lat": 46.839632079608776,
+      "lng": 29.025169263178043,
+      "gltf_file_id": "3321da02ce2f6e377546e537f9a764e3.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ef24c2216e75e0014a10a26",
+      "visible": true,
+      "deleted": false,
+      "title": "Asconi Winery3",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -1.999e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.64,
+          "scale": 2.09972e-08
+        }
+      },
+      "lat": 46.84006981132353,
+      "lng": 29.02633997121106,
+      "gltf_file_id": "377aa66f4de11e9cc78f914b62e800d0.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ef24e1616e75e0014a10a27",
+      "visible": true,
+      "deleted": false,
+      "title": "Asconi Winery4",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -5.953e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.35,
+          "scale": 8.9071e-09
+        }
+      },
+      "lat": 46.83962044018179,
+      "lng": 29.025757321167106,
+      "gltf_file_id": "27ac29c02de9efcdf38b39ba8ab0486e.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5ef253d816e75e0014a10a28",
+      "visible": true,
+      "deleted": false,
+      "title": "Asconi Winery1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -3.999e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.59,
+          "scale": 1.7989200000000004e-08
+        }
+      },
+      "lat": 46.839741932297585,
+      "lng": 29.02546506993309,
+      "gltf_file_id": "f376a6a225417fc7080a2b99e76ffacc.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5efe2a2c69c1250015d6eb90",
+      "visible": true,
+      "deleted": false,
+      "title": "Poiana1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -1.08056e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.3,
+          "scale": 1.14071e-08
+        }
+      },
+      "lat": 47.05544937722024,
+      "lng": 28.5127665777799,
+      "gltf_file_id": "4798521cf4734ab1a2b34721a7f85378.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5efe2ba28a9fc30015b1d00e",
+      "visible": true,
+      "deleted": false,
+      "title": "Poiana2",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -4.925200000000004e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 1.85,
+          "scale": 3.98833e-08
+        }
+      },
+      "lat": 47.055557319271685,
+      "lng": 28.51311411773412,
+      "gltf_file_id": "b44e8b84bbd2021fddc427f047161ba1.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f0893b069c1250015d6eb92",
+      "visible": true,
+      "deleted": false,
+      "title": "Et Cetera1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.985e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.86,
+          "scale": 1.046919e-07
+        }
+      },
+      "lat": 46.45324207466399,
+      "lng": 29.92383768014392,
+      "gltf_file_id": "24ea95cfbbaaa627f87b4dd33611e8db.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f08954969c1250015d6eb93",
+      "visible": true,
+      "deleted": false,
+      "title": "Et Cetera2",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -2.1925200000000004e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.72,
+          "scale": 3.18833e-08
+        }
+      },
+      "lat": 46.453481928092856,
+      "lng": 29.924330127475884,
+      "gltf_file_id": "2b2201d629e44546826f4d5abd380db1.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f08bcb269c1250015d6eb94",
+      "visible": true,
+      "deleted": false,
+      "title": "Et Cetera3",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -4.985e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.81,
+          "scale": 1e-07
+        }
+      },
+      "lat": 46.45338411901429,
+      "lng": 29.924127031598147,
+      "gltf_file_id": "28fd290709d92c19e856be7eb20b592b.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f08c01f69c1250015d6eb95",
+      "visible": true,
+      "deleted": false,
+      "title": "Et Cetera4",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -4.985e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.68,
+          "scale": 1e-07
+        }
+      },
+      "lat": 46.453319736147364,
+      "lng": 29.92357946882703,
+      "gltf_file_id": "53acfeffeacdd0182548345ba57b160b.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f1ec65469c1250015d6eb96",
+      "visible": true,
+      "deleted": false,
+      "title": "ManucBey ",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -1.0005200000000004e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.4,
+          "scale": 4.708940000000001e-08
+        }
+      },
+      "lat": 46.82566196747649,
+      "lng": 28.5820778396793,
+      "gltf_file_id": "cbe3ba9514344668a45f196fe2d0fb94.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f1ee45e69c1250015d6eb97",
+      "visible": true,
+      "deleted": false,
+      "title": "Punctul geodezic ",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 4.8355e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 1.09,
+          "scale": 1.39671e-08
+        }
+      },
+      "lat": 48.31878085291686,
+      "lng": 27.87641546339566,
+      "gltf_file_id": "25727cb5885764bec4db3eaa8113a643.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f2161518a9fc30015b1d00f",
+      "visible": true,
+      "deleted": false,
+      "title": "VodonapornayaDrochia",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 4.955100000000001e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.75,
+          "scale": 3.18744e-08
+        }
+      },
+      "lat": 48.03167102421892,
+      "lng": 27.809061385073903,
+      "gltf_file_id": "30d33bb3fab7b0d69d8137344125f9dc.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f44b3ab69c12500170bc942",
+      "visible": true,
+      "deleted": false,
+      "title": "ConaculBoieruluiPommer",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1.85e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.58,
+          "scale": 1.05983e-07
+        }
+      },
+      "lat": 48.2079414473059,
+      "lng": 27.67386851794427,
+      "gltf_file_id": "8c9672178a2d389a64a536b341ce425a.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f44cef569c12500170bc943",
+      "visible": true,
+      "deleted": false,
+      "title": "MoaradevantBesalma",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 4.8953e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -2.92,
+          "scale": 1.7946199999999998e-08
+        }
+      },
+      "lat": 46.16476409567116,
+      "lng": 28.651954150301975,
+      "gltf_file_id": "ef9edf26c9a5a96658c2ab7198edaf48.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f4641f269c12500170bc944",
+      "visible": true,
+      "deleted": false,
+      "title": "ConaculBalioz",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -4.985e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.04,
+          "scale": 5.884450000000001e-08
+        }
+      },
+      "lat": 47.28576038860845,
+      "lng": 28.857601173160646,
+      "gltf_file_id": "3d6639c88c501040fa1d07b46f8ded71.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f4659ce69c12500170bc945",
+      "visible": true,
+      "deleted": false,
+      "title": "ConaculCazimir",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -1.4955100000000001e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 1.4,
+          "scale": 2.59163e-08
+        }
+      },
+      "lat": 48.316543034870506,
+      "lng": 27.5618444565402,
+      "gltf_file_id": "616275cb6809ed0535b45fbfc1c9e31f.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f5f7e4ba82dfa00178c7845",
+      "visible": true,
+      "deleted": false,
+      "title": "CasaMuzeulAlexandruDonici",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 2.00000000004e-12,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.34,
+          "scale": 1.0393380000000001e-07
+        }
+      },
+      "lat": 47.28929063015667,
+      "lng": 28.671125701906192,
+      "gltf_file_id": "6c00fc3296c45d593efd29fb96863fb8.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f6dfba5a317a3001710a56d",
+      "visible": true,
+      "deleted": false,
+      "title": "Serpeni1",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -9.85e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -2.93,
+          "scale": 2.6919200000000002e-08
+        }
+      },
+      "lat": 47.03237531504962,
+      "lng": 29.352726377133052,
+      "gltf_file_id": "5d01b31dd14e3337a7ac341caad09175.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f6dfc87a82dfa00178c7846",
+      "visible": true,
+      "deleted": false,
+      "title": "Serpeni2",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -9.85e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.37,
+          "scale": 9.09996e-08
+        }
+      },
+      "lat": 47.03295407096141,
+      "lng": 29.352543632881947,
+      "gltf_file_id": "f15a61b6816c2cf5ef166e725ff55014.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f6dfd33a82dfa00178c7847",
+      "visible": true,
+      "deleted": false,
+      "title": "Serpeni3",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -2.4925200000000004e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.02,
+          "scale": 8.873380000000001e-08
+        }
+      },
+      "lat": 47.032569541345964,
+      "lng": 29.35262396253907,
+      "gltf_file_id": "2c617c4570d36c7a05719a6263939ffd.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f6dff51a317a3001710a56e",
+      "visible": true,
+      "deleted": false,
+      "title": "Serpeni4",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -4.985e-08,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.32,
+          "scale": 5.89415e-08
+        }
+      },
+      "lat": 47.032779616098566,
+      "lng": 29.353202724651794,
+      "gltf_file_id": "b8d30a7c0914ad7e022fb52c1012fb77.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f6e00b5a82dfa00178c7848",
+      "visible": true,
+      "deleted": false,
+      "title": "Serpeni5",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": -9.85e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.24,
+          "scale": 4.985e-09
+        }
+      },
+      "lat": 47.032670446880104,
+      "lng": 29.352632123942925,
+      "gltf_file_id": "2ec3a387f24dda6b8612f8e9547ba09d.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f9af78da82dfa001568f67b",
+      "visible": true,
+      "deleted": false,
+      "title": "ManastireaCapriana",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 7.55100000000001e-09,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -1.08,
+          "scale": 3.8833e-08
+        }
+      },
+      "lat": 47.11578857315692,
+      "lng": 28.51156396776213,
+      "gltf_file_id": "025eee8b8f6fba646fd291e426b22332.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "5f9be687a82dfa001568f67c",
+      "visible": true,
+      "deleted": false,
+      "title": "Stantia",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 5.7e-07,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.67,
+          "scale": 5.302852e-07
+        }
+      },
+      "lat": 47.27797853330162,
+      "lng": 29.12357980616187,
+      "gltf_file_id": "a84e68d49c54e6e1a8b93709ecb4e8cf.gltf",
+      "year": 0,
+      "info": null
+    },
+    {
+      "object_id": "",
+      "id": "61cb31d742e85f00183c2bc1",
+      "visible": true,
+      "deleted": false,
+      "title": "Zm1",
+      "viewport": {
+        "ambient_light": 0.7,
+        "rendering_mode": "3d",
+        "transform": {
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": -0.01,
+          "scale": 2.7881e-09
+        }
+      },
+      "lat": 47.01040603830313,
+      "lng": 28.835300553570647,
+      "gltf_file_id": "e60db2d4aa5e36b5372fa7f78e95b4ef.gltf",
+      "year": 0,
+      "info": {
+        "title": {
+          "ru": "",
+          "ro": ""
+        },
+        "description": null
+      }
+    },
+    {
+      "object_id": "",
+      "id": "61e5841ffd549000173e486a",
+      "visible": true,
+      "deleted": false,
+      "title": "VodapornayaChisinauNew",
+      "viewport": {
+        "ambient_light": 0.5,
+        "rendering_mode": "3d",
+        "transform": {
+          "translate_z": 1e-10,
+          "rotate_x": 1.5707963267948966,
+          "rotate_y": 0.8,
+          "scale": 5.7858e-08
+        }
+      },
+      "lat": 47.0193415672685,
+      "lng": 28.822438452633605,
+      "gltf_file_id": "7e92997fccabee54e2da06a2ab3c048a.gltf",
+      "year": 0,
+      "info": {
+        "title": {
+          "ru": "",
+          "ro": ""
+        },
+        "description": null
+      }
+    }
+  ],
+  "assets": [
+    {
+      "file": "025eee8b8f6fba646fd291e426b22332.gltf",
+      "bytes": 1411172,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "00c47cde11bededfd2bcafbbbfb865039175e0ca7c323b149e126e1f1002460b"
+    },
+    {
+      "file": "05c9abf5e32af7c89a5eb5e971f91751.gltf",
+      "bytes": 999620,
+      "asset": {
+        "copyright": "(C)2019 User",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "e76fc20d9495c8d34c7a61d6e9c655600de20ecd719f8f097447e055f2e5ef70"
+    },
+    {
+      "file": "0cc236c021f7c574032a9c8fae307e91.gltf",
+      "bytes": 391596,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "979dfa954827f47ddaf50f630936cdabb9a7e59d7e12a23e3bf8cb22fe590dca"
+    },
+    {
+      "file": "1156ed8c7999073e96feb591342f5a5a.gltf",
+      "bytes": 205420,
+      "asset": {
+        "copyright": "(C)2019 User",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "0f45ed3df535979b80fb853094c1038e41e09ffe6e9317d4d4bd888d7b902c44"
+    },
+    {
+      "file": "1482e22a6c64050aa3d1b04cc7221f73.gltf",
+      "bytes": 1172252,
+      "asset": {
+        "copyright": "(C)2019 �������",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "2ff6060dca5cffdb6ebba9ea0caa105ea077e085867fb5babe30a31c876ba867"
+    },
+    {
+      "file": "14b0286dfc7288c753e380c2dd4e2c0b.gltf",
+      "bytes": 760616,
+      "asset": {
+        "copyright": "(C)2019 User",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 56,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "ab640b0451275f22ddefded96e29c62cd2e9c292ff704da3037924ccd12e9a5e"
+    },
+    {
+      "file": "15676fca1af533d9e57c243889ac3108.gltf",
+      "bytes": 741384,
+      "asset": {
+        "copyright": "(C)2019 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "dc0b6b2274443b8eb0d1782aef31590408395abf9244773ea6094721c64a2633"
+    },
+    {
+      "file": "1a043cd95112ecb15b0a68f6a6de2de2.gltf",
+      "bytes": 115716,
+      "asset": {
+        "copyright": "(C)2019 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "22aadbc4b7655951cccf11dab85c7876f0ed69145bd1dea834e4fe31b3b224ff"
+    },
+    {
+      "file": "1ed6cbf0c1731c002770c996412b102c.gltf",
+      "bytes": 128460,
+      "asset": {
+        "copyright": "(C)2019 Andrei",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "f3e520e260b2764288525ae8b8866fb82b10785a755197e44c017a483cb42ac0"
+    },
+    {
+      "file": "216a7569a12dc6cbee2db9bebee2c9a2.gltf",
+      "bytes": 287556,
+      "asset": {
+        "copyright": "(C)2019 User",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 2,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "bfa9145af0d9fcd90d75434ec9558c65ce006b950785a95b5030fa7faab55fff"
+    },
+    {
+      "file": "238114fe1e46af4670f5800c2978b586.gltf",
+      "bytes": 289236,
+      "asset": {
+        "copyright": "(C)2019 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "54020949168f0eee3b6898057604534c647aefb2b21cf1dc9d1d2811b0a7b62a"
+    },
+    {
+      "file": "24ea95cfbbaaa627f87b4dd33611e8db.gltf",
+      "bytes": 629244,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 2,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "e07f03a7b4e49f882f1203541ad6ac81147d1dcbd443eda3cbedc5f33d28ed2b"
+    },
+    {
+      "file": "25727cb5885764bec4db3eaa8113a643.gltf",
+      "bytes": 126684,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "d85d4f7335dac0a2ba5866a5455334309c2965dba11c6919012f49fb6ed6ccfd"
+    },
+    {
+      "file": "277007236109671ace0ae855d0bfd7e8.gltf",
+      "bytes": 54420,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "555ec47b70c528ff25d6c80057faee4566d7a557680de67a4776a357299d6ebe"
+    },
+    {
+      "file": "27ac29c02de9efcdf38b39ba8ab0486e.gltf",
+      "bytes": 106292,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "8a9920ea5bf479d1cb5fe2d3650539a1e310b4f344dc26c13425481173494da7"
+    },
+    {
+      "file": "28fd290709d92c19e856be7eb20b592b.gltf",
+      "bytes": 13060,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "ec2a5e6f7ffe20187e9cb0d223646d492ebfa96b51d7bb89b499eb8e88f963d9"
+    },
+    {
+      "file": "2b2201d629e44546826f4d5abd380db1.gltf",
+      "bytes": 67252,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "84e53a7d2bcc18c5db77062c331e3712e812d0256547462a01a10fa4a7c7a2dd"
+    },
+    {
+      "file": "2c617c4570d36c7a05719a6263939ffd.gltf",
+      "bytes": 101880,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "e8eb0ef3ef0875b2075dfbd4f964c204de576bd67336efad196e166fefe74010"
+    },
+    {
+      "file": "2ec3a387f24dda6b8612f8e9547ba09d.gltf",
+      "bytes": 294264,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "3f1f7741cbdfd73b56a8947452900718d7aba1033c00f6034d83c78d9e16b54e"
+    },
+    {
+      "file": "30d33bb3fab7b0d69d8137344125f9dc.gltf",
+      "bytes": 179868,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "1181376a83ac45271bb80848e27939b5a04146046ef158a5f4afabb4b8f3e488"
+    },
+    {
+      "file": "3146f290163fb7892f9ca04d3328afe5.gltf",
+      "bytes": 1031120,
+      "asset": {
+        "copyright": "(C)2019 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "23e9e57f3c47994934839dfb42742ae20396acebcba8eadd9850ba00d22a871c"
+    },
+    {
+      "file": "3321da02ce2f6e377546e537f9a764e3.gltf",
+      "bytes": 16792,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "81f7e8a431df18a6b54610184b05ecbf538c94d2fe36268106e0a8f7eb649bc6"
+    },
+    {
+      "file": "377aa66f4de11e9cc78f914b62e800d0.gltf",
+      "bytes": 717512,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "81fdaa310f60eb2451da90bbdb2c59f806f14a61b4bf735f48060766f6afc247"
+    },
+    {
+      "file": "3ae73124805b9123f145cb22399d4ad4.gltf",
+      "bytes": 259732,
+      "asset": {
+        "copyright": "(C)2019 User",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "5e97b03013a3fdcbe0a97deeaf41dded58d502c685788598dd22971e6d5dfec4"
+    },
+    {
+      "file": "3d6639c88c501040fa1d07b46f8ded71.gltf",
+      "bytes": 371048,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "0809e36a9767016a75126bbc8f85feea4239821511473e0eae2a339fd5f8fbf7"
+    },
+    {
+      "file": "3d986e224ccebf9a0831a79092a1347d.gltf",
+      "bytes": 169896,
+      "asset": {
+        "copyright": "(C)2019 �������",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "17cbde8758d7e17a1e6945b183f77008debdb908a35838a784043805c1a8bf69"
+    },
+    {
+      "file": "43b9700f9ea90a2e5a2aad6063d54cd3.gltf",
+      "bytes": 44416,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "9de090d0851729d6b318025b1a297964b5040a13bbfff33bca5f1d5b1097f329"
+    },
+    {
+      "file": "4600dfd356225c2bc2de512e4aa2206a.gltf",
+      "bytes": 532272,
+      "asset": {
+        "copyright": "(C)2019 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "f7ed9e87e9e7aa5f85ad0fa4c2bceb20f17244dab867e7806e17347419a040d9"
+    },
+    {
+      "file": "463e1c292cc36c0fb9e64708162a1f53.gltf",
+      "bytes": 670288,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "a18027ad85f6fa317cf30b97c1156f920afcbdfa7fc35090cb5bea4036592753"
+    },
+    {
+      "file": "4798521cf4734ab1a2b34721a7f85378.gltf",
+      "bytes": 117956,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "55674ec23c6d6dcd8001535c2ec97a0c984d0f084d98e1fe82df2283b47d19e9"
+    },
+    {
+      "file": "47ef2a9ce3e327aab6011b2cbdb4fd2d.gltf",
+      "bytes": 53928,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "73b695549df4e8b9eeec035d409624117501ef96d8e1a7c6bbcbf45e2cd99324"
+    },
+    {
+      "file": "5082b7148431c6fb1a463f2efeb8b387.gltf",
+      "bytes": 180908,
+      "asset": {
+        "copyright": "(C)2019 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "5b423b09eb2d0df17c9d6749d18f9531d2ff10c2fa712a5d1214ccf41bd623b5"
+    },
+    {
+      "file": "53acfeffeacdd0182548345ba57b160b.gltf",
+      "bytes": 12348,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "b89f4e1fd88fc6f1ee7c9ceba7a8492fe77f9c07564e55fb80a5ca0a66518071"
+    },
+    {
+      "file": "5d01b31dd14e3337a7ac341caad09175.gltf",
+      "bytes": 78640,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "d7eca67041256afdec895fd3f3feec7508a8362239f6f1b934fa32fb1992e12b"
+    },
+    {
+      "file": "5e03c047ebf0760d18e1296c8c345c4e.gltf",
+      "bytes": 145388,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "58dad597959f60004c8461176ff208ad0f629ac3a64ac4ddc386c3b11dbab3dc"
+    },
+    {
+      "file": "616275cb6809ed0535b45fbfc1c9e31f.gltf",
+      "bytes": 321748,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "e5b51f240f972d0ac45e431b370b8639388eabe9a2b848ba01cc6ce3097e285a"
+    },
+    {
+      "file": "61dfc7fb1eacce3008676f6ff29108f2.gltf",
+      "bytes": 150052,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "aa3e2dc0801fa5bb189aa3953908621cc76d3a4ac76fcf47bd3014a6e219c0ff"
+    },
+    {
+      "file": "6695198115e49f393a08421ff992a2a8.gltf",
+      "bytes": 213680,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "3bd87c9d6890d0487e30369a11ec43bce2d9ed8db0bf8fcae61b81b26ffc1a04"
+    },
+    {
+      "file": "6c00fc3296c45d593efd29fb96863fb8.gltf",
+      "bytes": 409236,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "cb963a3ed91fd830075297c5f39ca9d8d983142fbd8330f89cca5464f70fb309"
+    },
+    {
+      "file": "740ae03b5a9e067ac6cf38242d3629b5.gltf",
+      "bytes": 9406332,
+      "asset": {
+        "copyright": "(C)2019 User",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "56e6186aead1cabdaf6170f4624fd7791f1c7a7f2eab480071cb263752768450"
+    },
+    {
+      "file": "776f5f596b44deeb739195f464c24542.gltf",
+      "bytes": 1054444,
+      "asset": {
+        "copyright": "(C)2019 Andrei",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "56057de45a1bc4b6bb8151fe480849fcd71fa51b79972e73e6a7304ac8f3f99e"
+    },
+    {
+      "file": "7d53ad846bf4ae305c8b1147ec6ed5d7.gltf",
+      "bytes": 198092,
+      "asset": {
+        "copyright": "(C)2019 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "5e1ffab987064a49f56d7afa185e1183ac9ce2085b5362691287344df76da744"
+    },
+    {
+      "file": "7e92997fccabee54e2da06a2ab3c048a.gltf",
+      "bytes": 920180,
+      "asset": {
+        "generator": "Khronos glTF Blender I/O v1.7.33",
+        "version": "2.0"
+      },
+      "meshes": 14,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "9ae5c9459bfd279a59fb9b8b8742bceebb02bd545010d53d19bf8619bb499630"
+    },
+    {
+      "file": "808dd145f1179d785bfd78d8a1eccd0d.gltf",
+      "bytes": 626380,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "290877c56d3cecc476ba07b22aeb2fee1a846576a2917d32414e98908b5883da"
+    },
+    {
+      "file": "82da3ac80160312249b4466ff22bf7f7.gltf",
+      "bytes": 421652,
+      "asset": {
+        "copyright": "(C)2019 Andrei",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "322680920570ac066bd5d3bfebc1f671e6e2e51cba7ae2d9f869b3138a19e3a0"
+    },
+    {
+      "file": "8449fe59629808bec77dcbaacf149404.gltf",
+      "bytes": 784268,
+      "asset": {
+        "copyright": "(C)2019 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "39edfd091574339d10de810a567fab78daa4b7a041a6d41479674b28b7309f18"
+    },
+    {
+      "file": "8c9672178a2d389a64a536b341ce425a.gltf",
+      "bytes": 594920,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "8033e9c8dfc7375c4fe81ab2a806c04c0e59c927b0fd398988fecd9cbc09c1db"
+    },
+    {
+      "file": "8cd8cd6b45bba498b492bd698dfb9555.gltf",
+      "bytes": 777808,
+      "asset": {
+        "copyright": "(C)2019 Andrei",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "242f615ba3863c5679fcfc8a5ededd2353b41941b1905a74779c970d56080c01"
+    },
+    {
+      "file": "910bf296beabdeda350ce311bfde569a.gltf",
+      "bytes": 10533704,
+      "asset": {
+        "copyright": "(C)2019 �������",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "6ef3e2781037e0825042faa876ca192ab3344b942943fa024f502594eabf90b8"
+    },
+    {
+      "file": "9364344ff603878bbf9c89c071dd534a.gltf",
+      "bytes": 356408,
+      "asset": {
+        "copyright": "(C)2019 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "aac55ca91f5d83a8ba06fc09357d0eed89f9d3557de64bf80ae7d1605b506f0c"
+    },
+    {
+      "file": "94d4bcdc80311b29e94cf66ee04b49a8.gltf",
+      "bytes": 437516,
+      "asset": {
+        "copyright": "(C)2019 User",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "6fdef24599ad916dcd3e761a1b701d12e8ca89bbd5eb33efc558f150b7199108"
+    },
+    {
+      "file": "9d1b2a7a7249ba5b188f11a3edb2f94d.gltf",
+      "bytes": 991248,
+      "asset": {
+        "copyright": "(C)2019 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "7b3a0b68250110fc99e3fc97a1bd7f9ab756f08048dec3fa20a959a58c945fec"
+    },
+    {
+      "file": "a2eabd41afbf6faa8aa8c056aeef3a0a.gltf",
+      "bytes": 448224,
+      "asset": {
+        "copyright": "(C)2019 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "d64131e9f79ad831a77e317c2857dc5a84063d46886bca68595740d2e7ddc95e"
+    },
+    {
+      "file": "a7f883fcdf8868526ceab691d72b2ac0.gltf",
+      "bytes": 239596,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "cbd6740f098d773f0f69080e7bdc5a0993ac45c7ab59e52182e3301e2ab4cd8b"
+    },
+    {
+      "file": "a84e68d49c54e6e1a8b93709ecb4e8cf.gltf",
+      "bytes": 933188,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "cc24e7cf11c2d745a33c2d25e93e1814bae674e94faf32d87e70516b74d7b841"
+    },
+    {
+      "file": "aa4a4516f7e40d23eb14253dc9fbb126.gltf",
+      "bytes": 751252,
+      "asset": {
+        "copyright": "(C)2019 User",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "3cb0474be29e3b111bbaab77efae9f21b3ebdb418457fd21445a744f92f3e765"
+    },
+    {
+      "file": "addd210696656da8309a947e08857f97.gltf",
+      "bytes": 695468,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "a28c126d9b76e83d56ff51b3e8e506add0c434efbe1b5d12188f0ba2e18bd1b3"
+    },
+    {
+      "file": "b30c83a93be0004148439dd4f2fdcd90.gltf",
+      "bytes": 34284,
+      "asset": {
+        "copyright": "(C)2019 �������",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "50852f1e761e1b51c0af1e56d94844f73762380a5467a3c4586c3385babb58bc"
+    },
+    {
+      "file": "b44e8b84bbd2021fddc427f047161ba1.gltf",
+      "bytes": 150456,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "9c971947f410ce5af44afefc919f80b8b843f24c27dfa8d95f541e78c316ed56"
+    },
+    {
+      "file": "b8d30a7c0914ad7e022fb52c1012fb77.gltf",
+      "bytes": 39388,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "cce7351d26e61fda4f4d8ced21e99875fd0b8ffc50bad9caf9ad8435943a4564"
+    },
+    {
+      "file": "bb1d2f2be8531d4e61a3234a0c9c7017.gltf",
+      "bytes": 31520,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "490a91decc9ec2de00b9fc361e3272b79f4d9f1f5eb9540a842b24bb6f678ebd"
+    },
+    {
+      "file": "c394ce1c953f06562e9758966688526b.gltf",
+      "bytes": 384600,
+      "asset": {
+        "copyright": "(C)2019 Alexei",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "d8a57cad63061e8785af2b596acd8b28710865c76c194d2492bf679ac5634b5e"
+    },
+    {
+      "file": "cbe3ba9514344668a45f196fe2d0fb94.gltf",
+      "bytes": 933152,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "79fd73b0be2d6e334e6c2ddb86dd2927348b383f4b66291cf851d235a66a73ba"
+    },
+    {
+      "file": "d14ff99a792e3aa239994522ec098697.gltf",
+      "bytes": 686584,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "5cfc569c0f55402988d1bf77b93f0870e39c11ecf148b141612fdc13193771b0"
+    },
+    {
+      "file": "d4f4f5fbfcf4ae872394ba25b3530a8c.gltf",
+      "bytes": 328820,
+      "asset": {
+        "copyright": "(C)2019 Andrei",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "fa451ad90d345e9cc35c2a8f0bf0ccdd7a42edfb3ba3a6d8539d65e1c08ae8da"
+    },
+    {
+      "file": "db0358d2f9abc9985ca412094a867f6a.gltf",
+      "bytes": 236436,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "cb1788a041bae2d3532ac20b3f4fbbd32bed1ee98d419366919f352dedfc1ee7"
+    },
+    {
+      "file": "ddebe52b0fd02a6217b239a81047d13a.gltf",
+      "bytes": 819900,
+      "asset": {
+        "copyright": "(C)2019 �������",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "07949a6073b8df894bdfb211673fcf3fbceb600c678b83fa03b49329d97effc2"
+    },
+    {
+      "file": "e2a976006212fd93ea2f7222d9ed3948.gltf",
+      "bytes": 5097196,
+      "asset": {
+        "copyright": "(C)2019 �������",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "b6545a93f4529f727d966c45acf4a6346d94c0053df1cbeb1f494272e3093f4b"
+    },
+    {
+      "file": "e48c6653d341ed6e8258f3e0e2e56c7e.gltf",
+      "bytes": 162344,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "9d24b24a3601484390580a251ee7a5dde81468a7124923f7870ad047728848cd"
+    },
+    {
+      "file": "e57dba1b9bbdbeafb8204060f949dc74.gltf",
+      "bytes": 620660,
+      "asset": {
+        "copyright": "(C)2019 Andrei",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "a5c87eec7947d773801edc397f9937c3af3a454a19fbabc1c79702297f03a755"
+    },
+    {
+      "file": "e60db2d4aa5e36b5372fa7f78e95b4ef.gltf",
+      "bytes": 1254776,
+      "asset": {
+        "copyright": "(C)2021 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "cb871dd6374abe3772f8dc45aa0f2655ad2075b1ec38a4db2b34d522cb3c8a80"
+    },
+    {
+      "file": "e62f83bddfa2b684b27db86cd1435aef.gltf",
+      "bytes": 551288,
+      "asset": {
+        "copyright": "(C)2019 Andrei",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "d0d468ece10611b3cbc45fd4536032c36efcfde8a67fb5a02bc1113323f543c8"
+    },
+    {
+      "file": "e73aa0b35dc1e4a587a0e6f3861acf7b.gltf",
+      "bytes": 386372,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "764fe574dfbaafd1313b6b16bfaeacf4327f9ad22dbcf74d3f11d6be414ce045"
+    },
+    {
+      "file": "e997bfb9705d3cce37c110c8e7f99f9d.gltf",
+      "bytes": 1547820,
+      "asset": {
+        "copyright": "(C)2019 Andrei",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "8f5f5d93836271718d403f19d84229c876e80ab7fa5ac614900bebc2fd27cd88"
+    },
+    {
+      "file": "ef9edf26c9a5a96658c2ab7198edaf48.gltf",
+      "bytes": 308912,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "eb5fb0285e8ca1d0c6b1cf1ef3258eeb00c5c7a1f4eefb1d65d73b736b68a011"
+    },
+    {
+      "file": "f15a61b6816c2cf5ef166e725ff55014.gltf",
+      "bytes": 206588,
+      "asset": {
+        "copyright": "(C)2020 IT-Department",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "2afbead2196be23c820a041e1f890c3722e6128ef702c3cada439f3b6d56b0aa"
+    },
+    {
+      "file": "f376a6a225417fc7080a2b99e76ffacc.gltf",
+      "bytes": 210296,
+      "asset": {
+        "copyright": "(C)2020 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "1a549e334507ac651bc1307b4e17507381ca9f557366d41e1dd32f93067221a7"
+    },
+    {
+      "file": "f660e0af196aa966c8260686f690f4e0.gltf",
+      "bytes": 451360,
+      "asset": {
+        "copyright": "(C)2019 roman",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "7aa989816b0c2cec34475f214bbcd380423a16d58cf21e4dc65018dcd2771a8d"
+    },
+    {
+      "file": "fd57642803d4dc05733ef46c9eaf8a07.gltf",
+      "bytes": 1074020,
+      "asset": {
+        "copyright": "(C)2019 �������",
+        "generator": "Maya2glTF V0.9.10 b7c0eed",
+        "version": "2.0"
+      },
+      "meshes": 1,
+      "textures": 0,
+      "extensions": [],
+      "importedGlbSha256": "678d58a549c94eb63a9696265e5a752648f07a4e9b1e3ad721553669c242f1ce"
+    }
+  ],
+  "changes": "Original glTF assets imported with copyright notices intact. Runtime GLBs retain every triangle, reorder vertices, omit unused UVs, and use EXT_meshopt compression with measured positional error under 5 mm. See compression.json for runtime hashes and calibration.json for dimensions.",
+  "runtimePlacements": 79,
+  "runtimeUniqueAssets": 78
+}

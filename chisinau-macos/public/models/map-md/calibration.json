@@ -1,0 +1,1026 @@
+{
+  "source": "OpenStreetMap contributors · ODbL-1.0",
+  "source_url": "https://www.openstreetmap.org/copyright",
+  "retrieved": "2026-09-25",
+  "note": "Mapped dimensions and author scale are estimates, not surveyed dimensions. Some source buildings describe their historical appearance.",
+  "models": [
+    {
+      "index": 0,
+      "title": "fosfor",
+      "size_m": [
+        200.191,
+        21.696,
+        135.605
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        1240421983
+      ]
+    },
+    {
+      "index": 1,
+      "title": "AfganPark",
+      "size_m": [
+        293.732,
+        17.79,
+        218.555
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 2,
+      "title": "Artcor",
+      "size_m": [
+        22.66,
+        9.198,
+        13.719
+      ],
+      "method": "Horizontal bounds matched to w706164927; vertical proportions preserved",
+      "replacements": [
+        706164927
+      ]
+    },
+    {
+      "index": 3,
+      "title": "Scuarul Catedralei",
+      "size_m": [
+        292.402,
+        2.095,
+        336.444
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 4,
+      "title": "Arcul de Triumf",
+      "size_m": [
+        11.376,
+        13.0,
+        11.306
+      ],
+      "method": "Horizontal bounds matched to r20340431; vertical proportions preserved; documented height 13 m (Visit Chișinău)",
+      "replacements": [
+        20340431
+      ]
+    },
+    {
+      "index": 5,
+      "title": "Catedrala Nașterea Domnului",
+      "size_m": [
+        38.39,
+        37.899,
+        38.427
+      ],
+      "method": "Horizontal bounds matched to w25764333; vertical proportions preserved",
+      "replacements": [
+        25764333
+      ]
+    },
+    {
+      "index": 6,
+      "title": "Clopotnița Catedralei",
+      "size_m": [
+        14.102,
+        34.285,
+        14.208
+      ],
+      "method": "Horizontal bounds matched to w549387560; vertical proportions preserved",
+      "replacements": [
+        549387560
+      ]
+    },
+    {
+      "index": 7,
+      "title": "Primăria Chișinău",
+      "size_m": [
+        88.985,
+        34.484,
+        65.84
+      ],
+      "method": "Horizontal bounds matched to w25187121; vertical proportions preserved",
+      "replacements": [
+        25187121
+      ]
+    },
+    {
+      "index": 8,
+      "title": "Porțile Orașului",
+      "size_m": [
+        106.505,
+        61.704,
+        315.714
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        15457843,
+        28776263,
+        78244324,
+        78244325,
+        78244336,
+        1306056243
+      ]
+    },
+    {
+      "index": 9,
+      "title": "Memorialul Eternitate",
+      "size_m": [
+        235.068,
+        29.704,
+        322.039
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        154016954
+      ]
+    },
+    {
+      "index": 10,
+      "title": "Simpals",
+      "size_m": [
+        31.461,
+        43.425,
+        71.975
+      ],
+      "method": "Horizontal bounds matched to w665718158; vertical proportions preserved",
+      "replacements": [
+        665718158
+      ]
+    },
+    {
+      "index": 11,
+      "title": "Parlamentul Republicii Moldova",
+      "size_m": [
+        134.067,
+        38.433,
+        72.573
+      ],
+      "method": "Horizontal bounds matched to r17536997; vertical proportions preserved",
+      "replacements": [
+        17536997
+      ]
+    },
+    {
+      "index": 12,
+      "title": "Președinția Republicii Moldova",
+      "size_m": [
+        43.466,
+        58.951,
+        49.033
+      ],
+      "method": "Central tower 38.4 × 33.4 m (Șlapac & Tabac, Akademos 2/2019, p.139); staircase extends outside tower footprint; cornice height approximately 45 m inferred from published elevation, mast retained; https://ibn.idsi.md/sites/default/files/imag_file/136-146_1.pdf",
+      "replacements": [
+        27616508
+      ]
+    },
+    {
+      "index": 13,
+      "title": "efes1",
+      "size_m": [
+        174.943,
+        48.647,
+        342.414
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        49454516,
+        49454517,
+        49454518,
+        49454519,
+        49454520,
+        1270617240,
+        1270617241,
+        1270617242,
+        1270617243,
+        1270617244
+      ]
+    },
+    {
+      "index": 14,
+      "title": "efes2",
+      "size_m": [
+        139.066,
+        32.409,
+        231.082
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        49454514,
+        49454515,
+        1270617247,
+        1270617248,
+        1270617249,
+        1270617250
+      ]
+    },
+    {
+      "index": 15,
+      "title": "Muzeul de Etnografie și Istorie Naturală",
+      "size_m": [
+        66.807,
+        17.7,
+        34.694
+      ],
+      "method": "Horizontal bounds matched to w27446425; vertical proportions preserved",
+      "replacements": [
+        27446425
+      ]
+    },
+    {
+      "index": 16,
+      "title": "Ștefan cel Mare",
+      "size_m": [
+        13.175,
+        14.464,
+        13.189
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        11730885
+      ]
+    },
+    {
+      "index": 17,
+      "title": "oazis",
+      "size_m": [
+        172.876,
+        21.108,
+        211.598
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        13745096,
+        13745097,
+        13745098,
+        13745101,
+        13745102,
+        13745103
+      ]
+    },
+    {
+      "index": 18,
+      "title": "oazis1",
+      "size_m": [
+        128.371,
+        46.051,
+        117.984
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        13745095,
+        13745096,
+        13745097,
+        13745102,
+        13745103
+      ]
+    },
+    {
+      "index": 19,
+      "title": "cetatea Soroca",
+      "size_m": [
+        55.866,
+        34.652,
+        55.811
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        12593748,
+        12647826,
+        12647827,
+        12647828,
+        12647829,
+        12647830,
+        12647832
+      ]
+    },
+    {
+      "index": 20,
+      "title": "Tank",
+      "size_m": [
+        10.483,
+        11.015,
+        18.122
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 21,
+      "title": "Severnii Vokzal",
+      "size_m": [
+        21.37,
+        32.765,
+        17.517
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 22,
+      "title": "Locomotiv",
+      "size_m": [
+        24.118,
+        6.552,
+        6.956
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 23,
+      "title": "Kolokol",
+      "size_m": [
+        8.553,
+        34.185,
+        10.534
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 24,
+      "title": "Mati",
+      "size_m": [
+        4.294,
+        10.828,
+        3.752
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 25,
+      "title": "Sala cu Orgă",
+      "size_m": [
+        29.344,
+        23.865,
+        60.502
+      ],
+      "method": "Horizontal bounds matched to w25192896; vertical proportions preserved",
+      "replacements": [
+        25192896
+      ]
+    },
+    {
+      "index": 26,
+      "title": "Muzeul Național de Istorie",
+      "size_m": [
+        69.306,
+        24.619,
+        66.227
+      ],
+      "method": "Horizontal bounds matched to w26790058; vertical proportions preserved",
+      "replacements": [
+        26790058
+      ]
+    },
+    {
+      "index": 27,
+      "title": "Suvorov",
+      "size_m": [
+        16.645,
+        19.919,
+        16.066
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 28,
+      "title": "Bender",
+      "size_m": [
+        132.349,
+        27.941,
+        141.274
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        295024430,
+        707336819,
+        707556357,
+        707557292,
+        795727954,
+        795740159,
+        795740160,
+        795750604,
+        795750605,
+        795793027,
+        795793028,
+        795793029,
+        795793030
+      ]
+    },
+    {
+      "index": 30,
+      "title": "Poșta Moldovei",
+      "size_m": [
+        58.383,
+        18.319,
+        57.577
+      ],
+      "method": "Horizontal bounds matched to w25525350; vertical proportions preserved",
+      "replacements": [
+        25525350,
+        96933768
+      ]
+    },
+    {
+      "index": 31,
+      "title": "Fântâna din Grădina Publică",
+      "size_m": [
+        14.293,
+        4.231,
+        11.32
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 32,
+      "title": "Biserica Sfântul Pantelimon",
+      "size_m": [
+        19.832,
+        15.509,
+        19.96
+      ],
+      "method": "Horizontal bounds matched to w75517095; vertical proportions preserved",
+      "replacements": [
+        75517095
+      ]
+    },
+    {
+      "index": 33,
+      "title": "Casa-muzeu Pușkin",
+      "size_m": [
+        24.604,
+        18.447,
+        39.012
+      ],
+      "method": "Horizontal bounds matched to w25850982; vertical proportions preserved",
+      "replacements": [
+        25850982
+      ]
+    },
+    {
+      "index": 34,
+      "title": "Gara Feroviară Chișinău",
+      "size_m": [
+        148.222,
+        35.649,
+        30.691
+      ],
+      "method": "Horizontal bounds matched to w618483373; vertical proportions preserved",
+      "replacements": [
+        618483373
+      ]
+    },
+    {
+      "index": 36,
+      "title": "Rudi1",
+      "size_m": [
+        16.348,
+        21.209,
+        23.746
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 37,
+      "title": "Rudi2",
+      "size_m": [
+        44.329,
+        16.059,
+        23.008
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        312914983,
+        711244770
+      ]
+    },
+    {
+      "index": 38,
+      "title": "Ion și Doina Aldea-Teodorovici",
+      "size_m": [
+        3.582,
+        8.658,
+        2.9
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 39,
+      "title": "Filarmonica Națională",
+      "size_m": [
+        68.458,
+        19.003,
+        43.132
+      ],
+      "method": "Horizontal bounds matched to r14066543; vertical proportions preserved",
+      "replacements": [
+        14066543
+      ]
+    },
+    {
+      "index": 40,
+      "title": "JD Ocnita",
+      "size_m": [
+        58.112,
+        9.322,
+        49.264
+      ],
+      "method": "Horizontal bounds matched to w702123901; vertical proportions preserved",
+      "replacements": [
+        702123901
+      ]
+    },
+    {
+      "index": 41,
+      "title": "Svecea Blagodareniea",
+      "size_m": [
+        18.189,
+        20.908,
+        18.577
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 42,
+      "title": "Biserica Sfânta Teodora de la Sihla",
+      "size_m": [
+        32.912,
+        23.996,
+        24.173
+      ],
+      "method": "Horizontal bounds matched to w135644936; vertical proportions preserved",
+      "replacements": [
+        135644936
+      ]
+    },
+    {
+      "index": 43,
+      "title": "Purcari",
+      "size_m": [
+        103.594,
+        27.239,
+        82.675
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        21209488
+      ]
+    },
+    {
+      "index": 44,
+      "title": "Mimi",
+      "size_m": [
+        138.989,
+        17.787,
+        129.374
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 45,
+      "title": "Cricova4",
+      "size_m": [
+        9.748,
+        6.6,
+        6.66
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 46,
+      "title": "Cricova3",
+      "size_m": [
+        11.699,
+        6.67,
+        2.538
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 47,
+      "title": "Cricova2",
+      "size_m": [
+        19.735,
+        10.182,
+        20.961
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 48,
+      "title": "Cricova1",
+      "size_m": [
+        31.682,
+        13.439,
+        12.393
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 49,
+      "title": "Milestii Mici1",
+      "size_m": [
+        77.983,
+        15.971,
+        31.905
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        980984466,
+        980994721
+      ]
+    },
+    {
+      "index": 50,
+      "title": "Milestii Mici f1",
+      "size_m": [
+        7.421,
+        5.159,
+        7.421
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 51,
+      "title": "Milestii Mici f2",
+      "size_m": [
+        7.421,
+        5.159,
+        7.421
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 52,
+      "title": "Milestii Mici3",
+      "size_m": [
+        26.9,
+        9.778,
+        14.387
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        980994732
+      ]
+    },
+    {
+      "index": 53,
+      "title": "Chateau Vartelly1",
+      "size_m": [
+        47.894,
+        12.478,
+        52.315
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        141633296
+      ]
+    },
+    {
+      "index": 54,
+      "title": "Chateau Vartelly",
+      "size_m": [
+        43.311,
+        17.647,
+        53.595
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        218347990
+      ]
+    },
+    {
+      "index": 55,
+      "title": "Asconi Winery2",
+      "size_m": [
+        19.757,
+        9.673,
+        17.047
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 56,
+      "title": "Asconi Winery3",
+      "size_m": [
+        38.181,
+        12.088,
+        80.427
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        705134461
+      ]
+    },
+    {
+      "index": 57,
+      "title": "Asconi Winery4",
+      "size_m": [
+        55.373,
+        7.722,
+        23.57
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        1447115513
+      ]
+    },
+    {
+      "index": 58,
+      "title": "Asconi Winery1",
+      "size_m": [
+        19.197,
+        15.299,
+        34.905
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        705134472
+      ]
+    },
+    {
+      "index": 59,
+      "title": "Poiana1",
+      "size_m": [
+        65.528,
+        27.317,
+        62.125
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        911139574,
+        911139577
+      ]
+    },
+    {
+      "index": 60,
+      "title": "Poiana2",
+      "size_m": [
+        16.381,
+        4.645,
+        10.225
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 61,
+      "title": "Et Cetera1",
+      "size_m": [
+        17.241,
+        7.682,
+        26.388
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 62,
+      "title": "Et Cetera2",
+      "size_m": [
+        17.574,
+        10.024,
+        14.079
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        1071133007
+      ]
+    },
+    {
+      "index": 63,
+      "title": "Et Cetera3",
+      "size_m": [
+        9.441,
+        5.15,
+        13.586
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 64,
+      "title": "Et Cetera4",
+      "size_m": [
+        69.832,
+        5.259,
+        21.126
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        14272324
+      ]
+    },
+    {
+      "index": 65,
+      "title": "ManucBey",
+      "size_m": [
+        47.465,
+        28.52,
+        43.735
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        116061824,
+        777143744
+      ]
+    },
+    {
+      "index": 66,
+      "title": "Punctul geodezic",
+      "size_m": [
+        22.424,
+        7.9,
+        22.424
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 67,
+      "title": "VodonapornayaDrochia",
+      "size_m": [
+        9.023,
+        17.401,
+        9.075
+      ],
+      "method": "Horizontal bounds matched to w985283876; vertical proportions preserved",
+      "replacements": [
+        985283876
+      ]
+    },
+    {
+      "index": 68,
+      "title": "ConaculBoieruluiPommer",
+      "size_m": [
+        26.694,
+        16.19,
+        26.649
+      ],
+      "method": "Horizontal bounds matched to w727568162; vertical proportions preserved",
+      "replacements": [
+        727568162
+      ]
+    },
+    {
+      "index": 69,
+      "title": "MoaradevantBesalma",
+      "size_m": [
+        12.068,
+        11.466,
+        15.419
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": [
+        994917995
+      ]
+    },
+    {
+      "index": 70,
+      "title": "ConaculBalioz",
+      "size_m": [
+        37.082,
+        13.626,
+        35.89
+      ],
+      "method": "Horizontal bounds matched to w705144698; vertical proportions preserved",
+      "replacements": [
+        705144698
+      ]
+    },
+    {
+      "index": 71,
+      "title": "ConaculCazimir",
+      "size_m": [
+        36.571,
+        8.644,
+        39.785
+      ],
+      "method": "Horizontal bounds matched to w906819450; vertical proportions preserved",
+      "replacements": [
+        906819450
+      ]
+    },
+    {
+      "index": 72,
+      "title": "CasaMuzeulAlexandruDonici",
+      "size_m": [
+        25.687,
+        9.511,
+        20.508
+      ],
+      "method": "Horizontal bounds matched to w780595846; vertical proportions preserved",
+      "replacements": [
+        780595846
+      ]
+    },
+    {
+      "index": 73,
+      "title": "Serpeni1",
+      "size_m": [
+        8.26,
+        7.709,
+        8.469
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 74,
+      "title": "Serpeni2",
+      "size_m": [
+        13.132,
+        13.477,
+        13.132
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 75,
+      "title": "Serpeni3",
+      "size_m": [
+        142.767,
+        15.47,
+        196.614
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 76,
+      "title": "Serpeni4",
+      "size_m": [
+        9.213,
+        37.803,
+        7.528
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 77,
+      "title": "Serpeni5",
+      "size_m": [
+        11.604,
+        1.921,
+        11.604
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 78,
+      "title": "ManastireaCapriana",
+      "size_m": [
+        23.96,
+        29.186,
+        28.95
+      ],
+      "method": "Horizontal bounds matched to w84193388; vertical proportions preserved",
+      "replacements": [
+        84193388
+      ]
+    },
+    {
+      "index": 79,
+      "title": "Stantia",
+      "size_m": [
+        94.815,
+        44.498,
+        226.47
+      ],
+      "method": "Original georeferenced map.md scale",
+      "replacements": []
+    },
+    {
+      "index": 81,
+      "title": "Turnul de apă · Muzeul Orașului",
+      "size_m": [
+        17.468,
+        25.525,
+        10.82
+      ],
+      "method": "Horizontal bounds matched to r12309864; vertical proportions preserved",
+      "replacements": [
+        12309864
+      ]
+    }
+  ]
+}

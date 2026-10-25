@@ -1,0 +1,144 @@
+{
+  "version": "2.8.0",
+  "compiled_world": {
+    "base_tiles": 240,
+    "detail_tiles": 222,
+    "base_vertices": 5803230,
+    "authored_vertices": 34813611,
+    "authored_layers": 185,
+    "authored_meshes": 14774,
+    "collision_segments": 231004,
+    "spatially_suppressed_osm_buildings": 2790,
+    "collision_only_authored_buildings": 8497
+  },
+  "authored_sector_inventory": {
+    "sciusev": {
+      "modules": 16,
+      "building_footprints": 432,
+      "building_files": [
+        "sciusev-121-buildings.json",
+        "sciusev-alecsandri-buildings.json",
+        "sciusev-bend-buildings.json",
+        "sciusev-bodoni-buildings.json",
+        "sciusev-cebotari-buildings.json",
+        "sciusev-eminescu-buildings.json",
+        "sciusev-iorga-buildings.json",
+        "sciusev-lazo-buildings.json",
+        "sciusev-north-buildings.json",
+        "sciusev-parcalab-buildings.json",
+        "sciusev-prometeu-buildings.json",
+        "sciusev-puskin-buildings.json",
+        "sciusev-sfatul-buildings.json",
+        "sciusev-stere-buildings.json",
+        "sciusev-test-buildings.json",
+        "sciusev-west-buildings.json"
+      ],
+      "segment_files": [
+        "sciusev-121.json",
+        "sciusev-alecsandri.json",
+        "sciusev-bend.json",
+        "sciusev-bodoni.json",
+        "sciusev-cebotari.json",
+        "sciusev-eminescu.json",
+        "sciusev-iorga.json",
+        "sciusev-lazo.json",
+        "sciusev-north.json",
+        "sciusev-parcalab.json",
+        "sciusev-prometeu.json",
+        "sciusev-puskin.json",
+        "sciusev-sfatul.json",
+        "sciusev-stere.json",
+        "sciusev-test.json",
+        "sciusev-west.json"
+      ]
+    },
+    "bucuresti": {
+      "modules": 11,
+      "building_footprints": 357,
+      "building_files": [
+        "bucuresti-bu01-buildings.json",
+        "bucuresti-bu02-buildings.json",
+        "bucuresti-bu03-buildings.json",
+        "bucuresti-bu04-buildings.json",
+        "bucuresti-bu05-buildings.json",
+        "bucuresti-bu06-buildings.json",
+        "bucuresti-bu07-buildings.json",
+        "bucuresti-bu08-buildings.json",
+        "bucuresti-bu09-buildings.json",
+        "bucuresti-bu10-buildings.json",
+        "bucuresti-bu11-buildings.json"
+      ],
+      "segment_files": [
+        "bucuresti-bu01.json",
+        "bucuresti-bu02.json",
+        "bucuresti-bu03.json",
+        "bucuresti-bu04.json",
+        "bucuresti-bu05.json",
+        "bucuresti-bu06.json",
+        "bucuresti-bu07.json",
+        "bucuresti-bu08.json",
+        "bucuresti-bu09.json",
+        "bucuresti-bu10.json",
+        "bucuresti-bu11.json"
+      ]
+    },
+    "columna": {
+      "modules": 1,
+      "building_footprints": 66,
+      "building_files": [
+        "columna-ismail-tighina-buildings.json"
+      ],
+      "segment_files": [
+        "columna-east.json",
+        "columna-ismail-tighina.json"
+      ]
+    }
+  },
+  "authoritative_surface_scan": {
+    "sciusev": {
+      "bounds": [
+        -1100,
+        540,
+        1220,
+        850
+      ],
+      "asphalt_triangles": 207648,
+      "min_y_m": 0,
+      "max_y_m": 17.9132,
+      "detail_tiles": 27
+    },
+    "bucuresti": {
+      "bounds": [
+        -325,
+        390,
+        1750,
+        550
+      ],
+      "asphalt_triangles": 73330,
+      "min_y_m": 0.035,
+      "max_y_m": 0.485,
+      "detail_tiles": 21
+    },
+    "columna_ismail_tighina": {
+      "bounds": [
+        1192,
+        -447,
+        1439,
+        -240
+      ],
+      "asphalt_triangles": 5392,
+      "min_y_m": 0.052,
+      "max_y_m": 0.056,
+      "detail_tiles": 4
+    }
+  },
+  "base_fallback_road_y_m": -0.012,
+  "minimum_verified_authored_road_separation_m": 0.012,
+  "map": {
+    "offline": true,
+    "quick_destinations": 10,
+    "total_named_destinations": 49,
+    "worked_street_destinations": 38
+  },
+  "result": "passed"
+}

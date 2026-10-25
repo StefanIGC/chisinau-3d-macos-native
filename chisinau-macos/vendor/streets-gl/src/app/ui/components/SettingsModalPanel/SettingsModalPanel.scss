@@ -1,0 +1,25 @@
+@import "../../styles/common.scss";
+
+.panelBodyContainer {
+	max-height: calc(100vh - 400px);
+	overflow: hidden;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	&::-webkit-scrollbar-track-piece {
+		background-color: transparent;
+		opacity: 0.7;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #CBCBCB;
+		border-radius: 999px;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: #909090;
+	}
+}

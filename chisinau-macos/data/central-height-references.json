@@ -1,0 +1,313 @@
+{
+  "researched_at": "2026-09-25",
+  "scope": "Asset-only factual reference research for central Ștefan cel Mare corridor, within Sfatul Țării–Ismail; two requested anchors plus six building/frontage samples. No Site code changed.",
+  "method": {
+    "levels": "Storeys below refer to total visible above-ground levels, including the ground floor, unless explicitly qualified. Counts are facade observations, not a cadastral survey. Two-level halls, raised basements, roofs, towers, and tall civic floors must not be flattened into identical residential floors.",
+    "height_measurements": "No surveyed/elevation-drawing metre heights were located in this bounded search. All actual_height_m values are null. Optional modelling ranges are rough proxies, not factual measured heights.",
+    "licensing": "Downloaded photos are inspection references. A source URL or public availability does not automatically grant reuse as a shipped game texture. Commons license details are given where verified.",
+    "coverage_limit": "Samples cover different building types within the corridor; they are not a building-by-building inventory or statistically representative sample of every block."
+  },
+  "anchors": [
+    {
+      "id": "central_post_office",
+      "name": "Poșta Centrală / Poșta Moldovei",
+      "address": "Bd. Ștefan cel Mare și Sfânt 134, Chișinău",
+      "observed_above_ground_levels": 4,
+      "count_basis": "Photo observation: ground entrance/shop zone, row above entrance, rectangular upper row, top arched window row. Best view is posta-moldovei-4, supported by -5.",
+      "confidence": "medium-high for visible facade bands; no floor plan inspected",
+      "actual_height_m": null,
+      "massing": "Long stone civic block with rounded corner entrance, repeated window rows, cornice, and a corner emphasis. Do not model as a one-floor shop.",
+      "source_pages": [
+        {
+          "url": "https://dgacg.md/posta-moldovei-2/",
+          "publisher": "Direcția generală pentru administrarea clădirilor Guvernului Republicii Moldova",
+          "authority": "Government property-management authority",
+          "supports": "Address 134, 1956 construction, architect Valentin Mednec; gallery of owned/managed building."
+        },
+        {
+          "url": "https://posta.md/ro/p/contacte",
+          "publisher": "Poșta Moldovei",
+          "authority": "Building occupant / postal operator",
+          "supports": "Headquarters address 134."
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://dgacg.md/wp-content/uploads/2025/01/posta-moldovei-4.webp",
+          "inspected": true,
+          "date": "unknown; website path January 2025",
+          "license": "not established; reference-only"
+        },
+        {
+          "url": "https://dgacg.md/wp-content/uploads/2025/01/posta-moldovei-5.webp",
+          "inspected": true,
+          "date": "unknown; website path January 2025",
+          "license": "not established; reference-only"
+        }
+      ],
+      "mapped_crosscheck_from_parent": "Parent reports OSM w25525350 has building:levels=4; separate extension w96933768 has 5. This supports main-versus-extension distinction; research did not independently retrieve those OSM tags."
+    },
+    {
+      "id": "city_hall",
+      "name": "Primăria municipiului Chișinău",
+      "address": "Bd. Ștefan cel Mare și Sfânt 83, Chișinău",
+      "observed_above_ground_levels": 2,
+      "count_basis": "Official municipal tourism audio guide explicitly says two levels; official elevated photo shows ground shop/entry level plus tall arched upper floor, then pitched roof and a separate clock tower.",
+      "confidence": "high for two principal storeys",
+      "actual_height_m": null,
+      "massing": "Two tall principal levels, substantial roof and triangular facade features, rounded/canted corner entrance crowned by clock tower. Do not add four equal floors to match Post Office.",
+      "source_pages": [
+        {
+          "url": "https://visit.chisinau.md/audio/primaria-chisinau/",
+          "publisher": "Visit Chișinău municipal tourism portal",
+          "authority": "Municipal tourism",
+          "supports": "Explicit two levels, corner at Vlaicu Pârcălab, shops at ground, clock feature."
+        },
+        {
+          "url": "https://visit.chisinau.md/obiective_turistice/cladirea-primariei-municipiului-chisinau-bd-stefan-cel-mare-si-sfant-83/",
+          "publisher": "Visit Chișinău",
+          "authority": "Municipal tourism",
+          "supports": "Address, identity, history; official photo."
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://visit.chisinau.md/wp-content/uploads/2021/09/DJI_0026bb-1-1.jpg",
+          "inspected": true,
+          "date": "unknown; website path September 2021",
+          "license": "not established; reference-only"
+        }
+      ]
+    }
+  ],
+  "corridor_samples": [
+    {
+      "id": "hasdeu_148",
+      "name": "Biblioteca Municipală B. P. Hasdeu / former Hotel Suisse frontage",
+      "address": "Bd. Ștefan cel Mare și Sfânt 148; corner with Mitropolit G. Bănulescu-Bodoni",
+      "observed_above_ground_levels": 3,
+      "count_basis": "Three visible window bands; municipal tourism and library-owned archive both explicitly describe three storeys.",
+      "confidence": "high",
+      "actual_height_m": null,
+      "massing": "Three-level perimeter frontage; arched ground windows, tall middle floor with classical detailing, simpler top floor.",
+      "source_pages": [
+        {
+          "url": "https://visit.chisinau.md/audio-ghid/?tax=cladiri",
+          "publisher": "Visit Chișinău",
+          "supports": "Former Suisse at boulevard/Bănulescu-Bodoni, three levels."
+        },
+        {
+          "url": "https://bibliotecahasdeu.wordpress.com/2010/10/19/expozitie-virtuala-19-octombrie-ziua-fondarii-bibliotecii-municipale-b-p-hasdeu-chisinau/",
+          "publisher": "Biblioteca Centrală a BM B. P. Hasdeu",
+          "supports": "Address 148, three storeys, boundaries including Bănulescu-Bodoni and Teatrului lane."
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:MD.C.C_-_bd._%C8%98tefan_cel_Mare,_148_-_Edificiu_pentru_func%C8%9Bii_social-politice_-_oct_2021_-_03.jpg",
+          "publisher": "Photographer Gikü, own work on Wikimedia Commons",
+          "supports": "Primary photograph, address in title, capture date and license."
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/MD.C.C_-_bd._%C8%98tefan_cel_Mare%2C_148_-_Edificiu_pentru_func%C8%9Bii_social-politice_-_oct_2021_-_03.jpg",
+          "inspected": true,
+          "date": "2021-10-29",
+          "author": "Gikü",
+          "license": "CC0 1.0"
+        }
+      ]
+    },
+    {
+      "id": "government_house",
+      "name": "Casa Guvernului",
+      "address": "Piața Marii Adunări Naționale 1, boulevard frontage",
+      "observed_above_ground_levels": 6,
+      "count_basis": "Official municipal tourism explicitly describes six storeys; full-width main facade visible in aerial reference.",
+      "confidence": "high for published count",
+      "actual_height_m": null,
+      "massing": "Broad six-storey administrative slab, strong vertical white piers and cornice; use independently of historic streetwall.",
+      "source_pages": [
+        {
+          "url": "https://visit.chisinau.md/obiective_turistice/casa-guvernului-din-chisinau-piata-marii-adunari-nationale-1/",
+          "publisher": "Visit Chișinău",
+          "supports": "Explicit six storeys; address; architecture."
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://visit.chisinau.md/wp-content/uploads/2021/09/Arca_Kiriac-1.jpg",
+          "inspected": true,
+          "date": "unknown; website path September 2021",
+          "license": "not established; reference-only"
+        },
+        {
+          "shared_reference": "pman_overhead"
+        }
+      ]
+    },
+    {
+      "id": "frontage_132",
+      "name": "Residential/shop block associated with Tamara Ciobanu",
+      "address": "Bd. Ștefan cel Mare și Sfânt 132; corner near Vlaicu Pârcălab",
+      "observed_above_ground_levels": 5,
+      "count_basis": "Primary 2021 photo by Gikü confirms five total visible levels on tall corner/boulevard wing: ground bank/shop zone plus four upper rows. Connected lower wing at left has four total visible levels; treat wings separately.",
+      "confidence": "high for five-level tall wing and four-level lower wing visible in primary photo; not surveyed heights",
+      "actual_height_m": null,
+      "massing": "Long mid-rise streetwall with shop base, balconies, top arched windows, cornice/parapet.",
+      "source_pages": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Building,_%C8%98tefan_cel_Mare,_132,_Chi%C8%99in%C4%83u",
+          "publisher": "Wikimedia Commons heritage photo collection",
+          "supports": "Address and building identity."
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:MD.C.C_-_Casa_%C3%AEn_care_a_locuit_c%C3%A2nt%C4%83rea%C8%9Ba_de_muzica_popular%C4%83_Tamara_Ciobanu_(dinspre_intersec%C8%9Bia_cu_Vl._P%C3%AErc%C4%83lab)_-_oct_2021.jpg",
+          "publisher": "Photographer Gikü, own work",
+          "supports": "Primary reference photo, date, CC0 license."
+        },
+        {
+          "url": "https://wikimapia.org/13391446/ru/%D0%B1%D1%83%D0%BB-%D0%A8%D1%82%D0%B5%D1%84%D0%B0%D0%BD-%D1%87%D0%B5%D0%BB-%D0%9C%D0%B0%D1%80%D0%B5-%D1%88%D0%B8-%D0%A1%D1%84%D1%8B%D0%BD%D1%82-132",
+          "publisher": "Wikimapia photo contributor; secondary address corroboration",
+          "supports": "Accessible observed corner photograph; do not use automatic image-search description as a storey source."
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://photos.wikimapia.org/p/00/02/12/36/49_full.jpg",
+          "inspected": true,
+          "date": "unknown",
+          "license": "not established; reference-only"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/MD.C.C_-_Casa_%C3%AEn_care_a_locuit_c%C3%A2nt%C4%83rea%C8%9Ba_de_muzica_popular%C4%83_Tamara_Ciobanu_%28dinspre_intersec%C8%9Bia_cu_Vl._P%C3%AErc%C4%83lab%29_-_oct_2021.jpg",
+          "inspected": true,
+          "date": "2021-10-29",
+          "author": "Gikü",
+          "license": "CC0 1.0"
+        }
+      ],
+      "uncertainty": "Do not apply five levels uniformly to entire address/footprint; connected lower wing in photo has four. Listing snippets and automatic image descriptions conflict and are not used.",
+      "observed_lower_wing_levels": 4
+    },
+    {
+      "id": "organhall_81",
+      "name": "Sala cu Orgă",
+      "address": "Bd. Ștefan cel Mare și Sfânt 81",
+      "observed_above_ground_levels": 1,
+      "additional_levels": "Raised basement visible; tall principal concert-hall volume; roof/central dome above. Count is facade level, not internal balcony levels.",
+      "count_basis": "Official aerial photo: short basement windows beneath one very tall main window order; rear upper mass and dome are architectural volumes.",
+      "confidence": "high for facade hierarchy; low for internal floor total",
+      "actual_height_m": null,
+      "massing": "Raised plinth, broad staircase, giant-order columns, high main hall, deep roof and central dome/spire; do not use regular apartment floor spacing.",
+      "source_pages": [
+        {
+          "url": "https://visit.chisinau.md/obiective_turistice/sala-cu-orga/",
+          "publisher": "Visit Chișinău",
+          "supports": "Building identity and official photo."
+        },
+        {
+          "url": "https://organhall.md/index.php?l=ro",
+          "publisher": "Sala cu Orgă",
+          "supports": "Primary institution; identity."
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://visit.chisinau.md/wp-content/uploads/2021/12/sala-cu-orga.jpg",
+          "inspected": true,
+          "date": "unknown; website path December 2021",
+          "license": "not established; reference-only"
+        }
+      ]
+    },
+    {
+      "id": "eminescu_79",
+      "name": "Teatrul Național Mihai Eminescu",
+      "address": "Bd. Ștefan cel Mare și Sfânt 79",
+      "observed_above_ground_levels": 3,
+      "count_basis": "Official front photo shows entry floor, upper window floor, and set-back/top window band behind pediment. Theatre interior/story divisions may differ.",
+      "confidence": "medium for three facade bands; not a floor-plan count",
+      "actual_height_m": null,
+      "massing": "Giant portico across two tall principal facade levels, triangular pediment, elevated upper volume.",
+      "source_pages": [
+        {
+          "url": "https://visit.chisinau.md/en/obiective_turistice/teatrul-national-mihai-eminescu/",
+          "publisher": "Visit Chișinău",
+          "supports": "Identity and official photo."
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://visit.chisinau.md/wp-content/uploads/2021/09/pe1-5-e1638351011799-1024x548.jpg",
+          "inspected": true,
+          "date": "unknown; website path September 2021",
+          "license": "not established; reference-only"
+        }
+      ]
+    },
+    {
+      "id": "opera_152",
+      "name": "Teatrul Național de Operă și Balet Maria Bieșu",
+      "address": "Bd. Ștefan cel Mare și Sfânt 152",
+      "observed_above_ground_levels": null,
+      "visible_facade_structure": "Lower podium/ticket-office zone plus entrance and tall upper foyer window zones behind monumental columns. Cannot reliably equate these visible bands with internal storey count.",
+      "count_basis": "Official tourism front photo inspected.",
+      "confidence": "high for massing, deliberately no precise total floor count",
+      "actual_height_m": null,
+      "massing": "Wide raised terrace, very broad stairs, tall rectangular colonnade and deep relief frieze; single low box understates scale.",
+      "source_pages": [
+        {
+          "url": "https://visit.chisinau.md/audio/teatrul-de-opera-si-balet-despre-maria-biesu-la-fel/",
+          "publisher": "Visit Chișinău",
+          "supports": "1980 monumental modernist building, broad stairs and piers; official photo."
+        },
+        {
+          "url": "https://tnob.md/en",
+          "publisher": "National Opera and Ballet Theatre",
+          "supports": "Primary address confirmation: 152."
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://visit.chisinau.md/wp-content/uploads/2021/09/13-2.jpg",
+          "inspected": true,
+          "date": "unknown; published on tourism page September 2021, image appears older",
+          "license": "not established; reference-only"
+        }
+      ]
+    }
+  ],
+  "pman_overhead": {
+    "name": "PMAN / Triumphal Arch / Government House aerial overview",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ansamblul_Catedralei_%E2%80%9ENa%C8%99terea_Domnului%E2%80%9D._Por%C8%9Bile_Sfinte_%C8%99i_scuarul._Pia%C8%9Ba_Marii_Adun%C4%83ri_Na%C8%9Bionale._07_-_March_-_2020_08.02.51_15.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Ansamblul_Catedralei_%E2%80%9ENa%C8%99terea_Domnului%E2%80%9D._Por%C8%9Bile_Sfinte_%C8%99i_scuarul._Pia%C8%9Ba_Marii_Adun%C4%83ri_Na%C8%9Bionale._07_-_March_-_2020_08.02.51_15.jpg",
+    "date": "2020-03-07",
+    "author": "Pelin Oleg",
+    "source_type": "Primary own-work drone photograph",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "inspected": true,
+    "view": "Elevated oblique aerial looking from Cathedral Park across arch to Government House; not an orthophoto.",
+    "observations": [
+      "Triumphal Arch stands at the south edge of Cathedral Park, immediately adjacent to a paved sidewalk/apron and the boulevard.",
+      "Across the boulevard toward Government House is a very broad asphalt roadway/PMAN hardscape; do not fill this zone with park lawn.",
+      "Government side has a narrow formal lawn/landscape strip and front walk, interrupted by the central paved entrance steps/apron.",
+      "Behind the arch toward the cathedral, the park begins with semi-circular/radial paved paths around distinct lawn sectors, with dense trees further to both sides.",
+      "Keep boulevard pavement and pedestrian paths visually distinct, while both remain hardscape."
+    ],
+    "secondary_top_down_reference": {
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ansamblul_Catedralei_%E2%80%9ENa%C8%99terea_Domnului%E2%80%9D_26.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Ansamblul_Catedralei_%E2%80%9ENa%C8%99terea_Domnului%E2%80%9D_26.jpg",
+      "date": "2020-03-07",
+      "author": "Pelin Oleg",
+      "inspected": true,
+      "use": "True overhead of cathedral/park paths only; frame omits arch-government crossing. Use overview for PMAN boundary."
+    }
+  },
+  "modelling_takeaway": [
+    "Do not assign every boulevard building four floors. Verified/observed anchors include City Hall 2 tall levels, Hasdeu 3, Post Office 4 visible levels, 132 corner 5 visible levels, and Government 6.",
+    "Model the shop base, upper floors, cornice and roof separately; narrow horizontal bands are not automatically independent storeys.",
+    "Treat halls, theatres, domes and towers as building-specific volumes.",
+    "Use metre estimates only as explicitly approximate starting points; no actual measured heights were found."
+  ]
+}

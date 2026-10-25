@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Șciusev125 · poartă curte",
+    "a": [
+      -980.4,
+      625.7
+    ],
+    "b": [
+      -977.4,
+      628.2
+    ],
+    "height": 1.7,
+    "color": "#56635b",
+    "post": "#c1beab",
+    "solidHeight": 0.35,
+    "arch": false,
+    "source": "July2025 street view; inferred metric position."
+  },
+  {
+    "name": "Șciusev127 · poartă curte",
+    "a": [
+      -998.1,
+      611.6
+    ],
+    "b": [
+      -995.8,
+      613.5
+    ],
+    "height": 1.8,
+    "color": "#746a59",
+    "post": "#bcb9a5",
+    "solidHeight": 1.65,
+    "arch": false,
+    "source": "July2025 street view; inferred metric position."
+  }
+]

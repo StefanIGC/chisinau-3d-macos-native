@@ -1,0 +1,735 @@
+{
+  "buildings": {
+    "r13800176": {
+      "sourceId": "cladiri.16695",
+      "nativeId": 13800176,
+      "p": [
+        [
+          -106.3797,
+          448.0627
+        ],
+        [
+          -106.3969,
+          446.6172
+        ],
+        [
+          -101.3356,
+          446.5746
+        ],
+        [
+          -101.5478,
+          429.1846
+        ],
+        [
+          -106.0201,
+          429.2319
+        ],
+        [
+          -106.1667,
+          427.1561
+        ],
+        [
+          -106.1367,
+          418.6616
+        ],
+        [
+          -118.7112,
+          418.6858
+        ],
+        [
+          -118.4745,
+          459.3383
+        ],
+        [
+          9.2337,
+          459.0298
+        ],
+        [
+          9.0011,
+          446.3623
+        ],
+        [
+          4.2379,
+          446.3872
+        ],
+        [
+          4.1669,
+          443.5242
+        ],
+        [
+          -4.9102,
+          443.7172
+        ],
+        [
+          -13.9359,
+          443.9814
+        ],
+        [
+          -13.8671,
+          446.6238
+        ],
+        [
+          -45.6656,
+          447.1233
+        ],
+        [
+          -45.7226,
+          445.4045
+        ],
+        [
+          -48.1138,
+          445.4813
+        ],
+        [
+          -48.0579,
+          447.1606
+        ],
+        [
+          -56.6995,
+          447.2943
+        ],
+        [
+          -56.7164,
+          445.5137
+        ],
+        [
+          -63.7518,
+          445.552
+        ],
+        [
+          -63.7413,
+          447.3973
+        ],
+        [
+          -76.4472,
+          447.5865
+        ],
+        [
+          -76.4598,
+          445.6863
+        ],
+        [
+          -81.2291,
+          445.7079
+        ],
+        [
+          -81.2232,
+          447.6669
+        ],
+        [
+          -88.4948,
+          447.7759
+        ],
+        [
+          -88.5003,
+          445.8074
+        ],
+        [
+          -93.2581,
+          445.8165
+        ],
+        [
+          -93.2502,
+          447.8604
+        ],
+        [
+          -106.3797,
+          448.0627
+        ]
+      ],
+      "holes": [],
+      "cadastralCode": "01005200182.01",
+      "evidence": "Complete FNDG WFS building polygon replaces only this existing Bodoni owner's plan. Native ID, function, renderer ownership and estimated height remain separate from the source; MapMD museum26790058 is unchanged."
+    },
+    "w146076907": {
+      "sourceId": "cladiri.10314",
+      "nativeId": 146076907,
+      "p": [
+        [
+          -138.6744,
+          442.7968
+        ],
+        [
+          -153.339,
+          442.7368
+        ],
+        [
+          -153.317,
+          444.8664
+        ],
+        [
+          -162.8249,
+          445.0298
+        ],
+        [
+          -162.8581,
+          449.9431
+        ],
+        [
+          -162.9191,
+          459.0235
+        ],
+        [
+          -138.5213,
+          459.1051
+        ],
+        [
+          -138.6744,
+          442.7968
+        ]
+      ],
+      "holes": [],
+      "cadastralCode": "01005200155.01",
+      "evidence": "Complete FNDG WFS building polygon replaces only this existing Bodoni owner's plan. Native ID, function, renderer ownership and estimated height remain separate from the source; MapMD museum26790058 is unchanged."
+    },
+    "w657259415": {
+      "sourceId": "cladiri.1829583",
+      "nativeId": 657259415,
+      "p": [
+        [
+          -138.6318,
+          425.4592
+        ],
+        [
+          -150.1496,
+          425.4035
+        ],
+        [
+          -150.2042,
+          423.797
+        ],
+        [
+          -168.5231,
+          423.6428
+        ],
+        [
+          -168.4803,
+          424.1659
+        ],
+        [
+          -172.6896,
+          424.1544
+        ],
+        [
+          -172.6753,
+          434.3205
+        ],
+        [
+          -165.721,
+          434.2718
+        ],
+        [
+          -165.683,
+          432.4961
+        ],
+        [
+          -164.264,
+          432.4857
+        ],
+        [
+          -164.2453,
+          437.7917
+        ],
+        [
+          -159.8537,
+          437.89
+        ],
+        [
+          -159.7627,
+          430.622
+        ],
+        [
+          -157.3337,
+          430.6037
+        ],
+        [
+          -157.3151,
+          434.269
+        ],
+        [
+          -152.4713,
+          434.2365
+        ],
+        [
+          -152.4933,
+          430.9713
+        ],
+        [
+          -150.7496,
+          430.8724
+        ],
+        [
+          -150.6973,
+          432.7962
+        ],
+        [
+          -151.8367,
+          432.8244
+        ],
+        [
+          -151.8539,
+          434.6927
+        ],
+        [
+          -153.4046,
+          434.7594
+        ],
+        [
+          -153.3207,
+          439.242
+        ],
+        [
+          -148.7803,
+          439.2285
+        ],
+        [
+          -148.8022,
+          438.9479
+        ],
+        [
+          -138.5112,
+          438.7784
+        ],
+        [
+          -138.6318,
+          425.4592
+        ]
+      ],
+      "holes": [],
+      "cadastralCode": "01005200180.01",
+      "evidence": "Complete FNDG WFS building polygon replaces only this existing Bodoni owner's plan. Native ID, function, renderer ownership and estimated height remain separate from the source; MapMD museum26790058 is unchanged."
+    },
+    "w41434938": {
+      "sourceId": "cladiri.23787",
+      "nativeId": 41434938,
+      "p": [
+        [
+          -186.9299,
+          416.0263
+        ],
+        [
+          -177.4933,
+          416.0866
+        ],
+        [
+          -177.4515,
+          416.6472
+        ],
+        [
+          -176.7408,
+          416.6797
+        ],
+        [
+          -176.6713,
+          416.1559
+        ],
+        [
+          -161.6702,
+          416.2505
+        ],
+        [
+          -161.6462,
+          416.6802
+        ],
+        [
+          -160.8976,
+          416.7486
+        ],
+        [
+          -160.845,
+          416.4316
+        ],
+        [
+          -149.1147,
+          416.6248
+        ],
+        [
+          -149.107,
+          417.413
+        ],
+        [
+          -152.0528,
+          417.4331
+        ],
+        [
+          -152.019,
+          420.8687
+        ],
+        [
+          -149.0733,
+          420.8485
+        ],
+        [
+          -149.0805,
+          423.9239
+        ],
+        [
+          -138.5835,
+          423.8609
+        ],
+        [
+          -138.2676,
+          385.554
+        ],
+        [
+          -152.8102,
+          385.5174
+        ],
+        [
+          -152.4943,
+          393.3902
+        ],
+        [
+          -149.2726,
+          393.3199
+        ],
+        [
+          -149.2088,
+          395.7847
+        ],
+        [
+          -159.2705,
+          395.6739
+        ],
+        [
+          -159.3325,
+          395.0284
+        ],
+        [
+          -160.1179,
+          394.9595
+        ],
+        [
+          -160.1292,
+          395.664
+        ],
+        [
+          -175.9155,
+          395.4892
+        ],
+        [
+          -175.9981,
+          394.9268
+        ],
+        [
+          -176.8202,
+          394.8588
+        ],
+        [
+          -176.7756,
+          395.4794
+        ],
+        [
+          -187.1467,
+          395.3645
+        ],
+        [
+          -187.0623,
+          403.3227
+        ],
+        [
+          -186.8008,
+          403.2836
+        ],
+        [
+          -186.9299,
+          416.0263
+        ]
+      ],
+      "holes": [],
+      "cadastralCode": "01005200240.01",
+      "evidence": "Complete FNDG WFS building polygon replaces only this existing Bodoni owner's plan. Native ID, function, renderer ownership and estimated height remain separate from the source; MapMD museum26790058 is unchanged."
+    }
+  },
+  "groundPatchOverrides": [
+    {
+      "x": -117.5,
+      "z": 408.5,
+      "patchIndex": 0,
+      "parts": [
+        [
+          [
+            [
+              -121.682,
+              395.0
+            ],
+            [
+              -121.67,
+              396.7
+            ],
+            [
+              -122.347,
+              396.707
+            ],
+            [
+              -122.356,
+              400.32
+            ],
+            [
+              -121.61,
+              400.32
+            ],
+            [
+              -121.58,
+              405.93
+            ],
+            [
+              -122.371,
+              405.943
+            ],
+            [
+              -122.39,
+              413.163
+            ],
+            [
+              -122.385,
+              413.455
+            ],
+            [
+              -121.26,
+              413.45
+            ],
+            [
+              -121.223,
+              422.0
+            ],
+            [
+              -118.6939239,
+              422.0
+            ],
+            [
+              -118.71323814,
+              418.68380264
+            ],
+            [
+              -118.10844354,
+              418.68263996
+            ],
+            [
+              -118.183,
+              395.0
+            ],
+            [
+              -121.682,
+              395.0
+            ]
+          ]
+        ]
+      ],
+      "originalPatchSHA256": "0ce331fe8d4f5d2cf0fa5dd3444d541e7940c4572ac6c984c02e53c452d9dc81",
+      "officialIntersectionM2": 1.9834293214675578,
+      "removedM2": 1.9912674185766122,
+      "evidence": "Only this existing Bodoni ground patch is clipped against the four corrected official owner plans with2mm numerical wall clearance; all unlisted patches remain byte-identical in their original dataset."
+    },
+    {
+      "x": -117.5,
+      "z": 435.5,
+      "patchIndex": 0,
+      "parts": [
+        [
+          [
+            [
+              -121.223,
+              422.0
+            ],
+            [
+              -121.22,
+              422.71
+            ],
+            [
+              -122.21,
+              422.719
+            ],
+            [
+              -122.152,
+              425.808
+            ],
+            [
+              -121.36,
+              425.8
+            ],
+            [
+              -121.216,
+              449.0
+            ],
+            [
+              -118.53667008,
+              449.0
+            ],
+            [
+              -118.6939239,
+              422.0
+            ],
+            [
+              -121.223,
+              422.0
+            ]
+          ]
+        ]
+      ],
+      "originalPatchSHA256": "dd0ea4d75283265c1f4c2e986960c050d8980fcfde6a8cb8235f8eef0d8de350",
+      "officialIntersectionM2": 15.074017737095424,
+      "removedM2": 15.128018652967782,
+      "evidence": "Only this existing Bodoni ground patch is clipped against the four corrected official owner plans with2mm numerical wall clearance; all unlisted patches remain byte-identical in their original dataset."
+    },
+    {
+      "x": -117.5,
+      "z": 462.5,
+      "patchIndex": 0,
+      "parts": [
+        [
+          [
+            [
+              -121.881,
+              458.805
+            ],
+            [
+              -121.881,
+              459.0
+            ],
+            [
+              -121.466,
+              459.0
+            ],
+            [
+              -121.279,
+              462.556
+            ],
+            [
+              -121.235,
+              465.0
+            ],
+            [
+              -118.035,
+              465.0
+            ],
+            [
+              -118.051,
+              464.084
+            ],
+            [
+              -105.0,
+              463.951
+            ],
+            [
+              -105.0,
+              460.75
+            ],
+            [
+              -118.163,
+              460.884
+            ],
+            [
+              -118.24332765,
+              459.3397419
+            ],
+            [
+              -118.47644591,
+              459.340305
+            ],
+            [
+              -118.53667008,
+              449.0
+            ],
+            [
+              -121.216,
+              449.0
+            ],
+            [
+              -121.18,
+              454.7
+            ],
+            [
+              -121.894,
+              454.703
+            ],
+            [
+              -121.891,
+              455.604
+            ],
+            [
+              -127.45,
+              455.731
+            ],
+            [
+              -131.0,
+              456.007
+            ],
+            [
+              -131.0,
+              459.217
+            ],
+            [
+              -127.29,
+              458.929
+            ],
+            [
+              -121.881,
+              458.805
+            ]
+          ]
+        ]
+      ],
+      "originalPatchSHA256": "f32539bdd685ed12b68ea73539220309ee33688613d5d0ed824cff41cacec1f7",
+      "officialIntersectionM2": 5.165947816564978,
+      "removedM2": 5.187090917983653,
+      "evidence": "Only this existing Bodoni ground patch is clipped against the four corrected official owner plans with2mm numerical wall clearance; all unlisted patches remain byte-identical in their original dataset."
+    }
+  ],
+  "sourceFixture": "scripts/fixtures/bu10-cladiri-3857.geojson.gz",
+  "unchangedSourceDatasets": [
+    "data/central-chisinau.json",
+    "data/bodoni-ground.json"
+  ],
+  "unchangedMapMDOwner": 26790058,
+  "impact": [
+    {
+      "owner": "r13800176",
+      "sourceId": "cladiri.16695",
+      "previousAreaM2": 1952.9343000000003,
+      "officialAreaM2": 2056.441888462445,
+      "oldBodyCoverageFraction": 0.9522178409286083,
+      "newBodyCoverageFraction": 0.9042895367258922,
+      "addedFootprintM2": 196.82300584102276,
+      "retiredFootprintM2": 93.31541737857849,
+      "previousOutlineHausdorffDifferenceM": 4.068243837287978,
+      "correctedOutlineHausdorffErrorM": 5.590180269645888e-05
+    },
+    {
+      "owner": "w146076907",
+      "sourceId": "cladiri.10314",
+      "previousAreaM2": 419.7517499999996,
+      "officialAreaM2": 374.78127896486166,
+      "oldBodyCoverageFraction": 0.8889966032010821,
+      "newBodyCoverageFraction": 0.9956684095010403,
+      "addedFootprintM2": 1.6233990271520442,
+      "retiredFootprintM2": 46.593870062290016,
+      "previousOutlineHausdorffDifferenceM": 2.398070257524822,
+      "correctedOutlineHausdorffErrorM": 5.909359217603344e-05
+    },
+    {
+      "owner": "w657259415",
+      "sourceId": "cladiri.1829583",
+      "previousAreaM2": 361.2270500000001,
+      "officialAreaM2": 407.18734216415885,
+      "oldBodyCoverageFraction": 0.8372197767672486,
+      "newBodyCoverageFraction": 0.7427206075609483,
+      "addedFootprintM2": 104.76091200086668,
+      "retiredFootprintM2": 58.80061983670812,
+      "previousOutlineHausdorffDifferenceM": 7.194604013711072,
+      "correctedOutlineHausdorffErrorM": 6.18732718656817e-05
+    },
+    {
+      "owner": "w41434938",
+      "sourceId": "cladiri.23787",
+      "previousAreaM2": 1221.7974499999984,
+      "officialAreaM2": 1232.6866931470947,
+      "oldBodyCoverageFraction": 0.9905160302799524,
+      "newBodyCoverageFraction": 0.9817660616506342,
+      "addedFootprintM2": 22.476733166927666,
+      "retiredFootprintM2": 11.587490019831318,
+      "previousOutlineHausdorffDifferenceM": 3.335263908637703,
+      "correctedOutlineHausdorffErrorM": 6.565354685347532e-05
+    }
+  ]
+}

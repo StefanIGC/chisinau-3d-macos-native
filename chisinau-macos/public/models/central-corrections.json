@@ -1,0 +1,16 @@
+{
+  "source": "https://www.openstreetmap.org/copyright",
+  "snapshot": "2026-09-21",
+  "license": "ODbL-1.0",
+  "pmanPavedAreaM2": 16010.43,
+  "pmanExcludedGreenAreaM2": 2751.89,
+  "pmanExcludedRoadAreaM2": 5175.88,
+  "pavementTiles": [
+    "38016/23043",
+    "38016/23044",
+    "38017/23044"
+  ],
+  "knownHeightOrLevelRecords": 150,
+  "protectedBuildings": 55,
+  "estimatedFallback": "Only untagged, substantial urban buildings in central Chisinau: four levels along Stefan cel Mare or for large footprints; three for smaller inner blocks. No measured height is claimed. Explicit native height/levels always take precedence."
+}

@@ -1,0 +1,1646 @@
+[
+  {
+    "id": "5d11db065283670019bd82bd",
+    "title": "fosfor",
+    "family": "stage",
+    "colors": {
+      "wall": "#282B2C",
+      "roof": "#373B3E",
+      "base": "#8A887F",
+      "metal": "#53585a",
+      "green": "#446A39",
+      "accent": "#be2432",
+      "trim": "#282B2C",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5d19d074668de700173db7e5",
+    "title": "AfganPark",
+    "family": "afghan",
+    "colors": {
+      "wall": "#F0EEE7",
+      "base": "#a6a296",
+      "metal": "#40544b",
+      "green": "#315139",
+      "accent": "#704d41",
+      "trim": "#F0EEE7",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5d19eb03668de700173db7e6",
+    "title": "Artcor",
+    "family": "artcor",
+    "colors": {
+      "wall": "#aea99e",
+      "roof": "#6D5B4C",
+      "glass": "#394A4E",
+      "base": "#AAA79E",
+      "metal": "#793C25",
+      "green": "#60734B",
+      "accent": "#a44e28",
+      "trim": "#A44E28",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5d19f9fb668de700173db7e7",
+    "title": "Scuarul Catedralei",
+    "family": "park",
+    "colors": {
+      "base": "#B6AFA0",
+      "metal": "#303B35",
+      "green": "#69864B",
+      "accent": "#8f8272",
+      "trim": "#b9b5a6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5d19fcc2668de700173db7e8",
+    "title": "Arcul de Triumf",
+    "family": "building",
+    "colors": {
+      "wall": "#c8c4b4",
+      "roof": "#858c83",
+      "base": "#949b90",
+      "metal": "#282D2B",
+      "green": "#34573C",
+      "accent": "#c8c4b4",
+      "trim": "#d1cbbc",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.87,
+    "windows": false,
+    "materials": {
+      "Arc:s1$": "metal",
+      "Arc:(o1|n1|q1)$": "trim",
+      "Arc:(u1|w1)$": "base"
+    }
+  },
+  {
+    "id": "5d19fdd2668de700173db7e9",
+    "title": "Catedrala Nașterea Domnului",
+    "family": "cathedral",
+    "colors": {
+      "wall": "#c7c1ad",
+      "roof": "#444b4c",
+      "glass": "#37403f",
+      "base": "#666461",
+      "metal": "#B8A256",
+      "green": "#527745",
+      "accent": "#cbc7b7",
+      "trim": "#dedbcf",
+      "gold": "#b8a256",
+      "wood": "#604b36"
+    },
+    "roofStart": 0.65,
+    "windowDepth": 1.2,
+    "trim": true,
+    "windowTop": 0.615,
+    "windowWidth": 3.4,
+    "windowHeight": 5.5,
+    "windowArea": 9,
+    "detectPanes": true
+  },
+  {
+    "id": "5d19fe49668de700173db7ea",
+    "title": "Clopotnița Catedralei",
+    "family": "building",
+    "colors": {
+      "wall": "#d0cdc0",
+      "roof": "#494e50",
+      "glass": "#323832",
+      "base": "#686762",
+      "metal": "#55544b",
+      "accent": "#cecec2",
+      "trim": "#dfdcd2",
+      "gold": "#a99754",
+      "wood": "#604b36"
+    },
+    "roofStart": 0.84,
+    "trim": true,
+    "materials": {
+      "Untitled_7": "roof",
+      "Untitled_9": "gold",
+      "initialShadingGroup": "metal",
+      "_t1$": "wood"
+    },
+    "detectPanes": true
+  },
+  {
+    "id": "5d1a00547c5cdc0019e82227",
+    "title": "Primăria Chișinău",
+    "family": "building",
+    "colors": {
+      "wall": "#c9b98d",
+      "roof": "#686b64",
+      "glass": "#354849",
+      "base": "#79584c",
+      "metal": "#BA9248",
+      "green": "#496D3F",
+      "accent": "#D9CC9F",
+      "trim": "#ded8c4",
+      "gold": "#a99754",
+      "wood": "#79603f"
+    },
+    "roofStart": 0.37,
+    "trim": true,
+    "windowTop": 0.62,
+    "windowWidth": 4.5,
+    "windowHeight": 5.3,
+    "windowDepth": 2.8,
+    "windowArea": 12,
+    "detectPanes": true,
+    "windowBottom": 0.012,
+    "groundWood": true
+  },
+  {
+    "id": "5d1a0f7e668de700173db7ec",
+    "title": "Porțile Orașului",
+    "family": "building",
+    "colors": {
+      "wall": "#E1DFD4",
+      "roof": "#8F9189",
+      "glass": "#515f60",
+      "base": "#A19D91",
+      "metal": "#BABCB4",
+      "green": "#4E7040",
+      "accent": "#E1DFD4",
+      "trim": "#c4bfb3",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.96,
+    "windowWidth": 4.5,
+    "windowHeight": 4.5,
+    "windowDepth": 1.7
+  },
+  {
+    "id": "5d1a1160668de700173db7ed",
+    "title": "Memorialul Eternitate",
+    "family": "eternity",
+    "colors": {
+      "wall": "#D54C2C",
+      "base": "#a39988",
+      "metal": "#323E35",
+      "green": "#51713C",
+      "accent": "#cf4b2c",
+      "trim": "#D54C2C",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5d1af5da7c5cdc0019e82228",
+    "title": "Simpals",
+    "family": "simpals",
+    "colors": {
+      "wall": "#C9C8B6",
+      "roof": "#8B8E80",
+      "glass": "#718286",
+      "base": "#6B554B",
+      "metal": "#3E4848",
+      "green": "#6D7C4A",
+      "accent": "#59443d",
+      "trim": "#C9C8B6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.95,
+    "windowWidth": 4.5,
+    "windowHeight": 4.5,
+    "windowDepth": 1.7
+  },
+  {
+    "id": "5d1b04a7668de700173db7ee",
+    "title": "Parlamentul Republicii Moldova",
+    "family": "parliament",
+    "colors": {
+      "wall": "#c6baad",
+      "roof": "#83877D",
+      "glass": "#627a80",
+      "base": "#9b9180",
+      "metal": "#4B5350",
+      "green": "#315638",
+      "accent": "#7e5548",
+      "trim": "#e1ded0",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.87,
+    "trim": true,
+    "materials": {
+      "eagle": "gold",
+      "___Default14": "base",
+      "___Default(8|9|11)$": "glass",
+      "Explorer_Default1$": "glass"
+    },
+    "windowWidth": 4.5,
+    "windowHeight": 4.5,
+    "windowDepth": 1.7,
+    "facadeBays": {
+      "width": 3.5,
+      "floor": 3.6
+    }
+  },
+  {
+    "id": "5d1c5a187c5cdc0019e82229",
+    "title": "Președinția Republicii Moldova",
+    "family": "presidency",
+    "colors": {
+      "wall": "#E4E2D7",
+      "roof": "#8C8C7D",
+      "glass": "#96855b",
+      "base": "#765044",
+      "metal": "#7C6A41",
+      "green": "#467047",
+      "accent": "#a7443d",
+      "trim": "#E4E2D7",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.75
+  },
+  {
+    "id": "5d1f0266b220f800150b7203",
+    "title": "efes1",
+    "family": "building",
+    "colors": {
+      "wall": "#C4C2B2",
+      "roof": "#BCC2C2",
+      "glass": "#6396B4",
+      "base": "#7b6152",
+      "metal": "#b6bec0",
+      "green": "#526D41",
+      "accent": "#426b88",
+      "trim": "#C4C2B2",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.22,
+    "windowWidth": 4.5,
+    "windowHeight": 4.5,
+    "windowDepth": 1.7
+  },
+  {
+    "id": "5d1f561150b86a0019fbe202",
+    "title": "efes2",
+    "family": "building",
+    "colors": {
+      "wall": "#C4C2B2",
+      "roof": "#BCC2C2",
+      "glass": "#6396B4",
+      "base": "#7b6152",
+      "metal": "#b6bec0",
+      "green": "#526D41",
+      "accent": "#426b88",
+      "trim": "#C4C2B2",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.3,
+    "windowWidth": 4.5,
+    "windowHeight": 4.5,
+    "windowDepth": 1.7
+  },
+  {
+    "id": "5d2dc75b260b6100164e67fb",
+    "title": "Muzeul de Etnografie și Istorie Naturală",
+    "family": "building",
+    "colors": {
+      "wall": "#D6CCB1",
+      "roof": "#929085",
+      "glass": "#425050",
+      "base": "#AAA798",
+      "metal": "#5B4938",
+      "green": "#48623C",
+      "accent": "#597a73",
+      "trim": "#d4b56b",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.9,
+    "trim": true
+  },
+  {
+    "id": "5d2ef876260b6100164e67fc",
+    "title": "Ștefan cel Mare",
+    "family": "statue",
+    "colors": {
+      "base": "#CBC7B3",
+      "metal": "#37493B",
+      "green": "#4D743C",
+      "accent": "#8f8272",
+      "trim": "#b9b5a6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65,
+    "statueStart": 0.49
+  },
+  {
+    "id": "5d3168cb93286c0017ba672a",
+    "title": "oazis",
+    "family": "oasis",
+    "colors": {
+      "wall": "#4d8c90",
+      "roof": "#969D98",
+      "glass": "#4f777e",
+      "base": "#414748",
+      "metal": "#536466",
+      "green": "#477245",
+      "accent": "#344247",
+      "trim": "#d3d7d4",
+      "gold": "#a99754",
+      "wood": "#51473e"
+    },
+    "roofStart": 0.65,
+    "windowWidth": 4.5,
+    "windowHeight": 4.5,
+    "windowDepth": 1.7
+  },
+  {
+    "id": "5d31698493286c0017ba672b",
+    "title": "oazis1",
+    "family": "oasis",
+    "colors": {
+      "wall": "#4d8c90",
+      "roof": "#969D98",
+      "glass": "#4f777e",
+      "base": "#414748",
+      "metal": "#536466",
+      "green": "#477245",
+      "accent": "#344247",
+      "trim": "#d3d7d4",
+      "gold": "#a99754",
+      "wood": "#51473e"
+    },
+    "roofStart": 0.65,
+    "windowWidth": 4.5,
+    "windowHeight": 4.5,
+    "windowDepth": 1.7
+  },
+  {
+    "id": "5d35748e93286c0017ba672c",
+    "title": "cetatea Soroca",
+    "family": "building",
+    "colors": {
+      "wall": "#b9b3a4",
+      "roof": "#928268",
+      "base": "#aca698",
+      "metal": "#44453f",
+      "stone": "#b9b3a4",
+      "wood": "#78644b",
+      "accent": "#b9b3a4",
+      "trim": "#b9b3a4",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.7,
+    "windows": false
+  },
+  {
+    "id": "5d5131cc992b610017b5a62c",
+    "title": "Tank",
+    "family": "tank",
+    "colors": {
+      "trim": "#e0dfd4",
+      "base": "#d3ccba",
+      "metal": "#303530",
+      "stone": "#d3ccba",
+      "accent": "#e0dfd4",
+      "gold": "#a99754",
+      "wall": "#435347"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5d51345c992b610017b5a62d",
+    "title": "Severnii Vokzal",
+    "family": "memorial",
+    "colors": {
+      "wall": "#e6e0d2",
+      "trim": "#b09a67",
+      "base": "#cbc8bc",
+      "metal": "#524b3a",
+      "stone": "#e6e0d2",
+      "accent": "#b09a67",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65,
+    "materials": {
+      "bell|kolokol": "metal"
+    }
+  },
+  {
+    "id": "5d67933ab9ce96001753a431",
+    "title": "Locomotiv",
+    "family": "locomotive",
+    "colors": {
+      "trim": "#bb352c",
+      "base": "#969b94",
+      "metal": "#242825",
+      "accent": "#a7342b",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5d776d6d81d1f600145e1b06",
+    "title": "Kolokol",
+    "family": "building",
+    "colors": {
+      "wall": "#dfbd95",
+      "roof": "#b7a052",
+      "trim": "#efe2c9",
+      "glass": "#2d312c",
+      "base": "#b7a180",
+      "metal": "#b7a052",
+      "stone": "#dfbd95",
+      "accent": "#efe2c9",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.64,
+    "trim": true,
+    "goldTop": true
+  },
+  {
+    "id": "5d8891cc81d1f600145e1b07",
+    "title": "Mati",
+    "family": "statue",
+    "colors": {
+      "base": "#b1b4a9",
+      "stone": "#d9d9d0",
+      "accent": "#8f8272",
+      "trim": "#b9b5a6",
+      "gold": "#a99754",
+      "metal": "#d9d9d0"
+    },
+    "roofStart": 0.65,
+    "statueStart": 0.4
+  },
+  {
+    "id": "5d9c4b27d77e770016ef5407",
+    "title": "Sala cu Orgă",
+    "family": "organ",
+    "colors": {
+      "wall": "#e7e8dc",
+      "roof": "#555c61",
+      "trim": "#e3e1d4",
+      "glass": "#243b34",
+      "base": "#a3afa8",
+      "metal": "#515b5d",
+      "stone": "#dfe1d3",
+      "wood": "#25382f",
+      "accent": "#4ca58d",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.35,
+    "regions": [
+      {
+        "h": [
+          0.85,
+          1.01
+        ],
+        "role": "metal"
+      },
+      {
+        "h": [
+          0.295,
+          0.31
+        ],
+        "z": [
+          0.72,
+          1.01
+        ],
+        "role": "accent",
+        "area": [
+          0,
+          0.35
+        ],
+        "width": [
+          0,
+          1.2
+        ],
+        "height": [
+          0,
+          0.3
+        ]
+      },
+      {
+        "h": [
+          0.06,
+          0.073
+        ],
+        "z": [
+          0.72,
+          1.01
+        ],
+        "role": "accent",
+        "area": [
+          0,
+          0.35
+        ],
+        "width": [
+          0,
+          1.2
+        ],
+        "height": [
+          0,
+          0.3
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5d9ca34bd77e770016ef5408",
+    "title": "Muzeul Național de Istorie",
+    "family": "building",
+    "colors": {
+      "wall": "#d3c7b7",
+      "roof": "#747b79",
+      "trim": "#e1d9ca",
+      "glass": "#59635d",
+      "base": "#aaa391",
+      "metal": "#48504a",
+      "stone": "#d3c7b7",
+      "accent": "#e1d9ca",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.46,
+    "trim": true
+  },
+  {
+    "id": "5dad5ca181d1f6004c51ffb9",
+    "title": "Suvorov",
+    "family": "statue",
+    "colors": {
+      "base": "#b8ad99",
+      "metal": "#4d4d40",
+      "stone": "#b8ad99",
+      "accent": "#8f8272",
+      "trim": "#b9b5a6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65,
+    "statueStart": 0.43,
+    "materials": {
+      "lambert(3|4)$": "metal"
+    }
+  },
+  {
+    "id": "5dbaa92681d1f6004c51ffba",
+    "title": "Bender",
+    "family": "building",
+    "colors": {
+      "wall": "#bcb59f",
+      "roof": "#b1684d",
+      "base": "#ada995",
+      "metal": "#42483f",
+      "stone": "#bcb59f",
+      "wood": "#79563b",
+      "accent": "#bcb59f",
+      "trim": "#bcb59f",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.69,
+    "windows": false
+  },
+  {
+    "id": "5dccf96881d1f6004c51ffbc",
+    "title": "Poșta Moldovei",
+    "family": "building",
+    "colors": {
+      "wall": "#bdbbb0",
+      "roof": "#787b73",
+      "trim": "#d4d1c5",
+      "glass": "#779096",
+      "base": "#9d9a8c",
+      "metal": "#555c58",
+      "stone": "#bdbbb0",
+      "wood": "#785637",
+      "accent": "#3f6991",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.9,
+    "trim": true
+  },
+  {
+    "id": "5dccfcd1d77e7700509d3a8f",
+    "title": "Fântâna din Grădina Publică",
+    "family": "fountain",
+    "colors": {
+      "base": "#a7a087",
+      "metal": "#756d59",
+      "stone": "#9b8d73",
+      "accent": "#8f8272",
+      "trim": "#b9b5a6",
+      "gold": "#a99754",
+      "wall": "#9b8d73"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5dd4f1c1323c7d0016a4b03a",
+    "title": "Biserica Sfântul Pantelimon",
+    "family": "building",
+    "colors": {
+      "wall": "#d7d0bb",
+      "roof": "#949da2",
+      "trim": "#958f7f",
+      "glass": "#495766",
+      "base": "#999485",
+      "metal": "#9aa3a8",
+      "stone": "#d7d0bb",
+      "wood": "#4e3830",
+      "accent": "#958f7f",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.44,
+    "goldTop": true,
+    "trim": true,
+    "windowWidth": 1.5,
+    "windowHeight": 2.5,
+    "windowDepth": 0.65
+  },
+  {
+    "id": "5ddcf241323c7d0016a4b03b",
+    "title": "Casa-muzeu Pușkin",
+    "family": "building",
+    "colors": {
+      "wall": "#e6c4ae",
+      "roof": "#9a654d",
+      "trim": "#eee6d4",
+      "glass": "#6c7167",
+      "base": "#55594e",
+      "stone": "#bbb19a",
+      "wood": "#573c2b",
+      "accent": "#eee6d4",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.64,
+    "trim": true
+  },
+  {
+    "id": "5df1f468323c7d0016a4b03c",
+    "title": "Gara Feroviară Chișinău",
+    "family": "building",
+    "colors": {
+      "wall": "#bdb6a4",
+      "roof": "#9f4f39",
+      "trim": "#e0d6bd",
+      "glass": "#415348",
+      "base": "#aaa28f",
+      "metal": "#655d4b",
+      "stone": "#bdb6a4",
+      "wood": "#986434",
+      "accent": "#a26345",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.44,
+    "trim": true
+  },
+  {
+    "id": "5e553cc14edbca0017e0417a",
+    "title": "Rudi1",
+    "family": "building",
+    "colors": {
+      "wall": "#e6e5d9",
+      "roof": "#45483e",
+      "trim": "#e9e8db",
+      "glass": "#343e34",
+      "base": "#a9a893",
+      "metal": "#6c6e61",
+      "stone": "#e6e5d9",
+      "wood": "#5d5845",
+      "accent": "#e9e8db",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.4,
+    "goldTop": true
+  },
+  {
+    "id": "5e553e4e9bcecd00184be459",
+    "title": "Rudi2",
+    "family": "building",
+    "colors": {
+      "wall": "#b0a08a",
+      "roof": "#b35e48",
+      "trim": "#b8a991",
+      "glass": "#456269",
+      "base": "#98775e",
+      "metal": "#4f514b",
+      "stone": "#b0a08a",
+      "wood": "#6e4230",
+      "accent": "#b8a991",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.63
+  },
+  {
+    "id": "5e5546049bcecd00184be45a",
+    "title": "Ion și Doina Aldea-Teodorovici",
+    "family": "statue",
+    "colors": {
+      "trim": "#bdad69",
+      "base": "#55594e",
+      "metal": "#535b51",
+      "stone": "#6f7266",
+      "accent": "#bdad69",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65,
+    "statueStart": 0.15
+  },
+  {
+    "id": "5e8c83d1f4814b0018a43460",
+    "title": "Filarmonica Națională",
+    "family": "building",
+    "colors": {
+      "wall": "#d5d0bf",
+      "roof": "#95968b",
+      "trim": "#e5e0d1",
+      "glass": "#526258",
+      "base": "#8b8b7f",
+      "metal": "#878f87",
+      "stone": "#c8c3b4",
+      "wood": "#835d3c",
+      "accent": "#e5e0d1",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.66,
+    "trim": true
+  },
+  {
+    "id": "5e8c850b61022e0016d5cb9a",
+    "title": "JD Ocnita",
+    "family": "building",
+    "colors": {
+      "wall": "#9c4237",
+      "roof": "#705349",
+      "trim": "#e7e3d9",
+      "glass": "#7a9297",
+      "base": "#614e48",
+      "metal": "#746b5f",
+      "stone": "#a8a69a",
+      "wood": "#d7ddd6",
+      "accent": "#e7e3d9",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.6,
+    "trim": true
+  },
+  {
+    "id": "5ea7eb1561022e0018caf70e",
+    "title": "Svecea Blagodareniea",
+    "family": "building",
+    "colors": {
+      "wall": "#d1be92",
+      "glass": "#393f38",
+      "base": "#b1a282",
+      "metal": "#a2a197",
+      "stone": "#d1be92",
+      "wood": "#5b4230",
+      "accent": "#d1be92",
+      "trim": "#d1be92",
+      "gold": "#a99754"
+    },
+    "roofStart": 1.1,
+    "windows": false
+  },
+  {
+    "id": "5eb28a625cb0f1001a314b03",
+    "title": "Biserica Sfânta Teodora de la Sihla",
+    "family": "building",
+    "colors": {
+      "wall": "#d6cbb0",
+      "roof": "#277ac1",
+      "trim": "#9a8e75",
+      "glass": "#394f54",
+      "base": "#a3987c",
+      "metal": "#3778ae",
+      "stone": "#d6cbb0",
+      "wood": "#4b352b",
+      "accent": "#9a8e75",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.45,
+    "trim": true,
+    "goldTop": true,
+    "windowWidth": 1.5,
+    "windowHeight": 2.5,
+    "windowDepth": 0.65
+  },
+  {
+    "id": "5ecf8f8237013c0016878764",
+    "title": "Purcari",
+    "family": "building",
+    "colors": {
+      "wall": "#E9E6DC",
+      "roof": "#A9513C",
+      "glass": "#3C4A4C",
+      "base": "#A59A83",
+      "metal": "#383C3A",
+      "wood": "#644C38",
+      "green": "#52743D",
+      "accent": "#E9E6DC",
+      "trim": "#E9E6DC",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.31
+  },
+  {
+    "id": "5eda02b816e75e0016f8f137",
+    "title": "Mimi",
+    "family": "building",
+    "colors": {
+      "wall": "#DAD5C1",
+      "roof": "#A15C45",
+      "glass": "#455A5B",
+      "base": "#B4AA92",
+      "metal": "#3D4441",
+      "brick_detail": "#B9967E",
+      "green": "#3E653D",
+      "accent": "#DAD5C1",
+      "trim": "#DAD5C1",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.57
+  },
+  {
+    "id": "5edf527d16e75e0016f8f138",
+    "title": "Cricova4",
+    "family": "building",
+    "colors": {
+      "wall": "#E2DED0",
+      "roof": "#E2DED0",
+      "glass": "#354A49",
+      "base": "#B4AA91",
+      "metal": "#30352F",
+      "awning": "#8F2534",
+      "wood": "#55402E",
+      "green": "#365F3E",
+      "accent": "#E2DED0",
+      "trim": "#E2DED0",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.88,
+    "windows": false
+  },
+  {
+    "id": "5edf53385113420016712938",
+    "title": "Cricova3",
+    "family": "building",
+    "colors": {
+      "wall": "#E2DED0",
+      "roof": "#E2DED0",
+      "glass": "#354A49",
+      "base": "#B4AA91",
+      "metal": "#30352F",
+      "awning": "#8F2534",
+      "wood": "#55402E",
+      "green": "#365F3E",
+      "accent": "#E2DED0",
+      "trim": "#E2DED0",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.88,
+    "windows": false
+  },
+  {
+    "id": "5edf53ec5113420016712939",
+    "title": "Cricova2",
+    "family": "building",
+    "colors": {
+      "wall": "#E2DED0",
+      "roof": "#C5BDA9",
+      "glass": "#354A49",
+      "base": "#B4AA91",
+      "metal": "#30352F",
+      "awning": "#8F2534",
+      "wood": "#55402E",
+      "green": "#365F3E",
+      "accent": "#E2DED0",
+      "trim": "#E2DED0",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.88,
+    "windows": false
+  },
+  {
+    "id": "5edf55d316e75e0016f8f139",
+    "title": "Cricova1",
+    "family": "building",
+    "colors": {
+      "wall": "#E2DED0",
+      "roof": "#C5BDA9",
+      "glass": "#354A49",
+      "base": "#B4AA91",
+      "metal": "#30352F",
+      "awning": "#8F2534",
+      "wood": "#55402E",
+      "green": "#365F3E",
+      "accent": "#E2DED0",
+      "trim": "#E2DED0",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.88,
+    "windows": false
+  },
+  {
+    "id": "5ee3a86e16e75e0016f8f13a",
+    "title": "Milestii Mici1",
+    "family": "building",
+    "colors": {
+      "wall": "#C9BFA6",
+      "roof": "#827866",
+      "glass": "#3D4C49",
+      "base": "#A7997F",
+      "metal": "#373D34",
+      "wood": "#856442",
+      "green": "#496D3D",
+      "fountain_stone": "#B4A083",
+      "fountain_gold": "#C1A14F",
+      "fountain_red": "#7C2730",
+      "red_trim": "#975847",
+      "accent": "#C9BFA6",
+      "trim": "#C9BFA6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.6,
+    "windows": false
+  },
+  {
+    "id": "5ee3aa4016e75e0016f8f13b",
+    "title": "Milestii Mici f1",
+    "family": "wine-fountain",
+    "colors": {
+      "wall": "#b4a083",
+      "roof": "#827866",
+      "glass": "#3D4C49",
+      "base": "#A7997F",
+      "metal": "#373D34",
+      "wood": "#856442",
+      "green": "#496D3D",
+      "fountain_stone": "#B4A083",
+      "fountain_gold": "#C1A14F",
+      "fountain_red": "#7C2730",
+      "red_trim": "#975847",
+      "accent": "#C9BFA6",
+      "trim": "#C9BFA6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.57
+  },
+  {
+    "id": "5ee3aafa511342001671293a",
+    "title": "Milestii Mici f2",
+    "family": "wine-fountain",
+    "colors": {
+      "wall": "#b4a083",
+      "roof": "#827866",
+      "glass": "#3D4C49",
+      "base": "#A7997F",
+      "metal": "#373D34",
+      "wood": "#856442",
+      "green": "#496D3D",
+      "fountain_stone": "#B4A083",
+      "fountain_gold": "#C1A14F",
+      "fountain_red": "#7C2730",
+      "red_trim": "#975847",
+      "accent": "#C9BFA6",
+      "trim": "#C9BFA6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.57
+  },
+  {
+    "id": "5ee3e789511342001671293e",
+    "title": "Milestii Mici3",
+    "family": "building",
+    "colors": {
+      "wall": "#C9BFA6",
+      "roof": "#827866",
+      "glass": "#3D4C49",
+      "base": "#A7997F",
+      "metal": "#373D34",
+      "wood": "#856442",
+      "green": "#496D3D",
+      "fountain_stone": "#B4A083",
+      "fountain_gold": "#C1A14F",
+      "fountain_red": "#7C2730",
+      "red_trim": "#975847",
+      "accent": "#C9BFA6",
+      "trim": "#C9BFA6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.66,
+    "windows": false
+  },
+  {
+    "id": "5ee9d41016e75e0016f8f140",
+    "title": "Chateau Vartelly1",
+    "family": "winery-tanks",
+    "colors": {
+      "wall": "#D7CDB6",
+      "roof": "#A4533B",
+      "glass": "#4C5A55",
+      "base": "#AFA086",
+      "metal": "#363C36",
+      "wood": "#67503B",
+      "green": "#4A713A",
+      "steel": "#BAC3C1",
+      "tank_shadow": "#879392",
+      "accent": "#D7CDB6",
+      "trim": "#D7CDB6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.57,
+    "materials": {
+      "lambert2$": "steel"
+    },
+    "regions": [
+      {
+        "x": [
+          0,
+          0.06
+        ],
+        "role": "steel"
+      },
+      {
+        "x": [
+          0.93,
+          1.01
+        ],
+        "role": "steel"
+      }
+    ]
+  },
+  {
+    "id": "5ee9fd55511342001671293f",
+    "title": "Chateau Vartelly",
+    "family": "building",
+    "colors": {
+      "wall": "#D7CDB6",
+      "roof": "#A4533B",
+      "glass": "#4C5A55",
+      "base": "#AFA086",
+      "metal": "#363C36",
+      "wood": "#67503B",
+      "green": "#4A713A",
+      "steel": "#BAC3C1",
+      "tank_shadow": "#879392",
+      "accent": "#D7CDB6",
+      "trim": "#D7CDB6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.57
+  },
+  {
+    "id": "5ef249c016e75e0014a10a25",
+    "title": "Asconi Winery2",
+    "family": "building",
+    "colors": {
+      "wall": "#E6E2D4",
+      "roof_green": "#3D6654",
+      "roof_thatch": "#A28B61",
+      "glass": "#3C4E49",
+      "base": "#968875",
+      "metal": "#343A31",
+      "wood": "#644831",
+      "green": "#50763C",
+      "courtyard": "#9F7054",
+      "steel": "#BAC3C1",
+      "tank_shadow": "#879392",
+      "roof_production_red": "#AC5144",
+      "accent": "#E6E2D4",
+      "trim": "#E6E2D4",
+      "gold": "#a99754",
+      "roof": "#A28B61"
+    },
+    "roofStart": 0.32
+  },
+  {
+    "id": "5ef24c2216e75e0014a10a26",
+    "title": "Asconi Winery3",
+    "family": "winery-tanks",
+    "colors": {
+      "wall": "#E6E2D4",
+      "roof_green": "#3D6654",
+      "roof_thatch": "#A28B61",
+      "glass": "#3C4E49",
+      "base": "#968875",
+      "metal": "#343A31",
+      "wood": "#644831",
+      "green": "#50763C",
+      "courtyard": "#9F7054",
+      "steel": "#BAC3C1",
+      "tank_shadow": "#879392",
+      "roof_production_red": "#AC5144",
+      "accent": "#E6E2D4",
+      "trim": "#E6E2D4",
+      "gold": "#a99754",
+      "roof": "#AC5144"
+    },
+    "roofStart": 0.6,
+    "materials": {
+      "lambert2$": "steel"
+    }
+  },
+  {
+    "id": "5ef24e1616e75e0014a10a27",
+    "title": "Asconi Winery4",
+    "family": "building",
+    "colors": {
+      "wall": "#E6E2D4",
+      "roof_green": "#3D6654",
+      "roof_thatch": "#A28B61",
+      "glass": "#3C4E49",
+      "base": "#968875",
+      "metal": "#343A31",
+      "wood": "#644831",
+      "green": "#50763C",
+      "courtyard": "#9F7054",
+      "steel": "#BAC3C1",
+      "tank_shadow": "#879392",
+      "roof_production_red": "#AC5144",
+      "accent": "#E6E2D4",
+      "trim": "#E6E2D4",
+      "gold": "#a99754",
+      "roof": "#3D6654"
+    },
+    "roofStart": 0.64
+  },
+  {
+    "id": "5ef253d816e75e0014a10a28",
+    "title": "Asconi Winery1",
+    "family": "building",
+    "colors": {
+      "wall": "#E6E2D4",
+      "roof_green": "#3D6654",
+      "roof_thatch": "#A28B61",
+      "glass": "#3C4E49",
+      "base": "#968875",
+      "metal": "#343A31",
+      "wood": "#644831",
+      "green": "#50763C",
+      "courtyard": "#9F7054",
+      "steel": "#BAC3C1",
+      "tank_shadow": "#879392",
+      "roof_production_red": "#AC5144",
+      "accent": "#E6E2D4",
+      "trim": "#E6E2D4",
+      "gold": "#a99754",
+      "roof": "#3D6654"
+    },
+    "roofStart": 0.54
+  },
+  {
+    "id": "5efe2a2c69c1250015d6eb90",
+    "title": "Poiana1",
+    "family": "building",
+    "colors": {
+      "wall": "#E7E7DF",
+      "roof": "#ADB0A9",
+      "canopy": "#F0EEE4",
+      "glass": "#708B92",
+      "base": "#ACADA3",
+      "metal": "#424C4B",
+      "green": "#537745",
+      "patio": "#CFCBBC",
+      "steel": "#BAC3C1",
+      "tank_shadow": "#879392",
+      "accent": "#E7E7DF",
+      "trim": "#E7E7DF",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.88,
+    "windowWidth": 4.5,
+    "windowHeight": 4.5,
+    "windowDepth": 1.7
+  },
+  {
+    "id": "5efe2ba28a9fc30015b1d00e",
+    "title": "Poiana2",
+    "family": "tanks",
+    "colors": {
+      "wall": "#E7E7DF",
+      "roof": "#BAC3C1",
+      "canopy": "#F0EEE4",
+      "glass": "#708B92",
+      "base": "#ACADA3",
+      "metal": "#424C4B",
+      "green": "#537745",
+      "patio": "#CFCBBC",
+      "steel": "#BAC3C1",
+      "tank_shadow": "#879392",
+      "accent": "#E7E7DF",
+      "trim": "#E7E7DF",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.57
+  },
+  {
+    "id": "5f0893b069c1250015d6eb92",
+    "title": "Et Cetera1",
+    "family": "building",
+    "colors": {
+      "wall": "#B1977B",
+      "roof": "#676459",
+      "glass": "#3F5556",
+      "base": "#A69E88",
+      "metal": "#3B423D",
+      "wood": "#77553B",
+      "green": "#4A723C",
+      "modern_white": "#E0DFD5",
+      "modern_charcoal": "#353D3E",
+      "accent": "#B1977B",
+      "trim": "#B1977B",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.48
+  },
+  {
+    "id": "5f08954969c1250015d6eb93",
+    "title": "Et Cetera2",
+    "family": "building",
+    "colors": {
+      "wall": "#B1977B",
+      "roof": "#676459",
+      "glass": "#3F5556",
+      "base": "#A69E88",
+      "metal": "#3B423D",
+      "wood": "#77553B",
+      "green": "#4A723C",
+      "modern_white": "#E0DFD5",
+      "modern_charcoal": "#353D3E",
+      "accent": "#B1977B",
+      "trim": "#B1977B",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.48
+  },
+  {
+    "id": "5f08bcb269c1250015d6eb94",
+    "title": "Et Cetera3",
+    "family": "building",
+    "colors": {
+      "wall": "#B1977B",
+      "roof": "#676459",
+      "glass": "#3F5556",
+      "base": "#A69E88",
+      "metal": "#3B423D",
+      "wood": "#77553B",
+      "green": "#4A723C",
+      "modern_white": "#E0DFD5",
+      "modern_charcoal": "#353D3E",
+      "accent": "#B1977B",
+      "trim": "#B1977B",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.48
+  },
+  {
+    "id": "5f08c01f69c1250015d6eb95",
+    "title": "Et Cetera4",
+    "family": "building",
+    "colors": {
+      "wall": "#B1977B",
+      "roof": "#676459",
+      "glass": "#3F5556",
+      "base": "#A69E88",
+      "metal": "#3B423D",
+      "wood": "#77553B",
+      "green": "#4A723C",
+      "modern_white": "#E0DFD5",
+      "modern_charcoal": "#353D3E",
+      "accent": "#B1977B",
+      "trim": "#B1977B",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.48
+  },
+  {
+    "id": "5f1ec65469c1250015d6eb96",
+    "title": "ManucBey",
+    "family": "building",
+    "colors": {
+      "wall": "#E5B773",
+      "trim": "#EEEDE3",
+      "roof": "#615F5D",
+      "glass": "#3B5058",
+      "base": "#A6A59A",
+      "metal": "#3C3B37",
+      "wood": "#574031",
+      "accent": "#EEEDE3",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.39,
+    "trim": true,
+    "windowDepth": 1.1
+  },
+  {
+    "id": "5f1ee45e69c1250015d6eb97",
+    "title": "Punctul geodezic",
+    "family": "building",
+    "colors": {
+      "wall": "#D8D1BE",
+      "trim": "#C9C6B7",
+      "base": "#B5B4AA",
+      "metal": "#232825",
+      "globe": "#A5A69A",
+      "paver_red": "#AA7E6C",
+      "accent": "#232825",
+      "gold": "#a99754"
+    },
+    "roofStart": 2,
+    "windows": false,
+    "regions": [
+      {
+        "h": [
+          0.09,
+          0.42
+        ],
+        "width": [
+          0,
+          0.5
+        ],
+        "role": "metal"
+      }
+    ]
+  },
+  {
+    "id": "5f2161518a9fc30015b1d00f",
+    "title": "VodonapornayaDrochia",
+    "family": "building",
+    "colors": {
+      "wall": "#B99562",
+      "trim": "#C1A06D",
+      "roof": "#54493D",
+      "glass": "#343D3A",
+      "base": "#A59B84",
+      "metal": "#493E33",
+      "wood": "#763D2E",
+      "accent": "#C1A06D",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.86,
+    "windowWidth": 1.5,
+    "windowHeight": 2.5,
+    "windowDepth": 0.65
+  },
+  {
+    "id": "5f44b3ab69c12500170bc942",
+    "title": "ConaculBoieruluiPommer",
+    "family": "building",
+    "colors": {
+      "wall": "#986B68",
+      "trim": "#C7C3B7",
+      "roof": "#B47465",
+      "roof_towers": "#A19F94",
+      "glass": "#45524F",
+      "base": "#A69B87",
+      "metal": "#6A6254",
+      "void": "#20221F",
+      "accent": "#C7C3B7",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.58,
+    "trim": true
+  },
+  {
+    "id": "5f44cef569c12500170bc943",
+    "title": "MoaradevantBesalma",
+    "family": "windmill",
+    "colors": {
+      "wall": "#898273",
+      "trim": "#675D4A",
+      "roof": "#74776D",
+      "base": "#A5A084",
+      "metal": "#403E35",
+      "sails": "#746A56",
+      "accent": "#675D4A",
+      "gold": "#a99754",
+      "wood": "#898273"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5f4641f269c12500170bc944",
+    "title": "ConaculBalioz",
+    "family": "building",
+    "colors": {
+      "wall": "#ADC6E0",
+      "trim": "#E8E9E2",
+      "roof": "#A96754",
+      "glass": "#3D505A",
+      "base": "#929489",
+      "metal": "#4B514A",
+      "accent": "#A96754",
+      "wood": "#464030",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.73,
+    "trim": true
+  },
+  {
+    "id": "5f4659ce69c12500170bc945",
+    "title": "ConaculCazimir",
+    "family": "building",
+    "colors": {
+      "wall": "#BAC8C4",
+      "trim": "#D1D4C8",
+      "roof": "#9D9E8A",
+      "glass": "#27332D",
+      "base": "#8B8C79",
+      "metal": "#555B4E",
+      "accent": "#A15D3D",
+      "wood": "#604631",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.61,
+    "trim": true
+  },
+  {
+    "id": "5f5f7e4ba82dfa00178c7845",
+    "title": "CasaMuzeulAlexandruDonici",
+    "family": "building",
+    "colors": {
+      "wall": "#ECEBDF",
+      "trim": "#EEEDE2",
+      "roof": "#6C6953",
+      "glass": "#475957",
+      "base": "#AFAD96",
+      "metal": "#3D4139",
+      "wood": "#4E402E",
+      "wood_frames": "#98613D",
+      "accent": "#EEEDE2",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.49
+  },
+  {
+    "id": "5f6dfba5a317a3001710a56d",
+    "title": "Serpeni1",
+    "family": "stele",
+    "colors": {
+      "wall": "#D1C6A5",
+      "trim": "#DCD2B9",
+      "base": "#865F50",
+      "metal": "#73604B",
+      "panel": "#705545",
+      "accent": "#765b4f",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5f6dfc87a82dfa00178c7846",
+    "title": "Serpeni2",
+    "family": "memorial",
+    "colors": {
+      "wall": "#D8CBB2",
+      "trim": "#E0D6C2",
+      "base": "#8E665A",
+      "metal": "#947055",
+      "cross": "#BA9B55",
+      "panel": "#435650",
+      "accent": "#E0D6C2",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65,
+    "dome": true
+  },
+  {
+    "id": "5f6dfd33a82dfa00178c7847",
+    "title": "Serpeni3",
+    "family": "park",
+    "colors": {
+      "wall": "#C8BA97",
+      "trim": "#906A54",
+      "base": "#B6B8AC",
+      "metal": "#303B37",
+      "paver_red": "#AE7168",
+      "grass": "#668448",
+      "accent": "#906A54",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5f6dff51a317a3001710a56e",
+    "title": "Serpeni4",
+    "family": "memorial",
+    "colors": {
+      "wall": "#EAE8DC",
+      "trim": "#E4E1D4",
+      "base": "#75554B",
+      "metal": "#855C37",
+      "cross": "#5C5845",
+      "inscription": "#3D3F37",
+      "accent": "#E4E1D4",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65,
+    "regions": [
+      {
+        "h": [
+          0.72,
+          0.83
+        ],
+        "x": [
+          0.3,
+          0.7
+        ],
+        "z": [
+          0.3,
+          0.7
+        ],
+        "role": "metal"
+      }
+    ]
+  },
+  {
+    "id": "5f6e00b5a82dfa00178c7848",
+    "title": "Serpeni5",
+    "family": "wreath",
+    "colors": {
+      "wall": "#486663",
+      "trim": "#758F89",
+      "base": "#875E51",
+      "metal": "#292c2d",
+      "dark": "#292C2D",
+      "green": "#486663",
+      "accent": "#758F89",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "5f9af78da82dfa001568f67b",
+    "title": "ManastireaCapriana",
+    "family": "building",
+    "colors": {
+      "wall": "#E5E0CE",
+      "trim": "#F0EFE6",
+      "roof": "#424747",
+      "glass": "#344A52",
+      "base": "#424842",
+      "metal": "#3E4037",
+      "wood": "#75472E",
+      "accent": "#F0EFE6",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.37,
+    "goldTop": false,
+    "trim": true,
+    "windowWidth": 1.5,
+    "windowHeight": 2.5,
+    "windowDepth": 0.65
+  },
+  {
+    "id": "5f9be687a82dfa001568f67c",
+    "title": "Stantia",
+    "family": "dam",
+    "colors": {
+      "wall": "#A49382",
+      "trim": "#BF804E",
+      "roof": "#5E6460",
+      "base": "#897E6E",
+      "metal": "#4E5C5D",
+      "gate": "#6D7877",
+      "accent": "#bf804e",
+      "gold": "#a99754",
+      "glass": "#6d7877"
+    },
+    "roofStart": 0.65
+  },
+  {
+    "id": "61e5841ffd549000173e486a",
+    "title": "Turnul de apă · Muzeul Orașului",
+    "family": "water-tower",
+    "colors": {
+      "wall": "#B7B2A1",
+      "trim": "#C5BEAA",
+      "roof": "#79503B",
+      "glass": "#3E4A4B",
+      "base": "#A6A08F",
+      "metal": "#363F3B",
+      "accent": "#A26F53",
+      "wood": "#4C352A",
+      "wood_frames": "#8B603C",
+      "gold": "#a99754"
+    },
+    "roofStart": 0.86,
+    "stoneBands": true,
+    "materials": {
+      "^$a": "wall"
+    },
+    "windowWidth": 1.4,
+    "windowHeight": 2.3,
+    "windowDepth": 0.8,
+    "nodes": {
+      "^Roof$": "roof",
+      "^Door$": "wood",
+      "^(Big_Windows|Tiny_Windows|Windows)$": "glass",
+      "DecorWindowBottom": "trim"
+    }
+  }
+]

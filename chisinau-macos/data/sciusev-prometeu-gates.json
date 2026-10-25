@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Prometeu · intrare Șciusev",
+    "a": [
+      -916,
+      636
+    ],
+    "b": [
+      -910.5,
+      636
+    ],
+    "height": 2.5,
+    "color": "#384a3c",
+    "post": "#a7ab92",
+    "solidHeight": 0.12,
+    "arch": false,
+    "source": "September 2025 Street View; dimensions estimated."
+  },
+  {
+    "name": "Stere4 · acces curte",
+    "a": [
+      -870.6,
+      689
+    ],
+    "b": [
+      -870.6,
+      692
+    ],
+    "height": 1.7,
+    "color": "#574c40",
+    "post": "#b9b399",
+    "solidHeight": 0.15,
+    "arch": false,
+    "source": "September 2025 Street View; metric placement estimated."
+  }
+]

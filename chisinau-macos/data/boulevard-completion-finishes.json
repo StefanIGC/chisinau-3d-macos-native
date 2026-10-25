@@ -1,0 +1,320 @@
+{
+  "w32516023": {
+    "height": 11.8,
+    "floors": 3,
+    "style": "campus",
+    "wall": "#b5b29d",
+    "trim": "#c5c4b3",
+    "roof": "#6e7d71",
+    "photoRefs": [
+      "ion-creanga1-official-01.jpg"
+    ],
+    "confidence": "official campus aerial; mapped three-storey boulevard block"
+  },
+  "w32516024": {
+    "height": 14.2,
+    "floors": 4,
+    "style": "campus",
+    "wall": "#b4b19d",
+    "trim": "#c5c3b2",
+    "photoRefs": [
+      "ion-creanga1-official-01.jpg"
+    ],
+    "confidence": "official campus aerial; adjacent mapped four-storey wing"
+  },
+  "w41434947": {
+    "height": 27,
+    "floors": 8,
+    "style": "bands",
+    "wall": "#9fa99d",
+    "trim": "#babcae",
+    "photoRefs": [
+      "W01"
+    ],
+    "confidence": "Cantemir wide photo; mapped eight-storey industrial block; details approximate"
+  },
+  "w96545866": {
+    "height": 7.2,
+    "floors": 2,
+    "style": "artico",
+    "wall": "#a5b2b1",
+    "trim": "#bcbfb0",
+    "photoRefs": [
+      "S1-01",
+      "ion-creanga1-official-01.jpg"
+    ],
+    "confidence": "secondary campus mass visible in official aerial; two mapped levels"
+  },
+  "w895149789": {
+    "height": 6.8,
+    "floors": 2,
+    "style": "artico",
+    "wall": "#a5b2b1",
+    "trim": "#bdc0b3",
+    "photoRefs": [
+      "S1-01"
+    ],
+    "confidence": "ARTICO secondary body; partial photographic coverage"
+  },
+  "w96545859": {
+    "height": 4.3,
+    "floors": 1,
+    "style": "artico",
+    "wall": "#a4afb0",
+    "trim": "#bfc0b2",
+    "photoRefs": [
+      "S1-01"
+    ],
+    "confidence": "ARTICO secondary body; partial photographic coverage"
+  },
+  "w96545875": {
+    "height": 4.3,
+    "floors": 1,
+    "style": "artico",
+    "wall": "#a4afb0",
+    "trim": "#bfc0b2",
+    "photoRefs": [
+      "S1-01"
+    ],
+    "confidence": "ARTICO secondary body; partial photographic coverage"
+  },
+  "w147647044": {
+    "height": 5,
+    "floors": 1,
+    "style": "cna-wing",
+    "wall": "#bec0ac",
+    "trim": "#c8c8b6",
+    "photoRefs": [
+      "S1-07"
+    ],
+    "confidence": "low CNA wing visible beside the main elevation"
+  },
+  "w85699408": {
+    "height": 13.6,
+    "floors": 4,
+    "style": "institution",
+    "wall": "#b4b09a",
+    "trim": "#c0c2b1",
+    "confidence": "194A address verified by USMF; mapped four levels; exterior details conservative"
+  },
+  "w95087774": {
+    "height": 13.2,
+    "floors": 3,
+    "style": "194b",
+    "wall": "#b7b095",
+    "trim": "#af886e",
+    "photoRefs": [
+      "194b-usmf-2019-01.jpg",
+      "194b-usmf-2019-02.jpg"
+    ],
+    "confidence": "Exact194B stone facade, salmon ornament and three visible window rows; lower ground partly tree-obscured; height estimated"
+  },
+  "w96545868": {
+    "height": 10.2,
+    "floors": 3,
+    "style": "167",
+    "wall": "#547e7d",
+    "trim": "#93aaa0",
+    "photoRefs": [
+      "167-1-unidentart-yandex-01.jpg",
+      "167-1-unidentart-yandex-02.jpg"
+    ],
+    "confidence": "Exact167/1 teal metal/glass and copper entrance canopy; three levels from map"
+  },
+  "w96301027": {
+    "height": 14.8,
+    "floors": 4,
+    "style": "159",
+    "wall": "#bdbba4",
+    "trim": "#c7c5b2",
+    "photoRefs": [
+      "159-residential-2022.jpg"
+    ],
+    "confidence": "exact-address exterior photo March 2022"
+  },
+  "w709254082": {
+    "height": 13.8,
+    "floors": 4,
+    "style": "institution",
+    "wall": "#b6b8a5",
+    "trim": "#c5c4af",
+    "confidence": "mapped four levels; exterior only, no invented institutional signage"
+  },
+  "w204447444": {
+    "height": 9.8,
+    "floors": 2,
+    "style": "137",
+    "wall": "#c1bca8",
+    "trim": "#c9c7b3",
+    "photoRefs": [
+      "137-topimobiliare-00.jpg",
+      "137-topimobiliare-01.jpg"
+    ],
+    "confidence": "Exact-address full-front photos confirm two levels, overriding stale four-level map tag"
+  },
+  "w49070365": {
+    "height": 9.7,
+    "floors": 2,
+    "style": "131",
+    "wall": "#bfa965",
+    "trim": "#cbc6ac",
+    "roof": "#746e61",
+    "photoRefs": [
+      "131-hungarian-embassy-2017.jpg"
+    ],
+    "confidence": "2017 exterior; exact current paint unverified after 2026 repaint notice"
+  },
+  "w1038203382": {
+    "height": 33,
+    "floors": 9,
+    "style": "avenue",
+    "wall": "#4b6768",
+    "trim": "#b3b6a8",
+    "photoRefs": [
+      "lazo38-avenue-full-2023.jpg",
+      "lazo38-avenue-entry.png"
+    ],
+    "confidence": "Full exterior from facade supplier; blue reflective glass and dark projecting fins, estimated nine-storey height"
+  },
+  "w87155329": {
+    "height": 5,
+    "floors": 1,
+    "style": "presidency-wing",
+    "wall": "#aeb7ad",
+    "trim": "#b8c0b5",
+    "confidence": "mapped low Presidency wing; retain central imported model"
+  },
+  "w87155335": {
+    "height": 5,
+    "floors": 1,
+    "style": "presidency-wing",
+    "wall": "#aeb7ad",
+    "trim": "#b8c0b5",
+    "confidence": "mapped low Presidency wing; retain central imported model"
+  },
+  "w49070357": {
+    "height": 11.8,
+    "floors": 3,
+    "style": "133",
+    "wall": "#b0a78d",
+    "trim": "#bcb9a2",
+    "photoRefs": [
+      "133-giant-yandex-02.jpg",
+      "133-maicom-yandex-01.jpg"
+    ],
+    "confidence": "Exact-address three-storey exterior; footprint from map"
+  },
+  "w902162006": {
+    "height": 8.5,
+    "floors": 2,
+    "style": "123",
+    "wall": "#b9b8a1",
+    "trim": "#c3c0aa",
+    "photoRefs": [
+      "123-opticlux-yandex-02.jpg"
+    ],
+    "confidence": "Exact-address storefront and upper elevation; full height estimated"
+  },
+  "w902162007": {
+    "height": 8.5,
+    "floors": 2,
+    "style": "123",
+    "wall": "#b9b7a0",
+    "trim": "#c3bfaa",
+    "photoRefs": [
+      "123-opticlux-yandex-02.jpg"
+    ],
+    "confidence": "Attached 123A continuation; partially photographed"
+  },
+  "w49070364": {
+    "height": 11.8,
+    "floors": 3,
+    "style": "119",
+    "wall": "#b3ae98",
+    "trim": "#c1bca6",
+    "photoRefs": [
+      "119-zebra-yandex-01.jpg"
+    ],
+    "confidence": "Exact-address carved window surrounds and shop vestibule; full height estimated"
+  },
+  "w204447435": {
+    "height": 12.8,
+    "floors": 3,
+    "style": "135",
+    "wall": "#bcb49a",
+    "trim": "#c5bda8",
+    "photoRefs": [
+      "135-papermax-yandex-01.jpg",
+      "135-papermax-yandex-02.jpg"
+    ],
+    "confidence": "Exact-address modern curved storefront, cream wall, orange edge and blue glass; height estimated from partial elevation"
+  },
+  "w312887035": {
+    "height": 4.9,
+    "floors": 1,
+    "style": "shops",
+    "wall": "#b1b3a2",
+    "trim": "#c2c1ad",
+    "photoRefs": [
+      "147-level-yandex-01.jpg"
+    ],
+    "confidence": "149 shop front visible beside exact147 entrance; full low roofline shown"
+  },
+  "w312887031": {
+    "height": 5.4,
+    "floors": 1,
+    "style": "shops",
+    "wall": "#a4957f",
+    "trim": "#bcbba7",
+    "photoRefs": [
+      "147-level-yandex-01.jpg",
+      "147-level-yandex-02.jpg"
+    ],
+    "confidence": "147 low storefront and red stone entry photographed; total height estimated"
+  },
+  "w312887033": {
+    "height": 8.4,
+    "floors": 2,
+    "style": "145",
+    "wall": "#bab69f",
+    "trim": "#c8c3ad",
+    "photoRefs": [
+      "145-pado-yandex-01.jpg",
+      "145-pado-yandex-02.jpg"
+    ],
+    "confidence": "Exact145 two-storey elevation and cafe wood fascia, corroborated address"
+  },
+  "w312887032": {
+    "height": 5.3,
+    "floors": 1,
+    "style": "shops",
+    "wall": "#bfc1b2",
+    "trim": "#c9c9b9",
+    "photoRefs": [
+      "143-kinder-waze.jpg"
+    ],
+    "confidence": "Exact143 single-storey white facade and dark plinth; source photo"
+  },
+  "w312887034": {
+    "height": 5.3,
+    "floors": 1,
+    "style": "shops",
+    "wall": "#bfc1b2",
+    "trim": "#c9c9b9",
+    "photoRefs": [
+      "143-kinder-waze.jpg"
+    ],
+    "confidence": "Attached143 part, photographed low white street row"
+  },
+  "w96301024": {
+    "height": 48.0,
+    "floors": 15,
+    "style": "deluxe",
+    "wall": "#bfb69a",
+    "trim": "#c4bda3",
+    "photoRefs": [
+      "137-topimobiliare-00.jpg"
+    ],
+    "confidence": "Deluxe behind street row, mapped 15 levels; cream exterior and blue glazed vertical bay visible in photo"
+  }
+}

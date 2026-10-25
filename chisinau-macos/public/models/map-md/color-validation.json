@@ -1,0 +1,937 @@
+[
+  {
+    "file": "740ae03b5a9e067ac6cf38242d3629b5.glb",
+    "title": "fosfor",
+    "sha256": "0efd51b7a5bfc77be24f1d865f7584a68721968fb0459f02ca39b2f929f2e8cf",
+    "bytes": 1950416,
+    "roles": {
+      "metal": 90970,
+      "roof": 18508,
+      "base": 212,
+      "accent": 4446
+    }
+  },
+  {
+    "file": "3ae73124805b9123f145cb22399d4ad4.glb",
+    "title": "AfganPark",
+    "sha256": "8c287182edac639e1b08a11f94950c74027ee44792a6ba92e2ed2df1c1abf65e",
+    "bytes": 60564,
+    "roles": {
+      "base": 799,
+      "wall": 3494,
+      "trim": 26
+    }
+  },
+  {
+    "file": "14b0286dfc7288c753e380c2dd4e2c0b.glb",
+    "title": "Artcor",
+    "sha256": "f63380da39f7e3cd18a47516cf6e504a4182059c1a11d0aa2ff2f09d3941dac6",
+    "bytes": 314840,
+    "roles": {
+      "wall": 1491,
+      "roof": 401,
+      "metal": 1574,
+      "glass": 588,
+      "green": 28,
+      "accent": 1133
+    }
+  },
+  {
+    "file": "1ed6cbf0c1731c002770c996412b102c.glb",
+    "title": "Scuarul Catedralei",
+    "sha256": "d51b850666512c148249a3602987e667e58cdb6531250038deb06ee359e0c5a4",
+    "bytes": 27024,
+    "roles": {
+      "base": 2100
+    }
+  },
+  {
+    "file": "216a7569a12dc6cbee2db9bebee2c9a2.glb",
+    "title": "Porțile Orașului",
+    "sha256": "d2fd4e2b17a17f5eb06ca59971ea354a5f97b60bc0cc6a36781650e5c3903e87",
+    "bytes": 66152,
+    "roles": {
+      "wall": 3133,
+      "base": 162,
+      "glass": 170,
+      "roof": 47
+    }
+  },
+  {
+    "file": "1156ed8c7999073e96feb591342f5a5a.glb",
+    "title": "Memorialul Eternitate",
+    "sha256": "0309df60fab1e530b9a9650d94f12c77abb8bfe8b5fcac25d1b6d45c15c97569",
+    "bytes": 49228,
+    "roles": {
+      "accent": 952,
+      "wall": 1405,
+      "base": 431
+    }
+  },
+  {
+    "file": "776f5f596b44deeb739195f464c24542.glb",
+    "title": "Simpals",
+    "sha256": "5568fcdd4926b4d4a331b5ead44c046fb4f38bad26f4403f16d64b327e411aef",
+    "bytes": 197212,
+    "roles": {
+      "accent": 9093,
+      "base": 640,
+      "wall": 1385,
+      "glass": 380,
+      "roof": 448
+    }
+  },
+  {
+    "file": "e62f83bddfa2b684b27db86cd1435aef.glb",
+    "title": "Parlamentul Republicii Moldova",
+    "sha256": "b7efdeaae556ecb967cfab0c3611b95160d87e59370b7453d53ab47847923cd3",
+    "bytes": 724364,
+    "roles": {
+      "glass": 2346,
+      "wall": 13914,
+      "trim": 657,
+      "roof": 120,
+      "accent": 2329,
+      "base": 886,
+      "gold": 2
+    }
+  },
+  {
+    "file": "d4f4f5fbfcf4ae872394ba25b3530a8c.glb",
+    "title": "Președinția Republicii Moldova",
+    "sha256": "1ea977cf069c9afca6b421b37b1760d01742d0a09da8fa27b7bb794b137091d4",
+    "bytes": 56452,
+    "roles": {
+      "gold": 176,
+      "metal": 128,
+      "wall": 983,
+      "glass": 341,
+      "roof": 446,
+      "accent": 166,
+      "base": 969
+    }
+  },
+  {
+    "file": "aa4a4516f7e40d23eb14253dc9fbb126.glb",
+    "title": "efes1",
+    "sha256": "2ce9ab42ea582a9c06b77b689608ffbd44c7f0653ff00bc081d91522d03d9689",
+    "bytes": 132992,
+    "roles": {
+      "wall": 9060,
+      "roof": 3238,
+      "base": 8
+    }
+  },
+  {
+    "file": "05c9abf5e32af7c89a5eb5e971f91751.glb",
+    "title": "efes2",
+    "sha256": "fc960f6ad2245d6f36ce6dd4d4882468e1d2881fe6ffaa6edf2abd81d608aa2e",
+    "bytes": 194128,
+    "roles": {
+      "wall": 10521,
+      "glass": 443,
+      "roof": 5026,
+      "base": 46
+    }
+  },
+  {
+    "file": "fd57642803d4dc05733ef46c9eaf8a07.glb",
+    "title": "Muzeul de Etnografie și Istorie Naturală",
+    "sha256": "a02cb54cc40d52325fe966257a3540b3a5c78736e42e38f1a0ccdbf1b60c03dd",
+    "bytes": 239584,
+    "roles": {
+      "wall": 11989,
+      "trim": 454,
+      "glass": 89,
+      "base": 251,
+      "roof": 204
+    }
+  },
+  {
+    "file": "e57dba1b9bbdbeafb8204060f949dc74.glb",
+    "title": "Ștefan cel Mare",
+    "sha256": "84b924eb73b158d7be694cc486b3b7f8c2dfc272a2178577048e06d86418c9d5",
+    "bytes": 315900,
+    "roles": {
+      "base": 746,
+      "metal": 7179
+    }
+  },
+  {
+    "file": "e2a976006212fd93ea2f7222d9ed3948.glb",
+    "title": "oazis",
+    "sha256": "43eb09b733438b6aed99b148bbaaa4c764fc98b23c76d91b41ab2f2e51579a86",
+    "bytes": 1126980,
+    "roles": {
+      "wood": 17181,
+      "roof": 6067,
+      "base": 1156,
+      "trim": 2441,
+      "wall": 1633,
+      "accent": 5024,
+      "glass": 20072
+    }
+  },
+  {
+    "file": "910bf296beabdeda350ce311bfde569a.glb",
+    "title": "oazis1",
+    "sha256": "12eb93e3a891036f5fe282fd42a1b4c621e3dd068439402f2d909137060558d6",
+    "bytes": 2117960,
+    "roles": {
+      "accent": 343,
+      "roof": 81,
+      "wall": 9050,
+      "trim": 11646,
+      "glass": 92854
+    }
+  },
+  {
+    "file": "3d986e224ccebf9a0831a79092a1347d.glb",
+    "title": "cetatea Soroca",
+    "sha256": "80012942d3617aec6f277d722281aba39d3d7b9bdd0b3a218ba5df73d21ab33b",
+    "bytes": 44288,
+    "roles": {
+      "wall": 1609,
+      "roof": 813,
+      "base": 46
+    }
+  },
+  {
+    "file": "ddebe52b0fd02a6217b239a81047d13a.glb",
+    "title": "Tank",
+    "sha256": "4ff8ce9de659ed011e076a9dc91dc43eadb7e7fcae7b28daa098e56ca788462a",
+    "bytes": 199852,
+    "roles": {
+      "wall": 8247,
+      "metal": 1321,
+      "base": 99
+    }
+  },
+  {
+    "file": "b30c83a93be0004148439dd4f2fdcd90.glb",
+    "title": "Severnii Vokzal",
+    "sha256": "cea73fc3d5ac3dd9ff81f7bee4be9aaee0b3e0a06cfa45562c367b9b63e1e6e6",
+    "bytes": 10200,
+    "roles": {
+      "base": 10,
+      "wall": 552
+    }
+  },
+  {
+    "file": "1482e22a6c64050aa3d1b04cc7221f73.glb",
+    "title": "Locomotiv",
+    "sha256": "e3f3c53b81c0957374281ee430b407573d72ff32f89b5851095b06693866edcc",
+    "bytes": 368040,
+    "roles": {
+      "base": 3955,
+      "accent": 7986,
+      "metal": 12598
+    }
+  },
+  {
+    "file": "c394ce1c953f06562e9758966688526b.glb",
+    "title": "Kolokol",
+    "sha256": "d8684646a845ee430086e78087da2d2a75c1704126b4e7ae21557b498732f8ec",
+    "bytes": 88968,
+    "roles": {
+      "wall": 4588,
+      "trim": 727,
+      "base": 62,
+      "glass": 89,
+      "roof": 224,
+      "gold": 4
+    }
+  },
+  {
+    "file": "7d53ad846bf4ae305c8b1147ec6ed5d7.glb",
+    "title": "Mati",
+    "sha256": "3f598617f75b68dc7f0cb1ba6605e4e848c7c4e6021756b4e90aaa03aea0b3d8",
+    "bytes": 53476,
+    "roles": {
+      "metal": 5165,
+      "base": 38
+    }
+  },
+  {
+    "file": "8449fe59629808bec77dcbaacf149404.glb",
+    "title": "Sala cu Orgă",
+    "sha256": "ec864479a52a9397554e1a43d078eccbc3fba337e726ead80cd7bf17701c9e82",
+    "bytes": 185404,
+    "roles": {
+      "wall": 8185,
+      "roof": 332,
+      "base": 134,
+      "glass": 24,
+      "metal": 30
+    }
+  },
+  {
+    "file": "3146f290163fb7892f9ca04d3328afe5.glb",
+    "title": "Muzeul Național de Istorie",
+    "sha256": "ca2e0fc3d2556fb03882ca498553ab4d21fc7c3c2be0a9d089f1a420e7c73469",
+    "bytes": 244988,
+    "roles": {
+      "trim": 2353,
+      "wall": 8976,
+      "roof": 1003,
+      "glass": 218,
+      "base": 46
+    }
+  },
+  {
+    "file": "4600dfd356225c2bc2de512e4aa2206a.glb",
+    "title": "Suvorov",
+    "sha256": "990bf0ac5523439fc98cbb03023e2ca7662a6a677d26ce426b2548db664247ae",
+    "bytes": 137752,
+    "roles": {
+      "metal": 5238,
+      "base": 112
+    }
+  },
+  {
+    "file": "a2eabd41afbf6faa8aa8c056aeef3a0a.glb",
+    "title": "Bender",
+    "sha256": "40e28c457f0d7eaf08914873052137f2b5e2500543dd5627151c161b8e1f5312",
+    "bytes": 92068,
+    "roles": {
+      "wall": 4734,
+      "base": 71,
+      "roof": 142
+    }
+  },
+  {
+    "file": "15676fca1af533d9e57c243889ac3108.glb",
+    "title": "Poșta Moldovei",
+    "sha256": "35bac65ade2176b5bb11ff2810949078136662cecb948485994b20b5803db935",
+    "bytes": 163476,
+    "roles": {
+      "wall": 9269,
+      "trim": 686,
+      "glass": 327,
+      "roof": 50,
+      "base": 7
+    }
+  },
+  {
+    "file": "9d1b2a7a7249ba5b188f11a3edb2f94d.glb",
+    "title": "Fântâna din Grădina Publică",
+    "sha256": "9d3d794a1a9596791ab8934ee14898cd9b9a8f5c7b8651cc2dee09fa95ebb52d",
+    "bytes": 205184,
+    "roles": {
+      "base": 76,
+      "water": 2,
+      "wall": 11012
+    }
+  },
+  {
+    "file": "238114fe1e46af4670f5800c2978b586.glb",
+    "title": "Biserica Sfântul Pantelimon",
+    "sha256": "3dabdad700824fe74b7042258caee4ec67f0bcbb7998c8444491dfb748342177",
+    "bytes": 73584,
+    "roles": {
+      "base": 58,
+      "wall": 2647,
+      "glass": 85,
+      "trim": 770,
+      "roof": 479,
+      "gold": 38
+    }
+  },
+  {
+    "file": "1a043cd95112ecb15b0a68f6a6de2de2.glb",
+    "title": "Casa-muzeu Pușkin",
+    "sha256": "694c239972a1d26896b9b98aa09799111bd73ea1ea84808b90a89d0f82a3b333",
+    "bytes": 24632,
+    "roles": {
+      "wall": 1045,
+      "trim": 104,
+      "base": 85,
+      "roof": 82,
+      "glass": 12
+    }
+  },
+  {
+    "file": "9364344ff603878bbf9c89c071dd534a.glb",
+    "title": "Gara Feroviară Chișinău",
+    "sha256": "5afa79b7a20fe727a0c7c310c133aaef99c11138e916b89c96f49caa5d09f26f",
+    "bytes": 76168,
+    "roles": {
+      "roof": 328,
+      "wall": 4054,
+      "trim": 325,
+      "glass": 40,
+      "base": 116
+    }
+  },
+  {
+    "file": "5082b7148431c6fb1a463f2efeb8b387.glb",
+    "title": "Rudi1",
+    "sha256": "dcdcbba2e5d0d398acce278f308020d5db6c405542e89d16ea00a5f05785f0dd",
+    "bytes": 47692,
+    "roles": {
+      "wall": 2049,
+      "roof": 262,
+      "gold": 18,
+      "base": 35
+    }
+  },
+  {
+    "file": "f660e0af196aa966c8260686f690f4e0.glb",
+    "title": "Rudi2",
+    "sha256": "cbb95d92c2d6ad4d70660c491c9a27aee20762c09d014e3fa4e741db99f23d30",
+    "bytes": 98716,
+    "roles": {
+      "wall": 5944,
+      "roof": 262,
+      "base": 67,
+      "glass": 103
+    }
+  },
+  {
+    "file": "463e1c292cc36c0fb9e64708162a1f53.glb",
+    "title": "Ion și Doina Aldea-Teodorovici",
+    "sha256": "f02a463e032eff8da8f7e2e0f7616182b2a1cecf9b63f83557c8ff979660ade1",
+    "bytes": 183344,
+    "roles": {
+      "metal": 6477,
+      "base": 75
+    }
+  },
+  {
+    "file": "808dd145f1179d785bfd78d8a1eccd0d.glb",
+    "title": "Filarmonica Națională",
+    "sha256": "f6045c0e08863ead904a5f295b95f3062927f5bb47ae5d8b7bde7a05d15e9c6e",
+    "bytes": 147300,
+    "roles": {
+      "trim": 537,
+      "wall": 4360,
+      "roof": 1415,
+      "glass": 49,
+      "base": 49
+    }
+  },
+  {
+    "file": "d14ff99a792e3aa239994522ec098697.glb",
+    "title": "JD Ocnita",
+    "sha256": "87b65ba2d202bd0bdc01fc34a97474ec45e61d519311fb1fd50eae79670475f0",
+    "bytes": 134880,
+    "roles": {
+      "roof": 372,
+      "wall": 7975,
+      "trim": 333,
+      "glass": 184,
+      "base": 104
+    }
+  },
+  {
+    "file": "6695198115e49f393a08421ff992a2a8.glb",
+    "title": "Svecea Blagodareniea",
+    "sha256": "89ae189d646a043ce08f889db141ee8aa1c1a01839ce11892760668f7433d2a4",
+    "bytes": 44836,
+    "roles": {
+      "base": 1596,
+      "wall": 759
+    }
+  },
+  {
+    "file": "e73aa0b35dc1e4a587a0e6f3861acf7b.glb",
+    "title": "Biserica Sfânta Teodora de la Sihla",
+    "sha256": "02425fdbed5ba5b86227c46b7d31603f5009be15cf3e3f40258d26c9c0dafe16",
+    "bytes": 101436,
+    "roles": {
+      "wall": 3459,
+      "base": 271,
+      "glass": 82,
+      "trim": 460,
+      "roof": 358,
+      "gold": 14
+    }
+  },
+  {
+    "file": "a7f883fcdf8868526ceab691d72b2ac0.glb",
+    "title": "Purcari",
+    "sha256": "ee543725aeece80178826597fb2cf33c642dcc2711b30338c5928f5ed1d704b9",
+    "bytes": 54028,
+    "roles": {
+      "wall": 2310,
+      "roof": 414,
+      "base": 113,
+      "glass": 43
+    }
+  },
+  {
+    "file": "addd210696656da8309a947e08857f97.glb",
+    "title": "Mimi",
+    "sha256": "8a16cfda153690e9c557a772baf3e24b25706d02d13bc3cba538734189eb852c",
+    "bytes": 144512,
+    "roles": {
+      "wall": 7847,
+      "base": 493,
+      "roof": 378,
+      "glass": 1
+    }
+  },
+  {
+    "file": "bb1d2f2be8531d4e61a3234a0c9c7017.glb",
+    "title": "Cricova4",
+    "sha256": "76848f57d67454a815e18bb715f9b06188ecac7fb68aacfe4c9bb49a3926281c",
+    "bytes": 8136,
+    "roles": {
+      "wall": 322,
+      "roof": 10,
+      "base": 20
+    }
+  },
+  {
+    "file": "43b9700f9ea90a2e5a2aad6063d54cd3.glb",
+    "title": "Cricova3",
+    "sha256": "d7c4a65ced9f4aefd58348385ce176148faffb6f587faff992ed392e50faf267",
+    "bytes": 12392,
+    "roles": {
+      "wall": 450,
+      "roof": 18,
+      "base": 46
+    }
+  },
+  {
+    "file": "61dfc7fb1eacce3008676f6ff29108f2.glb",
+    "title": "Cricova2",
+    "sha256": "c6b9f901bb67d1b5c37e906c84a325848da3b43056afa85add04da906783f2e5",
+    "bytes": 37208,
+    "roles": {
+      "wall": 1635,
+      "base": 51,
+      "roof": 90
+    }
+  },
+  {
+    "file": "db0358d2f9abc9985ca412094a867f6a.glb",
+    "title": "Cricova1",
+    "sha256": "5d5d421e99f23eb14ef23113c7f02b2bff711d863af4d8834cfeca86ab38c94a",
+    "bytes": 52708,
+    "roles": {
+      "wall": 2607,
+      "base": 105,
+      "roof": 10
+    }
+  },
+  {
+    "file": "0cc236c021f7c574032a9c8fae307e91.glb",
+    "title": "Milestii Mici1",
+    "sha256": "3f347ad815fb02f5da7cbe1a75eb9c9c46b4f120ea45bfe33385d0f7fed19274",
+    "bytes": 85988,
+    "roles": {
+      "wall": 4205,
+      "roof": 50,
+      "base": 22
+    }
+  },
+  {
+    "file": "5e03c047ebf0760d18e1296c8c345c4e.glb",
+    "title": "Milestii Mici f1",
+    "sha256": "febeadd9682c6399e6369a042f3cc026a598329cbf1085b746912fd2709d13da",
+    "bytes": 35260,
+    "roles": {
+      "wall": 521,
+      "wood": 1179,
+      "base": 56
+    }
+  },
+  {
+    "file": "277007236109671ace0ae855d0bfd7e8.glb",
+    "title": "Milestii Mici3",
+    "sha256": "64cfa69d754930b10c26444ed523f79cf2e231291603fbb36e0c65e25655a3fb",
+    "bytes": 16072,
+    "roles": {
+      "roof": 32,
+      "wall": 498,
+      "base": 39
+    }
+  },
+  {
+    "file": "47ef2a9ce3e327aab6011b2cbdb4fd2d.glb",
+    "title": "Chateau Vartelly1",
+    "sha256": "ea0e28787f36c935ff5e4134009e774dd2d3af5ac9f5e07629304f74c02033b0",
+    "bytes": 14744,
+    "roles": {
+      "roof": 59,
+      "steel": 446,
+      "base": 11,
+      "wall": 162
+    }
+  },
+  {
+    "file": "e48c6653d341ed6e8258f3e0e2e56c7e.glb",
+    "title": "Chateau Vartelly",
+    "sha256": "60642a7586e6983f207ab022a3502f8c8b13b3842c44f257f555291cd2bcde9b",
+    "bytes": 37232,
+    "roles": {
+      "wall": 1638,
+      "glass": 54,
+      "roof": 65,
+      "base": 28
+    }
+  },
+  {
+    "file": "3321da02ce2f6e377546e537f9a764e3.glb",
+    "title": "Asconi Winery2",
+    "sha256": "1809ad355d453e57021ccc1819f7d4f5f1d04763907456754f6c45ea3ae6933d",
+    "bytes": 5856,
+    "roles": {
+      "roof": 30,
+      "base": 5,
+      "wall": 119,
+      "glass": 8
+    }
+  },
+  {
+    "file": "377aa66f4de11e9cc78f914b62e800d0.glb",
+    "title": "Asconi Winery3",
+    "sha256": "69127a1ce421e2374247b1f55ee773462b132bebb86e24c85f0fe3b691e385b9",
+    "bytes": 155448,
+    "roles": {
+      "wall": 118,
+      "roof": 39,
+      "steel": 8070
+    }
+  },
+  {
+    "file": "27ac29c02de9efcdf38b39ba8ab0486e.glb",
+    "title": "Asconi Winery4",
+    "sha256": "51ec80ae1c733dc17921d1736298b9253b35a1ad11557e6ded177dfba04bfce4",
+    "bytes": 26788,
+    "roles": {
+      "wall": 1085,
+      "glass": 36,
+      "roof": 4
+    }
+  },
+  {
+    "file": "f376a6a225417fc7080a2b99e76ffacc.glb",
+    "title": "Asconi Winery1",
+    "sha256": "60bfa6438928d5ec51cff72f24a26e226d74408c83f6f524ecbfd44fb41f33f7",
+    "bytes": 47096,
+    "roles": {
+      "wall": 2060,
+      "roof": 392,
+      "glass": 48,
+      "base": 9
+    }
+  },
+  {
+    "file": "4798521cf4734ab1a2b34721a7f85378.glb",
+    "title": "Poiana1",
+    "sha256": "84ce8a5601cfe3faafa02cc5dade2bec894e454b983a4a616814a49fbe41e9f0",
+    "bytes": 26500,
+    "roles": {
+      "wall": 1404,
+      "base": 1,
+      "roof": 18
+    }
+  },
+  {
+    "file": "b44e8b84bbd2021fddc427f047161ba1.glb",
+    "title": "Poiana2",
+    "sha256": "4506686ee17048f0445a50b1c005b1be66801e6d30032bba6f9409483685ce5d",
+    "bytes": 34648,
+    "roles": {
+      "steel": 1568,
+      "base": 160
+    }
+  },
+  {
+    "file": "24ea95cfbbaaa627f87b4dd33611e8db.glb",
+    "title": "Et Cetera1",
+    "sha256": "9b47a2241c65ad132e7a0a419ffe9563419daeccb1709ac7beb5e1512aef0a91",
+    "bytes": 132536,
+    "roles": {
+      "wall": 6422,
+      "roof": 662,
+      "glass": 19,
+      "base": 19
+    }
+  },
+  {
+    "file": "2b2201d629e44546826f4d5abd380db1.glb",
+    "title": "Et Cetera2",
+    "sha256": "8f10c009bc1167c03815e66f8ad3175d5ee2857a21b4e67b20940cecbc11df7c",
+    "bytes": 15892,
+    "roles": {
+      "wall": 644,
+      "roof": 44,
+      "base": 85,
+      "glass": 49
+    }
+  },
+  {
+    "file": "28fd290709d92c19e856be7eb20b592b.glb",
+    "title": "Et Cetera3",
+    "sha256": "706d419d50b53bb10de4386a0cfd6cc922247dd59afec7f7e148ffd4efd17253",
+    "bytes": 5260,
+    "roles": {
+      "wall": 106,
+      "roof": 28,
+      "glass": 8,
+      "base": 12
+    }
+  },
+  {
+    "file": "53acfeffeacdd0182548345ba57b160b.glb",
+    "title": "Et Cetera4",
+    "sha256": "b311c1781544d46b524fd51022136534fe16d25df9e8c63a214ac949e99ec144",
+    "bytes": 5084,
+    "roles": {
+      "wall": 102,
+      "roof": 30,
+      "glass": 5,
+      "base": 11
+    }
+  },
+  {
+    "file": "cbe3ba9514344668a45f196fe2d0fb94.glb",
+    "title": "ManucBey",
+    "sha256": "01e19dd23ade1578ebfd75b1e24e6e15effa91f5a648b897dce2886e06049358",
+    "bytes": 200604,
+    "roles": {
+      "wall": 8066,
+      "roof": 1508,
+      "base": 738,
+      "trim": 931,
+      "glass": 102
+    }
+  },
+  {
+    "file": "25727cb5885764bec4db3eaa8113a643.glb",
+    "title": "Punctul geodezic",
+    "sha256": "1030c70939a677c91a4f804d5656e3412d144597e49c07140f17849ef5bba94e",
+    "bytes": 31732,
+    "roles": {
+      "wall": 2186,
+      "metal": 76,
+      "base": 40
+    }
+  },
+  {
+    "file": "30d33bb3fab7b0d69d8137344125f9dc.glb",
+    "title": "VodonapornayaDrochia",
+    "sha256": "7f11f3188c30d173d95650302caf50493dcdcc91f878cc856cba8ee64765c95f",
+    "bytes": 40440,
+    "roles": {
+      "wall": 2142,
+      "roof": 8,
+      "glass": 78,
+      "base": 25
+    }
+  },
+  {
+    "file": "8c9672178a2d389a64a536b341ce425a.glb",
+    "title": "ConaculBoieruluiPommer",
+    "sha256": "9c4e2feb604a7771f47d053e40c048061147e59f67f0a53fa99437fc51de95ee",
+    "bytes": 127100,
+    "roles": {
+      "wall": 5541,
+      "trim": 377,
+      "roof": 453,
+      "glass": 127,
+      "base": 419
+    }
+  },
+  {
+    "file": "ef9edf26c9a5a96658c2ab7198edaf48.glb",
+    "title": "MoaradevantBesalma",
+    "sha256": "3a6ecc13d50e831ea222d87a1f5b491cb0ff534b427c809b99583d388f8699c2",
+    "bytes": 68708,
+    "roles": {
+      "wood": 4044,
+      "base": 164
+    }
+  },
+  {
+    "file": "3d6639c88c501040fa1d07b46f8ded71.glb",
+    "title": "ConaculBalioz",
+    "sha256": "55b7185ed5ad169f8188fbf102bfc4149c81eb2fc5c71dc6594bbbc3e73df466",
+    "bytes": 75632,
+    "roles": {
+      "wall": 3728,
+      "roof": 142,
+      "trim": 173,
+      "base": 165,
+      "glass": 148
+    }
+  },
+  {
+    "file": "616275cb6809ed0535b45fbfc1c9e31f.glb",
+    "title": "ConaculCazimir",
+    "sha256": "6a7c20d8bd3441866609a1a186d016c9e27276fd56c93d3bcb540a482f864467",
+    "bytes": 69616,
+    "roles": {
+      "wall": 2962,
+      "trim": 477,
+      "roof": 286,
+      "glass": 177,
+      "base": 204
+    }
+  },
+  {
+    "file": "6c00fc3296c45d593efd29fb96863fb8.glb",
+    "title": "CasaMuzeulAlexandruDonici",
+    "sha256": "3ee0b83862f9b3ce419b24b80e4c666e00edc2973344fcefc32c9f11ec3ae8af",
+    "bytes": 88992,
+    "roles": {
+      "wall": 4623,
+      "roof": 101,
+      "glass": 12,
+      "base": 150
+    }
+  },
+  {
+    "file": "5d01b31dd14e3337a7ac341caad09175.glb",
+    "title": "Serpeni1",
+    "sha256": "de480e4843a7400c00148a920783758701bc45c67dc28fc1a2e050750f208e86",
+    "bytes": 19700,
+    "roles": {
+      "wall": 161,
+      "accent": 673,
+      "base": 52
+    }
+  },
+  {
+    "file": "f15a61b6816c2cf5ef166e725ff55014.glb",
+    "title": "Serpeni2",
+    "sha256": "807a7d2f8c2d3c91a8f0c677d86f39c188d0eef4969796611dd0f9f0a6cfd27e",
+    "bytes": 48540,
+    "roles": {
+      "wall": 683,
+      "base": 46,
+      "metal": 1407
+    }
+  },
+  {
+    "file": "2c617c4570d36c7a05719a6263939ffd.glb",
+    "title": "Serpeni3",
+    "sha256": "0ba4def2951effe427a6c7079bb56794bc5becaa2e2d976ecacdd1ff2968a17c",
+    "bytes": 26472,
+    "roles": {
+      "base": 1498
+    }
+  },
+  {
+    "file": "b8d30a7c0914ad7e022fb52c1012fb77.glb",
+    "title": "Serpeni4",
+    "sha256": "a2426b5a63a7cafb3c6882e2b15a4ee16326de6d5064ceaab448627717774f40",
+    "bytes": 10528,
+    "roles": {
+      "wall": 416,
+      "base": 32,
+      "metal": 26
+    }
+  },
+  {
+    "file": "2ec3a387f24dda6b8612f8e9547ba09d.glb",
+    "title": "Serpeni5",
+    "sha256": "8549ac897cbbd325dcf10e5a975448482a3788b03140c3c0bea4302be4b5dd61",
+    "bytes": 74456,
+    "roles": {
+      "base": 392,
+      "metal": 1338,
+      "green": 2088
+    }
+  },
+  {
+    "file": "025eee8b8f6fba646fd291e426b22332.glb",
+    "title": "ManastireaCapriana",
+    "sha256": "ffbdeeb49df29db0bd9727f0853779b974e7158903fae931cb5ce8e9dbc9b9f5",
+    "bytes": 369608,
+    "roles": {
+      "wall": 10786,
+      "roof": 2656,
+      "trim": 1448,
+      "glass": 55,
+      "base": 62
+    }
+  },
+  {
+    "file": "a84e68d49c54e6e1a8b93709ecb4e8cf.glb",
+    "title": "Stantia",
+    "sha256": "f75fbbe1dd226970d0e643e1136f9b946903220be0788c6f59c01d5e0f3c6489",
+    "bytes": 217844,
+    "roles": {
+      "wall": 2487,
+      "glass": 6681,
+      "roof": 1535,
+      "base": 258
+    }
+  },
+  {
+    "file": "7e92997fccabee54e2da06a2ab3c048a.glb",
+    "title": "Turnul de apă · Muzeul Orașului",
+    "sha256": "8e03ef4ae39e7f7e2fdc500e088eb119b31e26b01aeedce4b314904dc6722106",
+    "bytes": 200348,
+    "roles": {
+      "wall": 6615,
+      "accent": 2415,
+      "roof": 94,
+      "base": 20,
+      "wood": 86,
+      "glass": 3586,
+      "trim": 2592
+    }
+  },
+  {
+    "file": "82da3ac80160312249b4466ff22bf7f7.glb",
+    "title": "Arcul de Triumf",
+    "sha256": "643fc9e6b640095fac6b6f50bc2fd693e7ff60989c62b59b41a5008bb6c6aa27",
+    "bytes": 115592,
+    "roles": {
+      "wall": 3171,
+      "base": 356,
+      "roof": 8,
+      "trim": 144,
+      "metal": 144
+    }
+  },
+  {
+    "file": "e997bfb9705d3cce37c110c8e7f99f9d.glb",
+    "title": "Catedrala Nașterea Domnului",
+    "sha256": "acaf5cdf8e0f8bca3ecc75a28878a4b55435d78d3b1dcaeefc6f810a93fa9844",
+    "bytes": 477076,
+    "roles": {
+      "trim": 14091,
+      "roof": 4425,
+      "wall": 6636,
+      "glass": 277,
+      "gold": 34,
+      "base": 170
+    }
+  },
+  {
+    "file": "8cd8cd6b45bba498b492bd698dfb9555.glb",
+    "title": "Clopotnița Catedralei",
+    "sha256": "bb4049f7f31333c98189285b6121d69fb145ec6d9d54b3bb49f12089c4370a38",
+    "bytes": 195220,
+    "roles": {
+      "wall": 3045,
+      "trim": 942,
+      "glass": 32,
+      "base": 598,
+      "wood": 43,
+      "roof": 1520,
+      "metal": 1152,
+      "gold": 42
+    }
+  },
+  {
+    "file": "94d4bcdc80311b29e94cf66ee04b49a8.glb",
+    "title": "Primăria Chișinău",
+    "sha256": "91118ab6a4697d68943e484b28ed5a2a7673211109d7b6a6aab3a5715e82970c",
+    "bytes": 131804,
+    "roles": {
+      "roof": 924,
+      "glass": 204,
+      "wall": 3086,
+      "base": 280,
+      "trim": 1347,
+      "wood": 42
+    }
+  }
+]

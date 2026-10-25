@@ -1,0 +1,21 @@
+.DS_Store
+._*
+node_modules/
+dist/
+release/
+release-*/
+package-v*/
+*.log
+
+# Native generated output
+chisinau-native/build/
+chisinau-native/package/
+chisinau-native/resources/world/
+chisinau-native/resources/models/
+chisinau-native/resources/map/
+
+# Local/editor state
+.idea/
+.vscode/
+*.xcuserstate
+

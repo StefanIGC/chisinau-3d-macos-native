@@ -1,0 +1,22 @@
+{
+  "renderer": "Metal native",
+  "sector": "Șciusev",
+  "vehicle": "helicopter",
+  "physics_hz": 120,
+  "seconds": 22.01,
+  "average_fps": 60.00,
+  "p95_frame_ms": 17.89,
+  "p99_frame_ms": 18.25,
+  "max_frame_ms": 18.72,
+  "max_frame_at_s": 3.48,
+  "frames_over_25ms": 0,
+  "frames_over_34ms": 0,
+  "frames_over_50ms": 0,
+  "tiles_loaded": 112,
+  "near_detail_tiles": 21,
+  "near_detail_tiles_ready": 21,
+  "distance_m": 517.41,
+  "final_speed_kmh": 136.20,
+  "straight_w_deviation_m": 0.00,
+  "passed": true
+}

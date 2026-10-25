@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["DOM", "DOM.Iterable", "ES2023"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "types": ["node"]
+  },
+  "include": ["src", "app/*.ts", "app/*.tsx", "components/ui/dialog.tsx", "components/ui/button.tsx", "lib", "vite.config.ts"],
+  "exclude": ["node_modules", "dist", "release", "app/page.tsx", "app/layout.tsx", "app/chatgpt-auth.ts", "app/streets-explorer.tsx", "app/joc"]
+}

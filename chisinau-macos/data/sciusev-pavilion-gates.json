@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Șciusev125 · pavilion acces",
+    "a": [
+      -956.55,
+      636
+    ],
+    "b": [
+      -951.95,
+      636
+    ],
+    "height": 2.82,
+    "color": "#4b6058",
+    "post": "#829389",
+    "solidHeight": 2.7,
+    "arch": false,
+    "pattern": "solid-panel",
+    "source": "July2025 Street View; pale doors and dark frame observed, footprint and rear passage inferred to retain mapped access."
+  },
+  {
+    "name": "Șciusev129 · poartă laterală",
+    "a": [
+      -1006.4,
+      597.9
+    ],
+    "b": [
+      -1009.7,
+      595.2
+    ],
+    "height": 1.9,
+    "color": "#596e76",
+    "post": "#a3a592",
+    "solidHeight": 1.55,
+    "arch": false,
+    "source": "July2025 Street View north panorama: blue-gray metal gate marked129. Metric location and depth estimated."
+  }
+]

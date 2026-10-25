@@ -1,0 +1,3118 @@
+[
+  {
+    "name": "Pasaj · Vlaicu Pârcălab 57",
+    "a": [
+      315.05,
+      89.93
+    ],
+    "b": [
+      315.05,
+      93.07
+    ],
+    "height": 2.65,
+    "arch": false,
+    "color": "#354139",
+    "post": "#979c8e",
+    "source": "Photograph 15 July 2025, interbelic.savechisinau.org; opening width estimated within mapped footprint."
+  },
+  {
+    "name": "Curtea Zentrum · 31 August 103",
+    "a": [
+      374.15,
+      333.5
+    ],
+    "b": [
+      379.75,
+      333.5
+    ],
+    "height": 2.65,
+    "arch": true,
+    "color": "#343e34",
+    "post": "#a69572",
+    "source": "Zentrum exterior / official courtyard gallery; offset and dimensions estimated in mapped gap."
+  },
+  {
+    "name": "Curtea Julien · 31 August 93",
+    "a": [
+      541.45,
+      333.4
+    ],
+    "b": [
+      542.54,
+      333.4
+    ],
+    "height": 2.55,
+    "arch": true,
+    "color": "#344137",
+    "post": "#bdb9a2",
+    "source": "julien_yandex_all_00.jpg; narrow gate between mapped footprints, width estimated"
+  },
+  {
+    "name": "Curtea dintre 95 și OWH",
+    "a": [
+      530.03,
+      333.5
+    ],
+    "b": [
+      531.7,
+      333.5
+    ],
+    "height": 2.55,
+    "arch": false,
+    "color": "#39443a",
+    "post": "#aaa68f",
+    "source": "villa95_01.jpg; double gate in mapped gap, placement estimated"
+  },
+  {
+    "name": "31 August 57 · poartă pietonală",
+    "a": [
+      1074.6,
+      332.55
+    ],
+    "b": [
+      1076.3,
+      332.55
+    ],
+    "height": 2.95,
+    "arch": true,
+    "color": "#584c42",
+    "post": "#bfc2ac",
+    "source": "embassy_georgia_2021.jpg, Commons Tomasz Bladyniec 9 July2021; widths and offsets estimated.",
+    "solidHeight": 1.65
+  },
+  {
+    "name": "31 August 57 · poartă mare",
+    "a": [
+      1080.3,
+      332.55
+    ],
+    "b": [
+      1084.4,
+      332.55
+    ],
+    "height": 3.7,
+    "arch": true,
+    "color": "#584c42",
+    "post": "#bfc2ac",
+    "source": "embassy_georgia_2021.jpg, Commons Tomasz Bladyniec9July2021; widths and offsets estimated.",
+    "solidHeight": 2.15
+  },
+  {
+    "name": "Curtea 37 · lângă Punto Bianco",
+    "a": [
+      1317.2,
+      328.4
+    ],
+    "b": [
+      1321.3,
+      328.4
+    ],
+    "height": 2.8,
+    "arch": false,
+    "color": "#645547",
+    "post": "#a89e85",
+    "solidHeight": 1.85,
+    "source": "37/1 full exterior and no35 photo, gate37 visible. Offset and opening width estimated; corrected western edge of mapped35."
+  },
+  {
+    "name": "Curtea 35 · Orto-Class",
+    "a": [
+      1346.25,
+      329.2
+    ],
+    "b": [
+      1349.9,
+      329.2
+    ],
+    "height": 2.95,
+    "arch": false,
+    "color": "#815d58",
+    "post": "#b4a27f",
+    "solidHeight": 2.12,
+    "source": "Orto-Class gate photo with no35 inscription; placement in mapped gap estimated."
+  },
+  {
+    "name": "Curtea 40 · poartă roșie",
+    "a": [
+      1273.36,
+      307.8
+    ],
+    "b": [
+      1270.39,
+      307.8
+    ],
+    "height": 2.2,
+    "arch": false,
+    "color": "#944c41",
+    "post": "#8d5847",
+    "solidHeight": 1.92,
+    "source": "Commons no40 facade photos6October2021, red gatewestof40. Placement in mapped gap estimated."
+  },
+  {
+    "name": "Ismail 44 · poartă turcoaz",
+    "a": [
+      1427.65,
+      352.1
+    ],
+    "b": [
+      1427.65,
+      349.95
+    ],
+    "height": 2.5,
+    "arch": true,
+    "color": "#458c83",
+    "post": "#b7baa5",
+    "solidHeight": 2.08,
+    "source": "DGACG Ismail44 photo: turquoise gate at south end of annex. Dimensions inferred from mapped gap; no verified connection to Ismail42."
+  },
+  {
+    "name": "31 August 25 · poartă florală",
+    "a": [
+      1502.35,
+      328.5
+    ],
+    "b": [
+      1504.85,
+      328.5
+    ],
+    "height": 2.75,
+    "arch": true,
+    "color": "#4d5545",
+    "post": "#777f66",
+    "solidHeight": 1.65,
+    "source": "Address-confirmed Flori25/Yandex exterior: ornate dark gate immediately left/east of raised entrance. Width/offset estimated within mapped gap."
+  },
+  {
+    "name": "Casa Stepanov15 · poartă laterală",
+    "a": [
+      1620.2,
+      328.3
+    ],
+    "b": [
+      1624.5,
+      328.3
+    ],
+    "height": 2.2,
+    "color": "#3e4f53",
+    "post": "#a9ae9c",
+    "arch": false,
+    "solidHeight": 1.5
+  },
+  {
+    "name": "31 August24 · poartă de curte",
+    "a": [
+      1623.55,
+      307.6
+    ],
+    "b": [
+      1625.8,
+      307.6
+    ],
+    "height": 1.95,
+    "color": "#829282",
+    "post": "#b7b5a1",
+    "arch": false,
+    "solidHeight": 1.8
+  },
+  {
+    "name": "Ion Vasilenco16 · poartă laterală",
+    "a": [
+      1764.6,
+      329.6
+    ],
+    "b": [
+      1764.16,
+      332.35
+    ],
+    "height": 2.1,
+    "color": "#3d4a40",
+    "post": "#bbbda9",
+    "arch": false,
+    "solidHeight": 1.9
+  },
+  {
+    "name": "31 August20 · poartă Potaki",
+    "a": [
+      1785.75,
+      264.29
+    ],
+    "b": [
+      1789.55,
+      264.18
+    ],
+    "height": 3.2,
+    "color": "#834d39",
+    "post": "#a6856a",
+    "arch": true,
+    "solidHeight": 2.0,
+    "source": "Potaki exterior with visible20 plaque: brown-red paneled double gate, ornate upper bars and brick piers to right/east of cafe. Dimensions and placement estimated from mapped POI and available gap."
+  },
+  {
+    "name": "31 August12 · poartă verde",
+    "a": [
+      1842.2,
+      262.05
+    ],
+    "b": [
+      1846.5,
+      261.88
+    ],
+    "height": 2.1,
+    "color": "#57744a",
+    "post": "#8d8c76",
+    "arch": false,
+    "solidHeight": 1.9,
+    "source": "KartaView3066278/frame395,20 April2020: readable12 on solid green double gate; dimensions and position in mapped east-side gap estimated. No present-day finish certification."
+  },
+  {
+    "name": "31 August1–1/1 · poartă de curte",
+    "a": [
+      1918.0,
+      291.6
+    ],
+    "b": [
+      1922.0,
+      293.5
+    ],
+    "height": 2.65,
+    "color": "#39483c",
+    "post": "#b8b7a2",
+    "arch": true,
+    "solidHeight": 0.6,
+    "source": "KartaView3066278/495,20April2020: probable no1/1–1 compound, black arched ornamental gate in cream wall. Exact frontage split, gate position and dimensions estimated."
+  },
+  {
+    "name": "Hrușca · poartă de colț",
+    "a": [
+      1969.5,
+      317.4
+    ],
+    "b": [
+      1973.9,
+      319.55
+    ],
+    "height": 2.35,
+    "color": "#805342",
+    "post": "#8c8670",
+    "arch": false,
+    "solidHeight": 2.15,
+    "source": "KartaView3066298/40,20April2020: weathered timber fence and reddish-brown gate on south corner. Plaque possibly1, street unverified; no new house invented from this entrance photo. Placement and dimensions estimated."
+  },
+  {
+    "name": "Șciusev12 · poartă roșie",
+    "a": [
+      1050,
+      607.2
+    ],
+    "b": [
+      1054.5,
+      607.2
+    ],
+    "height": 2.3,
+    "solidHeight": 2.05,
+    "arch": false,
+    "color": "#975447",
+    "post": "#b6a085",
+    "source": "Google Maps Street View, Constantin P., April2025: red gate west of ochre no12. Position/size estimated against mapped bodies."
+  },
+  {
+    "name": "Șciusev8 · poartă roșie",
+    "a": [
+      1088,
+      606.8
+    ],
+    "b": [
+      1092.5,
+      606.8
+    ],
+    "height": 2.4,
+    "solidHeight": 2.15,
+    "arch": false,
+    "color": "#9a5c4e",
+    "post": "#995e4f",
+    "source": "Google Maps Street View, Constantin P., April2025: red compound gate beside low beige no10, red roof behind. Width estimated."
+  },
+  {
+    "name": "Șciusev · curtea de lângă Bulgară",
+    "a": [
+      1030,
+      631
+    ],
+    "b": [
+      1034.4,
+      631
+    ],
+    "height": 1.85,
+    "solidHeight": 1.5,
+    "arch": false,
+    "color": "#658c86",
+    "post": "#8d897b",
+    "source": "Google Maps Street View, Constantin P., April2025: teal/blue gate in weathered wall; precise span estimated."
+  },
+  {
+    "name": "Șciusev · acces sud central",
+    "a": [
+      1111,
+      629
+    ],
+    "b": [
+      1115.5,
+      629
+    ],
+    "height": 1.9,
+    "solidHeight": 1.1,
+    "arch": false,
+    "color": "#727e70",
+    "post": "#9b9d8e",
+    "source": "Mapped compound gap; gate finish and dimensions estimated where screened in April2025 imagery."
+  },
+  {
+    "name": "Șciusev · acces nord central",
+    "a": [
+      1121,
+      606.5
+    ],
+    "b": [
+      1125.5,
+      606.5
+    ],
+    "height": 2.0,
+    "solidHeight": 1.3,
+    "arch": false,
+    "color": "#758277",
+    "post": "#a6aaa0",
+    "source": "Mapped compound gap; gate details estimated from oblique April2025 frontage."
+  },
+  {
+    "name": "Șciusev · curtea est sud",
+    "a": [
+      1138.1,
+      629
+    ],
+    "b": [
+      1140.8,
+      629
+    ],
+    "height": 1.8,
+    "solidHeight": 1.1,
+    "arch": false,
+    "color": "#698077",
+    "post": "#9aa598",
+    "source": "Mapped gap, partly screened in imagery; gate appearance estimated."
+  },
+  {
+    "name": "Șciusev · curtea est nord",
+    "a": [
+      1165,
+      606.3
+    ],
+    "b": [
+      1168.8,
+      606.3
+    ],
+    "height": 2.0,
+    "solidHeight": 1.3,
+    "arch": false,
+    "color": "#6d7c6e",
+    "post": "#92988a",
+    "source": "Mapped access beside corner bank; gate placement and finish estimated."
+  },
+  {
+    "name": "Șciusev5 · acces lateral",
+    "a": [
+      1167,
+      633
+    ],
+    "b": [
+      1170.8,
+      633
+    ],
+    "height": 2.1,
+    "solidHeight": 0.7,
+    "arch": false,
+    "color": "#5d6a5f",
+    "post": "#b7b4a2",
+    "source": "Mapped side gap west of synagogue; screened entrance reconstructed approximately, not a surveyed gate."
+  },
+  {
+    "name": "Șciusev vest · portal alb mic",
+    "a": [
+      852.05,
+      607
+    ],
+    "b": [
+      854.95,
+      607
+    ],
+    "height": 3.1,
+    "solidHeight": 2.3,
+    "arch": true,
+    "color": "#bcbfad",
+    "post": "#c5c3b0",
+    "source": "Jan2017 Street View: ornate pale gates between30 and26. Exact width and ornament simplified."
+  },
+  {
+    "name": "Șciusev vest · portiță albă",
+    "a": [
+      855.65,
+      607
+    ],
+    "b": [
+      856.85,
+      607
+    ],
+    "height": 2.5,
+    "solidHeight": 1.8,
+    "arch": true,
+    "color": "#bcbfad",
+    "post": "#c5c3b0",
+    "source": "Jan2017 Street View: small pedestrian leaf between ornamental driveway portals; dimensions estimated."
+  },
+  {
+    "name": "Șciusev vest · portal alb mare",
+    "a": [
+      857.5,
+      607
+    ],
+    "b": [
+      862,
+      607
+    ],
+    "height": 4.0,
+    "solidHeight": 3.0,
+    "arch": true,
+    "color": "#bcbfad",
+    "post": "#c5c3b0",
+    "source": "Jan2017 Street View: tall pale arched gate and pilasters; original modeled geometry, no photo texture."
+  },
+  {
+    "name": "Șciusev32 · poartă laterală",
+    "a": [
+      815.5,
+      607
+    ],
+    "b": [
+      819.7,
+      607
+    ],
+    "height": 2.25,
+    "solidHeight": 1.75,
+    "arch": false,
+    "color": "#9eaa9b",
+    "post": "#bdb7a4",
+    "source": "SITe32 historic photo: pale metal side gate; opening placement estimated from mapped gap."
+  },
+  {
+    "name": "Șciusev18 · acces curte",
+    "a": [
+      957.5,
+      607
+    ],
+    "b": [
+      962,
+      607
+    ],
+    "height": 2.8,
+    "solidHeight": 2.0,
+    "arch": false,
+    "color": "#945846",
+    "post": "#a7a58f",
+    "source": "April2025 panorama: red-brown solid gate with open vertical-bar top beside yellow frontage and stone pier; dimensions estimated."
+  },
+  {
+    "name": "Șciusev25 · acces curte",
+    "a": [
+      925.4,
+      630
+    ],
+    "b": [
+      929.9,
+      630
+    ],
+    "height": 2.3,
+    "solidHeight": 1.8,
+    "arch": false,
+    "color": "#4d5e50",
+    "post": "#b3ac98",
+    "source": "Gap beside historic23/25; black metal gate visible in historic23 photo, exact span estimated."
+  },
+  {
+    "name": "Șciusev33 · poarta comună",
+    "a": [
+      838,
+      629
+    ],
+    "b": [
+      842.05,
+      629
+    ],
+    "height": 2.5,
+    "solidHeight": 1.9,
+    "arch": false,
+    "color": "#354f43",
+    "post": "#b8b5a2",
+    "source": "SITe33A/B: shared black metal driveway gate between paired houses. Manual footprint correspondence approximate."
+  },
+  {
+    "name": "Șciusev vest · acces dinspre Armenească",
+    "a": [
+      819.0,
+      629
+    ],
+    "b": [
+      823.5,
+      629
+    ],
+    "height": 2.1,
+    "solidHeight": 1.5,
+    "arch": false,
+    "color": "#758372",
+    "post": "#aaa896",
+    "source": "Mapped service courtyard gap; screened gate appearance estimated, not photographically verified."
+  },
+  {
+    "name": "Șciusev40 · poarta turcoaz",
+    "a": [
+      695.2,
+      605
+    ],
+    "b": [
+      698.7,
+      605
+    ],
+    "height": 2.9,
+    "arch": false,
+    "color": "#91b9ae",
+    "post": "#ada995",
+    "source": "Street View Sept2025, SITe historical photographs and Gardina/Armeneasca27 place images; exact dimensions estimated.",
+    "solidHeight": 2.8
+  },
+  {
+    "name": "Șciusev38 · acces lateral",
+    "a": [
+      734.1,
+      605
+    ],
+    "b": [
+      736.5,
+      605
+    ],
+    "height": 2.5,
+    "arch": false,
+    "color": "#475749",
+    "post": "#ada995",
+    "source": "Street View Sept2025, SITe historical photographs and Gardina/Armeneasca27 place images; exact dimensions estimated.",
+    "solidHeight": 2.15
+  },
+  {
+    "name": "Armenească27/10 · poarta roșie",
+    "a": [
+      747.4,
+      605.7
+    ],
+    "b": [
+      750.1,
+      605.7
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#92583f",
+    "post": "#ada995",
+    "source": "Street View Sept2025, SITe historical photographs and Gardina/Armeneasca27 place images; exact dimensions estimated.",
+    "solidHeight": 1.9
+  },
+  {
+    "name": "Șciusev35 · curtea dintre case",
+    "a": [
+      711.94,
+      629.1
+    ],
+    "b": [
+      714.2,
+      629.1
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#96a297",
+    "post": "#ada995",
+    "source": "Street View Sept2025, SITe historical photographs and Gardina/Armeneasca27 place images; exact dimensions estimated.",
+    "solidHeight": 2.3
+  },
+  {
+    "name": "Șciusev35 · acces estic",
+    "a": [
+      735.55,
+      629.6
+    ],
+    "b": [
+      737.2,
+      629.6
+    ],
+    "height": 2.3,
+    "arch": false,
+    "color": "#7c8d80",
+    "post": "#ada995",
+    "source": "Street View Sept2025, SITe historical photographs and Gardina/Armeneasca27 place images; exact dimensions estimated.",
+    "solidHeight": 2.2
+  },
+  {
+    "name": "Șciusev37 · pasaj carosabil",
+    "a": [
+      682.25,
+      628.65
+    ],
+    "b": [
+      685.25,
+      628.65
+    ],
+    "height": 2.9,
+    "arch": false,
+    "color": "#8fa194",
+    "post": "#ada995",
+    "source": "Street View Sept2025, SITe historical photographs and Gardina/Armeneasca27 place images; exact dimensions estimated.",
+    "solidHeight": 2.2
+  },
+  {
+    "name": "Șciusev48 · poarta vestică",
+    "a": [
+      521.45,
+      610.4
+    ],
+    "b": [
+      524.25,
+      610.4
+    ],
+    "height": 2.35,
+    "solidHeight": 2.1,
+    "arch": false,
+    "color": "#84958c",
+    "post": "#b8b29d",
+    "source": "Google Street View September2025, multiple angles; mapped courtyard gap. Position, dimensions and ironwork simplified/estimated."
+  },
+  {
+    "name": "Șciusev46 · poarta curții",
+    "a": [
+      542.15,
+      607.7
+    ],
+    "b": [
+      546.2,
+      607.7
+    ],
+    "height": 2.6,
+    "solidHeight": 2.35,
+    "arch": false,
+    "color": "#849084",
+    "post": "#b8b29d",
+    "source": "Google Street View September2025, multiple angles; mapped courtyard gap. Position, dimensions and ironwork simplified/estimated."
+  },
+  {
+    "name": "Șciusev44 · pasaj carosabil",
+    "a": [
+      557.65,
+      606.9
+    ],
+    "b": [
+      560.85,
+      606.9
+    ],
+    "height": 3.25,
+    "solidHeight": 3.0,
+    "arch": false,
+    "color": "#8b978e",
+    "post": "#b8b29d",
+    "source": "Google Street View September2025, multiple angles; mapped courtyard gap. Position, dimensions and ironwork simplified/estimated."
+  },
+  {
+    "name": "Șciusev42/1 · poarta metalică",
+    "a": [
+      581.55,
+      606.5
+    ],
+    "b": [
+      585.85,
+      606.5
+    ],
+    "height": 2.45,
+    "solidHeight": 2.2,
+    "arch": false,
+    "color": "#798b80",
+    "post": "#b8b29d",
+    "source": "Google Street View September2025, multiple angles; mapped courtyard gap. Position, dimensions and ironwork simplified/estimated."
+  },
+  {
+    "name": "Șciusev42/1 · portiță",
+    "a": [
+      587.35,
+      606.5
+    ],
+    "b": [
+      588.6,
+      606.5
+    ],
+    "height": 2.3,
+    "solidHeight": 2.05,
+    "arch": false,
+    "color": "#798b80",
+    "post": "#b8b29d",
+    "source": "Google Street View September2025, multiple angles; mapped courtyard gap. Position, dimensions and ironwork simplified/estimated."
+  },
+  {
+    "name": "Șciusev42 · poartă roșie",
+    "a": [
+      595.05,
+      609.3
+    ],
+    "b": [
+      597.7,
+      609.3
+    ],
+    "height": 2.4,
+    "solidHeight": 2.15,
+    "arch": false,
+    "color": "#945c4c",
+    "post": "#b8b29d",
+    "source": "Google Street View September2025, multiple angles; mapped courtyard gap. Position, dimensions and ironwork simplified/estimated."
+  },
+  {
+    "name": "Șciusev43 · poartă laterală",
+    "a": [
+      569.65,
+      629.3
+    ],
+    "b": [
+      573.3,
+      629.3
+    ],
+    "height": 2.6,
+    "solidHeight": 2.35,
+    "arch": false,
+    "color": "#754c40",
+    "post": "#b8b29d",
+    "source": "Google Street View September2025, multiple angles; mapped courtyard gap. Position, dimensions and ironwork simplified/estimated."
+  },
+  {
+    "name": "Șciusev45 · poarta neagră",
+    "a": [
+      531.25,
+      628.8
+    ],
+    "b": [
+      533.75,
+      628.8
+    ],
+    "height": 2.45,
+    "solidHeight": 2.2,
+    "arch": false,
+    "color": "#444b42",
+    "post": "#aea78f",
+    "source": "Grimerkka45 exterior photo, capture date unavailable: dark gate to west/right. Assignment within adjoining footprint and unseen covered continuation estimated."
+  },
+  {
+    "name": "Șciusev47 · poarta curții",
+    "pattern": "stepped",
+    "a": [
+      448.2,
+      629.0
+    ],
+    "b": [
+      453.4,
+      629.0
+    ],
+    "height": 1.85,
+    "solidHeight": 1.55,
+    "arch": false,
+    "color": "#57594b",
+    "post": "#b7b19a",
+    "source": "Google Street View Sept2025 multiple headings and satellite, original simplified ironwork. Exact dimensions and unseen courtyard continuation estimated."
+  },
+  {
+    "name": "Șciusev49 · poarta vestică",
+    "a": [
+      406.3,
+      629.1
+    ],
+    "b": [
+      411.2,
+      629.1
+    ],
+    "height": 2.3,
+    "solidHeight": 1.9999999999999998,
+    "arch": false,
+    "color": "#464e43",
+    "post": "#b7b19a",
+    "source": "Google Street View Sept2025 multiple headings and satellite, original simplified ironwork. Exact dimensions and unseen courtyard continuation estimated."
+  },
+  {
+    "name": "Șciusev53 · poarta albastră",
+    "a": [
+      368.25,
+      630.0
+    ],
+    "b": [
+      370.1,
+      630.0
+    ],
+    "height": 2.25,
+    "solidHeight": 1.95,
+    "arch": false,
+    "color": "#3d5770",
+    "post": "#b7b19a",
+    "source": "Google Street View Sept2025 multiple headings and satellite, original simplified ironwork. Exact dimensions and unseen courtyard continuation estimated."
+  },
+  {
+    "name": "Ambassador52 · acces curte",
+    "a": [
+      425.1,
+      609.3
+    ],
+    "b": [
+      430.0,
+      609.3
+    ],
+    "height": 2.6,
+    "solidHeight": 2.3000000000000003,
+    "arch": false,
+    "color": "#535c4c",
+    "post": "#b7b19a",
+    "source": "Google Street View Sept2025 multiple headings and satellite, original simplified ironwork. Exact dimensions and unseen courtyard continuation estimated."
+  },
+  {
+    "name": "Șciusev54 · poarta roșie",
+    "a": [
+      389.2,
+      609.3
+    ],
+    "b": [
+      391.0,
+      609.3
+    ],
+    "height": 2.1,
+    "solidHeight": 1.8,
+    "arch": false,
+    "color": "#a96569",
+    "post": "#b7b19a",
+    "source": "Google Street View Sept2025 multiple headings and satellite, original simplified ironwork. Exact dimensions and unseen courtyard continuation estimated."
+  },
+  {
+    "name": "Șciusev54 · poarta maro",
+    "a": [
+      373.85,
+      608.4
+    ],
+    "b": [
+      378.05,
+      608.4
+    ],
+    "height": 2.45,
+    "solidHeight": 2.1500000000000004,
+    "arch": false,
+    "color": "#84624e",
+    "post": "#b7b19a",
+    "source": "Google Street View Sept2025 multiple headings and satellite, original simplified ironwork. Exact dimensions and unseen courtyard continuation estimated."
+  },
+  {
+    "name": "Vila54 · portiță estică",
+    "a": [
+      403.5,
+      609.5
+    ],
+    "b": [
+      404.95,
+      609.5
+    ],
+    "height": 2.2,
+    "solidHeight": 1.9000000000000001,
+    "arch": false,
+    "color": "#4e5c4d",
+    "post": "#b7b19a",
+    "source": "Google Street View Sept2025 multiple headings and satellite, original simplified ironwork. Exact dimensions and unseen courtyard continuation estimated."
+  },
+  {
+    "name": "Șciusev62 · gang",
+    "a": [
+      209.78,
+      605.2
+    ],
+    "b": [
+      212.42,
+      605.2
+    ],
+    "height": 3.1,
+    "color": "#434e42",
+    "post": "#a49d84",
+    "arch": false,
+    "solidHeight": 0.7,
+    "source": "Street View April/July2025 and facade photos; dimensions and hidden continuation estimated."
+  },
+  {
+    "name": "Șciusev58 · curte",
+    "a": [
+      258.4,
+      608
+    ],
+    "b": [
+      261.65,
+      608
+    ],
+    "height": 2.1,
+    "color": "#4b5645",
+    "post": "#a49d84",
+    "arch": false,
+    "solidHeight": 0.7,
+    "source": "Street View April/July2025 and facade photos; dimensions and hidden continuation estimated."
+  },
+  {
+    "name": "Șciusev56 · curte est",
+    "a": [
+      295.05,
+      608.5
+    ],
+    "b": [
+      300.1,
+      608.5
+    ],
+    "height": 2.2,
+    "color": "#5f5441",
+    "post": "#a49d84",
+    "arch": false,
+    "solidHeight": 0.7,
+    "source": "Street View April/July2025 and facade photos; dimensions and hidden continuation estimated."
+  },
+  {
+    "name": "Șciusev61 · curte vest",
+    "a": [
+      215.1,
+      628.5
+    ],
+    "b": [
+      218.3,
+      628.5
+    ],
+    "height": 2.1,
+    "color": "#4d5646",
+    "post": "#a49d84",
+    "arch": false,
+    "solidHeight": 0.7,
+    "source": "Street View April/July2025 and facade photos; dimensions and hidden continuation estimated."
+  },
+  {
+    "name": "Șciusev61 · curte est",
+    "a": [
+      240.1,
+      628.7
+    ],
+    "b": [
+      245.8,
+      628.7
+    ],
+    "height": 2.4,
+    "color": "#68564a",
+    "post": "#a49d84",
+    "arch": false,
+    "solidHeight": 0.7,
+    "source": "Street View April/July2025 and facade photos; dimensions and hidden continuation estimated."
+  },
+  {
+    "name": "Șciusev66 · acces CNOS",
+    "a": [
+      125.2,
+      609.1
+    ],
+    "b": [
+      128.3,
+      609.1
+    ],
+    "height": 2.1,
+    "arch": false,
+    "solidHeight": 0.65,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev68 · curte",
+    "a": [
+      102.8,
+      608.1
+    ],
+    "b": [
+      107.1,
+      608.1
+    ],
+    "height": 2.3,
+    "arch": false,
+    "solidHeight": 1.4,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev72 · portal",
+    "a": [
+      57.8,
+      610.0
+    ],
+    "b": [
+      61.4,
+      610.0
+    ],
+    "height": 2.5,
+    "arch": true,
+    "solidHeight": 1.6,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev67 · Zepter",
+    "a": [
+      123.0,
+      628.5
+    ],
+    "b": [
+      127.0,
+      628.5
+    ],
+    "height": 2.3,
+    "arch": true,
+    "solidHeight": 0.65,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev69 · curte",
+    "a": [
+      103.0,
+      630.0
+    ],
+    "b": [
+      107.6,
+      630.0
+    ],
+    "height": 2.2,
+    "arch": false,
+    "solidHeight": 1.1,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev75 · curte",
+    "a": [
+      40.0,
+      630.0
+    ],
+    "b": [
+      44.0,
+      630.0
+    ],
+    "height": 2.2,
+    "arch": false,
+    "solidHeight": 1.7,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev77 · muzeu",
+    "a": [
+      2.0,
+      630.0
+    ],
+    "b": [
+      7.8,
+      630.0
+    ],
+    "height": 1.8,
+    "arch": false,
+    "solidHeight": 0.4,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev83 · Gregory",
+    "a": [
+      -31.7,
+      630.0
+    ],
+    "b": [
+      -26.3,
+      630.0
+    ],
+    "height": 2.65,
+    "arch": true,
+    "solidHeight": 0.75,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev87 · curte",
+    "a": [
+      -84.9,
+      630.2
+    ],
+    "b": [
+      -82.2,
+      630.2
+    ],
+    "height": 2.4,
+    "arch": true,
+    "solidHeight": 0.8,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev84 · curte",
+    "a": [
+      -97.3,
+      611.5
+    ],
+    "b": [
+      -95.1,
+      611.5
+    ],
+    "height": 2.2,
+    "arch": false,
+    "solidHeight": 1.5,
+    "color": "#4e5b4b",
+    "post": "#b2b3a1",
+    "source": "Street View April/September2025. Opening placement follows mapped gaps; dimensions and unseen continuation estimated."
+  },
+  {
+    "name": "Șciusev88 · poartă laterală",
+    "a": [
+      -237.4,
+      610.5
+    ],
+    "b": [
+      -233,
+      610.5
+    ],
+    "height": 2.25,
+    "arch": false,
+    "solidHeight": 1.8,
+    "color": "#53604f",
+    "post": "#b2b3a0",
+    "source": "Visible side gaps in heritage/2021 photographs; dimensions and exact current gate finish estimated."
+  },
+  {
+    "name": "Bodoni17 · curte Șciusev",
+    "a": [
+      -159.7,
+      610.0
+    ],
+    "b": [
+      -155.5,
+      610.0
+    ],
+    "height": 2.25,
+    "arch": false,
+    "solidHeight": 1.8,
+    "color": "#53604f",
+    "post": "#b2b3a0",
+    "source": "Visible side gaps in heritage/2021 photographs; dimensions and exact current gate finish estimated."
+  },
+  {
+    "name": "Șciusev90 · acces teren sportiv",
+    "a": [
+      -391.3,
+      611.8
+    ],
+    "b": [
+      -389.0,
+      611.8
+    ],
+    "height": 1.95,
+    "arch": false,
+    "solidHeight": 0.12,
+    "color": "#9eab9a",
+    "post": "#b2b6a4",
+    "source": "School fence photographed September2022; south courtyard gaps in OSM and2019/archive photos. Exact gate spans, ornament and unseen continuation estimated; original interactive geometry."
+  },
+  {
+    "name": "Șciusev101 · curte",
+    "a": [
+      -399.0,
+      630.4
+    ],
+    "b": [
+      -395.9,
+      630.4
+    ],
+    "height": 2.15,
+    "arch": false,
+    "solidHeight": 0.7,
+    "color": "#545d49",
+    "post": "#b2b6a4",
+    "source": "School fence photographed September2022; south courtyard gaps in OSM and2019/archive photos. Exact gate spans, ornament and unseen continuation estimated; original interactive geometry."
+  },
+  {
+    "name": "Șciusev97 · curte",
+    "a": [
+      -339.8,
+      631.2
+    ],
+    "b": [
+      -333.8,
+      631.2
+    ],
+    "height": 2.15,
+    "arch": false,
+    "solidHeight": 1.25,
+    "color": "#6b6151",
+    "post": "#b2b6a4",
+    "source": "School fence photographed September2022; south courtyard gaps in OSM and2019/archive photos. Exact gate spans, ornament and unseen continuation estimated; original interactive geometry."
+  },
+  {
+    "name": "Zemstvei · poartă grădină",
+    "a": [
+      -550.8,
+      635
+    ],
+    "b": [
+      -546.2,
+      635
+    ],
+    "height": 2.35,
+    "arch": false,
+    "solidHeight": 0.1,
+    "color": "#45503d",
+    "post": "#a29e83",
+    "source": "April2025 Street View and satellite: garden fence/entrance visible, rear access mapped. Exact gate span and rear finish estimated; interactive original geometry."
+  },
+  {
+    "name": "Zemstvei · acces curte Sfatul Țării",
+    "a": [
+      -581.9,
+      671.2
+    ],
+    "b": [
+      -581.9,
+      675.8
+    ],
+    "height": 2.35,
+    "arch": false,
+    "solidHeight": 0.5,
+    "color": "#45503d",
+    "post": "#a29e83",
+    "source": "April2025 Street View and satellite: garden fence/entrance visible, rear access mapped. Exact gate span and rear finish estimated; interactive original geometry."
+  },
+  {
+    "name": "Șciusev104 · curte",
+    "a": [
+      -696,
+      615.3
+    ],
+    "b": [
+      -691.8,
+      615.3
+    ],
+    "height": 2.3,
+    "color": "#464b42",
+    "post": "#b4a38d",
+    "solidHeight": 1.7,
+    "arch": true,
+    "source": "Observed April2025 Street View; 104 courtyard corroborated by Citys2025. Exact span and concealed rear details estimated. Original interactive geometry."
+  },
+  {
+    "name": "Șciusev107 · acces est",
+    "a": [
+      -671.2,
+      634.8
+    ],
+    "b": [
+      -668.0,
+      634.8
+    ],
+    "height": 2.15,
+    "color": "#79564b",
+    "post": "#b4a38d",
+    "solidHeight": 1.55,
+    "arch": true,
+    "source": "Observed April2025 Street View; 104 courtyard corroborated by Citys2025. Exact span and concealed rear details estimated. Original interactive geometry."
+  },
+  {
+    "name": "Șciusev105 · acces lateral",
+    "a": [
+      -637.99,
+      634.3
+    ],
+    "b": [
+      -636.54,
+      634.3
+    ],
+    "height": 2.1,
+    "color": "#88664d",
+    "post": "#b4a38d",
+    "solidHeight": 1.4,
+    "arch": false,
+    "source": "Observed April2025 Street View; 104 courtyard corroborated by Citys2025. Exact span and concealed rear details estimated. Original interactive geometry."
+  },
+  {
+    "name": "Șciusev107 · acces vest",
+    "a": [
+      -691.15,
+      635.1
+    ],
+    "b": [
+      -689.0,
+      635.1
+    ],
+    "height": 2.1,
+    "color": "#755247",
+    "post": "#b4a38d",
+    "solidHeight": 1.88,
+    "arch": false,
+    "source": "Observed April2025 Street View; 104 courtyard corroborated by Citys2025. Exact span and concealed rear details estimated. Original interactive geometry."
+  },
+  {
+    "name": "Dinamo · intrare centrală",
+    "a": [
+      -851.5,
+      615.62
+    ],
+    "b": [
+      -841.6,
+      615.62
+    ],
+    "height": 2.7,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.13,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · intrare pietonală vest",
+    "a": [
+      -854.3,
+      615.65
+    ],
+    "b": [
+      -852.0,
+      615.65
+    ],
+    "height": 2.7,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.13,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · intrare pietonală est",
+    "a": [
+      -841.1,
+      615.57
+    ],
+    "b": [
+      -838.65,
+      615.57
+    ],
+    "height": 2.7,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.13,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · pistă sud-vest",
+    "a": [
+      -917.3343429498583,
+      578.6498682984463
+    ],
+    "b": [
+      -917.2790356090358,
+      576.8000215155049
+    ],
+    "height": 1.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · pistă nord-vest",
+    "a": [
+      -913.8858730122311,
+      494.1824463464097
+    ],
+    "b": [
+      -913.8962178780428,
+      492.0858923437332
+    ],
+    "height": 1.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · pistă nord-est",
+    "a": [
+      -781.7072261831904,
+      490.80013111901036
+    ],
+    "b": [
+      -781.6649300538344,
+      493.10028545923234
+    ],
+    "height": 1.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · acces București",
+    "a": [
+      -915.7,
+      485.7
+    ],
+    "b": [
+      -912.3,
+      485.7
+    ],
+    "height": 2.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Șciusev111 · curte",
+    "a": [
+      -782.75,
+      635.3
+    ],
+    "b": [
+      -776.1,
+      635.3
+    ],
+    "height": 2.1,
+    "color": "#756757",
+    "post": "#b5ae99",
+    "solidHeight": 1.55,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Stere1 · curte sud",
+    "a": [
+      -850.8,
+      715
+    ],
+    "b": [
+      -850.8,
+      719
+    ],
+    "height": 2.2,
+    "color": "#6b5b4e",
+    "post": "#b5ae99",
+    "solidHeight": 1.6,
+    "arch": true,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Stere5 · curte",
+    "a": [
+      -849.1,
+      739.2
+    ],
+    "b": [
+      -849.1,
+      742.6
+    ],
+    "height": 2.2,
+    "color": "#6f7163",
+    "post": "#b5ae99",
+    "solidHeight": 1.5,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Dinamo · teren mic vest",
+    "a": [
+      -906.086826937974,
+      602.0006147747279
+    ],
+    "b": [
+      -906.0720365326717,
+      604.0005600849579
+    ],
+    "height": 2.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "Mapped mini-football court boundary; side opening location and finishes are estimated for safe pedestrian access, not confirmed by a current close photograph."
+  },
+  {
+    "name": "Dinamo · teren mic est",
+    "a": [
+      -787.3352325580416,
+      604.0004308537674
+    ],
+    "b": [
+      -787.3564841546273,
+      602.000543764544
+    ],
+    "height": 2.2,
+    "color": "#505c50",
+    "post": "#b5ae99",
+    "solidHeight": 0.1,
+    "arch": false,
+    "source": "Mapped mini-football court boundary; side opening location and finishes are estimated for safe pedestrian access, not confirmed by a current close photograph."
+  },
+  {
+    "name": "Stere · acces colț Șciusev",
+    "a": [
+      -850.6,
+      643
+    ],
+    "b": [
+      -850.6,
+      647.6
+    ],
+    "height": 2.1,
+    "color": "#858779",
+    "post": "#b5ae99",
+    "solidHeight": 1.55,
+    "arch": false,
+    "source": "September2025 Street View and/or mapped Dinamo gate. Metric spans and unseen finish estimated; own interactive geometry."
+  },
+  {
+    "name": "Prometeu · intrare Șciusev",
+    "a": [
+      -916,
+      636
+    ],
+    "b": [
+      -910.5,
+      636
+    ],
+    "height": 2.5,
+    "color": "#384a3c",
+    "post": "#a7ab92",
+    "solidHeight": 0.12,
+    "arch": false,
+    "source": "September 2025 Street View; dimensions estimated."
+  },
+  {
+    "name": "Stere4 · acces curte",
+    "a": [
+      -870.6,
+      689
+    ],
+    "b": [
+      -870.6,
+      692
+    ],
+    "height": 1.7,
+    "color": "#574c40",
+    "post": "#b9b399",
+    "solidHeight": 0.15,
+    "arch": false,
+    "source": "September 2025 Street View; metric placement estimated."
+  },
+  {
+    "name": "Stere10 · poartă laterală",
+    "a": [
+      -872.8,
+      756.5
+    ],
+    "b": [
+      -872.8,
+      758.2
+    ],
+    "height": 1.9,
+    "baseOffset": -0.34,
+    "color": "#776a62",
+    "post": "#c0c0ad",
+    "solidHeight": 1.65,
+    "arch": false,
+    "source": "September2025 Street View. Width and metric position inferred."
+  },
+  {
+    "name": "Șciusev125 · poartă curte",
+    "a": [
+      -980.4,
+      625.7
+    ],
+    "b": [
+      -977.4,
+      628.2
+    ],
+    "height": 1.7,
+    "color": "#56635b",
+    "post": "#c1beab",
+    "solidHeight": 0.35,
+    "arch": false,
+    "source": "July2025 street view; inferred metric position."
+  },
+  {
+    "name": "Șciusev127 · poartă curte",
+    "a": [
+      -998.1,
+      611.6
+    ],
+    "b": [
+      -995.8,
+      613.5
+    ],
+    "height": 1.8,
+    "color": "#746a59",
+    "post": "#bcb9a5",
+    "solidHeight": 1.65,
+    "arch": false,
+    "source": "July2025 street view; inferred metric position."
+  },
+  {
+    "name": "Șciusev125 · pavilion acces",
+    "a": [
+      -956.55,
+      636
+    ],
+    "b": [
+      -951.95,
+      636
+    ],
+    "height": 2.82,
+    "color": "#4b6058",
+    "post": "#829389",
+    "solidHeight": 2.7,
+    "arch": false,
+    "pattern": "solid-panel",
+    "source": "July2025 Street View; pale doors and dark frame observed, footprint and rear passage inferred to retain mapped access."
+  },
+  {
+    "name": "Șciusev129 · poartă laterală",
+    "a": [
+      -1006.4,
+      597.9
+    ],
+    "b": [
+      -1009.7,
+      595.2
+    ],
+    "height": 1.9,
+    "color": "#596e76",
+    "post": "#a3a592",
+    "solidHeight": 1.55,
+    "arch": false,
+    "source": "July2025 Street View north panorama: blue-gray metal gate marked129. Metric location and depth estimated."
+  },
+  {
+    "name": "Șciusev131 · acces curte",
+    "a": [
+      -1018.3,
+      585.3
+    ],
+    "b": [
+      -1022.3,
+      582.0
+    ],
+    "height": 2.0,
+    "color": "#6c7160",
+    "post": "#92957c",
+    "solidHeight": 1.8,
+    "arch": false,
+    "source": "September2025 Street View: weathered wooden boundary and pale lower gate. Gate metric positions inferred; inaccessible rear details estimated."
+  },
+  {
+    "name": "Șciusev133 · acces curte",
+    "a": [
+      -1036.5,
+      570.1
+    ],
+    "b": [
+      -1040,
+      567.2
+    ],
+    "height": 1.25,
+    "color": "#a4a696",
+    "post": "#81856c",
+    "solidHeight": 1.05,
+    "arch": false,
+    "source": "September2025 Street View: weathered wooden boundary and pale lower gate. Gate metric positions inferred; inaccessible rear details estimated."
+  },
+  {
+    "name": "VA05 · 46 · gang",
+    "a": [
+      638.0,
+      591.0
+    ],
+    "b": [
+      638.0,
+      596.4
+    ],
+    "height": 2.65,
+    "arch": false,
+    "color": "#80594f",
+    "post": "#b2ab96",
+    "solidHeight": 2.3,
+    "source": "September2025 Street View; dimensions estimated within official mapped gap."
+  },
+  {
+    "name": "VA05 · 48 · curte",
+    "a": [
+      640.5,
+      572.4
+    ],
+    "b": [
+      640.5,
+      575.4
+    ],
+    "height": 2.1,
+    "arch": false,
+    "color": "#536756",
+    "post": "#b2ab96",
+    "solidHeight": 1.9,
+    "source": "September2025 Street View; dimensions estimated within official mapped gap."
+  },
+  {
+    "name": "VA05 · 50 · vilă",
+    "a": [
+      639.3,
+      544.2
+    ],
+    "b": [
+      639.3,
+      548.0
+    ],
+    "height": 2.1,
+    "arch": false,
+    "color": "#414e42",
+    "post": "#b2ab96",
+    "solidHeight": 1.9,
+    "source": "September2025 Street View; dimensions estimated within official mapped gap."
+  },
+  {
+    "name": "VA05 · 93 · curte",
+    "a": [
+      618.3,
+      532.9
+    ],
+    "b": [
+      618.3,
+      536.9
+    ],
+    "height": 2.1,
+    "arch": false,
+    "color": "#925f4c",
+    "post": "#b2ab96",
+    "solidHeight": 1.9,
+    "source": "September2025 Street View; dimensions estimated within official mapped gap."
+  },
+  {
+    "name": "VA06 · 58 · acces curte",
+    "a": [
+      637.6,
+      442
+    ],
+    "b": [
+      637.6,
+      445.1
+    ],
+    "height": 2.35,
+    "arch": false,
+    "color": "#414b42",
+    "post": "#b8b19a",
+    "solidHeight": 1.8,
+    "source": "Sept2025 Street View. Dimensions estimated within official mapped gaps."
+  },
+  {
+    "name": "VA06 · 60 · poarta brună",
+    "a": [
+      637.9,
+      409.2
+    ],
+    "b": [
+      637.9,
+      411.5
+    ],
+    "height": 2.35,
+    "arch": false,
+    "color": "#4e483d",
+    "post": "#b8b19a",
+    "solidHeight": 1.8,
+    "source": "Sept2025 Street View. Dimensions estimated within official mapped gaps."
+  },
+  {
+    "name": "VA06 · 64 · poarta de fier",
+    "a": [
+      637.7,
+      380.8
+    ],
+    "b": [
+      637.7,
+      383.1
+    ],
+    "height": 2.35,
+    "arch": false,
+    "color": "#414b42",
+    "post": "#b8b19a",
+    "solidHeight": 0.25,
+    "source": "Sept2025 Street View. Dimensions estimated within official mapped gaps."
+  },
+  {
+    "name": "VA06 · 99 · poarta gri",
+    "a": [
+      618.4,
+      409.5
+    ],
+    "b": [
+      618.4,
+      412.0
+    ],
+    "height": 2.35,
+    "arch": false,
+    "color": "#626d61",
+    "post": "#b8b19a",
+    "solidHeight": 1.8,
+    "source": "Sept2025 Street View. Dimensions estimated within official mapped gaps."
+  },
+  {
+    "name": "VA06 · 101 · curte",
+    "a": [
+      618.0,
+      389.9
+    ],
+    "b": [
+      618.0,
+      394.4
+    ],
+    "height": 2.35,
+    "arch": false,
+    "color": "#7b6054",
+    "post": "#b8b19a",
+    "solidHeight": 1.8,
+    "source": "Sept2025 Street View. Dimensions estimated within official mapped gaps."
+  },
+  {
+    "name": "VA06 · 101–103 · poarta roșie",
+    "a": [
+      617.8,
+      369.6
+    ],
+    "b": [
+      617.8,
+      372.9
+    ],
+    "height": 2.35,
+    "arch": false,
+    "color": "#936c58",
+    "post": "#b8b19a",
+    "solidHeight": 1.6,
+    "source": "Sept2025 Street View. Dimensions estimated within official mapped gaps."
+  },
+  {
+    "name": "VA07 · 105 · poarta verde",
+    "a": [
+      615.8,
+      265.2
+    ],
+    "b": [
+      615.8,
+      270.5
+    ],
+    "height": 2.4,
+    "arch": true,
+    "color": "#719c52",
+    "post": "#b7b29e",
+    "solidHeight": 0.2,
+    "source": "Sep2025 Google Street View. Gap from official metric plan, dimensions estimated."
+  },
+  {
+    "name": "VA07 · 105 · curte nord",
+    "a": [
+      615.7,
+      232.5
+    ],
+    "b": [
+      615.7,
+      237.5
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#746c55",
+    "post": "#b7b29e",
+    "solidHeight": 1.5,
+    "source": "Sep2025 Google Street View. Gap from official metric plan, dimensions estimated."
+  },
+  {
+    "name": "VA07 · 109 · curte",
+    "a": [
+      615.6,
+      138.4
+    ],
+    "b": [
+      615.6,
+      143.8
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#565d50",
+    "post": "#b7b29e",
+    "solidHeight": 1.5,
+    "source": "Sep2025 Google Street View. Gap from official metric plan, dimensions estimated."
+  },
+  {
+    "name": "VA07 · 113 · acces curte",
+    "a": [
+      615.9,
+      72.0
+    ],
+    "b": [
+      615.9,
+      75.2
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#665948",
+    "post": "#b7b29e",
+    "solidHeight": 1.6,
+    "source": "Sep2025 Google Street View. Gap from official metric plan, dimensions estimated."
+  },
+  {
+    "name": "VA07 · 70–72 · acces est",
+    "a": [
+      638.5,
+      218
+    ],
+    "b": [
+      638.5,
+      223.7
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#4f5c4b",
+    "post": "#b7b29e",
+    "solidHeight": 1.7,
+    "source": "Sep2025 Google Street View. Gap from official metric plan, dimensions estimated."
+  },
+  {
+    "name": "VA07 · 74 · acces nord",
+    "a": [
+      638.2,
+      82
+    ],
+    "b": [
+      638.2,
+      89.9
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#5c6455",
+    "post": "#b7b29e",
+    "solidHeight": 1.6,
+    "source": "Sep2025 Google Street View. Gap from official metric plan, dimensions estimated."
+  },
+  {
+    "name": "VA08 · 117/1 · poarta sud",
+    "a": [
+      615.7,
+      -68.4
+    ],
+    "b": [
+      615.7,
+      -64.2
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#555e4d",
+    "post": "#b8b09b",
+    "solidHeight": 0.25,
+    "source": "Sep2025 Street View. Gap from metric official plans; small dimensions estimated."
+  },
+  {
+    "name": "VA08 · 117–119 · curte",
+    "a": [
+      614.9,
+      -119.0
+    ],
+    "b": [
+      614.9,
+      -113.0
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#5c6352",
+    "post": "#b8b09b",
+    "solidHeight": 1.6,
+    "source": "Sep2025 Street View. Gap from metric official plans; small dimensions estimated."
+  },
+  {
+    "name": "VA08 · 119–121 · acces",
+    "a": [
+      614.8,
+      -173.5
+    ],
+    "b": [
+      614.8,
+      -167.5
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#685e4d",
+    "post": "#b8b09b",
+    "solidHeight": 1.5,
+    "source": "Sep2025 Street View. Gap from metric official plans; small dimensions estimated."
+  },
+  {
+    "name": "VA08 · 78 · curte sud",
+    "a": [
+      642.0,
+      -80.5
+    ],
+    "b": [
+      642.0,
+      -72.0
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#8c6c56",
+    "post": "#b8b09b",
+    "solidHeight": 1.6,
+    "source": "Sep2025 Street View. Gap from metric official plans; small dimensions estimated."
+  },
+  {
+    "name": "VA09 · 123–125 · poarta roșie",
+    "a": [
+      615.6,
+      -256.5
+    ],
+    "b": [
+      615.6,
+      -252.5
+    ],
+    "height": 2.05,
+    "arch": false,
+    "color": "#9f5643",
+    "post": "#b8b09b",
+    "solidHeight": 1.95,
+    "source": "Sep2025 Street View. Small dimensions estimated;84 concealed through-route is a gameplay approximation.",
+    "pattern": "painted-panel"
+  },
+  {
+    "name": "VA09 · 129 · poarta de lemn",
+    "a": [
+      615.1,
+      -314.6
+    ],
+    "b": [
+      615.1,
+      -312.65
+    ],
+    "height": 2.05,
+    "arch": false,
+    "color": "#975a52",
+    "post": "#b8b09b",
+    "solidHeight": 1.9,
+    "source": "Sep2025 Street View. Small dimensions estimated;84 concealed through-route is a gameplay approximation.",
+    "pattern": "timber-planks"
+  },
+  {
+    "name": "VA09 · 80/B · acces sud",
+    "a": [
+      641.0,
+      -257.3
+    ],
+    "b": [
+      641.0,
+      -251.2
+    ],
+    "height": 1.75,
+    "arch": false,
+    "color": "#53694f",
+    "post": "#b8b09b",
+    "solidHeight": 0.45,
+    "source": "Sep2025 Street View. Small dimensions estimated;84 concealed through-route is a gameplay approximation."
+  },
+  {
+    "name": "VA09 · 82 · curte",
+    "a": [
+      635.1,
+      -279.8
+    ],
+    "b": [
+      635.1,
+      -274.0
+    ],
+    "height": 2.3,
+    "arch": false,
+    "color": "#615f51",
+    "post": "#b8b09b",
+    "solidHeight": 1.9,
+    "source": "Sep2025 Street View. Small dimensions estimated;84 concealed through-route is a gameplay approximation.",
+    "pattern": "painted-panel"
+  },
+  {
+    "name": "VA09 · 84 · intrare auto",
+    "a": [
+      635.8,
+      -311.9
+    ],
+    "b": [
+      635.8,
+      -308.6
+    ],
+    "height": 3.0,
+    "arch": false,
+    "color": "#49694f",
+    "post": "#b8b09b",
+    "solidHeight": 2.8,
+    "source": "Sep2025 Street View. Small dimensions estimated;84 concealed through-route is a gameplay approximation.",
+    "pattern": "painted-panel"
+  },
+  {
+    "name": "VA10 · 131 · poarta gri",
+    "a": [
+      614.5,
+      -380.0
+    ],
+    "b": [
+      614.5,
+      -375.6
+    ],
+    "height": 2.15,
+    "arch": true,
+    "color": "#949f9e",
+    "post": "#b6bcb1",
+    "solidHeight": 1.7,
+    "pattern": "painted-panel",
+    "source": "Sep2025 Street View visible solid gray gate. Position and dimensions approximate."
+  },
+  {
+    "name": "VA10 · 131–133 · poarta brună",
+    "a": [
+      614.4,
+      -397.0
+    ],
+    "b": [
+      614.4,
+      -393.5
+    ],
+    "height": 2.05,
+    "arch": false,
+    "color": "#645548",
+    "post": "#aaa99a",
+    "solidHeight": 2,
+    "pattern": "painted-panel",
+    "source": "Sep2025 Street View. Concealed courtyard paving is a gameplay approximation."
+  },
+  {
+    "name": "VA11 · 90 · portal",
+    "a": [
+      635.15,
+      -448.8
+    ],
+    "b": [
+      635.15,
+      -446.3
+    ],
+    "height": 3.25,
+    "arch": true,
+    "color": "#4b5148",
+    "post": "#b0aa92",
+    "solidHeight": 3.1,
+    "pattern": "painted-panel",
+    "source": "Sep2025 visible garage portal. Exact dimensions and hidden through-route estimated for gameplay."
+  },
+  {
+    "name": "VA11 · 135 · acces curte",
+    "a": [
+      611.5,
+      -435.0
+    ],
+    "b": [
+      611.5,
+      -430.0
+    ],
+    "height": 2.05,
+    "arch": false,
+    "color": "#96a59a",
+    "post": "#929d8c",
+    "solidHeight": 2,
+    "pattern": "painted-panel",
+    "source": "Sep2025 visible metal site enclosure and access. Dimensions approximate."
+  },
+  {
+    "name": "VA12 · 92 · acces curte",
+    "a": [
+      635.0,
+      -520.5
+    ],
+    "b": [
+      635.0,
+      -516.3
+    ],
+    "height": 1.95,
+    "arch": false,
+    "color": "#a7af98",
+    "post": "#b7baa3",
+    "solidHeight": 1.8,
+    "pattern": "painted-panel",
+    "source": "Sep2025 visible white sheet enclosure. Exact gate dimensions and concealed court layout estimated."
+  },
+  {
+    "name": "VA12 · Goga19 · poartă",
+    "a": [
+      602.3,
+      -561.2
+    ],
+    "b": [
+      602.3,
+      -558.7
+    ],
+    "height": 1.9,
+    "arch": false,
+    "color": "#8b7770",
+    "post": "#b2a58d",
+    "solidHeight": 1.8,
+    "pattern": "painted-panel",
+    "source": "Sep2025 burgundy enclosure with gate. Location/dimensions estimated within the clear cadastral access gap."
+  },
+  {
+    "name": "VA12 · vulcanizare · 1",
+    "a": [
+      650.5,
+      -557.9
+    ],
+    "b": [
+      650.5,
+      -554.7
+    ],
+    "height": 2.6,
+    "arch": false,
+    "color": "#454d43",
+    "post": "#b9b651",
+    "solidHeight": 2.5,
+    "pattern": "painted-panel",
+    "source": "Sep2025 two dark shop shutters. Hinged opening and the hidden passage are simplified gameplay approximations, not verified interiors."
+  },
+  {
+    "name": "VA12 · vulcanizare · 2",
+    "a": [
+      650.5,
+      -551.4
+    ],
+    "b": [
+      650.5,
+      -548.2
+    ],
+    "height": 2.6,
+    "arch": false,
+    "color": "#454d43",
+    "post": "#b9b651",
+    "solidHeight": 2.5,
+    "pattern": "painted-panel",
+    "source": "Sep2025 two dark shop shutters. Hinged opening and the hidden passage are simplified gameplay approximations, not verified interiors."
+  },
+  {
+    "name": "VA13 · zid alb · acces pietonal",
+    "a": [
+      598.5,
+      -687.0
+    ],
+    "b": [
+      598.5,
+      -685.6
+    ],
+    "height": 1.9,
+    "arch": false,
+    "color": "#956859",
+    "post": "#bcb9a2",
+    "solidHeight": 1.8,
+    "pattern": "painted-panel",
+    "source": "Sep2025 red pedestrian door in the white enclosure. Dimensions and concealed continuation estimated."
+  },
+  {
+    "name": "VA13 · 139 · poartă curte",
+    "a": [
+      598.5,
+      -725.1
+    ],
+    "b": [
+      598.5,
+      -722.0
+    ],
+    "height": 1.95,
+    "arch": false,
+    "color": "#9c6b5b",
+    "post": "#bcb9a2",
+    "solidHeight": 1.85,
+    "pattern": "painted-panel",
+    "source": "Sep2025 red gate beside139. Exact dimensions/court layout estimated."
+  },
+  {
+    "name": "VA13 · 100/1 · acces lateral",
+    "a": [
+      640.0,
+      -804.9
+    ],
+    "b": [
+      640.0,
+      -801.6
+    ],
+    "height": 2.0,
+    "arch": false,
+    "color": "#58634e",
+    "post": "#a9ac96",
+    "solidHeight": 1.9,
+    "pattern": "painted-panel",
+    "source": "Sep2025 dark side enclosure beside tall building. Gate position/dimensions and continuation estimated for gameplay."
+  },
+  {
+    "name": "BUC01 · 43 · acces vestic",
+    "a": [
+      689.4,
+      480.6
+    ],
+    "b": [
+      692.7,
+      480.6
+    ],
+    "height": 2.1,
+    "arch": false,
+    "color": "#42544a",
+    "post": "#bdbda7",
+    "solidHeight": 1.85,
+    "pattern": "painted-panel",
+    "source": "Black gate observed in Jul2025 panorama at43; metric position/width estimated in official gap."
+  },
+  {
+    "name": "BUC01 · 46 · acces nord",
+    "a": [
+      681.95,
+      459.5
+    ],
+    "b": [
+      685.1,
+      459.5
+    ],
+    "height": 2.1,
+    "arch": true,
+    "color": "#61755c",
+    "post": "#bdbda7",
+    "solidHeight": 1.85,
+    "pattern": "painted-panel",
+    "source": "Arched side gate in identifiable monument.sit.md photograph; capture date unknown, current leaf not fully visible; geometry estimated."
+  },
+  {
+    "name": "BUC01 · 44 · poartă între corpuri",
+    "a": [
+      692.0,
+      459.15
+    ],
+    "b": [
+      694.75,
+      459.15
+    ],
+    "height": 2.1,
+    "arch": false,
+    "color": "#775f4b",
+    "post": "#bdbda7",
+    "solidHeight": 1.85,
+    "pattern": "painted-panel",
+    "source": "Brown gate between low bodies in identifiable monument.sit.md photograph; capture date unknown, placement matched to cadastral gap, dimensions estimated."
+  },
+  {
+    "name": "BUC02 · 33 · poartă roșu-brună",
+    "a": [
+      883.15,
+      479
+    ],
+    "b": [
+      885.75,
+      479
+    ],
+    "height": 2.55,
+    "arch": false,
+    "color": "#735247",
+    "post": "#b2afa0",
+    "solidHeight": 2.45,
+    "source": "Street View September2025: opaque red-brown painted panels, no ornamental upper grille. Placement and dimensions estimated within the official footprint gap.",
+    "pattern": "painted-panel"
+  },
+  {
+    "name": "BUC02 · 31 · poartă sub arc",
+    "a": [
+      904.65,
+      479
+    ],
+    "b": [
+      907.25,
+      479
+    ],
+    "height": 2.65,
+    "arch": true,
+    "color": "#3f4942",
+    "post": "#cbc7b4",
+    "solidHeight": 0.35,
+    "source": "Street View September2025: dark iron gate under arch; placement and dimensions estimated within the official footprint gap."
+  },
+  {
+    "name": "BUC02 · 34 · poartă de fier",
+    "a": [
+      934.45,
+      458.0
+    ],
+    "b": [
+      936.75,
+      458.0
+    ],
+    "height": 2.65,
+    "arch": true,
+    "color": "#39433f",
+    "post": "#d1d1c3",
+    "solidHeight": 1.25,
+    "source": "Street View September2025: black iron gate with approximately1.25m opaque lower panels and ornamental upper bars, beneath a white lintel. Placement and dimensions estimated within the official footprint gap."
+  },
+  {
+    "name": "BUC03 · 19–21 · poartă opacă brun-gri",
+    "a": [
+      1052.95,
+      479.5
+    ],
+    "b": [
+      1057.75,
+      479.5
+    ],
+    "height": 2.4,
+    "arch": false,
+    "color": "#736b61",
+    "post": "#c5c4b6",
+    "solidHeight": 2.3,
+    "pattern": "painted-panel",
+    "source": "D.S. Street View September 2025 panorama CIABIhAKFPe78uVkfmjVgvsBhgS1: opaque brown-gray panels, leaves of slightly different shades. Estimated position/height inside the exact gap between official bodies 29814 and 13640."
+  },
+  {
+    "name": "BUC03 · 15–13 · poartă de fier",
+    "a": [
+      1107.0,
+      479.5
+    ],
+    "b": [
+      1112.9,
+      479.5
+    ],
+    "height": 2.55,
+    "arch": true,
+    "color": "#353a36",
+    "post": "#c7c8b8",
+    "solidHeight": 1.05,
+    "source": "D.S. Street View September 2025 panorama CIABIhB7IZh8Pqc0jHkQTJa5mKVR: black metal gate, opaque lower panels and arched upper bars. Width, height and exact position are estimated within the official gap."
+  },
+  {
+    "name": "BUC03 · 13 · poartă opacă estică",
+    "a": [
+      1139.3,
+      479.5
+    ],
+    "b": [
+      1145.7,
+      479.5
+    ],
+    "height": 2.1,
+    "arch": false,
+    "color": "#4c4139",
+    "post": "#9c9a8b",
+    "solidHeight": 2.0,
+    "pattern": "painted-panel",
+    "source": "D.S. Street View September 2025, east panorama heading270: opaque brown gate with ivy, within the courtyard opening east of VIVOCLINIC. Position, width and height estimated. Separate masonry closes the frontage west/east of this 6.4m interactive opening."
+  },
+  {
+    "name": "BUC04 · Ismail9 · poartă arcuită în pasaj",
+    "a": [
+      1392.5,
+      458.25
+    ],
+    "b": [
+      1394.65,
+      458.25
+    ],
+    "height": 2.1,
+    "arch": true,
+    "color": "#343b35",
+    "post": "#ccc8b8",
+    "solidHeight": 2.1,
+    "pattern": "painted-panel",
+    "source": "Street View2025 black opaque arched double gate between9555 and historicfront9632. Position/height estimated; official footprint includes portal, so a clear passage is modeled inside9632."
+  },
+  {
+    "name": "BUC04 · București 26 vest · poartă de curte",
+    "a": [
+      1245.35,
+      458
+    ],
+    "b": [
+      1251.2,
+      458
+    ],
+    "height": 2.2,
+    "arch": false,
+    "color": "#8c918a",
+    "post": "#a8aea0",
+    "solidHeight": 0.12,
+    "pattern": "vertical-bars",
+    "source": "Street View September 2025 inspected by the project lead. Gate type and existence are visible; endpoints, height and exact shade are estimates tied to the complete official body contours. No parcel is extruded."
+  },
+  {
+    "name": "BUC04 · București 26 est · poartă de curte",
+    "a": [
+      1275.8,
+      458
+    ],
+    "b": [
+      1279.516,
+      458
+    ],
+    "height": 2.2,
+    "arch": false,
+    "color": "#8c918a",
+    "post": "#a8aea0",
+    "solidHeight": 0.12,
+    "pattern": "vertical-bars",
+    "source": "Street View September 2025 inspected by the project lead. Gate type and existence are visible; endpoints, height and exact shade are estimates tied to the complete official body contours. No parcel is extruded."
+  },
+  {
+    "name": "BUC04 · București 24–22 · poartă de curte",
+    "a": [
+      1288.196,
+      458
+    ],
+    "b": [
+      1291.418,
+      458
+    ],
+    "height": 2.15,
+    "arch": false,
+    "color": "#5e7f9b",
+    "post": "#a8aea0",
+    "solidHeight": 2.15,
+    "pattern": "painted-panel",
+    "source": "Street View September 2025 inspected by the project lead. Gate type and existence are visible; endpoints, height and exact shade are estimates tied to the complete official body contours. No parcel is extruded."
+  },
+  {
+    "name": "BUC04 · București 20 vest · poartă de curte",
+    "a": [
+      1300.15,
+      458.4
+    ],
+    "b": [
+      1305.0,
+      458.4
+    ],
+    "height": 2.3,
+    "arch": false,
+    "color": "#363d37",
+    "post": "#a8aea0",
+    "solidHeight": 2.3,
+    "pattern": "painted-panel",
+    "source": "Street View September 2025 inspected by the project lead. Gate type and existence are visible; endpoints, height and exact shade are estimates tied to the complete official body contours. No parcel is extruded."
+  },
+  {
+    "name": "BUC04 · București 20 est · poartă de curte",
+    "a": [
+      1316.1,
+      458.4
+    ],
+    "b": [
+      1320.65,
+      458.4
+    ],
+    "height": 2.3,
+    "arch": false,
+    "color": "#353c36",
+    "post": "#a8aea0",
+    "solidHeight": 2.3,
+    "pattern": "horizontal-slats",
+    "source": "Street View September 2025 inspected by the project lead. Gate type and existence are visible; endpoints, height and exact shade are estimates tied to the complete official body contours. No parcel is extruded."
+  },
+  {
+    "name": "BUC05 · București4 est · poartă de curte",
+    "a": [
+      1517.55,
+      458.55
+    ],
+    "b": [
+      1521.65,
+      458.55
+    ],
+    "height": 2.1,
+    "arch": false,
+    "color": "#42443d",
+    "post": "#b9b7a7",
+    "solidHeight": 1.8,
+    "pattern": "painted-panel",
+    "source": "September2025 Street View confirms dark metal double gate between official9661 and the photograph-only white kiosk. Endpoint and height estimates tied to complete adjacent source contours; upper metal tips above opaque panels remain approximate."
+  },
+  {
+    "name": "BUC05 · București5 vest · poartă de curte",
+    "a": [
+      1481.6,
+      479.8
+    ],
+    "b": [
+      1485.2,
+      479.8
+    ],
+    "height": 1.9,
+    "arch": false,
+    "color": "#343a35",
+    "post": "#9c9e90",
+    "solidHeight": 1.1,
+    "pattern": "panel-bars",
+    "source": "September2025 Street View confirms a black double gate with opaque lower panels and simple vertical upper bars, opening into the real gap west of official12341. Position, height and lower-panel height are estimates. The visible address5 is contextual and does not merge adjacent bodies."
+  },
+  {
+    "name": "BUC05 · București6 vest · poartă de curte",
+    "a": [
+      1471.2,
+      458.45
+    ],
+    "b": [
+      1475.85,
+      458.45
+    ],
+    "height": 2.15,
+    "arch": false,
+    "color": "#514239",
+    "post": "#7d7e6c",
+    "solidHeight": 2.15,
+    "pattern": "painted-panel",
+    "source": "Opaque brown courtyard gate visible west of9888 in September2025 Street View. No earlier courtyard-gates entry owns this gap. Endpoints, leaf width and height are estimates; surrounding fixed panels connect the complete retained/new contours."
+  },
+  {
+    "name": "BUC05 · București1 vest · poartă de curte",
+    "a": [
+      1514.25,
+      479.65
+    ],
+    "b": [
+      1518.55,
+      479.65
+    ],
+    "height": 2.15,
+    "arch": false,
+    "color": "#793e4b",
+    "post": "#6e5551",
+    "solidHeight": 1.3,
+    "pattern": "panel-bars",
+    "topProfile": "peaked",
+    "baseOffset": 0.365,
+    "source": "July2025 Street View shows red opaque lower panels, simple vertical upper bars and a peaked center, beside the real western gap of14490. Dimensions are estimates. BaseOffset.365 places the leaf bottom on the local+.45m estimated plateau plus.035m floor, with no transverse threshold obstacle."
+  },
+  {
+    "name": "VA14 · ACAEM · poartă principală",
+    "a": [
+      601.4,
+      -908.8
+    ],
+    "b": [
+      601.4,
+      -906.6
+    ],
+    "height": 1.9,
+    "arch": true,
+    "color": "#454d43",
+    "post": "#b7a48b",
+    "solidHeight": 0.25,
+    "pattern": "iron",
+    "source": "Sep2025 visible black metal pedestrian gate. Dimensions/hinge and concealed continuation estimated."
+  },
+  {
+    "name": "VA14 · ACAEM · poartă auto",
+    "a": [
+      598.4,
+      -925.0
+    ],
+    "b": [
+      598.4,
+      -921.9
+    ],
+    "height": 2.1,
+    "arch": true,
+    "color": "#464e43",
+    "post": "#b8a28a",
+    "solidHeight": 0.4,
+    "pattern": "iron",
+    "source": "Sep2025 arched black driveway gate. Dimensions and hidden continuation estimated."
+  },
+  {
+    "name": "VA14 · Hâjdeu · poartă albă",
+    "a": [
+      599,
+      -894.4
+    ],
+    "b": [
+      599,
+      -891.3
+    ],
+    "height": 1.9,
+    "arch": false,
+    "color": "#c4c2af",
+    "post": "#b9a18b",
+    "solidHeight": 1.8,
+    "pattern": "painted-panel",
+    "source": "Sep2025 visible white double metal gate. Dimensions and concealed court estimated."
+  },
+  {
+    "name": "BUC07 · București51 · acces curte",
+    "a": [
+      532.6,
+      480.7
+    ],
+    "b": [
+      536.2,
+      480.7
+    ],
+    "height": 2.0,
+    "arch": false,
+    "color": "#5e584b",
+    "post": "#b9b4a1",
+    "solidHeight": 1.85,
+    "pattern": "timber-planks",
+    "initialOpen": true,
+    "source": "Google Street View July2025, Aleksandr Malina. Open entrance between concrete posts at the western side of official49. Plan position and3.6m width estimated from the mapped service access and official facade gaps. The existing shared gate interaction remains unchanged."
+  },
+  {
+    "name": "BUC07 · București47 · poartă curte lângă49",
+    "a": [
+      557.0,
+      479.7
+    ],
+    "b": [
+      560.2,
+      479.7
+    ],
+    "height": 2.35,
+    "color": "#794e58",
+    "post": "#825860",
+    "solidHeight": 1.8,
+    "arch": true,
+    "initialOpen": false,
+    "source": "Google Street View July 2025, Aleksandr Malina. Closed burgundy two-leaf metal gate with upper ornament visible in 2025-07-bucuresti47-front.jpg and -temporary-cover.jpg. Endpoints fit the official gap between cladiri.25403 and retained VA05 cladiri.8887. Metric width, height and ornament dimensions are visual estimates. Shared existing hinges, collision and interaction are reused."
+  },
+  {
+    "name": "BUC07 · București52–50 · acces curte",
+    "a": [
+      552.97,
+      459.2
+    ],
+    "b": [
+      555.73,
+      459.2
+    ],
+    "height": 2.15,
+    "arch": false,
+    "color": "#343b38",
+    "post": "#5d6157",
+    "solidHeight": 2.15,
+    "pattern": "painted-panel",
+    "centralPanelColor": "#d6c7a1",
+    "centralPanelWidth": 0.62,
+    "initialOpen": false,
+    "openDirection": -1,
+    "source": "Google Street View July 2025, Aleksandr Malina, 2025-07-bucuresti50-front.jpg. Closed dark metal gate with a cream central panel and irregular light graffiti in the official gap between cladiri.9316 and cladiri.9315. Endpoints, height and panel dimensions are perspective estimates. Inward opening is a functional estimate using the existing gate interaction, not a photographed hinge-direction claim. Graffiti lettering is not transcribed."
+  },
+  {
+    "name": "BUC07 · București50 · acces curte est",
+    "a": [
+      573.65,
+      459.35
+    ],
+    "b": [
+      578.85,
+      459.35
+    ],
+    "height": 2.2,
+    "arch": false,
+    "color": "#414944",
+    "post": "#656b60",
+    "solidHeight": 2.2,
+    "pattern": "painted-panel",
+    "label": "50",
+    "initialOpen": false,
+    "openDirection": -1,
+    "source": "Google Street View July 2025, Aleksandr Malina, 2025-07-bucuresti50-eastgate.jpg. Dark east access gate and boundary with a large white number50. The gate appears closed. Placement in the first approximately5.2m of the official gap from cladiri.9315 toward retained VA06 cladiri.9794, its height and the remaining fixed boundary are photographic estimates. Inward opening is an explicitly estimated functional direction."
+  },
+  {
+    "name": "BUC08 · București53 · poartă auto curte",
+    "a": [
+      436.47,
+      480.2
+    ],
+    "b": [
+      438.66,
+      480.2
+    ],
+    "height": 2.05,
+    "arch": false,
+    "color": "#303a36",
+    "post": "#696c62",
+    "solidHeight": 0.48,
+    "initialOpen": false,
+    "source": "Google Street View July2025, AleksandrMalina, south53-gates. Closed openwork two-leaf metal gate with dark lower panels, circles and spikes, adjacent to a separate narrow pedestrian leaf. Official gap38610–8874 fixes its approximate bounds. All metric dimensions and hinge direction are estimates.",
+    "postWidth": 0.1
+  },
+  {
+    "name": "BUC08 · București53 · ușă pietonală curte",
+    "a": [
+      435.52,
+      480.2
+    ],
+    "b": [
+      436.35,
+      480.2
+    ],
+    "height": 1.95,
+    "arch": false,
+    "color": "#5b6159",
+    "post": "#bc9b92",
+    "solidHeight": 1.95,
+    "pattern": "painted-panel",
+    "singleLeaf": true,
+    "initialOpen": false,
+    "source": "Google Street View July2025, AleksandrMalina, south53-gates. Separate closed narrow pedestrian door beneath pink lintel and București53 plaque. Width0.83m, height and hinge direction are perspective estimates. Graffiti lettering is not transcribed.",
+    "postWidth": 0.1
+  },
+  {
+    "name": "BUC08 · București59 · gang spre curte",
+    "a": [
+      383.83,
+      480.72
+    ],
+    "b": [
+      386.96,
+      480.72
+    ],
+    "height": 2.9,
+    "arch": false,
+    "color": "#75584d",
+    "post": "#bcaa98",
+    "solidHeight": 2.9,
+    "pattern": "timber-planks",
+    "initialOpen": true,
+    "source": "Google Street View July2025 AleksandrMalina frame16 confirms both brown timber leaves folded inward and a view through the covered gang to the court. Metricwidth3.13m and height are estimates aligned to the gap between official8869 and8871, whose outlines remain intact. The observed upper bridge is separately recorded as photograph-only geometry.",
+    "openDirection": 1,
+    "postWidth": 0.12
+  },
+  {
+    "name": "BUC08 · București55–57 · poartă auto curte",
+    "a": [
+      408.05,
+      480.2
+    ],
+    "b": [
+      412.45,
+      480.2
+    ],
+    "height": 2.2,
+    "arch": false,
+    "color": "#343a33",
+    "post": "#494b3f",
+    "solidHeight": 1.07,
+    "pattern": "panel-bars",
+    "initialOpen": false,
+    "openDirection": 1,
+    "postWidth": 0.12,
+    "source": "July2025 frame25 and frame26 confirm a closed two-leaf gate with opaque panels on the lower half and plain vertical bars above, without hoops or spikes. Official gap8871–38610 controls approximate placement. Exact width, height and inward hinge direction are estimates."
+  },
+  {
+    "name": "BUC09 · București 65 · poartă spre curte",
+    "a": [
+      265.7,
+      480.15
+    ],
+    "b": [
+      268.45,
+      480.15
+    ],
+    "height": 2.1,
+    "arch": true,
+    "color": "#7f2f35",
+    "post": "#bcb6a4",
+    "solidHeight": 1.55,
+    "pattern": "panel-bars",
+    "postWidth": 0.15,
+    "initialOpen": false,
+    "source": "Google Street View July 2025, retained frames 10, 12: burgundy double gate with dark openwork upper part and the number65, between the official low front38603 and Gamburd22423 Individual positions, dimensions, colours and heights are image-based estimates aligned to the official plan, not surveyed measurements."
+  },
+  {
+    "name": "BUC09 · București 63/61 · poartă laterală est",
+    "a": [
+      287.45,
+      480.5
+    ],
+    "b": [
+      293.85,
+      480.5
+    ],
+    "height": 2.1,
+    "arch": false,
+    "color": "#303531",
+    "post": "#9b9b8e",
+    "solidHeight": 1.75,
+    "pattern": "panel-bars",
+    "postWidth": 0.13,
+    "initialOpen": false,
+    "groundOwners": [
+      "bucuresti-bu09.json",
+      "bucuresti-bu08.json"
+    ],
+    "source": "Google Street View July 2025, retained frames 07: dark gate in the open space between official Gamburd63 and the retained whole61 body; width spans both ground owners, with no duplicate earlier gate Individual positions, dimensions, colours and heights are image-based estimates aligned to the official plan, not surveyed measurements."
+  },
+  {
+    "name": "BUC09 · Asachi / București 62 · poartă de curte",
+    "a": [
+      251.8,
+      458.5
+    ],
+    "b": [
+      258.35,
+      458.5
+    ],
+    "height": 2.3,
+    "arch": false,
+    "color": "#3c443b",
+    "post": "#b4b2a1",
+    "solidHeight": 0.15,
+    "pattern": "panel-bars",
+    "postWidth": 0.13,
+    "initialOpen": false,
+    "source": "Google Street View July 2025, retained frames 09: dark metal openwork courtyard gate in the gap between the historic Asachi east end and the preserved62 front; full width and hinge direction estimated from the official gap Individual positions, dimensions, colours and heights are image-based estimates aligned to the official plan, not surveyed measurements."
+  },
+  {
+    "name": "BUC09 · Pușkin 20/1 · poartă laterală nord",
+    "a": [
+      192.4,
+      522.6
+    ],
+    "b": [
+      192.4,
+      526.65
+    ],
+    "height": 2.1,
+    "arch": false,
+    "color": "#3b4338",
+    "post": "#b8b3a1",
+    "solidHeight": 0.12,
+    "pattern": "panel-bars",
+    "postWidth": 0.12,
+    "initialOpen": false,
+    "source": "Google Street View July 2025, retained frames 23, 24: vertical iron gateway across the court entrance north of the World Bank body, with bars visible behind the roadside tree Individual positions, dimensions, colours and heights are image-based estimates aligned to the official plan, not surveyed measurements."
+  },
+  {
+    "name": "BUC10 · București75 · poartă laterală",
+    "a": [
+      86.1,
+      478.3
+    ],
+    "b": [
+      90.8,
+      478.3
+    ],
+    "height": 2.45,
+    "arch": false,
+    "color": "#6c5048",
+    "post": "#b7ad98",
+    "solidHeight": 1.25,
+    "pattern": "panel-bars",
+    "postWidth": 0.15,
+    "initialOpen": false,
+    "source": "Google Street View July2025 frame07; dark red/brown double gate with solid lower panels, openwork upper section and speared bars beside the historic75 east end. Width, heights and hinges estimated using the official building gap."
+  },
+  {
+    "name": "BUC10 · București87/85 · poarta albastră spre curte",
+    "a": [
+      -62.5,
+      480.4
+    ],
+    "b": [
+      -58.5,
+      480.4
+    ],
+    "height": 2.05,
+    "arch": true,
+    "color": "#248fc2",
+    "post": "#a19e8b",
+    "solidHeight": 1.8,
+    "pattern": "painted-panel",
+    "postWidth": 0.14,
+    "initialOpen": true,
+    "source": "Google Street View July2025 frames23/24/25: open blue double metal leaves, east exposed-stone wall, west plastered wall and vines. Approximate opening registered to the official gap between9200 and9032; panorama URL viewport is not a surveyed camera location. The visible paved lane remains accessible, without claiming traversal of the entire private courtyard."
+  },
+  {
+    "name": "BUC11 · București76 · portița pietonală",
+    "a": [
+      -224.28,
+      459.7
+    ],
+    "b": [
+      -223.1,
+      459.7
+    ],
+    "height": 2.35,
+    "arch": false,
+    "color": "#c5c7bc",
+    "post": "#d2d1c3",
+    "solidHeight": 2.35,
+    "pattern": "solid-panel",
+    "postWidth": 0.12,
+    "initialOpen": false,
+    "singleLeaf": true,
+    "source": "Google Street View, D.S., captureSeptember2025 (contributor headerOctober2025). Coordinates and metric dimensions are approximate registrations to complete official footprints, not surveyed measurements. No photographed vehicles are reproduced. 01: separate light solid wicket on the west side of the main gateway; hinge and widths estimated."
+  },
+  {
+    "name": "BUC11 · București76/74 · poarta auto",
+    "a": [
+      -222.65,
+      459.7
+    ],
+    "b": [
+      -218.75,
+      459.7
+    ],
+    "height": 2.7,
+    "arch": true,
+    "color": "#b9beb6",
+    "post": "#d5d3c7",
+    "solidHeight": 2.3,
+    "pattern": "painted-panel",
+    "postWidth": 0.12,
+    "initialOpen": false,
+    "source": "Google Street View, D.S., captureSeptember2025 (contributor headerOctober2025). Coordinates and metric dimensions are approximate registrations to complete official footprints, not surveyed measurements. No photographed vehicles are reproduced. 01: grey metal double gate with decorative high ironwork between the two houses. Profiles, hinges and exact metric dimensions estimated."
+  },
+  {
+    "name": "BUC11 · București93 · poarta estică",
+    "a": [
+      -249.2,
+      480.5
+    ],
+    "b": [
+      -244.1,
+      480.5
+    ],
+    "height": 2.45,
+    "arch": false,
+    "color": "#6c5248",
+    "post": "#c6b6ac",
+    "solidHeight": 2.45,
+    "pattern": "timber-planks",
+    "postWidth": 0.12,
+    "initialOpen": true,
+    "source": "Google Street View, D.S., captureSeptember2025 (contributor headerOctober2025). Coordinates and metric dimensions are approximate registrations to complete official footprints, not surveyed measurements. No photographed vehicles are reproduced. 18/19: open dark timber gate leaf in the pink/white piered portal; double-leaf hinge reconstruction and exact opening width estimated. Visible lane stays open."
+  }
+]

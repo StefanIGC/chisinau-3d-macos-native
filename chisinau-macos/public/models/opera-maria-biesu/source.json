@@ -1,0 +1,29 @@
+{
+  "source": "https://map.md/ro#20/47.0277484266623/28.829911079694597/0/60",
+  "model_url": "https://map.md/api/images/map/objects/abf86a26ab79ff3e6f2ec3bcafb2b32a.gltf",
+  "copyright": "(C)2020 IT-Department",
+  "model": {
+    "object_id": "",
+    "id": "5e43ea2a323c7d0016a4b03d",
+    "visible": true,
+    "deleted": false,
+    "title": "teatr",
+    "viewport": {
+      "ambient_light": 0.5,
+      "rendering_mode": "3d",
+      "transform": {
+        "translate_z": 1.2119917e-09,
+        "rotate_x": 1.5707963267948966,
+        "rotate_y": -2.37,
+        "scale": 8.944499999999999e-08
+      }
+    },
+    "lat": 47.0277484266623,
+    "lng": 28.829911079694597,
+    "gltf_file_id": "abf86a26ab79ff3e6f2ec3bcafb2b32a.gltf",
+    "year": 0,
+    "info": null
+  },
+  "retrieved": "2026-09-25",
+  "changes": "Original geometry and material repackaged as a self-contained GLB. No textures are referenced by the source."
+}

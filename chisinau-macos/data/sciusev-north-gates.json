@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Șciusev131 · acces curte",
+    "a": [
+      -1018.3,
+      585.3
+    ],
+    "b": [
+      -1022.3,
+      582.0
+    ],
+    "height": 2.0,
+    "color": "#6c7160",
+    "post": "#92957c",
+    "solidHeight": 1.8,
+    "arch": false,
+    "source": "September2025 Street View: weathered wooden boundary and pale lower gate. Gate metric positions inferred; inaccessible rear details estimated."
+  },
+  {
+    "name": "Șciusev133 · acces curte",
+    "a": [
+      -1036.5,
+      570.1
+    ],
+    "b": [
+      -1040,
+      567.2
+    ],
+    "height": 1.25,
+    "color": "#a4a696",
+    "post": "#81856c",
+    "solidHeight": 1.05,
+    "arch": false,
+    "source": "September2025 Street View: weathered wooden boundary and pale lower gate. Gate metric positions inferred; inaccessible rear details estimated."
+  }
+]

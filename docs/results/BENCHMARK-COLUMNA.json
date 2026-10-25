@@ -1,0 +1,22 @@
+{
+  "renderer": "Metal native",
+  "sector": "Columna",
+  "vehicle": "helicopter",
+  "physics_hz": 120,
+  "seconds": 22.00,
+  "average_fps": 60.00,
+  "p95_frame_ms": 18.08,
+  "p99_frame_ms": 18.43,
+  "max_frame_ms": 19.57,
+  "max_frame_at_s": 13.87,
+  "frames_over_25ms": 0,
+  "frames_over_34ms": 0,
+  "frames_over_50ms": 0,
+  "tiles_loaded": 169,
+  "near_detail_tiles": 18,
+  "near_detail_tiles_ready": 18,
+  "distance_m": 516.09,
+  "final_speed_kmh": 136.20,
+  "straight_w_deviation_m": 0.00,
+  "passed": true
+}

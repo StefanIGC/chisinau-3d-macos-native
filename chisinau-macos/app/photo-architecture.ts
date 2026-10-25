@@ -1,0 +1,25 @@
+import * as T from 'three';
+import {feature,type XY} from './city-layout';
+import type {streetMesh} from './street-mesh';
+
+/** Bounded, opaque architecture pieces. The footprint is always mapped; photo
+ * references set the finish and elevation. No facade is drawn twice. */
+export function photoArchitecture(mesh:ReturnType<typeof streetMesh>){
+ const {job,ground,solid,put,box,beam,facade}=mesh;
+ const C={wall:'#b7b39d',trim:'#c6c3af',base:'#888b7d',roof:'#707b70',glass:'#50696a',wood:'#675042',iron:'#3b4942'};
+ type Face=ReturnType<typeof facade>;
+ function faces(p:XY[],y:number){const area=p.slice(1).reduce((s,b,i)=>s+p[i][0]*b[1]-b[0]*p[i][1],0),out:Face[]=[];for(let i=1;i<p.length;i++){const a=area>0?p[i]:p[i-1],b=area>0?p[i-1]:p[i];if(Math.hypot(b[0]-a[0],b[1]-a[1])>.6)out.push(facade(a,b,y));}return out;}
+ function street(f:Face){const m=f.at(f.len/2),n=f.at(f.len/2,1);return m[1]*n[1]<m[1]*m[1]&&Math.abs(n[1]-m[1])>.75;}
+ function cornice(f:Face,h:number,color=C.trim){for(const [hh,d,w]of[[h-.35,.28,.18],[h-.10,.42,.18],[h+.10,.55,.15]])f.panel(f.len/2,hh,d/2,f.len+.1,w,d,color);}
+ function* windows(f:Face,rows:number,h:number,bays=Math.max(1,Math.round(f.len/3.3)),first=2.1,trim=C.trim,frame=C.wood){for(let r=0;r<rows;r++){for(let i=0;i<bays;i++){f.window((i+.5)*f.len/bays,first+r*(h-.6)/rows,Math.min(1.6,f.len/bays*.60),rows===1?2.45:Math.min(2.15,h/rows*.65),trim,frame);if(i%5===4)yield;}yield;}}
+ function* plain(p:XY[],y:number,h:number,rows:number,skipFront=true){for(const f of faces(p,y)){f.panel(f.len/2,.32,.12,f.len,.64,.24,C.base);cornice(f,h);if(!skipFront||!street(f))yield* windows(f,rows,h);yield;}}
+ function building(id:string,title:string,h:number,color:string,anchor:XY,detail:(p:XY[],y:number,h:number)=>Generator<void>,ids=[Number(id.slice(1))],kind=0){const f=feature(id);job(title,f.p,ids,function*(){const y=ground(...anchor)+.14;solid(f.p,h+5,y-5,color,true,f.holes,kind);solid(f.p,.14,y+h,C.roof,true,f.holes);yield;yield* detail(f.p,y,h);});}
+ function roof(x:number,z:number,w:number,d:number,y:number,rise:number,color=C.roof){const a=[x-w/2,y,z-d/2],b=[x+w/2,y,z-d/2],c=[x+w/2,y,z+d/2],e=[x-w/2,y,z+d/2],r=[x-w/2+Math.min(d*.4,w*.2),y+rise,z],s=[x+w/2-Math.min(d*.4,w*.2),y+rise,z];const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute([a,r,b,b,r,s,b,s,c,c,s,e,e,s,r,e,r,a].flat(),3));g.computeVertexNormals();put(g,color,false,true);}
+ function pediment(f:Face,u:number,base:number,w:number,h:number,y:number,color=C.trim){const a=f.at(u-w/2,.44),b=f.at(u+w/2,.44),c=f.at(u,.44),g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute([a[0],y+base,a[1],b[0],y+base,b[1],c[0],y+base+h,c[1]],3));g.computeVertexNormals();put(g,color);beam(new T.Vector3(a[0],y+base,a[1]),new T.Vector3(c[0],y+base+h,c[1]),.08,color);beam(new T.Vector3(c[0],y+base+h,c[1]),new T.Vector3(b[0],y+base,b[1]),.08,color);}
+ function door(f:Face,u:number,h=3,w=1.7,color=C.wood){f.panel(u,h/2+.06,.38,w,h,.03,color,false,1);for(const side of[-1,1]){f.panel(u+side*(w/2+.11),h/2+.08,.36,.20,h+.2,.31,C.trim);for(const yy of[.60,1.35,2.1])f.panel(u+side*w/4,yy,.43,w*.32,.42,.08,'#846247',true);}f.panel(u,h/2,.48,.065,h,.08,'#4d3b2d',true);f.panel(u,h+.16,.40,w+.45,.22,.42,C.trim);}
+ function steps(f:Face,u:number,w:number,rise=.42){const q=f.at(u,1.5),low=ground(...q)+.14,n=Math.max(1,Math.ceil(rise/.14)),a=f.at(0),b=f.at(1),angle=Math.atan2(-(b[1]-a[1]),b[0]-a[0]);for(let i=0;i<n;i++){const p=f.at(u,1.5-i*.30);box(p[0],low+(i+1)*rise/n-.28,p[1],w,.56,.30,C.base,false,true,angle);}}
+ function arch(f:Face,u:number,bottom:number,w:number,h:number,y:number,color=C.glass,trim=C.trim,kind=1){const r=w/2,s=new T.Shape();s.moveTo(-r,0);s.lineTo(r,0);s.lineTo(r,h-r);s.absarc(0,h-r,r,0,Math.PI,false);s.closePath();const a=f.at(u,.34),b=f.at(1),c=f.at(0),angle=Math.atan2(-(b[1]-c[1]),b[0]-c[0]);const g=new T.ShapeGeometry(s,10);g.rotateY(angle);g.translate(a[0],y+bottom,a[1]);put(g,color,false,false,kind);const t=new T.TorusGeometry(r+.085,.085,4,16,Math.PI);t.rotateY(angle);const q=f.at(u,.45);t.translate(q[0],y+bottom+h-r,q[1]);put(t,trim,true);for(const sign of[-1,1])f.panel(u+sign*(r+.085),bottom+(h-r)/2,.40,.16,h-r,.20,trim,true);}
+ function column(x:number,z:number,y:number,h:number,r=.4,color=C.trim,physical=false){const g=new T.CylinderGeometry(r*.83,r,h,12);g.translate(x,y+h/2,z);put(g,color,false,physical);for(const [hh,rr,thick]of[[.14,r*1.26,.28],[h-.1,r*1.28,.2]]){const g=new T.CylinderGeometry(rr,rr,thick,12);g.translate(x,y+hh,z);put(g,color,false,physical);}box(x,y+h-.35,z,r*2.35,.22,r*2.35,color,true);}
+ function* fence(a:XY,b:XY,y:number,h=1.15){const f=facade(a,b,y);for(const hh of[.25,h-.12])f.panel(f.len/2,hh,0,f.len,.05,.045,C.iron,true);for(let u=0;u<=f.len;u+=.22){f.panel(u,h/2,0,.026,h,.035,C.iron,true);if(Math.round(u/.22)%15===14)yield;}for(let u=0;u<=f.len;u+=3.1)f.panel(u,h/2,0,.10,h+.12,.10,C.iron);}
+ return{C,faces,street,cornice,windows,plain,building,roof,pediment,door,steps,arch,column,fence};
+}

@@ -1,0 +1,8 @@
+{
+  "test": "walker physics and animation",
+  "distance_m": 25.03,
+  "facing_error_rad": 0.00,
+  "animation_frames_loaded": 16,
+  "finite_state": true,
+  "passed": true
+}

@@ -1,0 +1,59 @@
+VERIFICARE SECTOARE ORIGINALE · v2.8.0
+======================================
+
+Data verificării: 25 octombrie 2026
+
+ACOPERIRE
+---------
+- Șciusev: 16 module complete, de la Tighina până la sectorul nord/curbă,
+  inclusiv ramura nr. 121; 432 amprente de clădiri și anexe.
+- București: 11 module complete, BUC01–BUC11, de la Ciuflea/Lev Tolstoi până
+  la Nicolae Iorga; 357 amprente de clădiri și anexe.
+- Columna: Tighina–Ismail, ambele fronturi; 66 amprente.
+- Toate modulele originale sunt compilate offline din aceleași obiecte Three.js
+  și landscapeLayer ca proiectul online; straturile temporare BUC07–BUC11 nu
+  sunt exportate.
+
+SUPRAPUNERI ȘI DRUMURI
+----------------------
+- 2.790 de corpuri OSM care intersectează amprentele originale sunt eliminate
+  spațial la compilare; volumele simple ale celor 8.497 de corpuri originale
+  rămân numai pentru coliziune, nu pentru randare.
+- carosabilul de rezervă este la -0,012 m;
+- minim carosabil original Șciusev: 0,000 m (separare 0,012 m);
+- minim carosabil original București: 0,035 m (separare 0,047 m);
+- minim carosabil original Columna: 0,052 m (separare 0,064 m).
+- scanarea a găsit suprafețe originale de asfalt în 27 de dale Șciusev, 21 de
+  dale București și 4 dale Columna. Rezultat audit: trecut.
+
+HARTĂ ȘI TELEPORTARE
+--------------------
+- harta este complet offline și conține 49 de destinații nominale;
+- selectorul include fiecare segment Șciusev, București și Alecsandri lucrat;
+- orientarea destinațiilor este transformată în axele orașului nativ;
+- testul automat confirmă încărcarea hărții, teleportarea sigură, pregătirea
+  coliziunilor și revenirea în modul pieton, cu eroare 0,00 m.
+
+PERFORMANȚĂ ȘI STREAMING
+------------------------
+Sistem: Apple M1 Pro, 16 GB. Fiecare traseu durează 22 secunde, la 136,2 km/h,
+cu fizica vehiculului la 120 Hz. Criteriu: zero cadre peste 25 ms și toate
+dalele detaliate din raza de 450 m pregătite la final.
+
+- Șciusev: 60,00 FPS; p95 17,89 ms; maxim 18,72 ms; 0 cadre >25 ms;
+  21/21 dale detaliate apropiate pregătite; trecut.
+- București: 60,00 FPS; p95 18,30 ms; maxim 20,28 ms; 0 cadre >25 ms;
+  16/16 dale detaliate apropiate pregătite; trecut.
+- Columna: 60,00 FPS; p95 18,08 ms; maxim 19,57 ms; 0 cadre >25 ms;
+  18/18 dale detaliate apropiate pregătite; trecut.
+- Centru: 60,00 FPS; p95 18,07 ms; maxim 20,30 ms; 0 cadre >25 ms;
+  10/10 dale detaliate apropiate pregătite; trecut.
+- Mașină: 59,97 FPS; p95 18,29 ms; maxim 24,69 ms; 0 cadre >25 ms;
+  marșarier automat și mers drept confirmate; trecut.
+
+REGRESII FUNCȚIONALE
+--------------------
+- pieton: mers/alergare, orientare și toate cele 16 cadre Walk/Run — trecut;
+- intrare/ieșire mașină și elicopter, inclusiv condiția de aterizare — trecut;
+- executabil universal arm64+x86_64 și semnătură ad-hoc — verificat;
+- conexiune la internet în timpul jocului — nu este necesară.

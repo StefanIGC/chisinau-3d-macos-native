@@ -1,0 +1,645 @@
+{
+  "street": "București",
+  "planDate": "2026-10-23",
+  "status": "partially_implemented",
+  "activeSector": "BUC11",
+  "sectorCount": 16,
+  "nodeCount": 17,
+  "coordinateOrder": "longitude, latitude for coordinatesWGS84",
+  "source": {
+    "viewer": "https://geodata.gov.md/_v/2026101914/#/viewer/openlayers/99",
+    "layer": "cadastru_data:Strazi_RM",
+    "streetFeatureId": "Strazi_RM.2410",
+    "queryURL": "https://geodata.gov.md/geoserver/cadastru_data/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=cadastru_data%3AStrazi_RM&outputFormat=application%2Fjson&srsName=EPSG%3A3857&bbox=3207865.05866337%2C5943810.991448%2C3210938.24073917%2C5946835.17336176%2CEPSG%3A3857&maxFeatures=10000",
+    "retrievedUTC": "2026-10-23T09:26:43.875248+00:00",
+    "sourceSha256": "3322eeac6e1b1ffa6c0dbe1f5adcd23f48e2be63263060270be2ac49c46b875d",
+    "archivedSource": "docs/bucuresti-bu01-references/source-data/bucuresti-all-streets-3857.geojson.gz"
+  },
+  "method": "Exact geometric intersections of the official București axis with the other returned official road geometries in EPSG:3857. Ciuflea and bd. Dacia share one terminal node. The 17 distinct nodes define 16 adjacent sectors.",
+  "workOrderPolicy": "Finish BUC01 before extending. Continue southeast to Ciuflea/Dacia, then restart at Alecsandri and proceed northwest to Șciusev.",
+  "scopeCaution": "The plan is not a completion record. Street-axis coordinates do not define curb positions, street widths or ownership of already reconstructed corner models. Endpoint handling must respect the existing Alecsandri segments.",
+  "nodes": [
+    {
+      "id": "BUC-N01",
+      "label": "Alexei Șciusev",
+      "streetNames": [
+        "str. Alexei Șciusev"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2356"
+      ],
+      "coordinatesWGS84": [
+        28.817191273873817,
+        47.028854743299576
+      ],
+      "coordinatesEPSG3857": [
+        3207915.0587,
+        5946785.1734
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N02",
+      "label": "Mitropolit Petru Movilă",
+      "streetNames": [
+        "str. Mitropolit Petru Movilă"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2806"
+      ],
+      "coordinatesWGS84": [
+        28.81885164079324,
+        47.02779063990495
+      ],
+      "coordinatesEPSG3857": [
+        3208099.8899,
+        5946611.3925
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N03",
+      "label": "Serghei Lazo",
+      "streetNames": [
+        "str. Serghei Lazo"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2924"
+      ],
+      "coordinatesWGS84": [
+        28.820866319430394,
+        47.02644309892426
+      ],
+      "coordinatesEPSG3857": [
+        3208324.1629,
+        5946391.3278
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N04",
+      "label": "Sfatul Țării",
+      "streetNames": [
+        "str. Sfatul Țării"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2935"
+      ],
+      "coordinatesWGS84": [
+        28.82228428854681,
+        47.02548647198156
+      ],
+      "coordinatesEPSG3857": [
+        3208482.0105,
+        5946235.106
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N05",
+      "label": "Maria Cebotari",
+      "streetNames": [
+        "str. Maria Cebotari"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2774"
+      ],
+      "coordinatesWGS84": [
+        28.8237594084816,
+        47.02452241640216
+      ],
+      "coordinatesEPSG3857": [
+        3208646.2201,
+        5946077.6739
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N06",
+      "label": "Nicolae Iorga",
+      "streetNames": [
+        "str. Nicolae Iorga"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2826"
+      ],
+      "coordinatesWGS84": [
+        28.825245095299085,
+        47.02354144235171
+      ],
+      "coordinatesEPSG3857": [
+        3208811.606,
+        5945917.4819
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N07",
+      "label": "Mitropolit Gavriil Bănulescu-Bodoni",
+      "streetNames": [
+        "str. Mitropolit Gavriil Bănulescu-Bodoni"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2804"
+      ],
+      "coordinatesWGS84": [
+        28.826674252932353,
+        47.02260088275079
+      ],
+      "coordinatesEPSG3857": [
+        3208970.6991,
+        5945763.8923
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N08",
+      "label": "Alexandr Pușkin",
+      "streetNames": [
+        "str. Alexandr Pușkin"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2340"
+      ],
+      "coordinatesWGS84": [
+        28.82959106918516,
+        47.02064628559583
+      ],
+      "coordinatesEPSG3857": [
+        3209295.3976,
+        5945444.7231
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N09",
+      "label": "Vlaicu Pârcălab",
+      "streetNames": [
+        "str. Vlaicu Pârcălab"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.3040"
+      ],
+      "coordinatesWGS84": [
+        28.83103816707298,
+        47.01968084916903
+      ],
+      "coordinatesEPSG3857": [
+        3209456.4878,
+        5945287.0798
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N10",
+      "label": "Mihai Eminescu",
+      "streetNames": [
+        "str. Mihai Eminescu"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2788"
+      ],
+      "coordinatesWGS84": [
+        28.832386332600247,
+        47.01875639105013
+      ],
+      "coordinatesEPSG3857": [
+        3209606.5649,
+        5945136.1304
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N11",
+      "label": "Vasile Alecsandri",
+      "streetNames": [
+        "str. Vasile Alecsandri"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.3014"
+      ],
+      "coordinatesWGS84": [
+        28.833765676854394,
+        47.017808233057245
+      ],
+      "coordinatesEPSG3857": [
+        3209760.1128,
+        5944981.3139
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N12",
+      "label": "Armenească",
+      "streetNames": [
+        "str. Armenească"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2375"
+      ],
+      "coordinatesWGS84": [
+        28.835173369243954,
+        47.01689935217772
+      ],
+      "coordinatesEPSG3857": [
+        3209916.8164,
+        5944832.9132
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N13",
+      "label": "Bulgară",
+      "streetNames": [
+        "str. Bulgară"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2419"
+      ],
+      "coordinatesWGS84": [
+        28.837199511282453,
+        47.015524632850266
+      ],
+      "coordinatesEPSG3857": [
+        3210142.3655,
+        5944608.4559
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N14",
+      "label": "Tighina",
+      "streetNames": [
+        "str. Tighina"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2971"
+      ],
+      "coordinatesWGS84": [
+        28.839188344490566,
+        47.014179504133075
+      ],
+      "coordinatesEPSG3857": [
+        3210363.7614,
+        5944388.8356
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N15",
+      "label": "Ismail",
+      "streetNames": [
+        "str. Ismail"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2639"
+      ],
+      "coordinatesWGS84": [
+        28.841212947714983,
+        47.0127986944961
+      ],
+      "coordinatesEPSG3857": [
+        3210589.1392,
+        5944163.3954
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N16",
+      "label": "Lev Tolstoi",
+      "streetNames": [
+        "str. Lev Tolstoi"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.2754"
+      ],
+      "coordinatesWGS84": [
+        28.84256689120615,
+        47.0118611735899
+      ],
+      "coordinatesEPSG3857": [
+        3210739.8595,
+        5944010.3328
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    },
+    {
+      "id": "BUC-N17",
+      "label": "Ciuflea / bd. Dacia",
+      "streetNames": [
+        "bd. Dacia",
+        "str. Ciuflea"
+      ],
+      "streetFeatureIds": [
+        "Strazi_RM.481",
+        "Strazi_RM.2462"
+      ],
+      "coordinatesWGS84": [
+        28.84389982220451,
+        47.01094642947468
+      ],
+      "coordinatesEPSG3857": [
+        3210888.2407,
+        5943860.9914
+      ],
+      "intersectionType": "Point",
+      "distanceToBucurestiAxisEPSG3857": 0.0
+    }
+  ],
+  "sectors": [
+    {
+      "id": "BUC01",
+      "workOrder": 1,
+      "fromNode": "BUC-N11",
+      "toNode": "BUC-N12",
+      "from": "Vasile Alecsandri",
+      "to": "Armenească",
+      "status": "implemented",
+      "direction": "southeast",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu01-references/20261023.md",
+      "verificationStatus": [
+        "automated_passed",
+        "browser_3d_unverified"
+      ]
+    },
+    {
+      "id": "BUC02",
+      "workOrder": 2,
+      "fromNode": "BUC-N12",
+      "toNode": "BUC-N13",
+      "from": "Armenească",
+      "to": "Bulgară",
+      "status": "implemented",
+      "direction": "southeast",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu02-references/20261023.md",
+      "verificationStatus": [
+        "automated_passed",
+        "browser_3d_unverified"
+      ]
+    },
+    {
+      "id": "BUC03",
+      "workOrder": 3,
+      "fromNode": "BUC-N13",
+      "toNode": "BUC-N14",
+      "from": "Bulgară",
+      "to": "Tighina",
+      "status": "implemented",
+      "direction": "southeast",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu03-references/20261023.md",
+      "verificationStatus": [
+        "automated_passed",
+        "browser_3d_unverified"
+      ]
+    },
+    {
+      "id": "BUC04",
+      "workOrder": 4,
+      "fromNode": "BUC-N14",
+      "toNode": "BUC-N15",
+      "from": "Tighina",
+      "to": "Ismail",
+      "status": "implemented",
+      "direction": "southeast",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu04-references/20261023.md",
+      "verificationStatus": [
+        "automated_passed",
+        "browser_3d_unverified"
+      ]
+    },
+    {
+      "id": "BUC05",
+      "workOrder": 5,
+      "fromNode": "BUC-N15",
+      "toNode": "BUC-N16",
+      "from": "Ismail",
+      "to": "Lev Tolstoi",
+      "status": "implemented",
+      "direction": "southeast",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu05-references/20261023.md",
+      "verificationStatus": [
+        "data_geometry_passed",
+        "runtime_physics_passed",
+        "typescript_passed",
+        "world_startup_passed",
+        "browser_ui_verified",
+        "browser_3d_unverified",
+        "matched_camera_renders_reviewed"
+      ]
+    },
+    {
+      "id": "BUC06",
+      "workOrder": 6,
+      "fromNode": "BUC-N16",
+      "toNode": "BUC-N17",
+      "from": "Lev Tolstoi",
+      "to": "Ciuflea / bd. Dacia",
+      "status": "implemented",
+      "direction": "southeast",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu06-references/20261023.md",
+      "verificationStatus": [
+        "data_geometry_passed",
+        "runtime_physics_passed",
+        "thin_barrier_physics_passed",
+        "typescript_passed",
+        "world_startup_passed_before_local_physics_fixes",
+        "browser_ui_verified",
+        "browser_3d_unverified",
+        "matched_camera_renders_reviewed"
+      ]
+    },
+    {
+      "id": "BUC07",
+      "workOrder": 7,
+      "fromNode": "BUC-N11",
+      "toNode": "BUC-N10",
+      "from": "Vasile Alecsandri",
+      "to": "Mihai Eminescu",
+      "status": "implemented",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu07-references/20261023.md",
+      "verificationStatus": [
+        "data_geometry_passed",
+        "runtime_physics_passed",
+        "gate_interactions_passed",
+        "typescript_passed",
+        "world_startup_passed",
+        "production_build_passed",
+        "matched_camera_renders_reviewed",
+        "browser_webgl_block_confirmed",
+        "browser_3d_unverified"
+      ]
+    },
+    {
+      "id": "BUC08",
+      "workOrder": 8,
+      "fromNode": "BUC-N10",
+      "toNode": "BUC-N09",
+      "from": "Mihai Eminescu",
+      "to": "Vlaicu Pârcălab",
+      "status": "implemented",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu08-references/20261024.md",
+      "verificationStatus": [
+        "data_geometry_passed",
+        "runtime_physics_passed",
+        "gate_interactions_passed",
+        "typescript_passed",
+        "world_startup_passed",
+        "production_build_passed",
+        "matched_camera_renders_reviewed",
+        "browser_webgl_block_confirmed",
+        "browser_3d_unverified"
+      ]
+    },
+    {
+      "id": "BUC09",
+      "workOrder": 9,
+      "fromNode": "BUC-N09",
+      "toNode": "BUC-N08",
+      "from": "Vlaicu Pârcălab",
+      "to": "Alexandr Pușkin",
+      "status": "implemented",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu09-references/20261024.md",
+      "verificationStatus": [
+        "data_geometry_passed",
+        "runtime_physics_passed",
+        "gate_interactions_passed",
+        "native_instance_ownership_passed",
+        "typescript_passed",
+        "world_startup_passed",
+        "matched_camera_renders_reviewed",
+        "browser_webgl_block_confirmed",
+        "browser_3d_unverified"
+      ]
+    },
+    {
+      "id": "BUC10",
+      "workOrder": 10,
+      "fromNode": "BUC-N08",
+      "toNode": "BUC-N07",
+      "from": "Alexandr Pușkin",
+      "to": "Mitropolit Gavriil Bănulescu-Bodoni",
+      "status": "implemented",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu10-references/20261024.md",
+      "verificationStatus": [
+        "data_geometry_passed",
+        "runtime_physics_passed",
+        "gate_interactions_passed",
+        "native_instance_ownership_passed",
+        "typescript_passed",
+        "world_startup_passed",
+        "cold_neighbor_arrival_passed",
+        "matched_camera_renders_reviewed",
+        "browser_webgl_block_confirmed",
+        "browser_3d_unverified"
+      ]
+    },
+    {
+      "id": "BUC11",
+      "workOrder": 11,
+      "fromNode": "BUC-N07",
+      "toNode": "BUC-N06",
+      "from": "Mitropolit Gavriil Bănulescu-Bodoni",
+      "to": "Nicolae Iorga",
+      "status": "implemented",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": "docs/bucuresti-bu11-references/20261024.md",
+      "verificationStatus": [
+        "automatic_verification_in_linked_report",
+        "browser_webgl_block_confirmed",
+        "browser_3d_unverified"
+      ]
+    },
+    {
+      "id": "BUC12",
+      "workOrder": 12,
+      "fromNode": "BUC-N06",
+      "toNode": "BUC-N05",
+      "from": "Nicolae Iorga",
+      "to": "Maria Cebotari",
+      "status": "planned",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": null
+    },
+    {
+      "id": "BUC13",
+      "workOrder": 13,
+      "fromNode": "BUC-N05",
+      "toNode": "BUC-N04",
+      "from": "Maria Cebotari",
+      "to": "Sfatul Țării",
+      "status": "planned",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": null
+    },
+    {
+      "id": "BUC14",
+      "workOrder": 14,
+      "fromNode": "BUC-N04",
+      "toNode": "BUC-N03",
+      "from": "Sfatul Țării",
+      "to": "Serghei Lazo",
+      "status": "planned",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": null
+    },
+    {
+      "id": "BUC15",
+      "workOrder": 15,
+      "fromNode": "BUC-N03",
+      "toNode": "BUC-N02",
+      "from": "Serghei Lazo",
+      "to": "Mitropolit Petru Movilă",
+      "status": "planned",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": null
+    },
+    {
+      "id": "BUC16",
+      "workOrder": 16,
+      "fromNode": "BUC-N02",
+      "toNode": "BUC-N01",
+      "from": "Mitropolit Petru Movilă",
+      "to": "Alexei Șciusev",
+      "status": "planned",
+      "direction": "northwest",
+      "scope": "Both street fronts, courtyards visible in sources, full endpoint corners and continuous lateral connections",
+      "documentation": null
+    }
+  ],
+  "updatedOn": "2026-10-24"
+}

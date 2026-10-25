@@ -1,0 +1,4901 @@
+[
+  {
+    "id": "w151035903",
+    "title": "Columna 44 · anexă",
+    "p": [
+      [
+        1213.41,
+        -257.084
+      ],
+      [
+        1213.368,
+        -267.48
+      ],
+      [
+        1227.79,
+        -267.535
+      ],
+      [
+        1227.826,
+        -257.133
+      ],
+      [
+        1213.41,
+        -257.084
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b69484",
+    "trim": "#d6c5b6",
+    "roof": "#755f58",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1219.161,
+      -261.263
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035903
+    ],
+    "sourceIds": [
+      "w151035903"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035903",
+        "address": "Strada Columna 44",
+        "number": "44",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035904",
+    "title": "Columna 44 · anexă",
+    "p": [
+      [
+        1213.368,
+        -267.48
+      ],
+      [
+        1213.285,
+        -287.226
+      ],
+      [
+        1230.796,
+        -287.296
+      ],
+      [
+        1230.859,
+        -270.302
+      ],
+      [
+        1227.771,
+        -270.286
+      ],
+      [
+        1227.79,
+        -267.535
+      ],
+      [
+        1213.368,
+        -267.48
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1222.462,
+      -273.944
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035904
+    ],
+    "sourceIds": [
+      "w151035904"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035904",
+        "address": "Strada Columna 44",
+        "number": "44",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035946",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1230.155,
+        -449.069
+      ],
+      [
+        1228.297,
+        -442.96
+      ],
+      [
+        1224.342,
+        -444.264
+      ],
+      [
+        1222.948,
+        -440.038
+      ],
+      [
+        1211.376,
+        -443.847
+      ],
+      [
+        1214.752,
+        -454.131
+      ],
+      [
+        1230.155,
+        -449.069
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1223.146,
+      -446.197
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035946
+    ],
+    "sourceIds": [
+      "w151035946"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035946",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035959",
+    "title": "Columna 56 · anexă",
+    "p": [
+      [
+        1227.826,
+        -257.133
+      ],
+      [
+        1227.91,
+        -237.905
+      ],
+      [
+        1231.641,
+        -237.93
+      ],
+      [
+        1231.66,
+        -233.786
+      ],
+      [
+        1213.505,
+        -233.72
+      ],
+      [
+        1213.41,
+        -257.084
+      ],
+      [
+        1227.826,
+        -257.133
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1224.825,
+      -244.956
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035959
+    ],
+    "sourceIds": [
+      "w151035959"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035959",
+        "address": "Strada Columna 56",
+        "number": "56",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035948",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1233.642,
+        -441.199
+      ],
+      [
+        1232.295,
+        -437.099
+      ],
+      [
+        1229.578,
+        -428.858
+      ],
+      [
+        1220.277,
+        -431.923
+      ],
+      [
+        1222.948,
+        -440.038
+      ],
+      [
+        1224.342,
+        -444.264
+      ],
+      [
+        1228.297,
+        -442.96
+      ],
+      [
+        1233.642,
+        -441.199
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1228.128,
+      -438.443
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035948
+    ],
+    "sourceIds": [
+      "w151035948"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035948",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035940",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1210.782,
+        -400.883
+      ],
+      [
+        1210.181,
+        -424.78
+      ],
+      [
+        1227.057,
+        -425.007
+      ],
+      [
+        1227.314,
+        -406.122
+      ],
+      [
+        1228.877,
+        -406.148
+      ],
+      [
+        1228.83,
+        -409.716
+      ],
+      [
+        1231.003,
+        -409.751
+      ],
+      [
+        1230.969,
+        -412.205
+      ],
+      [
+        1237.213,
+        -412.287
+      ],
+      [
+        1237.261,
+        -408.892
+      ],
+      [
+        1240.154,
+        -408.933
+      ],
+      [
+        1240.124,
+        -411.22
+      ],
+      [
+        1245.461,
+        -411.282
+      ],
+      [
+        1245.458,
+        -401.545
+      ],
+      [
+        1210.782,
+        -400.883
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1230.098,
+      -409.977
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035940
+    ],
+    "sourceIds": [
+      "w151035940"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035940",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035927",
+    "title": "Columna 48 · front stradal",
+    "p": [
+      [
+        1210.782,
+        -400.883
+      ],
+      [
+        1245.458,
+        -401.545
+      ],
+      [
+        1248.059,
+        -401.548
+      ],
+      [
+        1248.088,
+        -400.482
+      ],
+      [
+        1248.155,
+        -394.789
+      ],
+      [
+        1246.47,
+        -394.767
+      ],
+      [
+        1245.124,
+        -394.736
+      ],
+      [
+        1238.709,
+        -394.611
+      ],
+      [
+        1221.085,
+        -394.255
+      ],
+      [
+        1221.422,
+        -377.406
+      ],
+      [
+        1226.128,
+        -377.501
+      ],
+      [
+        1226.261,
+        -370.92
+      ],
+      [
+        1238.691,
+        -371.167
+      ],
+      [
+        1238.94,
+        -358.768
+      ],
+      [
+        1211.628,
+        -358.231
+      ],
+      [
+        1210.782,
+        -400.883
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#b69484",
+    "trim": "#d6c5b6",
+    "roof": "#755f58",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1232.861,
+      -387.031
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035927
+    ],
+    "sourceIds": [
+      "w151035927"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035927",
+        "address": "Strada Columna 48",
+        "number": "48",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": true
+  },
+  {
+    "id": "w151035947",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1249.157,
+        -443.258
+      ],
+      [
+        1245.997,
+        -432.906
+      ],
+      [
+        1232.295,
+        -437.099
+      ],
+      [
+        1233.642,
+        -441.199
+      ],
+      [
+        1228.297,
+        -442.96
+      ],
+      [
+        1230.155,
+        -449.069
+      ],
+      [
+        1249.157,
+        -443.258
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1238.386,
+      -441.393
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035947
+    ],
+    "sourceIds": [
+      "w151035947"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035947",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w739896394",
+    "title": "corp de curte · anexă",
+    "p": [
+      [
+        1237.201,
+        -372.621
+      ],
+      [
+        1245.899,
+        -372.952
+      ],
+      [
+        1252.305,
+        -373.194
+      ],
+      [
+        1251.871,
+        -384.69
+      ],
+      [
+        1245.515,
+        -384.45
+      ],
+      [
+        1245.124,
+        -394.736
+      ],
+      [
+        1238.709,
+        -394.611
+      ],
+      [
+        1238.907,
+        -389.454
+      ],
+      [
+        1236.913,
+        -389.378
+      ],
+      [
+        1237.005,
+        -387.028
+      ],
+      [
+        1227.667,
+        -386.675
+      ],
+      [
+        1228.019,
+        -377.476
+      ],
+      [
+        1236.996,
+        -377.817
+      ],
+      [
+        1237.201,
+        -372.621
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1239.952,
+      -382.693
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      739896394
+    ],
+    "sourceIds": [
+      "w739896394"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035911",
+    "title": "Columna 46 · anexă",
+    "p": [
+      [
+        1259.336,
+        -304.869
+      ],
+      [
+        1259.578,
+        -291.15
+      ],
+      [
+        1215.093,
+        -290.373
+      ],
+      [
+        1214.857,
+        -304.098
+      ],
+      [
+        1259.336,
+        -304.869
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1241.64,
+      -299.072
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035911
+    ],
+    "sourceIds": [
+      "w151035911"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035911",
+        "address": "Strada Columna 46",
+        "number": "46",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035923",
+    "title": "Columna 48 · front stradal",
+    "p": [
+      [
+        1252.82,
+        -358.82
+      ],
+      [
+        1246.279,
+        -358.649
+      ],
+      [
+        1245.899,
+        -372.952
+      ],
+      [
+        1252.305,
+        -373.194
+      ],
+      [
+        1252.82,
+        -358.82
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1250.025,
+      -364.487
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035923
+    ],
+    "sourceIds": [
+      "w151035923"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035923",
+        "address": "Strada Columna 48",
+        "number": "48",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": true
+  },
+  {
+    "id": "w151035944",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1255.618,
+        -401.552
+      ],
+      [
+        1248.059,
+        -401.548
+      ],
+      [
+        1245.458,
+        -401.545
+      ],
+      [
+        1245.461,
+        -411.282
+      ],
+      [
+        1245.454,
+        -416.126
+      ],
+      [
+        1255.6,
+        -416.135
+      ],
+      [
+        1255.618,
+        -401.552
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1250.181,
+      -407.106
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035944
+    ],
+    "sourceIds": [
+      "w151035944"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035944",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035958",
+    "title": "Columna 56 · anexă",
+    "p": [
+      [
+        1258.205,
+        -290.575
+      ],
+      [
+        1258.471,
+        -247.538
+      ],
+      [
+        1247.507,
+        -247.471
+      ],
+      [
+        1247.24,
+        -290.508
+      ],
+      [
+        1258.205,
+        -290.575
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1253.926,
+      -273.333
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035958
+    ],
+    "sourceIds": [
+      "w151035958"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035958",
+        "address": "Strada Columna 56",
+        "number": "56",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035922",
+    "title": "Columna 48 · anexă",
+    "p": [
+      [
+        1276.975,
+        -400.839
+      ],
+      [
+        1277.111,
+        -390.066
+      ],
+      [
+        1251.438,
+        -389.739
+      ],
+      [
+        1251.49,
+        -386.003
+      ],
+      [
+        1246.581,
+        -385.941
+      ],
+      [
+        1246.47,
+        -394.767
+      ],
+      [
+        1248.155,
+        -394.789
+      ],
+      [
+        1248.088,
+        -400.482
+      ],
+      [
+        1276.975,
+        -400.839
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1258.143,
+      -393.718
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035922
+    ],
+    "sourceIds": [
+      "w151035922"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035922",
+        "address": "Strada Columna 48",
+        "number": "48",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035954",
+    "title": "Columna 52 · anexă",
+    "p": [
+      [
+        1265.598,
+        -233.641
+      ],
+      [
+        1258.283,
+        -233.455
+      ],
+      [
+        1258.057,
+        -242.246
+      ],
+      [
+        1265.367,
+        -242.426
+      ],
+      [
+        1265.598,
+        -233.641
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1262.581,
+      -237.082
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035954
+    ],
+    "sourceIds": [
+      "w151035954"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035954",
+        "address": "Strada Columna 52",
+        "number": "52",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035941",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1274.529,
+        -435.619
+      ],
+      [
+        1272.927,
+        -430.579
+      ],
+      [
+        1248.837,
+        -438.215
+      ],
+      [
+        1250.433,
+        -443.251
+      ],
+      [
+        1274.529,
+        -435.619
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1264.251,
+      -436.657
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035941
+    ],
+    "sourceIds": [
+      "w151035941"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035941",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035921",
+    "title": "Columna 48 · front stradal",
+    "p": [
+      [
+        1277.372,
+        -358.901
+      ],
+      [
+        1259.019,
+        -358.56
+      ],
+      [
+        1258.773,
+        -371.744
+      ],
+      [
+        1277.126,
+        -372.084
+      ],
+      [
+        1277.372,
+        -358.901
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#b69484",
+    "trim": "#d6c5b6",
+    "roof": "#755f58",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1269.932,
+      -364.038
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035921
+    ],
+    "sourceIds": [
+      "w151035921"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035921",
+        "address": "Strada Columna 48",
+        "number": "48",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": true
+  },
+  {
+    "id": "w151035956",
+    "title": "Columna 52/1 · anexă",
+    "p": [
+      [
+        1285.639,
+        -233.677
+      ],
+      [
+        1268.73,
+        -233.559
+      ],
+      [
+        1268.657,
+        -244.128
+      ],
+      [
+        1278.544,
+        -244.194
+      ],
+      [
+        1278.459,
+        -256.816
+      ],
+      [
+        1285.475,
+        -256.863
+      ],
+      [
+        1285.639,
+        -233.677
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1278.735,
+      -243.273
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035956
+    ],
+    "sourceIds": [
+      "w151035956"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035956",
+        "address": "Strada Columna 52/1",
+        "number": "52/1",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035898",
+    "title": "Columna 3b · anexă",
+    "p": [
+      [
+        1283.347,
+        -418.715
+      ],
+      [
+        1276.106,
+        -420.668
+      ],
+      [
+        1276.337,
+        -428.909
+      ],
+      [
+        1277.636,
+        -433.76
+      ],
+      [
+        1286.742,
+        -431.302
+      ],
+      [
+        1283.347,
+        -418.715
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1280.586,
+      -425.345
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035898
+    ],
+    "sourceIds": [
+      "w151035898"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035898",
+        "address": "Strada Columna 3b",
+        "number": "3b",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035897",
+    "title": "Columna 3b · anexă",
+    "p": [
+      [
+        1286.742,
+        -431.302
+      ],
+      [
+        1296.263,
+        -428.737
+      ],
+      [
+        1292.876,
+        -416.142
+      ],
+      [
+        1283.347,
+        -418.715
+      ],
+      [
+        1286.742,
+        -431.302
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b69484",
+    "trim": "#d6c5b6",
+    "roof": "#755f58",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1289.194,
+      -425.24
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035897
+    ],
+    "sourceIds": [
+      "w151035897"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035897",
+        "address": "Strada Columna 3b",
+        "number": "3b",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035907",
+    "title": "Columna 46 · front stradal",
+    "p": [
+      [
+        1300.498,
+        -358.557
+      ],
+      [
+        1278.651,
+        -358.427
+      ],
+      [
+        1278.565,
+        -372.896
+      ],
+      [
+        1300.419,
+        -373.018
+      ],
+      [
+        1300.498,
+        -358.557
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#c6bba5",
+    "trim": "#ded3bd",
+    "roof": "#7a7469",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1291.726,
+      -364.291
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035907
+    ],
+    "sourceIds": [
+      "w151035907"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035907",
+        "address": "Strada Columna 46",
+        "number": "46",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": true
+  },
+  {
+    "id": "w151035955",
+    "title": "Columna 52 · anexă",
+    "p": [
+      [
+        1300.314,
+        -233.778
+      ],
+      [
+        1285.639,
+        -233.677
+      ],
+      [
+        1285.475,
+        -256.863
+      ],
+      [
+        1285.431,
+        -263.611
+      ],
+      [
+        1292.835,
+        -263.665
+      ],
+      [
+        1292.935,
+        -249.539
+      ],
+      [
+        1300.2,
+        -249.581
+      ],
+      [
+        1300.314,
+        -233.778
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c6bba5",
+    "trim": "#ded3bd",
+    "roof": "#7a7469",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1292.893,
+      -248.061
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035955
+    ],
+    "sourceIds": [
+      "w151035955"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035955",
+        "address": "Strada Columna 52",
+        "number": "52",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035905",
+    "title": "Columna 46 · anexă",
+    "p": [
+      [
+        1299.595,
+        -395.802
+      ],
+      [
+        1299.693,
+        -386.775
+      ],
+      [
+        1284.33,
+        -386.604
+      ],
+      [
+        1284.227,
+        -395.626
+      ],
+      [
+        1299.595,
+        -395.802
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1293.488,
+      -392.122
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035905
+    ],
+    "sourceIds": [
+      "w151035905"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035905",
+        "address": "Strada Columna 46",
+        "number": "46",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w122112718",
+    "title": "Columna 51 · front stradal",
+    "p": [
+      [
+        1287.989,
+        -326.982
+      ],
+      [
+        1288.353,
+        -326.981
+      ],
+      [
+        1288.51,
+        -336.917
+      ],
+      [
+        1289.828,
+        -336.889
+      ],
+      [
+        1302.555,
+        -336.694
+      ],
+      [
+        1302.55,
+        -336.063
+      ],
+      [
+        1304.966,
+        -336.025
+      ],
+      [
+        1304.888,
+        -331.472
+      ],
+      [
+        1302.612,
+        -331.508
+      ],
+      [
+        1302.57,
+        -328.43
+      ],
+      [
+        1304.865,
+        -328.397
+      ],
+      [
+        1304.798,
+        -324.232
+      ],
+      [
+        1302.132,
+        -324.274
+      ],
+      [
+        1302.126,
+        -323.892
+      ],
+      [
+        1294.41,
+        -324.014
+      ],
+      [
+        1294.398,
+        -323.032
+      ],
+      [
+        1297.634,
+        -322.975
+      ],
+      [
+        1297.602,
+        -321.409
+      ],
+      [
+        1298.92,
+        -321.382
+      ],
+      [
+        1298.871,
+        -318.376
+      ],
+      [
+        1297.542,
+        -318.393
+      ],
+      [
+        1297.28,
+        -302.171
+      ],
+      [
+        1296.269,
+        -302.19
+      ],
+      [
+        1296.254,
+        -300.877
+      ],
+      [
+        1287.573,
+        -301.015
+      ],
+      [
+        1287.989,
+        -326.982
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1297.442,
+      -323.522
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      122112718
+    ],
+    "sourceIds": [
+      "w122112718"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w122112718",
+        "address": "Strada Columna 51",
+        "number": "51",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": true
+  },
+  {
+    "id": "w151035906",
+    "title": "Columna 46 · anexă",
+    "p": [
+      [
+        1299.595,
+        -395.802
+      ],
+      [
+        1307.897,
+        -396.524
+      ],
+      [
+        1308.875,
+        -385.331
+      ],
+      [
+        1300.573,
+        -384.609
+      ],
+      [
+        1299.595,
+        -395.802
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1303.307,
+      -391.614
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035906
+    ],
+    "sourceIds": [
+      "w151035906"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035906",
+        "address": "Strada Columna 46",
+        "number": "46",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035935",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1310.293,
+        -248.662
+      ],
+      [
+        1300.974,
+        -248.625
+      ],
+      [
+        1300.874,
+        -275.05
+      ],
+      [
+        1310.192,
+        -275.087
+      ],
+      [
+        1310.293,
+        -248.662
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1306.525,
+      -259.217
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035935
+    ],
+    "sourceIds": [
+      "w151035935"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035935",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035933",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1311.244,
+        -233.091
+      ],
+      [
+        1302.111,
+        -232.769
+      ],
+      [
+        1301.611,
+        -247.095
+      ],
+      [
+        1310.744,
+        -247.417
+      ],
+      [
+        1311.244,
+        -233.091
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b69484",
+    "trim": "#d6c5b6",
+    "roof": "#755f58",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1307.391,
+      -238.693
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035933
+    ],
+    "sourceIds": [
+      "w151035933"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035933",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035952",
+    "title": "Columna 51 · front stradal",
+    "p": [
+      [
+        1308.235,
+        -337.079
+      ],
+      [
+        1318.696,
+        -336.867
+      ],
+      [
+        1318.175,
+        -311.362
+      ],
+      [
+        1317.728,
+        -288.839
+      ],
+      [
+        1313.057,
+        -288.934
+      ],
+      [
+        1313.016,
+        -287.032
+      ],
+      [
+        1302.595,
+        -287.236
+      ],
+      [
+        1302.785,
+        -296.437
+      ],
+      [
+        1309.599,
+        -296.3
+      ],
+      [
+        1309.741,
+        -303.217
+      ],
+      [
+        1306.49,
+        -303.29
+      ],
+      [
+        1306.659,
+        -311.595
+      ],
+      [
+        1309.985,
+        -311.532
+      ],
+      [
+        1310.31,
+        -327.658
+      ],
+      [
+        1308.039,
+        -327.7
+      ],
+      [
+        1308.235,
+        -337.079
+      ]
+    ],
+    "holes": [],
+    "height": 7.6,
+    "levels": 2,
+    "style": "historic",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1310.209,
+      -309.51
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035952
+    ],
+    "sourceIds": [
+      "w151035952"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035952",
+        "address": "Strada Columna 51",
+        "number": "51",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": true
+  },
+  {
+    "id": "w151035912",
+    "title": "Columna 46/1 · front stradal",
+    "p": [
+      [
+        1320.4,
+        -359.176
+      ],
+      [
+        1303.957,
+        -358.392
+      ],
+      [
+        1303.517,
+        -367.518
+      ],
+      [
+        1310.955,
+        -367.872
+      ],
+      [
+        1310.298,
+        -381.666
+      ],
+      [
+        1319.302,
+        -382.097
+      ],
+      [
+        1320.4,
+        -359.176
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1312.69,
+      -367.985
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035912
+    ],
+    "sourceIds": [
+      "w151035912"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035912",
+        "address": "Strada Columna 46/1",
+        "number": "46/1",
+        "association": "Adresa Columna 46/1 a fost localizată separat și în registrul oficial; punctele de adresă nu au fost transformate în clădiri."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": true
+  },
+  {
+    "id": "w151035896",
+    "title": "Columna 3 · anexă",
+    "p": [
+      [
+        1323.703,
+        -420.842
+      ],
+      [
+        1321.754,
+        -414.847
+      ],
+      [
+        1317.458,
+        -416.096
+      ],
+      [
+        1315.34,
+        -408.932
+      ],
+      [
+        1293.92,
+        -415.906
+      ],
+      [
+        1298.223,
+        -429.14
+      ],
+      [
+        1323.703,
+        -420.842
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1313.443,
+      -418.086
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035896
+    ],
+    "sourceIds": [
+      "w151035896"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035896",
+        "address": "Strada Columna 3",
+        "number": "3",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w1263095056",
+    "title": "corp de curte · anexă",
+    "p": [
+      [
+        1313.745,
+        -447.073
+      ],
+      [
+        1316.69,
+        -446.165
+      ],
+      [
+        1318.469,
+        -451.944
+      ],
+      [
+        1315.523,
+        -452.853
+      ],
+      [
+        1313.745,
+        -447.073
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1315.634,
+      -449.022
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      1263095056
+    ],
+    "sourceIds": [
+      "w1263095056"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w1263095055",
+    "title": "corp de curte · anexă",
+    "p": [
+      [
+        1317.252,
+        -446.407
+      ],
+      [
+        1320.513,
+        -445.232
+      ],
+      [
+        1322.308,
+        -450.229
+      ],
+      [
+        1319.046,
+        -451.404
+      ],
+      [
+        1317.252,
+        -446.407
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b69484",
+    "trim": "#d6c5b6",
+    "roof": "#755f58",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1319.274,
+      -447.936
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      1263095055
+    ],
+    "sourceIds": [
+      "w1263095055"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035960",
+    "title": "corp de curte · anexă",
+    "p": [
+      [
+        1323.901,
+        -407.329
+      ],
+      [
+        1321.58,
+        -396.257
+      ],
+      [
+        1313.691,
+        -397.914
+      ],
+      [
+        1316.02,
+        -408.978
+      ],
+      [
+        1323.901,
+        -407.329
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1319.819,
+      -403.561
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035960
+    ],
+    "sourceIds": [
+      "w151035960"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w1263095054",
+    "title": "corp de curte · anexă",
+    "p": [
+      [
+        1320.933,
+        -444.786
+      ],
+      [
+        1322.564,
+        -449.559
+      ],
+      [
+        1324.155,
+        -449.018
+      ],
+      [
+        1328.072,
+        -447.677
+      ],
+      [
+        1326.441,
+        -442.904
+      ],
+      [
+        1320.933,
+        -444.786
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1323.85,
+      -446.455
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      1263095054
+    ],
+    "sourceIds": [
+      "w1263095054"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035931",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1333.375,
+        -233.377
+      ],
+      [
+        1315.126,
+        -233.093
+      ],
+      [
+        1314.887,
+        -247.942
+      ],
+      [
+        1333.136,
+        -248.227
+      ],
+      [
+        1333.375,
+        -233.377
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c6bba5",
+    "trim": "#ded3bd",
+    "roof": "#7a7469",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1325.98,
+      -239.203
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035931
+    ],
+    "sourceIds": [
+      "w151035931"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035931",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035930",
+    "title": "Columna 49 · front stradal",
+    "p": [
+      [
+        1326.891,
+        -336.702
+      ],
+      [
+        1318.696,
+        -336.867
+      ],
+      [
+        1318.175,
+        -311.362
+      ],
+      [
+        1326.443,
+        -311.189
+      ],
+      [
+        1326.515,
+        -314.797
+      ],
+      [
+        1333.08,
+        -314.664
+      ],
+      [
+        1333.221,
+        -321.939
+      ],
+      [
+        1326.598,
+        -322.077
+      ],
+      [
+        1326.891,
+        -336.702
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1326.279,
+      -322.922
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035930
+    ],
+    "sourceIds": [
+      "w151035930"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035930",
+        "address": "Strada Columna 49",
+        "number": "49",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": true
+  },
+  {
+    "id": "w151035902",
+    "title": "Columna 44 · front stradal",
+    "p": [
+      [
+        1322.122,
+        -358.124
+      ],
+      [
+        1321.813,
+        -374.719
+      ],
+      [
+        1329.372,
+        -374.864
+      ],
+      [
+        1329.455,
+        -370.893
+      ],
+      [
+        1335.737,
+        -371.012
+      ],
+      [
+        1335.677,
+        -374.161
+      ],
+      [
+        1346.636,
+        -374.363
+      ],
+      [
+        1346.936,
+        -358.587
+      ],
+      [
+        1322.122,
+        -358.124
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1332.208,
+      -368.316
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035902
+    ],
+    "sourceIds": [
+      "w151035902"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035902",
+        "address": "Strada Columna 44",
+        "number": "44",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": true
+  },
+  {
+    "id": "w151035928",
+    "title": "Columna 49 · front stradal",
+    "p": [
+      [
+        1342.862,
+        -321.747
+      ],
+      [
+        1334.526,
+        -321.914
+      ],
+      [
+        1333.221,
+        -321.939
+      ],
+      [
+        1326.598,
+        -322.077
+      ],
+      [
+        1326.891,
+        -336.702
+      ],
+      [
+        1343.156,
+        -336.371
+      ],
+      [
+        1342.862,
+        -321.747
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1335.731,
+      -326.071
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035928
+    ],
+    "sourceIds": [
+      "w151035928"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035928",
+        "address": "Strada Columna 49",
+        "number": "49",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": true
+  },
+  {
+    "id": "w151035937",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1340.508,
+        -270.533
+      ],
+      [
+        1331.161,
+        -269.671
+      ],
+      [
+        1330.387,
+        -278.185
+      ],
+      [
+        1339.728,
+        -279.042
+      ],
+      [
+        1340.508,
+        -270.533
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c6bba5",
+    "trim": "#ded3bd",
+    "roof": "#7a7469",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1336.458,
+      -273.593
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035937
+    ],
+    "sourceIds": [
+      "w151035937"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035937",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035929",
+    "title": "Columna 49 · anexă",
+    "p": [
+      [
+        1342.771,
+        -317.369
+      ],
+      [
+        1342.447,
+        -300.993
+      ],
+      [
+        1339.771,
+        -301.056
+      ],
+      [
+        1339.688,
+        -297.124
+      ],
+      [
+        1334.033,
+        -297.234
+      ],
+      [
+        1334.526,
+        -321.914
+      ],
+      [
+        1342.862,
+        -321.747
+      ],
+      [
+        1342.771,
+        -317.369
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1339.859,
+      -309.351
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035929
+    ],
+    "sourceIds": [
+      "w151035929"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035929",
+        "address": "Strada Columna 49",
+        "number": "49",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035939",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1343.17,
+        -239.972
+      ],
+      [
+        1345.955,
+        -240.111
+      ],
+      [
+        1346.33,
+        -232.281
+      ],
+      [
+        1335.666,
+        -231.76
+      ],
+      [
+        1335.283,
+        -239.629
+      ],
+      [
+        1336.919,
+        -239.712
+      ],
+      [
+        1336.69,
+        -244.305
+      ],
+      [
+        1342.939,
+        -244.61
+      ],
+      [
+        1343.17,
+        -239.972
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b69484",
+    "trim": "#d6c5b6",
+    "roof": "#755f58",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1340.68,
+      -239.15
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035939
+    ],
+    "sourceIds": [
+      "w151035939"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035939",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035938",
+    "title": "Columna 50 · anexă",
+    "p": [
+      [
+        1344.787,
+        -250.568
+      ],
+      [
+        1335.802,
+        -250.83
+      ],
+      [
+        1336.15,
+        -263.035
+      ],
+      [
+        1345.134,
+        -262.773
+      ],
+      [
+        1344.787,
+        -250.568
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1341.332,
+      -255.555
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035938
+    ],
+    "sourceIds": [
+      "w151035938"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035938",
+        "address": "Strada Columna 50",
+        "number": "50",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035895",
+    "title": "Columna 1/2 · anexă",
+    "p": [
+      [
+        1352.387,
+        -410.748
+      ],
+      [
+        1348.058,
+        -398.005
+      ],
+      [
+        1335.597,
+        -402.25
+      ],
+      [
+        1339.926,
+        -414.993
+      ],
+      [
+        1352.387,
+        -410.748
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c6bba5",
+    "trim": "#ded3bd",
+    "roof": "#7a7469",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1345.671,
+      -407.349
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035895
+    ],
+    "sourceIds": [
+      "w151035895"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035895",
+        "address": "Strada Columna 1/2",
+        "number": "1/2",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035913",
+    "title": "Columna 47 · anexă",
+    "p": [
+      [
+        1354.731,
+        -297.965
+      ],
+      [
+        1353.483,
+        -286.498
+      ],
+      [
+        1339.492,
+        -288.027
+      ],
+      [
+        1340.74,
+        -299.494
+      ],
+      [
+        1354.731,
+        -297.965
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c6bba5",
+    "trim": "#ded3bd",
+    "roof": "#7a7469",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1348.635,
+      -293.99
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035913
+    ],
+    "sourceIds": [
+      "w151035913"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035913",
+        "address": "Strada Columna 47",
+        "number": "47",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w1263095048",
+    "title": "Columna 4 · anexă",
+    "p": [
+      [
+        1340.889,
+        -438.181
+      ],
+      [
+        1352.231,
+        -434.411
+      ],
+      [
+        1358.804,
+        -454.254
+      ],
+      [
+        1353.456,
+        -456.028
+      ],
+      [
+        1355.56,
+        -462.364
+      ],
+      [
+        1349.574,
+        -464.352
+      ],
+      [
+        1344.459,
+        -448.939
+      ],
+      [
+        1340.889,
+        -438.181
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1349.483,
+      -449.589
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      1263095048
+    ],
+    "sourceIds": [
+      "w1263095048"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w1263095048",
+        "address": "Strada Columna 4",
+        "number": "4",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035914",
+    "title": "Columna 47 · anexă",
+    "p": [
+      [
+        1355.625,
+        -299.522
+      ],
+      [
+        1343.449,
+        -300.011
+      ],
+      [
+        1344.31,
+        -321.674
+      ],
+      [
+        1356.49,
+        -321.19
+      ],
+      [
+        1355.625,
+        -299.522
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1351.1,
+      -308.384
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035914
+    ],
+    "sourceIds": [
+      "w151035914"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035914",
+        "address": "Strada Columna 47",
+        "number": "47",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035926",
+    "title": "Columna 48 · anexă",
+    "p": [
+      [
+        1357.49,
+        -271.397
+      ],
+      [
+        1348.884,
+        -271.751
+      ],
+      [
+        1349.101,
+        -277.114
+      ],
+      [
+        1357.707,
+        -276.76
+      ],
+      [
+        1357.49,
+        -271.397
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1354.134,
+      -273.684
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035926
+    ],
+    "sourceIds": [
+      "w151035926"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035926",
+        "address": "Strada Columna 48",
+        "number": "48",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035924",
+    "title": "Columna 48 · anexă",
+    "p": [
+      [
+        1358.809,
+        -231.981
+      ],
+      [
+        1349.313,
+        -232.004
+      ],
+      [
+        1349.349,
+        -248.941
+      ],
+      [
+        1358.845,
+        -248.918
+      ],
+      [
+        1358.809,
+        -231.981
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1355.025,
+      -238.765
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035924
+    ],
+    "sourceIds": [
+      "w151035924"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035924",
+        "address": "Strada Columna 48",
+        "number": "48",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035900",
+    "title": "Columna 42 · front stradal",
+    "p": [
+      [
+        1368.834,
+        -358.612
+      ],
+      [
+        1356.189,
+        -359.091
+      ],
+      [
+        1356.651,
+        -371.331
+      ],
+      [
+        1369.288,
+        -370.86
+      ],
+      [
+        1368.834,
+        -358.612
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1363.959,
+      -363.701
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035900
+    ],
+    "sourceIds": [
+      "w151035900"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035900",
+        "address": "Strada Columna 42",
+        "number": "42",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": true
+  },
+  {
+    "id": "w696844646",
+    "title": "Columna 2 · anexă",
+    "p": [
+      [
+        1353.531,
+        -434.413
+      ],
+      [
+        1356.821,
+        -446.458
+      ],
+      [
+        1360.523,
+        -445.453
+      ],
+      [
+        1362.208,
+        -451.64
+      ],
+      [
+        1369.798,
+        -449.562
+      ],
+      [
+        1372.429,
+        -459.218
+      ],
+      [
+        1377.837,
+        -457.739
+      ],
+      [
+        1370.219,
+        -429.852
+      ],
+      [
+        1353.531,
+        -434.413
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1364.1,
+      -445.416
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      696844646
+    ],
+    "sourceIds": [
+      "w696844646"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w696844646",
+        "address": "Strada Columna 2",
+        "number": "2",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035894",
+    "title": "Columna 1/1 · anexă",
+    "p": [
+      [
+        1369.111,
+        -386.803
+      ],
+      [
+        1357.291,
+        -387.581
+      ],
+      [
+        1358.209,
+        -401.54
+      ],
+      [
+        1370.022,
+        -400.77
+      ],
+      [
+        1369.111,
+        -386.803
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1364.749,
+      -392.699
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035894
+    ],
+    "sourceIds": [
+      "w151035894"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035894",
+        "address": "Strada Columna 1/1",
+        "number": "1/1",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035925",
+    "title": "Columna 48 · anexă",
+    "p": [
+      [
+        1373.916,
+        -232.088
+      ],
+      [
+        1363.633,
+        -231.536
+      ],
+      [
+        1362.986,
+        -243.636
+      ],
+      [
+        1373.269,
+        -244.187
+      ],
+      [
+        1373.916,
+        -232.088
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c6bba5",
+    "trim": "#ded3bd",
+    "roof": "#7a7469",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1369.544,
+      -236.707
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035925
+    ],
+    "sourceIds": [
+      "w151035925"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035925",
+        "address": "Strada Columna 48",
+        "number": "48",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035916",
+    "title": "Columna 47 · front stradal",
+    "p": [
+      [
+        1385.373,
+        -337.176
+      ],
+      [
+        1385.155,
+        -325.13
+      ],
+      [
+        1366.217,
+        -325.479
+      ],
+      [
+        1366.057,
+        -316.777
+      ],
+      [
+        1359.272,
+        -316.896
+      ],
+      [
+        1359.654,
+        -337.649
+      ],
+      [
+        1385.373,
+        -337.176
+      ]
+    ],
+    "holes": [],
+    "height": 7.6,
+    "levels": 2,
+    "style": "historic",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1372.443,
+      -328.04
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035916
+    ],
+    "sourceIds": [
+      "w151035916"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035916",
+        "address": "Strada Columna 47",
+        "number": "47",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": true
+  },
+  {
+    "id": "w116953272",
+    "title": "corp de curte · anexă",
+    "p": [
+      [
+        1381.827,
+        -403.279
+      ],
+      [
+        1380.975,
+        -400.622
+      ],
+      [
+        1376.787,
+        -401.977
+      ],
+      [
+        1377.642,
+        -404.621
+      ],
+      [
+        1381.827,
+        -403.279
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1379.812,
+      -402.756
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      116953272
+    ],
+    "sourceIds": [
+      "w116953272"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035901",
+    "title": "Columna 42 · front stradal",
+    "p": [
+      [
+        1389.161,
+        -357.851
+      ],
+      [
+        1368.834,
+        -358.612
+      ],
+      [
+        1369.288,
+        -370.86
+      ],
+      [
+        1379.019,
+        -370.49
+      ],
+      [
+        1379.147,
+        -373.762
+      ],
+      [
+        1389.743,
+        -373.371
+      ],
+      [
+        1389.161,
+        -357.851
+      ]
+    ],
+    "holes": [],
+    "height": 7.6,
+    "levels": 2,
+    "style": "historic",
+    "wall": "#c6bba5",
+    "trim": "#ded3bd",
+    "roof": "#7a7469",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1380.622,
+      -366.114
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035901
+    ],
+    "sourceIds": [
+      "w151035901"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035901",
+        "address": "Strada Columna 42",
+        "number": "42",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": true
+  },
+  {
+    "id": "w200726592",
+    "title": "Columna 49 · anexă",
+    "p": [
+      [
+        1408.42,
+        -446.329
+      ],
+      [
+        1408.561,
+        -416.688
+      ],
+      [
+        1373.022,
+        -427.943
+      ],
+      [
+        1376.777,
+        -440.307
+      ],
+      [
+        1378.812,
+        -439.985
+      ],
+      [
+        1379.466,
+        -442.4
+      ],
+      [
+        1381.015,
+        -442.053
+      ],
+      [
+        1381.785,
+        -444.426
+      ],
+      [
+        1384.702,
+        -443.677
+      ],
+      [
+        1383.729,
+        -436.628
+      ],
+      [
+        1395.536,
+        -433.067
+      ],
+      [
+        1395.209,
+        -445.998
+      ],
+      [
+        1408.42,
+        -446.329
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1388.881,
+      -438.91
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      200726592
+    ],
+    "sourceIds": [
+      "w200726592"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w200726592",
+        "address": "Strada Columna 49",
+        "number": "49",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035908",
+    "title": "Columna 46 · anexă",
+    "p": [
+      [
+        1395.181,
+        -232.676
+      ],
+      [
+        1379.981,
+        -233.01
+      ],
+      [
+        1379.829,
+        -246.412
+      ],
+      [
+        1394.965,
+        -246.64
+      ],
+      [
+        1395.181,
+        -232.676
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1389.027,
+      -238.283
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035908
+    ],
+    "sourceIds": [
+      "w151035908"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035908",
+        "address": "Strada Columna 46",
+        "number": "46",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035909",
+    "title": "Columna 46 · anexă",
+    "p": [
+      [
+        1404.114,
+        -273.237
+      ],
+      [
+        1377.692,
+        -274.487
+      ],
+      [
+        1378.154,
+        -284.364
+      ],
+      [
+        1394.189,
+        -283.65
+      ],
+      [
+        1405.57,
+        -283.143
+      ],
+      [
+        1404.114,
+        -273.237
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b69484",
+    "trim": "#d6c5b6",
+    "roof": "#755f58",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1393.972,
+      -278.686
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035909
+    ],
+    "sourceIds": [
+      "w151035909"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035909",
+        "address": "Strada Columna 46",
+        "number": "46",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035917",
+    "title": "Columna 47 · front stradal",
+    "p": [
+      [
+        1403.085,
+        -324.787
+      ],
+      [
+        1392.02,
+        -324.995
+      ],
+      [
+        1391.477,
+        -295.993
+      ],
+      [
+        1384.62,
+        -296.12
+      ],
+      [
+        1385.155,
+        -325.13
+      ],
+      [
+        1385.373,
+        -337.176
+      ],
+      [
+        1402.969,
+        -336.846
+      ],
+      [
+        1406.698,
+        -336.775
+      ],
+      [
+        1408.956,
+        -334.123
+      ],
+      [
+        1408.659,
+        -318.087
+      ],
+      [
+        1402.967,
+        -318.191
+      ],
+      [
+        1403.085,
+        -324.787
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1397.922,
+      -322.751
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035917
+    ],
+    "sourceIds": [
+      "w151035917"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035917",
+        "address": "Strada Columna 47",
+        "number": "47",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": true
+  },
+  {
+    "id": "w116953275",
+    "title": "Columna 42 · anexă",
+    "p": [
+      [
+        1409.056,
+        -394.064
+      ],
+      [
+        1408.911,
+        -374.312
+      ],
+      [
+        1400.314,
+        -374.159
+      ],
+      [
+        1400.426,
+        -383.644
+      ],
+      [
+        1390.143,
+        -386.019
+      ],
+      [
+        1391.351,
+        -392.095
+      ],
+      [
+        1385.665,
+        -393.456
+      ],
+      [
+        1388.762,
+        -401.712
+      ],
+      [
+        1409.056,
+        -394.064
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b69484",
+    "trim": "#d6c5b6",
+    "roof": "#755f58",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1398.187,
+      -388.169
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      116953275
+    ],
+    "sourceIds": [
+      "w116953275"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w116953275",
+        "address": "Strada Columna 42",
+        "number": "42",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": false
+  },
+  {
+    "id": "w151035910",
+    "title": "Columna 46 · anexă",
+    "p": [
+      [
+        1408.872,
+        -246.86
+      ],
+      [
+        1394.965,
+        -246.64
+      ],
+      [
+        1394.752,
+        -260.686
+      ],
+      [
+        1392.725,
+        -260.655
+      ],
+      [
+        1392.592,
+        -269.6
+      ],
+      [
+        1408.521,
+        -269.846
+      ],
+      [
+        1408.872,
+        -246.86
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c4b6a1",
+    "trim": "#dfd3c1",
+    "roof": "#716d64",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1400.186,
+      -257.307
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035910
+    ],
+    "sourceIds": [
+      "w151035910"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035910",
+        "address": "Strada Columna 46",
+        "number": "46",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035919",
+    "title": "Columna 47 · anexă",
+    "p": [
+      [
+        1408.186,
+        -292.394
+      ],
+      [
+        1408.013,
+        -283.1
+      ],
+      [
+        1405.57,
+        -283.143
+      ],
+      [
+        1394.189,
+        -283.65
+      ],
+      [
+        1394.794,
+        -292.636
+      ],
+      [
+        1397.595,
+        -292.586
+      ],
+      [
+        1408.186,
+        -292.394
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#c6bba5",
+    "trim": "#ded3bd",
+    "roof": "#7a7469",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1402.362,
+      -288.558
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035919
+    ],
+    "sourceIds": [
+      "w151035919"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035919",
+        "address": "Strada Columna 47",
+        "number": "47",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035899",
+    "title": "Columna 40 · front stradal",
+    "p": [
+      [
+        1409.456,
+        -358.623
+      ],
+      [
+        1392.802,
+        -358.538
+      ],
+      [
+        1392.734,
+        -371.553
+      ],
+      [
+        1409.382,
+        -371.632
+      ],
+      [
+        1409.456,
+        -358.623
+      ]
+    ],
+    "holes": [],
+    "height": 4.55,
+    "levels": 1,
+    "style": "low-shop",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 1.05,
+    "front": [
+      0,
+      1
+    ],
+    "bay": 3.15,
+    "anchor": [
+      1402.766,
+      -363.794
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035899
+    ],
+    "sourceIds": [
+      "w151035899"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035899",
+        "address": "Strada Columna 40",
+        "number": "40",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "April-2025-panorama-estimate",
+    "elevationEvidence": "Panorame publice Google Maps, aprilie 2025; numărul de niveluri și înălțimea metrică rămân estimări.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "south",
+    "streetFront": true
+  },
+  {
+    "id": "w151035918",
+    "title": "Columna 47 · anexă",
+    "p": [
+      [
+        1408.449,
+        -306.769
+      ],
+      [
+        1408.186,
+        -292.394
+      ],
+      [
+        1397.595,
+        -292.586
+      ],
+      [
+        1397.863,
+        -306.967
+      ],
+      [
+        1399.77,
+        -306.926
+      ],
+      [
+        1408.449,
+        -306.769
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#b7ad9b",
+    "trim": "#d0c7b4",
+    "roof": "#726c60",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1403.385,
+      -302.068
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035918
+    ],
+    "sourceIds": [
+      "w151035918"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035918",
+        "address": "Strada Columna 47",
+        "number": "47",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w93332165",
+    "title": "Columna 46 · anexă",
+    "p": [
+      [
+        1408.872,
+        -246.86
+      ],
+      [
+        1409.06,
+        -234.824
+      ],
+      [
+        1408.325,
+        -233.582
+      ],
+      [
+        1406.973,
+        -232.856
+      ],
+      [
+        1395.181,
+        -232.676
+      ],
+      [
+        1394.965,
+        -246.64
+      ],
+      [
+        1408.872,
+        -246.86
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#a8afaa",
+    "trim": "#d4d1c5",
+    "roof": "#666d69",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1404.607,
+      -239.185
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      93332165
+    ],
+    "sourceIds": [
+      "w93332165"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w93332165",
+        "address": "Strada Columna 46",
+        "number": "46",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  },
+  {
+    "id": "w151035920",
+    "title": "Columna 47 · anexă",
+    "p": [
+      [
+        1408.449,
+        -306.769
+      ],
+      [
+        1399.77,
+        -306.926
+      ],
+      [
+        1399.98,
+        -318.245
+      ],
+      [
+        1402.967,
+        -318.191
+      ],
+      [
+        1408.659,
+        -318.087
+      ],
+      [
+        1408.449,
+        -306.769
+      ]
+    ],
+    "holes": [],
+    "height": 3.75,
+    "levels": 1,
+    "style": "annex",
+    "wall": "#aaa99f",
+    "trim": "#d0ccbc",
+    "roof": "#686d68",
+    "roofRise": 0.65,
+    "front": [
+      0,
+      -1
+    ],
+    "bay": 4.2,
+    "anchor": [
+      1404.712,
+      -312.498
+    ],
+    "doors": [],
+    "passages": [],
+    "nativeIds": [
+      151035920
+    ],
+    "sourceIds": [
+      "w151035920"
+    ],
+    "parcelIds": [],
+    "addressEvidence": [
+      {
+        "id": "osm:w151035920",
+        "address": "Strada Columna 47",
+        "number": "47",
+        "association": "Etichetă de adresă OSM; nu este folosită drept geometrie."
+      }
+    ],
+    "estimatedHeight": true,
+    "heightSource": "unseen-elevation-estimate",
+    "elevationEvidence": "Corpul este confirmat în plan/ortofoto; elevația de curte nu este complet vizibilă și rămâne estimată.",
+    "evidence": "Amprentă OSM curentă verificată față de corpurile cadastrale și ortofoto 2016/2020/2021 din geoportalul AGCC; nicio parcelă și niciun punct de adresă nu este extrudat.",
+    "side": "north",
+    "streetFront": false
+  }
+]
+
