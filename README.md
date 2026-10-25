@@ -17,7 +17,7 @@ Joc open-world 3D al centrului Chișinăului, cu motor nativ C++20 / Objective-C
 - Columna între Tighina și Ismail;
 - arhitectura și suprafețele originale compilate din proiectul de autor;
 - corpuri de clădire închise sub fațadele detaliate, fără golurile produse de eliminarea pereților și acoperișurilor;
-- streaming predictiv și fog pentru deplasare continuă în zbor;
+- vizibilitate fără fog până la 7 km, cu orașul de bază păstrat la orizont;
 - executabil universal Apple Silicon `arm64` + Intel `x86_64`.
 
 ## Structură
@@ -62,7 +62,7 @@ BIN="chisinau-native/build/Chișinău 3D Native/Chișinău 3D.app/Contents/MacOS
 "$BIN" --test-spawn
 ```
 
-Pe sistemul de verificare Apple M1 Pro, traseele finale Șciusev, București și Columna au rulat la aproximativ 60 FPS, fără cadre peste 25 ms. Vezi [noutățile versiunii 2.9.0](docs/RELEASE-v2.9.0.md) și [auditul lumii](docs/WORLD-AUDIT.json).
+Pe sistemul de verificare Apple M1 Pro, traseele fără fog Centru și Șciusev și testul mașinii au rulat la aproximativ 60 FPS, fără cadre peste 25 ms. Vezi [noutățile versiunii 2.10.0](docs/RELEASE-v2.10.0.md) și [auditul lumii](docs/WORLD-AUDIT.json).
 
 ## Date și licențe
 

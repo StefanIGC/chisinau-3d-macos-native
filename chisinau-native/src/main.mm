@@ -24,6 +24,10 @@
 using namespace simd;
 
 static constexpr float kPi = 3.14159265358979323846f;
+// The whole 6.6 km offline map remains inside the camera frustum. Detailed
+// authored meshes still stream locally, while the lightweight base city stays
+// visible all the way to the horizon without atmospheric fog.
+static constexpr float kNoFogViewDistance = 7000.f;
 
 struct PackedVertex {
   float px, py, pz;
@@ -237,9 +241,8 @@ fragment float4 cityFragment(Raster in [[stage_in]], constant Uniforms &u [[buff
   if(materialClass==1u)lit=mix(lit,float3(.055,.12,.14),.18+rim*.30);
   if(materialClass==2u)lit+=base*sunColor*max(0.0,dot(-n,sun))*.055;
   lit=acesFilmic(lit*u.viewportAndExposure.z);
-  float fog=smoothstep(u.cameraAndFogStart.w,u.fogEndAndSun.x,distanceToCamera);
-  float3 fogColor=float3(.558,.617,.631);
-  lit=mix(lit,fogColor,fog);
+  // Intentionally no distance fog: distant geometry keeps its original lit
+  // colour instead of being blended into a grey horizon.
   float2 screen=in.position.xy/max(float2(1.0),u.viewportAndExposure.xy);
   float v=abs(screen.y-.5)*2.0;
   lit*=1.0-.10*smoothstep(.48,1.0,v);
@@ -647,7 +650,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   vector_float2 benchmarkStart=helicopterBenchmarkStart(benchmarkKind);_helicopter.position={benchmarkStart.x,isHelicopterBenchmark(benchmarkKind)?58.f:.05f,benchmarkStart.y};_helicopter.yaw=helicopterBenchmarkHeading(benchmarkKind);
   _heliPhysics.grounded=!isHelicopterBenchmark(benchmarkKind);_heliPhysics.rotor=isHelicopterBenchmark(benchmarkKind)?1.f:0.f;
   _camera=_mode==PlayerMode::Helicopter?_helicopter.position+(vector_float3){-16,10,20}:benchmarkKind==5?_walker.position+(vector_float3){-4,3,-4}:(vector_float3){98.3f,8.8f,-115.15f};_cameraTarget=_mode==PlayerMode::Helicopter?_helicopter.position:benchmarkKind==5?_walker.position:(vector_float3){144.08f,10,-145.83f};_cameraYaw=_mode==PlayerMode::Helicopter?_helicopter.yaw:benchmarkKind==5?-2.342f:.78f;_cameraPitch=.15f;_cameraManualTimer=0;_rotorAngle=0;_walkerAnimationPhase=0;
-  _fogEnd=_mode==PlayerMode::Helicopter?370.f:400.f;_fogStart=_fogEnd*(_mode==PlayerMode::Helicopter?.52f:.42f);
+  _fogEnd=kNoFogViewDistance;_fogStart=kNoFogViewDistance;
   _lastFrame=CACurrentMediaTime();_startTime=_lastFrame;_benchmarkStart=_lastFrame;_lastHUD=0;_noticeUntil=0;_fpsAccumulator=0;_fpsFrames=0;_displayFPS=60;
   _stutters25=_stutters34=_stutters50=0;
   _walkerTestDistance=0;_walkerFacingError=0;
@@ -731,12 +734,16 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   // Releasing every Metal buffer of an evicted tile in one frame caused a
   // visible 35-45 ms hitch. Retire one chunk at a time and cap total driver
   // operations, keeping both release and upload work bounded.
-  int driverOperations=0;if(!_retiredChunks.empty()){_retiredChunks.pop_front();driverOperations++;}
+  int driverOperations=0,baseUploads=0;if(!_retiredChunks.empty()){_retiredChunks.pop_front();driverOperations++;}
   std::vector<PendingTile> deferred;
   for(auto&ready:work){
     if(ready.index>=_tiles.size())continue;auto&tile=_tiles[ready.index];
     if(!ready.ok||ready.bytes.size()<sizeof(TileHeader)){tile.state=0;continue;}
-    if(driverOperations>=2){deferred.push_back(std::move(ready));continue;}
+    BOOL detailTile=tile.detail;
+    // With the whole base city retained for the no-fog horizon, cap distant
+    // base uploads at one per frame. Nearby authored detail may still use the
+    // second slot, so buildings along the route finish without a visible pop.
+    if(driverOperations>=2||(!detailTile&&baseUploads>=1)){deferred.push_back(std::move(ready));continue;}
     // Two small allocations per frame avoid both a 20 MB main-thread copy and
     // the single 480 KB driver spike while sustaining 28.8 MB/s at 60 FPS.
     // Counts stay triangle-aligned.
@@ -748,11 +755,17 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
     uint32_t count=std::min(maxChunkVertices,ready.vertexCount-ready.nextVertex);count-=count%3;
     TileBufferChunk chunk;chunk.vertexCount=count;
     chunk.buffer=[_device newBufferWithBytes:ready.bytes.data()+sizeof(TileHeader)+(size_t)ready.nextVertex*sizeof(PackedVertex) length:(size_t)count*sizeof(PackedVertex) options:MTLResourceStorageModeShared];
-    driverOperations++;
+    driverOperations++;if(!detailTile)baseUploads++;
     if(!chunk.buffer||!count){tile.state=0;continue;}
     ready.chunks.push_back(std::move(chunk));ready.nextVertex+=count;
     if(ready.nextVertex>=ready.vertexCount){
       tile.chunks=std::move(ready.chunks);tile.visibleChunks=0;tile.collisions=std::move(ready.collisions);tile.state=2;
+      // A dense authored tile can retain tens of megabytes of source bytes.
+      // Destroying that vector here produced a repeatable frame spike when the
+      // no-fog streamer reached the denser central pages. Release it away from
+      // the render thread after the Metal buffers own their copies.
+      auto*retiredBytes=new std::vector<uint8_t>(std::move(ready.bytes));
+      dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY,0),^{delete retiredBytes;});
     }else deferred.push_back(std::move(ready));
   }
   if(!deferred.empty()){std::lock_guard<std::mutex>guard(_pendingMutex);for(auto&ready:deferred)_pending.push_back(std::move(ready));}
@@ -1046,11 +1059,11 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
     desired={p.position.x+std::sin(_cameraYaw)*distance,p.position.y+5.8f+sp*10.f,p.position.z+std::cos(_cameraYaw)*distance};
   }
   float alpha=1-(float)std::exp(-dt*(_mode==PlayerMode::Helicopter?4.2f:7.f));_camera=_camera+(desired-_camera)*alpha;_cameraTarget=_cameraTarget+(target-_cameraTarget)*alpha;
-  float altitude=std::max(0.f,p.position.y);_fogEnd=_mode==PlayerMode::Helicopter?std::clamp(350.f+altitude*.38f,280.f,450.f):std::clamp(400.f+altitude*.65f,280.f,560.f);_fogStart=_fogEnd*(_mode==PlayerMode::Helicopter?.52f:.42f);
+  _fogEnd=kNoFogViewDistance;_fogStart=kNoFogViewDistance;
 }
 
 - (void)updateStreaming:(double)now {
-  PlayerState&p=[self activePlayer];float lookAhead=_mode==PlayerMode::Helicopter?6.5f:4.5f;vector_float3 forecast=p.position+p.velocity*lookAhead;float worldRadius=_mode==PlayerMode::Helicopter?1750.f:1300.f;
+  PlayerState&p=[self activePlayer];float lookAhead=_mode==PlayerMode::Helicopter?6.5f:4.5f;vector_float3 forecast=p.position+p.velocity*lookAhead;float worldRadius=kNoFogViewDistance;
   int baseLoading=0,detailLoading=0;std::vector<std::pair<float,size_t>>baseCandidates,detailCandidates;
   for(size_t i=0;i<_tiles.size();i++){
     auto&t=_tiles[i];float radius=t.detail?(_mode==PlayerMode::Helicopter?900.f:700.f):worldRadius,evict=radius+(t.detail?320.f:850.f);float current=std::hypot(t.centerX-p.position.x,t.centerZ-p.position.z),ahead=std::hypot(t.centerX-forecast.x,t.centerZ-forecast.z),priority=std::min(current,ahead*(t.detail?.72f:.78f));
@@ -1150,7 +1163,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   vector_float2 heliStart=helicopterBenchmarkStart(_benchmarkKind);
   double distance=_benchmarkKind==2?_carPhysics.distance:std::hypot(_helicopter.position.x-heliStart.x,_helicopter.position.z-heliStart.y);
   const char*sector=_benchmarkKind==4?"Columna":_benchmarkKind==9?"Șciusev":_benchmarkKind==10?"București":"Centru";
-  std::ostringstream out;out<<"{\n  \"renderer\": \"Metal native\",\n  \"sector\": \""<<sector<<"\",\n  \"vehicle\": \""<<(_benchmarkKind==2?"car":"helicopter")<<"\",\n  \"physics_hz\": 120,\n  \"seconds\": "<<std::fixed<<std::setprecision(2)<<(now-_benchmarkStart)<<",\n  \"average_fps\": "<<1.0/mean<<",\n  \"p95_frame_ms\": "<<p95*1000<<",\n  \"p99_frame_ms\": "<<p99*1000<<",\n  \"max_frame_ms\": "<<_maxBenchmarkFrame*1000<<",\n  \"max_frame_at_s\": "<<_maxBenchmarkFrameAt<<",\n  \"frames_over_25ms\": "<<_stutters25<<",\n  \"frames_over_34ms\": "<<_stutters34<<",\n  \"frames_over_50ms\": "<<_stutters50<<",\n  \"tiles_loaded\": "<<loaded<<",\n  \"near_detail_tiles\": "<<nearDetail<<",\n  \"near_detail_tiles_ready\": "<<nearDetailReady<<",\n  \"distance_m\": "<<distance<<",\n  \"final_speed_kmh\": "<<(_benchmarkKind==2?std::abs(_car.speed):_helicopter.speed)*3.6;
+  std::ostringstream out;out<<"{\n  \"renderer\": \"Metal native\",\n  \"sector\": \""<<sector<<"\",\n  \"vehicle\": \""<<(_benchmarkKind==2?"car":"helicopter")<<"\",\n  \"physics_hz\": 120,\n  \"fog_enabled\": false,\n  \"view_distance_m\": "<<kNoFogViewDistance<<",\n  \"seconds\": "<<std::fixed<<std::setprecision(2)<<(now-_benchmarkStart)<<",\n  \"average_fps\": "<<1.0/mean<<",\n  \"p95_frame_ms\": "<<p95*1000<<",\n  \"p99_frame_ms\": "<<p99*1000<<",\n  \"max_frame_ms\": "<<_maxBenchmarkFrame*1000<<",\n  \"max_frame_at_s\": "<<_maxBenchmarkFrameAt<<",\n  \"frames_over_25ms\": "<<_stutters25<<",\n  \"frames_over_34ms\": "<<_stutters34<<",\n  \"frames_over_50ms\": "<<_stutters50<<",\n  \"tiles_loaded\": "<<loaded<<",\n  \"near_detail_tiles\": "<<nearDetail<<",\n  \"near_detail_tiles_ready\": "<<nearDetailReady<<",\n  \"distance_m\": "<<distance<<",\n  \"final_speed_kmh\": "<<(_benchmarkKind==2?std::abs(_car.speed):_helicopter.speed)*3.6;
   if(_benchmarkKind==2)out<<",\n  \"max_forward_kmh\": "<<_carBenchmarkMaxForward*3.6<<",\n  \"max_reverse_kmh\": "<<std::abs(_carBenchmarkMaxReverse)*3.6<<",\n  \"automatic_reverse_verified\": "<<(_carBenchmarkReversed?"true":"false");
   if(_benchmarkKind==2)out<<",\n  \"straight_w_deviation_m\": "<<_carStraightMaxDeviation;
   else out<<",\n  \"straight_w_deviation_m\": "<<_heliStraightMaxDeviation;
@@ -1172,14 +1185,17 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
     [encoder setRenderPipelineState:_skyPipeline];[encoder setDepthStencilState:_skyDepth];[encoder setFragmentBytes:&sky length:sizeof(sky) atIndex:0];[encoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3];
     [encoder setRenderPipelineState:_pipeline];[encoder setDepthStencilState:_depth];
     [encoder setFragmentTexture:_asphaltTexture atIndex:0];[encoder setFragmentTexture:_pavementTexture atIndex:1];[encoder setFragmentTexture:_grassTexture atIndex:2];[encoder setFragmentSamplerState:_surfaceSampler atIndex:0];
-    float aspect=std::max(1.0,view.drawableSize.width)/std::max(1.0,view.drawableSize.height),fov=_mode==PlayerMode::Helicopter?64.f:_mode==PlayerMode::Car?61.f:58.f;matrix_float4x4 vp=simd_mul(perspective(fov*kPi/180,aspect,.12f,_fogEnd+40.f),lookAt(_camera,_cameraTarget));
+    float aspect=std::max(1.0,view.drawableSize.width)/std::max(1.0,view.drawableSize.height),fov=_mode==PlayerMode::Helicopter?64.f:_mode==PlayerMode::Car?61.f:58.f;matrix_float4x4 vp=simd_mul(perspective(fov*kPi/180,aspect,.12f,_fogEnd),lookAt(_camera,_cameraTarget));
     Uniforms world{};world.viewProjection=vp;world.model=matrix_identity_float4x4;world.cameraAndFogStart={_camera.x,_camera.y,_camera.z,_fogStart};world.fogEndAndSun={_fogEnd,-85.f,110.f,65.f};world.tintAndTime={1,1,1,(float)(now-_startTime)};world.viewportAndExposure={(float)view.drawableSize.width,(float)view.drawableSize.height,1,0};
     [encoder setVertexBytes:&world length:sizeof(world) atIndex:1];[encoder setFragmentBytes:&world length:sizeof(world) atIndex:1];
     // Base context first, authoritative photo-authored geometry second. With
     // LessEqual depth the detailed surface wins even when a source footprint
     // is exactly coplanar with its lightweight streaming envelope.
+    vector_float2 horizontalView={_cameraTarget.x-_camera.x,_cameraTarget.z-_camera.z};float horizontalLength=simd_length(horizontalView);if(horizontalLength>.001f)horizontalView/=horizontalLength;else horizontalView={0,-1};float horizontalTan=std::tan(fov*kPi/360.f)*aspect;
     PlayerState&p=[self activePlayer];for(int detailPass=0;detailPass<2;detailPass++)for(auto&tile:_tiles)if(tile.detail==(detailPass==1)&&tile.state==2&&!tile.chunks.empty()){
-      float d=std::hypot(tile.centerX-p.position.x,tile.centerZ-p.position.z);if(d>=_fogEnd+(tile.detail?180.f:430.f))continue;
+      float d=std::hypot(tile.centerX-p.position.x,tile.centerZ-p.position.z);if(d>=(tile.detail?1250.f:_fogEnd))continue;
+      float tx=tile.centerX-_camera.x,tz=tile.centerZ-_camera.z,forward=tx*horizontalView.x+tz*horizontalView.y,side=std::abs(tx*horizontalView.y-tz*horizontalView.x),tileRadius=tile.detail?142.f:315.f;
+      if(forward<-tileRadius||forward>0&&side>forward*horizontalTan+tileRadius)continue;
       tile.visibleChunks=std::min(tile.chunks.size(),tile.visibleChunks+1);
       for(size_t i=0;i<tile.visibleChunks;i++){auto&chunk=tile.chunks[i];[encoder setVertexBuffer:chunk.buffer offset:0 atIndex:0];[encoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:chunk.vertexCount];}
     }

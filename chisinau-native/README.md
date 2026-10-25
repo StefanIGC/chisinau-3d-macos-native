@@ -10,8 +10,8 @@ Aplicație macOS nativă, fără Electron, Chromium, JavaScript sau conexiune la
 - 185 de straturi arhitecturale prioritare sunt exportate direct din modulele originale construite după fotografii și Street View: fațade, ferestre, uși, balcoane, cornișe, acoperișuri, scări, porți, mobilier și suprafețele complete Șciusev, București și Columna–Ismail. Cele cinci straturi temporare „reprezentare” nu intră în aplicație.
 - Exportul arhitecturii rulează numai la build; aplicația livrată rămâne integral nativă.
 - Geometrie gata pentru GPU; nu se triangulează clădiri în timpul jocului.
-- Streaming asincron pe două niveluri: orașul de bază rămâne vizibil până în fog, iar cele 34,8 milioane de vârfuri de detaliu sunt anticipate în direcția deplasării și încărcate numai în apropiere.
-- Fog dinamic și evacuarea sectoarelor îndepărtate.
+- Streaming asincron pe două niveluri: orașul de bază se încarcă până la limita hărții și rămâne vizibil la orizont, iar cele 35,5 milioane de vârfuri de detaliu sunt anticipate în direcția deplasării și încărcate numai în apropiere.
+- Fără fog de distanță; camera și orașul de bază au vizibilitate de 7 km.
 - Trei moduri: pieton, mașină și elicopter.
 - Din modul pieton, `2` generează mașina, iar `3` generează elicopterul într-un loc liber din apropiere; `E` permite intrarea și ieșirea.
 - Corpurile solide, pereții și acoperișurile clădirilor sunt păstrate sub fațadele detaliate; fallback-urile OSM suprapuse rămân eliminate.
