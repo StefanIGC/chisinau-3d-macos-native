@@ -13,6 +13,8 @@ Aplicație macOS nativă, fără Electron, Chromium, JavaScript sau conexiune la
 - Streaming asincron pe două niveluri: orașul de bază rămâne vizibil până în fog, iar cele 34,8 milioane de vârfuri de detaliu sunt anticipate în direcția deplasării și încărcate numai în apropiere.
 - Fog dinamic și evacuarea sectoarelor îndepărtate.
 - Trei moduri: pieton, mașină și elicopter.
+- Din modul pieton, `2` generează mașina, iar `3` generează elicopterul într-un loc liber din apropiere; `E` permite intrarea și ieșirea.
+- Corpurile solide, pereții și acoperișurile clădirilor sunt păstrate sub fațadele detaliate; fallback-urile OSM suprapuse rămân eliminate.
 - Fizică deterministă la 120 Hz pentru vehicule, independentă de rata cadrelor.
 - Mașina folosește un model bicycle: accelerație, frânare, marșarier automat, limitarea direcției la viteză și frână de mână.
 - Elicopterul are rotor cu pornire progresivă, decolare/aterizare, inerție, atitudine și coliziuni sub-pas.
@@ -40,3 +42,5 @@ Fizica mașinii și randarea ei pot fi testate separat cu `--benchmark-car`; rez
 Traseul nou Columna, de la Tighina spre Ismail, se verifică separat cu `--benchmark-columna`; rezultatul se scrie în `/tmp/chisinau-native-benchmark-columna.json`.
 
 Șciusev și București se verifică separat cu `--benchmark-sciusev` și `--benchmark-bucuresti`. Harta, pietonul și interacțiunile se verifică prin `--test-map`, `--test-walker` și `--test-interaction`.
+
+Generarea sigură a vehiculelor se verifică prin `--test-spawn`.

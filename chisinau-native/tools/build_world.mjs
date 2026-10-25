@@ -384,9 +384,14 @@ const architectureFile=path.join(architectureTempRoot,'architecture.carch');
 const architectureEntry=path.join(sourceRoot,'scripts/export-native-architecture.ts');
 const esbuild=path.join(sourceRoot,'node_modules/esbuild/bin/esbuild');
 if(!fs.existsSync(architectureEntry)||!fs.existsSync(esbuild))throw new Error('Missing authored architecture exporter or esbuild.');
-execFileSync(process.execPath,[esbuild,architectureEntry,'--bundle','--platform=node','--format=esm',`--outfile=${architectureBundle}`,'--log-level=warning'],{stdio:'inherit'});
+// The npm package exposes a platform-native executable here. Launching that
+// Mach-O/ELF binary through Node produces an "invalid token" error on current
+// esbuild releases, so execute it directly.
+execFileSync(esbuild,[architectureEntry,'--bundle','--platform=node','--format=esm',`--outfile=${architectureBundle}`,'--log-level=warning'],{stdio:'inherit'});
 const architectureOutput=execFileSync(process.execPath,[architectureBundle,architectureFile],{encoding:'utf8',maxBuffer:1024*1024}).trim();
 if(architectureOutput)console.log(architectureOutput);
+let architectureExport={};
+try{architectureExport=JSON.parse(architectureOutput.split('\n').at(-1)??'{}');}catch{}
 
 function architectureHeader(file){
   const descriptor=fs.openSync(file,'r'),header=Buffer.alloc(32);fs.readSync(descriptor,header,0,header.length,0);
@@ -533,7 +538,7 @@ for (const bucket of [...tileData.values()].sort((a,b)=>a.x-b.x||a.y-b.y)) {
 const attribution = {
   format:'Chișinău Native Tile 1', zoom:ZOOM, origin:[ORIGIN_LAT,ORIGIN_LON],
   tiles:tileData.size, vertices:totalVertices, collisions:totalCollisions, landmarkModels:landmarkCount, bytes:totalBytes,
-  authoredArchitecture:{...architectureTiles,layers:authoredArchitecture.layers,meshes:authoredArchitecture.meshes,replacementIds:authoredArchitecture.replacementCount,spatiallySuppressedBuildings,collisionOnlyBuildings:collisionOnlyAuthoredBuildings},
+  authoredArchitecture:{...architectureTiles,layers:authoredArchitecture.layers,meshes:authoredArchitecture.meshes,solidShellVertices:number(architectureExport.solidShellVertices,0),replacementIds:authoredArchitecture.replacementCount,spatiallySuppressedBuildings,collisionOnlyBuildings:collisionOnlyAuthoredBuildings},
   sources:['© OpenStreetMap contributors · ODbL 1.0','Chișinău · Centru 3D project datasets','Street View/photo-authored architecture modules','map.md placement catalog'],
   generated:new Date().toISOString(),
 };

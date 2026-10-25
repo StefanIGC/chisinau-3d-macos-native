@@ -66,7 +66,13 @@ export function streetMesh(scene:T.Scene,name:string,ground:(x:number,z:number)=
     jobs.push({root,physical,points,ids,x,z,run,done:false,nextProbe:0});for(const id of ids)replacements.push({id,x,z,radius:0,ready:false});
   }
   function* flush(){
-    if(nativeExport){const shells=parts.filter(p=>p.nativeShell);shells.forEach(p=>p.g.dispose());parts=parts.filter(p=>!p.nativeShell);}
+    // Keep the structural solids in the native export. They are the closed
+    // walls and roofs behind the photo-authored facade details. Removing them
+    // left windows, cornices and balconies floating over empty space because
+    // the corresponding OSM fallback is deliberately suppressed downstream.
+    // These shells are not duplicates: the native compiler removes the old
+    // OSM footprint before this authoritative layer is drawn.
+    if(nativeExport)active!.root.userData.nativeShellVertices=(active!.root.userData.nativeShellVertices??0)+parts.filter(p=>p.nativeShell).reduce((sum,p)=>sum+p.g.getAttribute('position').count,0);
     for(const fine of[false,true])for(let kind=0;kind<materials.length;kind++){const selected=parts.filter(p=>p.fine===fine&&p.kind===kind);if(!selected.length)continue;const g=mergeGeometries(selected.map(p=>p.g))!;g.computeBoundingSphere();g.computeBoundingBox();const mesh=new T.Mesh(g,materials[kind]);mesh.receiveShadow=true;mesh.matrixAutoUpdate=false;active!.root.add(mesh);visuals.push({mesh,fine});const physical=selected.filter(p=>p.physical);if(!nativeExport&&physical.length){const collider=new T.Mesh(mergeGeometries(physical.map(p=>p.g))!,physicalMaterial);collider.matrixAutoUpdate=false;active!.physical.add(collider);}selected.forEach(p=>p.g.dispose());yield;}
     parts=[];active!.physical.updateMatrixWorld(true);if(!nativeExport)yield* prepareLandmarkCollision(active!.physical);active!.root.userData.groundRings=groundRings;groundRings=[];
   }

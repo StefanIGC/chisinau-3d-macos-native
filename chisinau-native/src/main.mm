@@ -588,6 +588,7 @@ struct PendingTile {
   BOOL _carBenchmarkReversed;
   int _interactionStage;
   BOOL _interactionCarEntry,_interactionCarExit,_interactionHeliEntry,_interactionHeliExit;
+  BOOL _spawnTestCar,_spawnTestHelicopter;
 }
 - (instancetype)initWithView:(GameView*)view resourcePath:(NSString*)resourcePath benchmarkKind:(NSInteger)benchmarkKind;
 @end
@@ -623,7 +624,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
 @implementation CityRenderer
 - (instancetype)initWithView:(GameView*)view resourcePath:(NSString*)resourcePath benchmarkKind:(NSInteger)benchmarkKind {
   if(!(self=[super init]))return nil;
-  _view=view;_device=view.device;_resourcePath=[resourcePath copy];_benchmarkKind=benchmarkKind;_benchmark=(benchmarkKind>0&&benchmarkKind<5)||benchmarkKind==6||benchmarkKind==7||benchmarkKind==9||benchmarkKind==10;_benchmarkFinished=NO;_mode=benchmarkKind==2?PlayerMode::Car:isHelicopterBenchmark(benchmarkKind)?PlayerMode::Helicopter:PlayerMode::Walker;
+  _view=view;_device=view.device;_resourcePath=[resourcePath copy];_benchmarkKind=benchmarkKind;_benchmark=(benchmarkKind>0&&benchmarkKind<5)||benchmarkKind==6||benchmarkKind==7||benchmarkKind==9||benchmarkKind==10||benchmarkKind==11;_benchmarkFinished=NO;_mode=benchmarkKind==2?PlayerMode::Car:isHelicopterBenchmark(benchmarkKind)?PlayerMode::Helicopter:PlayerMode::Walker;
   _queue=[_device newCommandQueue];NSError*error=nil;id<MTLLibrary>library=[_device newLibraryWithSource:kShaderSource options:nil error:&error];
   if(!library){NSLog(@"Metal shader error: %@",error);return nil;}
   MTLRenderPipelineDescriptor*descriptor=[MTLRenderPipelineDescriptor new];descriptor.vertexFunction=[library newFunctionWithName:@"cityVertex"];descriptor.fragmentFunction=[library newFunctionWithName:@"cityFragment"];
@@ -650,7 +651,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   _lastFrame=CACurrentMediaTime();_startTime=_lastFrame;_benchmarkStart=_lastFrame;_lastHUD=0;_noticeUntil=0;_fpsAccumulator=0;_fpsFrames=0;_displayFPS=60;
   _stutters25=_stutters34=_stutters50=0;
   _walkerTestDistance=0;_walkerFacingError=0;
-  _interactionStage=0;_interactionCarEntry=_interactionCarExit=_interactionHeliEntry=_interactionHeliExit=NO;_mapOpen=_teleportPending=_mapTestOpened=_mapTestTeleported=NO;
+  _interactionStage=0;_interactionCarEntry=_interactionCarExit=_interactionHeliEntry=_interactionHeliExit=NO;_spawnTestCar=_spawnTestHelicopter=NO;_mapOpen=_teleportPending=_mapTestOpened=_mapTestTeleported=NO;
   std::filesystem::path worldPath=std::filesystem::path(resourcePath.UTF8String)/"world";
   if(std::filesystem::exists(worldPath))for(const auto&entry:std::filesystem::directory_iterator(worldPath))if(entry.path().extension()==".ctile"||entry.path().extension()==".dtile"){
     std::ifstream stream(entry.path(),std::ios::binary);TileHeader h{};stream.read(reinterpret_cast<char*>(&h),sizeof(h));
@@ -667,7 +668,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   _hud=makeLabel(NSMakeRect(22,_view.bounds.size.height-112,420,90),14,NSFontWeightSemibold);_hud.autoresizingMask=NSViewMinYMargin;
   _controls=makeLabel(NSMakeRect(22,18,820,66),12,NSFontWeightMedium);_controls.textColor=[NSColor colorWithWhite:1 alpha:.83];_controls.autoresizingMask=NSViewMaxYMargin|NSViewWidthSizable;
   _notice=makeLabel(NSMakeRect(_view.bounds.size.width/2-260,_view.bounds.size.height-64,520,34),13,NSFontWeightSemibold);_notice.alignment=NSTextAlignmentCenter;_notice.autoresizingMask=NSViewMinXMargin|NSViewMaxXMargin|NSViewMinYMargin;
-  _notice.stringValue=_benchmark?(_benchmarkKind==3?@"TEST INTERACȚIUNE · intrare / ieșire":_benchmarkKind==6?@"TEST PIETON · mers, orientare și animație":_benchmarkKind==7?@"TEST HARTĂ · teleportare și streaming":_benchmarkKind==2?@"BENCHMARK MAȘINĂ · fizică 120 Hz":_benchmarkKind==4?@"BENCHMARK COLUMNA · streaming în zbor":_benchmarkKind==9?@"BENCHMARK ȘCIUSEV · toate modulele în zbor":_benchmarkKind==10?@"BENCHMARK BUCUREȘTI · toate modulele în zbor":@"BENCHMARK ELICOPTER · traseu automat"):_benchmarkKind==5?@"COL-IT-01 · COLUMNA · TIGHINA → ISMAIL":@"Click pentru cameră · M hartă · E intră / iese";
+  _notice.stringValue=_benchmark?(_benchmarkKind==3?@"TEST INTERACȚIUNE · intrare / ieșire":_benchmarkKind==6?@"TEST PIETON · mers, orientare și animație":_benchmarkKind==7?@"TEST HARTĂ · teleportare și streaming":_benchmarkKind==11?@"TEST GENERARE · mașină și elicopter":_benchmarkKind==2?@"BENCHMARK MAȘINĂ · fizică 120 Hz":_benchmarkKind==4?@"BENCHMARK COLUMNA · streaming în zbor":_benchmarkKind==9?@"BENCHMARK ȘCIUSEV · toate modulele în zbor":_benchmarkKind==10?@"BENCHMARK BUCUREȘTI · toate modulele în zbor":@"BENCHMARK ELICOPTER · traseu automat"):_benchmarkKind==5?@"COL-IT-01 · COLUMNA · TIGHINA → ISMAIL":@"Click pentru cameră · M hartă · E intră / iese";
   _minimap=[[MiniMapView alloc]initWithFrame:NSMakeRect(_view.bounds.size.width-192,22,170,170)];_minimap.autoresizingMask=NSViewMinXMargin|NSViewMaxYMargin;__weak CityRenderer*weakSelf=self;_minimap.onOpen=^{[weakSelf openWorldMap];};[_view addSubview:_minimap];
 }
 
@@ -891,6 +892,36 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   return {vehicle.position.x+x*c+z*s,y,vehicle.position.z-x*s+z*c};
 }
 
+- (BOOL)spawnCarNearWalker {
+  if(_mode!=PlayerMode::Walker||![self walkerWorldReady]){[self showNotice:@"Așteaptă încărcarea străzii înainte de a genera mașina."];return NO;}
+  PlayerState anchor=_walker;anchor.yaw=_cameraYaw;
+  static const float candidates[][2]={{0,-7},{3.4f,-7},{-3.4f,-7},{0,7},{5.5f,0},{-5.5f,0},{0,-12},{7,-7},{-7,-7}};
+  for(const auto&offset:candidates){
+    vector_float3 point=[self localPointFor:anchor x:offset[0] z:offset[1] y:.72f];
+    if([self carBlockedAtX:point.x z:point.z yaw:anchor.yaw]||[self insideBuildingAt:point]||std::hypot(point.x-_helicopter.position.x,point.z-_helicopter.position.z)<6.5f)continue;
+    _car=PlayerState{};_car.position=point;_car.yaw=anchor.yaw;_carPhysics=CarPhysics{};
+    [self showNotice:@"Mașină generată · apropie-te și apasă E"];
+    return YES;
+  }
+  [self showNotice:@"Nu există suficient spațiu liber aici pentru mașină."];
+  return NO;
+}
+
+- (BOOL)spawnHelicopterNearWalker {
+  if(_mode!=PlayerMode::Walker||![self walkerWorldReady]){[self showNotice:@"Așteaptă încărcarea străzii înainte de a genera elicopterul."];return NO;}
+  PlayerState anchor=_walker;anchor.yaw=_cameraYaw;
+  static const float candidates[][2]={{0,-12},{7,-12},{-7,-12},{12,0},{-12,0},{0,12},{11,-11},{-11,-11},{0,-20}};
+  for(const auto&offset:candidates){
+    vector_float3 point=[self localPointFor:anchor x:offset[0] z:offset[1] y:.05f];
+    if([self blockedAt:point radius:3.35f]||[self insideBuildingAt:point]||std::hypot(point.x-_car.position.x,point.z-_car.position.z)<7.5f)continue;
+    _helicopter=PlayerState{};_helicopter.position=point;_helicopter.yaw=anchor.yaw;_heliPhysics=HelicopterPhysics{};
+    [self showNotice:@"Elicopter generat · apropie-te și apasă E"];
+    return YES;
+  }
+  [self showNotice:@"Nu există suficient spațiu liber aici pentru elicopter."];
+  return NO;
+}
+
 - (BOOL)enterCarIfNear:(BOOL)explain {
   if(std::hypot(_walker.position.x-_car.position.x,_walker.position.z-_car.position.z)>4.8f){if(explain)[self showNotice:@"Apropie-te de mașină, apoi apasă E."];return NO;}
   _mode=PlayerMode::Car;_car.speed=0;_car.velocity={0,0,0};_cameraYaw=_car.yaw;_cameraPitch=.12f;_cameraManualTimer=0;
@@ -942,12 +973,16 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
     float elapsed=(float)(now-_benchmarkStart);if(!_mapTestOpened&&elapsed>.25f){[self openWorldMap];_mapTestOpened=_worldMap!=nil;}
     if(_mapTestOpened&&!_mapTestTeleported&&elapsed>.85f){vector_float2 destination=nativeMapPoint(1310.f,-355.5f);[self teleportFromMapX:destination.x z:destination.y yaw:-2.342f];_mapTestTeleported=YES;}
   }
+  if(_benchmarkKind==11&&[self walkerWorldReady]){
+    if(!_spawnTestCar)_spawnTestCar=[self spawnCarNearWalker];
+    if(_spawnTestCar&&!_spawnTestHelicopter)_spawnTestHelicopter=[self spawnHelicopterNearWalker];
+  }
   if(!_benchmark){
     if([_view pressed:46]){[self openWorldMap];return;}
     if([_view pressed:14])[self interactWithVehicle];
     if([_view pressed:18]&&_mode!=PlayerMode::Walker)[self exitActiveVehicle];
-    if([_view pressed:19]&&_mode==PlayerMode::Walker)[self enterCarIfNear:YES];
-    if([_view pressed:20]&&_mode==PlayerMode::Walker)[self enterHelicopterIfNear:YES];
+    if([_view pressed:19]&&_mode==PlayerMode::Walker)[self spawnCarNearWalker];
+    if([_view pressed:20]&&_mode==PlayerMode::Walker)[self spawnHelicopterNearWalker];
     if([_view pressed:15])[self resetActiveVehicle];
   }
   [self finishPendingTeleport];
@@ -1076,7 +1111,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   if(_mode==PlayerMode::Car)state=_carPhysics.reversing?@"R":_carPhysics.braking?@"FRÂNĂ":@"D";
   else if(_mode==PlayerMode::Helicopter)state=_heliPhysics.grounded?(_heliPhysics.rotor>.72f?@"ROTOR GATA":@"PORNIRE ROTOR"):@"ÎN ZBOR";
   _hud.stringValue=[NSString stringWithFormat:@"CHIȘINĂU 3D · METAL NATIV\n%@ · %@ · %.0f km/h · alt. %.0f m\n%.0f FPS · %d/%zu sectoare · %d pregătite",mode,state,kmh,p.position.y,_displayFPS,loaded,_tiles.size(),loading];
-  if(_mode==PlayerMode::Walker)_controls.stringValue=@"WASD deplasare · Shift alergare · M hartă/teleport · E intră în vehicul · 2 mașină · 3 elicopter · Esc cursor";
+  if(_mode==PlayerMode::Walker)_controls.stringValue=@"WASD deplasare · Shift alergare · M hartă/teleport · E intră · 2 generează mașină · 3 generează elicopter · Esc cursor";
   else if(_mode==PlayerMode::Car)_controls.stringValue=@"W accelerează · S frână/marșarier · A/D direcție · Space frână de mână · M hartă · E/1 coboară · R repoziționează";
   else _controls.stringValue=@"W/S înainte/înapoi · A/D rotație · Space urcare · Ctrl coborâre · Shift boost · M hartă · E/1 coboară · R repoziționează";
   if(!_benchmark&&now>=_noticeUntil)_notice.stringValue=_teleportPending?@"Se pregătesc străzile și coliziunile destinației…":[self walkerWorldReady]?@"M hartă · E intră / iese · clic pe mini-hartă":@"Se pregătesc strada și coliziunile din apropiere…";
@@ -1102,6 +1137,13 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
     if(now-_benchmarkStart<10.25)return;_benchmarkFinished=YES;vector_float2 expected=nativeMapPoint(1310.f,-355.5f);float error=std::hypot(_walker.position.x-expected.x,_walker.position.z-expected.y);BOOL asset=std::filesystem::exists(std::filesystem::path(_resourcePath.UTF8String)/"map/world-map.png"),passed=asset&&_mapTestOpened&&_mapTestTeleported&&!_teleportPending&&error<60.f&&_mode==PlayerMode::Walker;
     std::ostringstream out;out<<"{\n  \"test\": \"offline map and teleport\",\n  \"map_asset_loaded\": "<<(asset?"true":"false")<<",\n  \"map_opened\": "<<(_mapTestOpened?"true":"false")<<",\n  \"teleport_requested\": "<<(_mapTestTeleported?"true":"false")<<",\n  \"destination_ready\": "<<(!_teleportPending?"true":"false")<<",\n  \"destination_error_m\": "<<std::fixed<<std::setprecision(2)<<error<<",\n  \"walker_mode_restored\": "<<(_mode==PlayerMode::Walker?"true":"false")<<",\n  \"passed\": "<<(passed?"true":"false")<<"\n}\n";
     std::ofstream("/tmp/chisinau-native-map.json")<<out.str();std::cout<<out.str()<<std::flush;dispatch_async(dispatch_get_main_queue(),^{[NSApp terminate:nil];});return;
+  }
+  if(_benchmarkKind==11){
+    if(now-_benchmarkStart<6.25)return;_benchmarkFinished=YES;
+    float carDistance=std::hypot(_car.position.x-_walker.position.x,_car.position.z-_walker.position.z),helicopterDistance=std::hypot(_helicopter.position.x-_walker.position.x,_helicopter.position.z-_walker.position.z),vehicleDistance=std::hypot(_car.position.x-_helicopter.position.x,_car.position.z-_helicopter.position.z);
+    BOOL finite=std::isfinite(_car.position.x)&&std::isfinite(_car.position.z)&&std::isfinite(_helicopter.position.x)&&std::isfinite(_helicopter.position.z),passed=_spawnTestCar&&_spawnTestHelicopter&&finite&&_heliPhysics.grounded&&carDistance>4.f&&helicopterDistance>7.f&&vehicleDistance>6.f;
+    std::ostringstream out;out<<"{\n  \"test\": \"vehicle generation\",\n  \"car_generated\": "<<(_spawnTestCar?"true":"false")<<",\n  \"helicopter_generated\": "<<(_spawnTestHelicopter?"true":"false")<<",\n  \"helicopter_grounded\": "<<(_heliPhysics.grounded?"true":"false")<<",\n  \"car_distance_m\": "<<std::fixed<<std::setprecision(2)<<carDistance<<",\n  \"helicopter_distance_m\": "<<helicopterDistance<<",\n  \"vehicle_separation_m\": "<<vehicleDistance<<",\n  \"finite_state\": "<<(finite?"true":"false")<<",\n  \"passed\": "<<(passed?"true":"false")<<"\n}\n";
+    std::ofstream("/tmp/chisinau-native-spawn.json")<<out.str();std::cout<<out.str()<<std::flush;dispatch_async(dispatch_get_main_queue(),^{[NSApp terminate:nil];});return;
   }
   if(now-_benchmarkStart<22)return;_benchmarkFinished=YES;
   auto samples=_benchmarkFrames;if(samples.empty())samples.push_back(1.0/60.0);std::sort(samples.begin(),samples.end());double sum=std::accumulate(samples.begin(),samples.end(),0.0),mean=sum/samples.size(),p95=samples[(size_t)(samples.size()*.95)],p99=samples[(size_t)(samples.size()*.99)];int loaded=0,nearDetail=0,nearDetailReady=0;for(auto&t:_tiles){if(t.state==2)loaded++;if(t.detail&&std::hypot(t.centerX-_helicopter.position.x,t.centerZ-_helicopter.position.z)<450.f){nearDetail++;if(t.state==2)nearDetailReady++;}}
@@ -1167,6 +1209,6 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
 @end
 
 int main(int argc,const char*argv[]){@autoreleasepool{
-  NSInteger benchmarkKind=0;for(int i=1;i<argc;i++){std::string arg=argv[i];if(arg=="--benchmark")benchmarkKind=1;else if(arg=="--benchmark-car")benchmarkKind=2;else if(arg=="--test-interaction")benchmarkKind=3;else if(arg=="--benchmark-columna")benchmarkKind=4;else if(arg=="--preview-columna")benchmarkKind=5;else if(arg=="--test-walker")benchmarkKind=6;else if(arg=="--test-map")benchmarkKind=7;else if(arg=="--preview-map")benchmarkKind=8;else if(arg=="--benchmark-sciusev")benchmarkKind=9;else if(arg=="--benchmark-bucuresti")benchmarkKind=10;}
+  NSInteger benchmarkKind=0;for(int i=1;i<argc;i++){std::string arg=argv[i];if(arg=="--benchmark")benchmarkKind=1;else if(arg=="--benchmark-car")benchmarkKind=2;else if(arg=="--test-interaction")benchmarkKind=3;else if(arg=="--benchmark-columna")benchmarkKind=4;else if(arg=="--preview-columna")benchmarkKind=5;else if(arg=="--test-walker")benchmarkKind=6;else if(arg=="--test-map")benchmarkKind=7;else if(arg=="--preview-map")benchmarkKind=8;else if(arg=="--benchmark-sciusev")benchmarkKind=9;else if(arg=="--benchmark-bucuresti")benchmarkKind=10;else if(arg=="--test-spawn")benchmarkKind=11;}
   NSApplication*app=NSApplication.sharedApplication;app.activationPolicy=NSApplicationActivationPolicyRegular;AppDelegate*delegate=[AppDelegate new];delegate.benchmarkKind=benchmarkKind;app.delegate=delegate;[app run];
 }return 0;}

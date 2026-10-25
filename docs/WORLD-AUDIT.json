@@ -1,12 +1,13 @@
 {
-  "version": "2.8.0",
+  "version": "2.9.0",
   "compiled_world": {
     "base_tiles": 240,
     "detail_tiles": 222,
     "base_vertices": 5803230,
-    "authored_vertices": 34813611,
+    "authored_vertices": 35515023,
+    "solid_shell_vertices": 701412,
     "authored_layers": 185,
-    "authored_meshes": 14774,
+    "authored_meshes": 14777,
     "collision_segments": 231004,
     "spatially_suppressed_osm_buildings": 2790,
     "collision_only_authored_buildings": 8497

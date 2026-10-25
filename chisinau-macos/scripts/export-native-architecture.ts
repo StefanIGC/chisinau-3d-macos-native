@@ -182,6 +182,7 @@ for(const layer of activeLayers)for(const root of layer.objects)root.traverse(ob
   if(object instanceof T.Mesh&&object.geometry?.getAttribute('position'))meshes.push(object);
 });
 const vertexCount=meshes.reduce((sum,mesh)=>sum+(mesh.geometry.index?.count??mesh.geometry.getAttribute('position').count),0);
+const solidShellVertices=activeLayers.reduce((sum,layer)=>sum+layer.objects.reduce((layerSum,root)=>layerSum+(Number(root.userData.nativeShellVertices)||0),0),0);
 const layerVertices=activeLayers.map(layer=>({
   name:layer.objects[0]?.name.split(' · ').slice(0,-1).join(' · ')||'layer',
   jobs:layer.objects.length,
@@ -247,4 +248,4 @@ for(const mesh of meshes){
 }
 fs.closeSync(descriptor);
 if(written!==vertexCount)throw new Error(`Architecture vertex count mismatch: ${written} != ${vertexCount}`);
-console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),meshes:meshes.length,vertices:vertexCount,replacementIds:replacementIds.length,bytes:fs.statSync(output).size,largestLayers:layerVertices.slice(0,24)}));
+console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),meshes:meshes.length,vertices:vertexCount,solidShellVertices,replacementIds:replacementIds.length,bytes:fs.statSync(output).size,largestLayers:layerVertices.slice(0,24)}));
