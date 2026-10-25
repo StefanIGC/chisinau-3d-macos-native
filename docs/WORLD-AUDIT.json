@@ -1,10 +1,10 @@
 {
-  "version": "2.11.0",
+  "version": "2.12.0",
   "compiled_world": {
     "base_tiles": 240,
     "detail_tiles": 222,
-    "base_vertices": 6317382,
-    "authored_vertices": 36567828,
+    "base_vertices": 5409459,
+    "authored_vertices": 36472101,
     "solid_shell_vertices": 701412,
     "authored_layers": 190,
     "authored_meshes": 15305,
@@ -27,7 +27,27 @@
     },
     "collision_segments": 231004,
     "spatially_suppressed_osm_buildings": 2790,
-    "collision_only_authored_buildings": 8497
+    "collision_only_authored_buildings": 8497,
+    "surface_ownership_masks": 10418,
+    "suppressed_legacy_geometry": {
+      "roads": 274432,
+      "railways": 0,
+      "barriers": 6026,
+      "waterways": 10699,
+      "landcover": 552625,
+      "trees": 1894,
+      "streetFurniture": 542,
+      "terrain": 21735
+    },
+    "bucuresti_armeneasca_check": {
+      "owned": true,
+      "radius": 95,
+      "suppressed": {
+        "roads": 568,
+        "landcover": 366,
+        "terrain": 135
+      }
+    }
   },
   "authored_sector_inventory": {
     "sciusev": {
@@ -120,7 +140,7 @@
         1220,
         850
       ],
-      "asphalt_triangles": 207648,
+      "asphalt_triangles": 203232,
       "min_y_m": 0,
       "max_y_m": 17.9132,
       "detail_tiles": 27
@@ -132,7 +152,7 @@
         1750,
         550
       ],
-      "asphalt_triangles": 73330,
+      "asphalt_triangles": 73274,
       "min_y_m": 0.035,
       "max_y_m": 0.485,
       "detail_tiles": 21
@@ -149,6 +169,12 @@
       "max_y_m": 0.056,
       "detail_tiles": 4
     }
+  },
+  "anti_blink_scan": {
+    "bucuresti_armeneasca_radius_m": 95,
+    "unique_authored_surface_triangles": 43296,
+    "duplicate_visible_surface_triangles": 0,
+    "degenerate_duplicate_triangles_below_0_001_m2": 0
   },
   "base_fallback_road_y_m": -0.012,
   "minimum_verified_authored_road_separation_m": 0.012,

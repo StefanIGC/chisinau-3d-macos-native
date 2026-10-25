@@ -538,6 +538,10 @@ struct HelicopterPhysics {
   bool grounded=true,contact=false;
 };
 struct TileBufferChunk { id<MTLBuffer> buffer=nil;uint32_t vertexCount=0; };
+struct RetiredTileCollisionData {
+  std::vector<CollisionSegment> collisions;
+  std::vector<uint32_t> collisionGridIndices;
+};
 
 struct TileMeta {
   std::string path;
@@ -1106,12 +1110,28 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
 
 - (void)updateStreaming:(double)now {
   PlayerState&p=[self activePlayer];float lookAhead=_mode==PlayerMode::Helicopter?6.5f:4.5f;vector_float3 forecast=p.position+p.velocity*lookAhead;float worldRadius=kNoFogViewDistance;
-  int baseLoading=0,detailLoading=0;std::vector<std::pair<float,size_t>>baseCandidates,detailCandidates;
+  // Eviction used to move every Metal chunk of every expired tile into the
+  // retirement queue in one update. Dense authored tiles made that otherwise
+  // harmless bookkeeping visible as a repeatable frame spike while flying.
+  // State 3 retires one chunk globally per frame and starts at most one new
+  // eviction, so memory reclamation has a strict, tiny frame-time budget.
+  int baseLoading=0,detailLoading=0,retireMoves=0,evictionsStarted=0;std::vector<std::pair<float,size_t>>baseCandidates,detailCandidates;
   for(size_t i=0;i<_tiles.size();i++){
     auto&t=_tiles[i];float radius=t.detail?(_mode==PlayerMode::Helicopter?900.f:700.f):worldRadius,evict=radius+(t.detail?320.f:850.f);float current=std::hypot(t.centerX-p.position.x,t.centerZ-p.position.z),ahead=std::hypot(t.centerX-forecast.x,t.centerZ-forecast.z),priority=std::min(current,ahead*(t.detail?.72f:.78f));
+    if(t.state==3){
+      if(retireMoves<1){
+        if(!t.chunks.empty()){_retiredChunks.push_back(std::move(t.chunks.back()));t.chunks.pop_back();retireMoves++;}
+        else{
+          auto*retired=new RetiredTileCollisionData{std::move(t.collisions),std::move(t.collisionGridIndices)};
+          dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY,0),^{delete retired;});
+          t.collisionGridOffsets.fill(0);t.maxCollisionHeight=0;t.state=0;retireMoves++;
+        }
+      }
+      continue;
+    }
     if(priority<radius)t.lastNear=now;if(t.state==1){if(t.detail)detailLoading++;else baseLoading++;}
     if(t.state==0&&priority<radius)(t.detail?detailCandidates:baseCandidates).push_back({priority,i});
-    if(t.state==2&&current>evict&&now-t.lastNear>8){for(auto&chunk:t.chunks)_retiredChunks.push_back(std::move(chunk));t.chunks.clear();t.visibleChunks=0;t.collisions.clear();t.collisionGridIndices.clear();t.collisionGridOffsets.fill(0);t.maxCollisionHeight=0;t.state=0;}
+    if(t.state==2&&current>evict&&now-t.lastNear>8&&evictionsStarted<1){t.visibleChunks=0;t.state=3;evictionsStarted++;}
   }
   std::sort(baseCandidates.begin(),baseCandidates.end());std::sort(detailCandidates.begin(),detailCandidates.end());
   int baseSlots=std::max(0,2-baseLoading);for(int n=0;n<baseSlots&&n<(int)baseCandidates.size();n++){

@@ -211,11 +211,13 @@ function addFootprintCollision(bucket, rawRing, height) {
   }
 }
 
-function addFlatPolygon(bucket, rawRing, y, color) {
+function addFlatPolygon(bucket, rawRing, y, color, ownershipCategory) {
   const ring = cleanRing(rawRing);
   if (ring.length < 3) return;
   for (const [ia, ib, ic] of triangulate(ring)) {
-    triangle(bucket.vertices, [ring[ia][0], y, ring[ia][1]], [ring[ib][0], y, ring[ib][1]], [ring[ic][0], y, ring[ic][1]], [0, 1, 0], color);
+    const a=ring[ia],b=ring[ib],c=ring[ic];
+    if(ownershipCategory)emitFlatTriangleOutsideOwnership(bucket,a,b,c,y,color,ownershipCategory);
+    else triangle(bucket.vertices, [a[0], y, a[1]], [b[0], y, b[1]], [c[0], y, c[1]], [0, 1, 0], color);
   }
 }
 
@@ -236,11 +238,20 @@ function roadWidth(properties) {
   }
 }
 
-function addRoad(bucket, points, width, color) {
+function addRoad(bucket, points, width, color, ownershipCategory) {
   for (let i = 1; i < points.length; i++) {
     const a = points[i - 1], b = points[i];
     const dx = b[0] - a[0], dz = b[1] - a[1], length = Math.hypot(dx, dz);
     if (length < 0.05) continue;
+    if(ownershipCategory&&segmentOverlapsAuthoredSurface(a,b)){
+      const count=Math.max(1,Math.ceil(length/1.5));
+      for(let part=0;part<count;part++){
+        const t0=part/count,t1=(part+1)/count,p0=[a[0]+dx*t0,a[1]+dz*t0],p1=[a[0]+dx*t1,a[1]+dz*t1],mid=[(p0[0]+p1[0])*.5,(p0[1]+p1[1])*.5];
+        if(authoredSurfaceContains(mid)){recordSuppression(ownershipCategory,mid);continue;}
+        addRoad(bucket,[p0,p1],width,color);
+      }
+      continue;
+    }
     const ox = -dz / length * width * 0.5, oz = dx / length * width * 0.5;
     // This is distant fallback context. Several original Șciusev road meshes
     // intentionally sit at y=0, while newer modules use 0.035–0.15 m. Keep
@@ -265,26 +276,35 @@ function addBox(bucket, x, y, z, sx, sy, sz, color) {
   for(const f of faces){triangle(o,f[0],f[1],f[2],f[4],color);triangle(o,f[0],f[2],f[3],f[4],color);}
 }
 
-function addVerticalRibbon(bucket, points, minHeight, height, color) {
+function addVerticalRibbon(bucket, points, minHeight, height, color, ownershipCategory) {
   const bottom=number(minHeight,0),top=Math.max(bottom+.08,number(height,1.5)),out=bucket.vertices;
   for(let i=1;i<points.length;i++){
     const a=points[i-1],b=points[i],dx=b[0]-a[0],dz=b[1]-a[1],length=Math.hypot(dx,dz);if(length<.04)continue;
+    if(ownershipCategory&&segmentOverlapsAuthoredSurface(a,b)){
+      const count=Math.max(1,Math.ceil(length/1.5));
+      for(let part=0;part<count;part++){
+        const t0=part/count,t1=(part+1)/count,p0=[a[0]+dx*t0,a[1]+dz*t0],p1=[a[0]+dx*t1,a[1]+dz*t1],mid=[(p0[0]+p1[0])*.5,(p0[1]+p1[1])*.5];
+        if(authoredSurfaceContains(mid)){recordSuppression(ownershipCategory,mid);continue;}
+        addVerticalRibbon(bucket,[p0,p1],bottom,top,color);
+      }
+      continue;
+    }
     const normal=[dz/length,0,-dx/length];
     triangle(out,[a[0],bottom,a[1]],[b[0],bottom,b[1]],[b[0],top,b[1]],normal,color);
     triangle(out,[a[0],bottom,a[1]],[b[0],top,b[1]],[a[0],top,a[1]],normal,color);
   }
 }
 
-function addRailway(bucket, points, gauge) {
+function addRailway(bucket, points, gauge, ownershipCategory) {
   const width=Math.max(1,number(gauge,1435)/1000),ballast=[.27,.255,.235,materialCode(0,1,0)],rail=[.24,.255,.25,materialCode(6,.42,.72)];
-  addRoad(bucket,points,width+1.25,ballast);
+  addRoad(bucket,points,width+1.25,ballast,ownershipCategory);
   for(const side of[-1,1]){
     const shifted=[];
     for(let i=0;i<points.length;i++){
       const a=points[Math.max(0,i-1)],b=points[Math.min(points.length-1,i+1)],dx=b[0]-a[0],dz=b[1]-a[1],length=Math.hypot(dx,dz)||1;
       shifted.push([points[i][0]-dz/length*width*.5*side,points[i][1]+dx/length*width*.5*side]);
     }
-    addRoad(bucket,shifted,.095,rail);
+    addRoad(bucket,shifted,.095,rail,ownershipCategory);
   }
 }
 
@@ -318,7 +338,8 @@ function addTreeCrown(bucket,x,y,z,rx,ry,rz,color,phase=0){
   }
 }
 
-function addTree(bucket, x, z, seed) {
+function addTree(bucket, x, z, seed, ownershipCategory) {
+  if(ownershipCategory&&authoredSurfaceContains([x,z])){recordSuppression(ownershipCategory,[x,z]);return;}
   const height = 5.5 + (seed % 29) * 0.11;
   addBox(bucket, x, height * 0.22, z, 0.42, height * 0.44, 0.42, [0.25,0.18,0.09,materialCode(0,1,0)]);
   const green=[0.12+(seed%5)*.012,0.29+(seed%7)*.011,0.105,materialCode(2,1,0)];
@@ -460,6 +481,7 @@ const architectureTempRoot=fs.mkdtempSync(path.join(os.tmpdir(),'chisinau-author
 process.on('exit',()=>{try{fs.rmSync(architectureTempRoot,{recursive:true,force:true});}catch{}});
 const architectureBundle=path.join(architectureTempRoot,'export-native-architecture.mjs');
 const architectureFile=path.join(architectureTempRoot,'architecture.carch');
+const architectureOwnershipFile=path.join(architectureTempRoot,'surface-ownership.json');
 const architectureEntry=path.join(sourceRoot,'scripts/export-native-architecture.ts');
 const esbuild=path.join(sourceRoot,'node_modules/esbuild/bin/esbuild');
 if(!fs.existsSync(architectureEntry)||!fs.existsSync(esbuild))throw new Error('Missing authored architecture exporter or esbuild.');
@@ -467,10 +489,68 @@ if(!fs.existsSync(architectureEntry)||!fs.existsSync(esbuild))throw new Error('M
 // Mach-O/ELF binary through Node produces an "invalid token" error on current
 // esbuild releases, so execute it directly.
 execFileSync(esbuild,[architectureEntry,'--bundle','--platform=node','--format=esm',`--outfile=${architectureBundle}`,'--log-level=warning'],{stdio:'inherit'});
-const architectureOutput=execFileSync(process.execPath,[architectureBundle,architectureFile],{encoding:'utf8',maxBuffer:1024*1024}).trim();
+const architectureOutput=execFileSync(process.execPath,[architectureBundle,architectureFile,architectureOwnershipFile],{encoding:'utf8',maxBuffer:1024*1024}).trim();
 if(architectureOutput)console.log(architectureOutput);
 let architectureExport={};
 try{architectureExport=JSON.parse(architectureOutput.split('\n').at(-1)??'{}');}catch{}
+
+// Every reconstructed road, pavement, courtyard and planted patch owns its
+// exact footprint. Remove legacy Streets GL and curated fallback geometry only
+// inside these footprints, leaving the rest of the city intact. This prevents
+// coplanar surfaces and duplicate trees from alternating in the depth buffer.
+const authoredSurfaceCell=48,authoredSurfaces=[],authoredSurfaceGrid=new Map(),suppressedBaseGeometry={roads:0,railways:0,barriers:0,waterways:0,landcover:0,trees:0,streetFurniture:0,terrain:0};
+const antiBlinkChecks={bucurestiArmeneasca:{point:localPoint([776.123062,470.256627]),radius:95,suppressed:{}}};
+function recordSuppression(category,point){
+  suppressedBaseGeometry[category]=(suppressedBaseGeometry[category]??0)+1;
+  for(const check of Object.values(antiBlinkChecks))if(Math.hypot(point[0]-check.point[0],point[1]-check.point[1])<=check.radius)check.suppressed[category]=(check.suppressed[category]??0)+1;
+}
+function registerAuthoredSurface(rawRings,owner){
+  if(!Array.isArray(rawRings)||!Array.isArray(rawRings[0]))return;
+  const rings=rawRings.map(ring=>cleanRing(ring.map(localPoint))).filter(ring=>ring.length>=3);if(!rings.length)return;
+  const outer=rings[0],xs=outer.map(p=>p[0]),zs=outer.map(p=>p[1]),surface={owner,rings,minX:Math.min(...xs),minZ:Math.min(...zs),maxX:Math.max(...xs),maxZ:Math.max(...zs)},index=authoredSurfaces.push(surface)-1;
+  for(let x=Math.floor(surface.minX/authoredSurfaceCell);x<=Math.floor(surface.maxX/authoredSurfaceCell);x++)for(let z=Math.floor(surface.minZ/authoredSurfaceCell);z<=Math.floor(surface.maxZ/authoredSurfaceCell);z++){
+    const key=`${x}/${z}`,list=authoredSurfaceGrid.get(key)??[];list.push(index);authoredSurfaceGrid.set(key,list);
+  }
+}
+const ownershipExport=readJson(architectureOwnershipFile);
+for(const surface of ownershipExport.surfaces??[])registerAuthoredSurface(surface.rings,surface.owner??'authored');
+function surfaceCandidates(minX,minZ,maxX,maxZ){
+  const result=new Set();for(let x=Math.floor(minX/authoredSurfaceCell);x<=Math.floor(maxX/authoredSurfaceCell);x++)for(let z=Math.floor(minZ/authoredSurfaceCell);z<=Math.floor(maxZ/authoredSurfaceCell);z++)for(const index of authoredSurfaceGrid.get(`${x}/${z}`)??[])result.add(index);return result;
+}
+function pointInsideAuthoredSurface(point,surface){return pointInPolygon2(point,surface.rings[0])&&!surface.rings.slice(1).some(hole=>pointInPolygon2(point,hole));}
+function authoredSurfaceContains(point){
+  for(const index of authoredSurfaceGrid.get(`${Math.floor(point[0]/authoredSurfaceCell)}/${Math.floor(point[1]/authoredSurfaceCell)}`)??[]){const surface=authoredSurfaces[index];if(pointInsideAuthoredSurface(point,surface))return true;}return false;
+}
+function segmentOverlapsAuthoredSurface(a,b){
+  const minX=Math.min(a[0],b[0]),minZ=Math.min(a[1],b[1]),maxX=Math.max(a[0],b[0]),maxZ=Math.max(a[1],b[1]),mid=[(a[0]+b[0])*.5,(a[1]+b[1])*.5];
+  for(const index of surfaceCandidates(minX,minZ,maxX,maxZ)){
+    const surface=authoredSurfaces[index];if(maxX<surface.minX||minX>surface.maxX||maxZ<surface.minZ||minZ>surface.maxZ)continue;
+    if(pointInsideAuthoredSurface(a,surface)||pointInsideAuthoredSurface(b,surface)||pointInsideAuthoredSurface(mid,surface))return true;
+    const outer=surface.rings[0];for(let i=0;i<outer.length;i++)if(segmentsCross(a,b,outer[i],outer[(i+1)%outer.length]))return true;
+  }
+  return false;
+}
+function triangleOverlapsAuthoredSurface(points){
+  const xs=points.map(p=>p[0]),zs=points.map(p=>p[1]),minX=Math.min(...xs),minZ=Math.min(...zs),maxX=Math.max(...xs),maxZ=Math.max(...zs),center=[(points[0][0]+points[1][0]+points[2][0])/3,(points[0][1]+points[1][1]+points[2][1])/3];
+  for(const index of surfaceCandidates(minX,minZ,maxX,maxZ)){
+    const surface=authoredSurfaces[index];if(maxX<surface.minX||minX>surface.maxX||maxZ<surface.minZ||minZ>surface.maxZ)continue;
+    const outer=surface.rings[0];if(pointInsideAuthoredSurface(center,surface)||points.some(p=>pointInsideAuthoredSurface(p,surface))||outer.some(p=>pointInPolygon2(p,points))||polygonEdgesCross(points,outer))return true;
+  }
+  return false;
+}
+function emitFlatTriangleOutsideOwnership(bucket,a,b,c,y,color,category,depth=0){
+  const points=[a,b,c],center=[(a[0]+b[0]+c[0])/3,(a[1]+b[1]+c[1])/3];
+  if(!triangleOverlapsAuthoredSurface(points)){triangle(bucket.vertices,[a[0],y,a[1]],[b[0],y,b[1]],[c[0],y,c[1]],[0,1,0],color);return;}
+  const longest=Math.max(Math.hypot(a[0]-b[0],a[1]-b[1]),Math.hypot(b[0]-c[0],b[1]-c[1]),Math.hypot(c[0]-a[0],c[1]-a[1]));
+  if(depth<10&&longest>2.5){
+    const ab=Math.hypot(a[0]-b[0],a[1]-b[1]),bc=Math.hypot(b[0]-c[0],b[1]-c[1]),ca=Math.hypot(c[0]-a[0],c[1]-a[1]);
+    if(ab>=bc&&ab>=ca){const m=[(a[0]+b[0])*.5,(a[1]+b[1])*.5];emitFlatTriangleOutsideOwnership(bucket,a,m,c,y,color,category,depth+1);emitFlatTriangleOutsideOwnership(bucket,m,b,c,y,color,category,depth+1);}
+    else if(bc>=ca){const m=[(b[0]+c[0])*.5,(b[1]+c[1])*.5];emitFlatTriangleOutsideOwnership(bucket,a,b,m,y,color,category,depth+1);emitFlatTriangleOutsideOwnership(bucket,a,m,c,y,color,category,depth+1);}
+    else{const m=[(a[0]+c[0])*.5,(a[1]+c[1])*.5];emitFlatTriangleOutsideOwnership(bucket,a,b,m,y,color,category,depth+1);emitFlatTriangleOutsideOwnership(bucket,m,b,c,y,color,category,depth+1);}return;
+  }
+  if(authoredSurfaceContains(center)){recordSuppression(category,center);return;}
+  triangle(bucket.vertices,[a[0],y,a[1]],[b[0],y,b[1]],[c[0],y,c[1]],[0,1,0],color);
+}
 
 function architectureHeader(file){
   const descriptor=fs.openSync(file,'r'),header=Buffer.alloc(32);fs.readSync(descriptor,header,0,header.length,0);
@@ -489,9 +569,19 @@ function compileArchitectureTiles(file,header){
   // of waiting for a 50–125 MB Web-Mercator tile to upload in its entirety.
   const detailTileSize=192;
   const details=new Map(),descriptor=fs.openSync(file,'r'),triangleBytes=3*10*4,batchTriangles=8192,readBuffer=Buffer.allocUnsafe(triangleBytes*batchTriangles);
-  function bucket(x,y){const key=`${x}/${y}`;let value=details.get(key);if(!value){value={x,y,vertices:0,bytes:0,buffer:Buffer.allocUnsafe(1200000),file:path.join(architectureTempRoot,`${x}_${y}.raw`)};details.set(key,value);}return value;}
+  function bucket(x,y){const key=`${x}/${y}`;let value=details.get(key);if(!value){value={x,y,vertices:0,bytes:0,buffer:Buffer.allocUnsafe(1200000),file:path.join(architectureTempRoot,`${x}_${y}.raw`),surfaceTriangles:new Set()};details.set(key,value);}return value;}
   function flush(value){if(!value.bytes)return;fs.appendFileSync(value.file,value.buffer.subarray(0,value.bytes));value.bytes=0;}
-  let position=header.headerBytes,remaining=header.vertices,processed=0;
+  function surfaceTriangleHash(vertices){
+    // Identical coplanar surfaces can arrive with slightly different generated
+    // normals. Positions, colour and the material family define the visible
+    // primitive; normals must not keep a second depth-writing copy alive.
+    // Hash the exact Float32 values that the tile will store. Two source
+    // triangles can differ below Float32 precision and become identical only
+    // after serialization; comparing the Double intermediates misses them.
+    const signatures=vertices.map(v=>[Math.round(Math.fround(v[0])*1000),Math.round(Math.fround(v[1])*1000),Math.round(Math.fround(v[2])*1000),Math.round(Math.fround(v[6])*4096),Math.round(Math.fround(v[7])*4096),Math.round(Math.fround(v[8])*4096),Math.floor(v[9]/64)].join(',')).sort();
+    let a=2166136261,b=2246822519;for(const signature of signatures)for(let i=0;i<signature.length;i++){const code=signature.charCodeAt(i);a=Math.imul(a^code,16777619);b=Math.imul(b^code,3266489917);}return(a>>>0)*2097152+(b>>>11);
+  }
+  let position=header.headerBytes,remaining=header.vertices,processed=0,deduplicatedSurfaceTriangles=0,discardedDegenerateSurfaceTriangles=0;
   while(remaining){
     const vertices=Math.min(remaining,batchTriangles*3),bytes=vertices*40,read=fs.readSync(descriptor,readBuffer,0,bytes,position);if(read!==bytes)throw new Error('Truncated authored architecture file.');
     for(let at=0;at<bytes;at+=triangleBytes){
@@ -501,7 +591,10 @@ function compileArchitectureTiles(file,header){
         const p=localPoint([x,z]),tx=ROT_C*nx-ROT_S*nz,tz=ROT_S*nx+ROT_C*nz;centerX+=p[0]/3;centerZ+=p[1]/3;
         transformed.push([p[0],y,p[1],tx,ny,tz,readBuffer.readFloatLE(offset+24),readBuffer.readFloatLE(offset+28),readBuffer.readFloatLE(offset+32),readBuffer.readFloatLE(offset+36)]);
       }
-      const tileX=Math.floor(centerX/detailTileSize),tileY=Math.floor(centerZ/detailTileSize),target=bucket(tileX,tileY);if(target.bytes+triangleBytes>target.buffer.length)flush(target);
+      const ab=[transformed[1][0]-transformed[0][0],transformed[1][1]-transformed[0][1],transformed[1][2]-transformed[0][2]],ac=[transformed[2][0]-transformed[0][0],transformed[2][1]-transformed[0][1],transformed[2][2]-transformed[0][2]],face=[ab[1]*ac[2]-ab[2]*ac[1],ab[2]*ac[0]-ab[0]*ac[2],ab[0]*ac[1]-ab[1]*ac[0]],faceLength=Math.hypot(...face)||1;if(face[1]<0)for(let k=0;k<3;k++)face[k]*=-1;for(let k=0;k<3;k++)face[k]/=faceLength;
+      const tileX=Math.floor(centerX/detailTileSize),tileY=Math.floor(centerZ/detailTileSize),target=bucket(tileX,tileY),surfaceMaterial=transformed.every(values=>[3,4,5,7].includes(Math.floor(values[9]/64))),surface=surfaceMaterial&&face[1]>.8;
+      if(surfaceMaterial){if(surface)for(const values of transformed){values[3]=face[0];values[4]=face[1];values[5]=face[2];}const hash=surfaceTriangleHash(transformed);if(target.surfaceTriangles.has(hash)){deduplicatedSurfaceTriangles++;processed+=3;continue;}target.surfaceTriangles.add(hash);}
+      if(target.bytes+triangleBytes>target.buffer.length)flush(target);
       for(const values of transformed)for(const value of values){target.buffer.writeFloatLE(value,target.bytes);target.bytes+=4;}
       target.vertices+=3;processed+=3;
     }
@@ -513,7 +606,7 @@ function compileArchitectureTiles(file,header){
     flush(value);const center=[(value.x+.5)*detailTileSize,(value.y+.5)*detailTileSize],headerBuffer=Buffer.alloc(64);headerBuffer.writeUInt32LE(0x4c495443,0);headerBuffer.writeUInt32LE(1,4);headerBuffer.writeInt32LE(value.x,8);headerBuffer.writeInt32LE(value.y,12);headerBuffer.writeFloatLE(center[0],16);headerBuffer.writeFloatLE(center[1],20);headerBuffer.writeUInt32LE(value.vertices,24);
     const output=path.join(outputRoot,`detail_${value.x}_${value.y}.dtile`),out=fs.openSync(output,'w');fs.writeSync(out,headerBuffer);const input=fs.openSync(value.file,'r'),copy=Buffer.allocUnsafe(4*1024*1024);let offset=0;for(;;){const read=fs.readSync(input,copy,0,copy.length,offset);if(!read)break;fs.writeSync(out,copy,0,read);offset+=read;}fs.closeSync(input);fs.closeSync(out);totalBytes+=64+value.vertices*40;
   }
-  return{tiles:details.size,vertices:processed,bytes:totalBytes};
+  return{tiles:details.size,vertices:processed-(deduplicatedSurfaceTriangles+discardedDegenerateSurfaceTriangles)*3,sourceVertices:processed,deduplicatedSurfaceTriangles,discardedDegenerateSurfaceTriangles,bytes:totalBytes};
 }
 const architectureTiles=compileArchitectureTiles(architectureFile,authoredArchitecture);
 
@@ -545,33 +638,33 @@ for (const file of pbfFiles) {
         if (geometry[0]) addExtrusion(bucket, geometry[0], height, wall, shade(wall,.62));
       } else if (layerName === 'highways' && feature.type === 2) {
         if(properties.type==='railway'){
-          for(const line of geometry)addRailway(bucket,line,properties.gauge);restoredVectorFeatures.railways++;
+          for(const line of geometry)addRailway(bucket,line,properties.gauge,'railways');restoredVectorFeatures.railways++;
         }else{
           const width = roadWidth(properties);
           const walkway = ['pedestrian','footway','path','cycleway','steps'].includes(properties.pathType);
           const surface = walkway ? [.42,.40,.36,materialCode(4,1,0)] : [.19,.205,.215,materialCode(3,1,0)];
-          for (const line of geometry) addRoad(bucket, line, width, surface);
+          for (const line of geometry) addRoad(bucket, line, width, surface,'roads');
         }
       } else if(layerName==='highways'&&feature.type===3){
         const walkway=['pedestrian','footway','path','cycleway','steps'].includes(properties.pathType),surface=walkway?[.42,.40,.36,materialCode(4,1,0)]:[.19,.205,.215,materialCode(3,1,0)];
-        for(const ring of geometry.slice(0,1))addFlatPolygon(bucket,ring,-.01,surface);restoredVectorFeatures.highwayAreas++;
+        for(const ring of geometry.slice(0,1))addFlatPolygon(bucket,ring,-.01,surface,'roads');restoredVectorFeatures.highwayAreas++;
       } else if(layerName==='barriers'&&feature.type===2){
         const wall=properties.type==='wall',height=number(properties.height,wall?3:properties.fenceType==='wood'?2:properties.fenceType==='chain_link'||properties.fenceType==='wire'?3:1.5),color=wall?[.45,.45,.41,materialCode(0,1,0)]:[.30,.34,.32,materialCode(6,.7,.45)];
-        for(const line of geometry)addVerticalRibbon(bucket,line,0,height,color);restoredVectorFeatures.barriers++;
+        for(const line of geometry)addVerticalRibbon(bucket,line,0,height,color,'barriers');restoredVectorFeatures.barriers++;
       } else if (layerName === 'water' && feature.type === 3) {
-        for (const ring of geometry) addFlatPolygon(bucket, ring, .045, [.12,.34,.48,materialCode(7,.3,.14)]);
+        for (const ring of geometry) addFlatPolygon(bucket, ring, .045, [.12,.34,.48,materialCode(7,.3,.14)],'waterways');
       } else if(layerName==='water'&&feature.type===2){
-        const widths={river:10,stream:2,canal:8,drain:1,ditch:1},width=number(properties.width,widths[properties.waterwayType]??0);if(width>0){for(const line of geometry)addRoad(bucket,line,width,[.12,.34,.48,materialCode(7,.3,.14)]);restoredVectorFeatures.waterways++;}
+        const widths={river:10,stream:2,canal:8,drain:1,ditch:1},width=number(properties.width,widths[properties.waterwayType]??0);if(width>0){for(const line of geometry)addRoad(bucket,line,width,[.12,.34,.48,materialCode(7,.3,.14)],'waterways');restoredVectorFeatures.waterways++;}
       } else if ((layerName === 'common' || layerName === 'natural') && feature.type === 3) {
         const type = properties.type;
         const c = type === 'parking' ? [.25,.255,.25,materialCode(3,1,0)] : ['bridge','pier'].includes(type) ? [.43,.42,.39,materialCode(4,1,0)] : ['construction','brownfield'].includes(type) ? [.40,.32,.23,materialCode(0,1,0)] : type === 'sand' ? [.62,.54,.36,materialCode(0,1,0)] : type === 'pitch'||type === 'playground' ? [.20,.39,.20,materialCode(5,1,0)] : [.18,.33,.18,materialCode(5,1,0)];
-        for (const ring of geometry.slice(0,1)) addFlatPolygon(bucket, ring, .035, c);
+        for (const ring of geometry.slice(0,1)) addFlatPolygon(bucket, ring, .035, c,'landcover');
       } else if(layerName==='natural'&&feature.type===2&&properties.type==='treeRow'){
-        for(const line of geometry)for(let j=1;j<line.length;j++){const a=line[j-1],b=line[j],length=Math.hypot(b[0]-a[0],b[1]-a[1]),count=Math.max(1,Math.floor(length/10));for(let k=0;k<count;k++){const t=(k+.5)/count;addTree(bucket,a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,Number(properties.osmId??i)+j*31+k);}}
+        for(const line of geometry)for(let j=1;j<line.length;j++){const a=line[j-1],b=line[j],length=Math.hypot(b[0]-a[0],b[1]-a[1]),count=Math.max(1,Math.floor(length/10));for(let k=0;k<count;k++){const t=(k+.5)/count;addTree(bucket,a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,Number(properties.osmId??i)+j*31+k,'trees');}}
         restoredVectorFeatures.treeRows++;
       } else if (layerName === 'point' && feature.type === 1) {
-        if (properties.type === 'tree') for (const group of geometry) for (const point of group) addTree(bucket, point[0], point[1], Number(properties.osmId ?? i));
-        else if(['bench','picnicTable','memorial','statue','sculpture'].includes(properties.type)){for(const group of geometry)for(const point of group)addMappedObject(bucket,properties.type,point[0],point[1],Number(properties.osmId??i),properties);restoredVectorFeatures.streetFurniture++;}
+        if (properties.type === 'tree') for (const group of geometry) for (const point of group) addTree(bucket, point[0], point[1], Number(properties.osmId ?? i),'trees');
+        else if(['bench','picnicTable','memorial','statue','sculpture'].includes(properties.type)){for(const group of geometry)for(const point of group){if(authoredSurfaceContains(point)){recordSuppression('streetFurniture',point);continue;}addMappedObject(bucket,properties.type,point[0],point[1],Number(properties.osmId??i),properties);}restoredVectorFeatures.streetFurniture++;}
       }
     }
   }
@@ -598,25 +691,25 @@ for (const feature of customFeatures.values()) {
   } else if (tags.highway) {
     const width=number(tags.width,roadWidth({pathType:tags.highway,lanes:tags.lanes}));
     const walkway=['pedestrian','footway','path','cycleway','steps'].includes(tags.highway);
-    addRoad(bucket,points,width,walkway?[.46,.43,.38,materialCode(4,1,0)]:[.18,.195,.205,materialCode(3,1,0)]);
+    addRoad(bucket,points,width,walkway?[.46,.43,.38,materialCode(4,1,0)]:[.18,.195,.205,materialCode(3,1,0)],'roads');
   } else if (tags.barrier==='fence'||tags.barrier==='wall') {
     const wall=tags.barrier==='wall',height=number(tags.height,wall?3:tags.fence_type==='wood'?2:tags.fence_type==='chain_link'||tags.fence_type==='wire'?3:1.5);
-    addVerticalRibbon(bucket,points,number(tags.min_height,0),height,wall?[.45,.45,.41,materialCode(0,1,0)]:[.30,.34,.32,materialCode(6,.7,.45)]);restoredVectorFeatures.barriers++;
+    addVerticalRibbon(bucket,points,number(tags.min_height,0),height,wall?[.45,.45,.41,materialCode(0,1,0)]:[.30,.34,.32,materialCode(6,.7,.45)],'barriers');restoredVectorFeatures.barriers++;
   } else if(tags.waterway){
-    const widths={river:10,stream:2,canal:8,drain:1,ditch:1},width=number(tags.width,widths[tags.waterway]??0);if(width>0){addRoad(bucket,points,width,[.12,.34,.48,materialCode(7,.3,.14)]);restoredVectorFeatures.waterways++;}
+    const widths={river:10,stream:2,canal:8,drain:1,ditch:1},width=number(tags.width,widths[tags.waterway]??0);if(width>0){addRoad(bucket,points,width,[.12,.34,.48,materialCode(7,.3,.14)],'waterways');restoredVectorFeatures.waterways++;}
   } else if(tags.natural==='tree_row'){
-    for(let j=1;j<points.length;j++){const a=points[j-1],b=points[j],length=Math.hypot(b[0]-a[0],b[1]-a[1]),count=Math.max(1,Math.floor(length/10));for(let k=0;k<count;k++){const t=(k+.5)/count;addTree(bucket,a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,j*37+k);}}
+    for(let j=1;j<points.length;j++){const a=points[j-1],b=points[j],length=Math.hypot(b[0]-a[0],b[1]-a[1]),count=Math.max(1,Math.floor(length/10));for(let k=0;k<count;k++){const t=(k+.5)/count;addTree(bucket,a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,j*37+k,'trees');}}
     restoredVectorFeatures.treeRows++;
   } else if(tags.amenity==='parking'){
-    addFlatPolygon(bucket,points,.025,[.25,.255,.25,materialCode(3,1,0)]);
+    addFlatPolygon(bucket,points,.025,[.25,.255,.25,materialCode(3,1,0)],'landcover');
   } else if(tags.natural==='water'||tags.landuse==='basin'||tags.amenity==='fountain'||tags.leisure==='swimming_pool'){
-    addFlatPolygon(bucket,points,.045,[.12,.34,.48,materialCode(7,.3,.14)]);
+    addFlatPolygon(bucket,points,.045,[.12,.34,.48,materialCode(7,.3,.14)],'waterways');
   } else if(['pitch','playground','sports_centre','stadium'].includes(tags.leisure)){
-    addFlatPolygon(bucket,points,.035,[.20,.39,.20,materialCode(5,1,0)]);
+    addFlatPolygon(bucket,points,.035,[.20,.39,.20,materialCode(5,1,0)],'landcover');
   } else if(['construction','brownfield'].includes(tags.landuse)){
-    addFlatPolygon(bucket,points,.025,[.40,.32,.23,materialCode(0,1,0)]);
+    addFlatPolygon(bucket,points,.025,[.40,.32,.23,materialCode(0,1,0)],'landcover');
   } else if (['park','garden'].includes(tags.leisure) || ['grass','forest','meadow'].includes(tags.landuse) || tags.natural==='wood') {
-    addFlatPolygon(bucket,points,.05,[.17,.36,.18,materialCode(5,1,0)]);
+    addFlatPolygon(bucket,points,.05,[.17,.36,.18,materialCode(5,1,0)],'landcover');
   }
 }
 
@@ -633,7 +726,7 @@ for (const item of customBuildings.values()) {
 for (const bucket of tileData.values()) {
   const extent=65536;
   const corners=[[0,0],[extent,0],[extent,extent],[0,extent]].map(([x,y])=>projectedPoint(bucket.x,bucket.y,extent,{x,y}));
-  addFlatPolygon(bucket,corners,-.035,[.145,.225,.145,materialCode(5,1,0)]);
+  addFlatPolygon(bucket,corners,-.18,[.145,.225,.145,materialCode(5,1,0)],'terrain');
 }
 
 let totalVertices=0,totalCollisions=0,totalBytes=0;
@@ -655,6 +748,7 @@ const attribution = {
   format:'Chișinău Native Tile 1', zoom:ZOOM, origin:[ORIGIN_LAT,ORIGIN_LON],
   tiles:tileData.size, vertices:totalVertices, collisions:totalCollisions, landmarkModels:landmarkCount, operaModelVertices, bytes:totalBytes,
   authoredArchitecture:{...architectureTiles,layers:authoredArchitecture.layers,meshes:authoredArchitecture.meshes,solidShellVertices:number(architectureExport.solidShellVertices,0),replacementIds:authoredArchitecture.replacementCount,restoredFamilies:architectureExport.restoredFamilies??[],spatiallySuppressedBuildings,collisionOnlyBuildings:collisionOnlyAuthoredBuildings},
+  surfaceOwnership:{masks:authoredSurfaces.length,suppressedBaseGeometry,checks:{bucurestiArmeneasca:{owned:authoredSurfaceContains(antiBlinkChecks.bucurestiArmeneasca.point),radius:antiBlinkChecks.bucurestiArmeneasca.radius,suppressed:antiBlinkChecks.bucurestiArmeneasca.suppressed}}},
   restoredVectorFeatures,
   sources:['© OpenStreetMap contributors · ODbL 1.0','Chișinău · Centru 3D project datasets','Street View/photo-authored architecture modules','map.md placement catalog'],
   generated:new Date().toISOString(),

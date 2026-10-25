@@ -66,7 +66,7 @@ BIN="chisinau-native/build/Chișinău 3D Native/Chișinău 3D.app/Contents/MacOS
 "$BIN" --test-spawn
 ```
 
-Pe sistemul de verificare Apple M1 Pro, traseele fără fog Centru, Columna, Șciusev și București și testul mașinii sunt verificate la aproximativ 60 FPS. Vezi [noutățile versiunii 2.11.0](docs/RELEASE-v2.11.0.md) și [auditul lumii](docs/WORLD-AUDIT.json).
+Pe sistemul de verificare Apple M1 Pro, traseele fără fog Centru, Columna, Șciusev și București și testul mașinii sunt verificate la aproximativ 60 FPS. Vezi [noutățile versiunii 2.12.0](docs/RELEASE-v2.12.0.md) și [auditul lumii](docs/WORLD-AUDIT.json).
 
 ## Date și licențe
 

@@ -91,7 +91,8 @@ declare global {
 }
 
 const output=process.argv[2];
-if(!output)throw new Error('Usage: export-native-architecture <output.carch>');
+const ownershipOutput=process.argv[3];
+if(!output)throw new Error('Usage: export-native-architecture <output.carch> [ownership.json]');
 globalThis.__CHISINAU_NATIVE_STREET_MESHES__=[];
 const scene=new T.Scene(),ground=()=>0,loaded=()=>true,ready=()=>true;
 
@@ -187,6 +188,17 @@ scene.updateMatrixWorld(true);
 // put two buildings in the same place. Export only the authoritative layers.
 const activeLayers=layers.filter(layer=>!layer.objects.some(root=>/reprezentare\s+v\d+/i.test(root.name)));
 const excludedLayers=layers.filter(layer=>!activeLayers.includes(layer));
+type GroundRings=number[][][];
+const ownershipSurfaces:{owner:string;rings:GroundRings}[]=[];
+for(const layer of activeLayers)for(const root of layer.objects){
+  const surfaces=root.userData.groundRings as GroundRings[]|undefined;
+  if(!Array.isArray(surfaces))continue;
+  for(const rings of surfaces){
+    if(!Array.isArray(rings)||!Array.isArray(rings[0])||rings[0].length<3)continue;
+    ownershipSurfaces.push({owner:root.name,rings});
+  }
+}
+if(ownershipOutput)fs.writeFileSync(ownershipOutput,JSON.stringify({format:'Chișinău authored surface ownership 1',surfaces:ownershipSurfaces}));
 const meshes:T.Mesh[]=[];
 for(const layer of activeLayers)for(const root of layer.objects)root.traverse(object=>{
   if(object instanceof T.Mesh&&object.geometry?.getAttribute('position'))meshes.push(object);
@@ -258,4 +270,4 @@ for(const mesh of meshes){
 }
 fs.closeSync(descriptor);
 if(written!==vertexCount)throw new Error(`Architecture vertex count mismatch: ${written} != ${vertexCount}`);
-console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),restoredFamilies:['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete'],meshes:meshes.length,vertices:vertexCount,solidShellVertices,replacementIds:replacementIds.length,bytes:fs.statSync(output).size,largestLayers:layerVertices.slice(0,24)}));
+console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),restoredFamilies:['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete'],meshes:meshes.length,vertices:vertexCount,solidShellVertices,replacementIds:replacementIds.length,ownershipSurfaces:ownershipSurfaces.length,bytes:fs.statSync(output).size,largestLayers:layerVertices.slice(0,24)}));

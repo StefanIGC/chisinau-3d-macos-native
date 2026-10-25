@@ -17,6 +17,7 @@ function authoredPoint(nativeX,nativeZ){
   const dx=c*nativeX+s*nativeZ,dz=-s*nativeX+c*nativeZ;
   return[dx+24,dz-15];
 }
+function nativePoint(authoredX,authoredZ){const dx=authoredX-24,dz=authoredZ+15;return[c*dx-s*dz,s*dx+c*dz];}
 function json(name){return JSON.parse(fs.readFileSync(path.join(dataRoot,name),'utf8'));}
 function familyInventory(prefix){
   const buildingFiles=fs.readdirSync(dataRoot).filter(name=>name.startsWith(prefix)&&name.endsWith('-buildings.json')).sort();
@@ -30,13 +31,18 @@ const corridors={
   columna_ismail_tighina:{bounds:[1192,-447,1439,-240]},
 };
 for(const value of Object.values(corridors))Object.assign(value,{asphalt_triangles:0,min_y_m:Infinity,max_y_m:-Infinity,detail_tiles:new Set()});
+const armeneasca=nativePoint(776.123062,470.256627),armeneascaRadius=95,armeneascaSurfaceTriangles=new Set();let armeneascaDuplicateSurfaceTriangles=0,armeneascaDegenerateDuplicateSurfaceTriangles=0;
 
 for(const name of fs.readdirSync(worldRoot).filter(name=>name.endsWith('.dtile')).sort()){
   const buffer=fs.readFileSync(path.join(worldRoot,name));
   if(buffer.readUInt32LE(0)!==0x4c495443||buffer.readUInt32LE(4)!==1)throw new Error(`Invalid tile ${name}`);
-  const vertices=buffer.readUInt32LE(24),end=64+vertices*40;
+  const vertices=buffer.readUInt32LE(24),end=64+vertices*40,tileNearArmeneasca=Math.hypot(buffer.readFloatLE(16)-armeneasca[0],buffer.readFloatLE(20)-armeneasca[1])<360;
   for(let offset=64;offset+120<=end;offset+=120){
     const material=Math.floor(buffer.readFloatLE(offset+36)/64);
+    if(tileNearArmeneasca&&[3,4,5,7].includes(material)){
+      let cx=0,cz=0,cy=0;const signatures=[],points=[];for(let i=0;i<3;i++){const at=offset+i*40,x=buffer.readFloatLE(at),y=buffer.readFloatLE(at+4),z=buffer.readFloatLE(at+8);cx+=x/3;cy+=y/3;cz+=z/3;points.push([x,y,z]);signatures.push([Math.round(x*1000),Math.round(y*1000),Math.round(z*1000),material,Math.round(buffer.readFloatLE(at+24)*4096),Math.round(buffer.readFloatLE(at+28)*4096),Math.round(buffer.readFloatLE(at+32)*4096)].join(','));}
+      if(cy<1&&Math.hypot(cx-armeneasca[0],cz-armeneasca[1])<armeneascaRadius){const key=signatures.sort().join('|');if(armeneascaSurfaceTriangles.has(key)){const a=points[0],b=points[1],d=points[2],ab=[b[0]-a[0],b[1]-a[1],b[2]-a[2]],ad=[d[0]-a[0],d[1]-a[1],d[2]-a[2]],area=.5*Math.hypot(ab[1]*ad[2]-ab[2]*ad[1],ab[2]*ad[0]-ab[0]*ad[2],ab[0]*ad[1]-ab[1]*ad[0]);if(area>=.001)armeneascaDuplicateSurfaceTriangles++;else armeneascaDegenerateDuplicateSurfaceTriangles++;}else armeneascaSurfaceTriangles.add(key);}
+    }
     if(material!==3)continue;
     let x=0,y=0,z=0;
     for(let i=0;i<3;i++){x+=buffer.readFloatLE(offset+i*40)/3;y+=buffer.readFloatLE(offset+i*40+4)/3;z+=buffer.readFloatLE(offset+i*40+8)/3;}
@@ -60,6 +66,7 @@ for(const value of Object.values(corridors)){
 const inventories={sciusev:familyInventory('sciusev-'),bucuresti:familyInventory('bucuresti-bu'),columna:familyInventory('columna-')};
 const expectedRestoredFamilies=['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete'];
 const restoredVectorFeatures=manifest.restoredVectorFeatures??{};
+const surfaceOwnership=manifest.surfaceOwnership??{},suppressedBaseGeometry=surfaceOwnership.suppressedBaseGeometry??{};
 const passed=inventories.sciusev.modules===16&&inventories.bucuresti.modules===11&&inventories.columna.modules===1&&
   inventories.sciusev.building_footprints===432&&inventories.bucuresti.building_footprints===357&&inventories.columna.building_footprints===66&&
   Object.values(corridors).every(value=>value.asphalt_triangles>0&&value.detail_tiles>0&&value.min_y_m>-.012)&&
@@ -67,12 +74,16 @@ const passed=inventories.sciusev.modules===16&&inventories.bucuresti.modules===1
   expectedRestoredFamilies.every(name=>manifest.authoredArchitecture?.restoredFamilies?.includes(name))&&
   manifest.operaModelVertices>0&&manifest.landmarkModels===25&&
   ['barriers','waterways','treeRows','highwayAreas','railways','streetFurniture'].every(name=>restoredVectorFeatures[name]>0)&&
+  surfaceOwnership.masks>0&&surfaceOwnership.checks?.bucurestiArmeneasca?.owned===true&&
+  surfaceOwnership.checks?.bucurestiArmeneasca?.suppressed?.landcover>0&&armeneascaDuplicateSurfaceTriangles===0&&
+  ['roads','landcover','trees','terrain'].every(name=>suppressedBaseGeometry[name]>0)&&
   manifest.authoredArchitecture?.spatiallySuppressedBuildings>0&&manifest.authoredArchitecture?.collisionOnlyBuildings>0;
 const report={
-  version:'2.11.0',
-  compiled_world:{base_tiles:manifest.tiles,detail_tiles:manifest.authoredArchitecture.tiles,base_vertices:manifest.vertices,authored_vertices:manifest.authoredArchitecture.vertices,solid_shell_vertices:manifest.authoredArchitecture.solidShellVertices,authored_layers:manifest.authoredArchitecture.layers,authored_meshes:manifest.authoredArchitecture.meshes,landmark_models:manifest.landmarkModels,opera_model_vertices:manifest.operaModelVertices,restored_authored_families:manifest.authoredArchitecture.restoredFamilies,restored_vector_features:restoredVectorFeatures,collision_segments:manifest.collisions,spatially_suppressed_osm_buildings:manifest.authoredArchitecture.spatiallySuppressedBuildings,collision_only_authored_buildings:manifest.authoredArchitecture.collisionOnlyBuildings},
+  version:'2.12.0',
+  compiled_world:{base_tiles:manifest.tiles,detail_tiles:manifest.authoredArchitecture.tiles,base_vertices:manifest.vertices,authored_vertices:manifest.authoredArchitecture.vertices,solid_shell_vertices:manifest.authoredArchitecture.solidShellVertices,authored_layers:manifest.authoredArchitecture.layers,authored_meshes:manifest.authoredArchitecture.meshes,landmark_models:manifest.landmarkModels,opera_model_vertices:manifest.operaModelVertices,restored_authored_families:manifest.authoredArchitecture.restoredFamilies,restored_vector_features:restoredVectorFeatures,collision_segments:manifest.collisions,spatially_suppressed_osm_buildings:manifest.authoredArchitecture.spatiallySuppressedBuildings,collision_only_authored_buildings:manifest.authoredArchitecture.collisionOnlyBuildings,surface_ownership_masks:surfaceOwnership.masks,suppressed_legacy_geometry:suppressedBaseGeometry,bucuresti_armeneasca_check:surfaceOwnership.checks?.bucurestiArmeneasca},
   authored_sector_inventory:inventories,
   authoritative_surface_scan:corridors,
+  anti_blink_scan:{bucuresti_armeneasca_radius_m:armeneascaRadius,unique_authored_surface_triangles:armeneascaSurfaceTriangles.size,duplicate_visible_surface_triangles:armeneascaDuplicateSurfaceTriangles,degenerate_duplicate_triangles_below_0_001_m2:armeneascaDegenerateDuplicateSurfaceTriangles},
   base_fallback_road_y_m:-.012,
   minimum_verified_authored_road_separation_m:Number((Math.min(...Object.values(corridors).map(value=>value.min_y_m))+.012).toFixed(4)),
   map:{offline:true,quick_destinations:10,total_named_destinations:49,worked_street_destinations:38},
