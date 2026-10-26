@@ -1,0 +1,4204 @@
+{
+  "version": "5",
+  "world": "world",
+  "minimum_overlap_area_m2": 0.01,
+  "color_tolerance": 0.02,
+  "detail_tiles_scanned": 222,
+  "triangles_scanned": 12337709,
+  "non_degenerate_triangles": 9647834,
+  "candidate_pairs": 236144295,
+  "max_candidates_per_triangle": 4656,
+  "coplanar_overlap_pairs": 426900,
+  "coplanar_overlap_area_m2": 1653645.198092,
+  "visual_conflict_pairs": 147752,
+  "visual_conflict_area_m2": 1518262.927034,
+  "same_facing_conflict_pairs": 28088,
+  "same_facing_conflict_area_m2": 23856.794001,
+  "opposite_facing_conflict_pairs": 119664,
+  "opposite_facing_conflict_area_m2": 1494406.133032,
+  "resolved_by_browser_side_policy_pairs": 119664,
+  "resolved_by_layer_depth_pairs": 28064,
+  "resolved_by_color_depth_pairs": 24,
+  "unresolved_blink_risk_pairs": 0,
+  "unresolved_blink_risk_area_m2": 0,
+  "affected_tiles": 214,
+  "unresolved_tiles": 0,
+  "material_pairs": {
+    "solid/solid": 114369,
+    "grass/solid": 1909,
+    "grass/pavement": 720,
+    "grass/grass": 4931,
+    "pavement/solid": 13972,
+    "glass/solid": 3907,
+    "pavement/road": 2714,
+    "road/road": 444,
+    "pavement/pavement": 256,
+    "road/solid": 1506,
+    "grass/road": 3018,
+    "glass/glass": 6
+  },
+  "samples": [
+    {
+      "tile": "detail_-7_-11.dtile",
+      "authored_x": -2204.376,
+      "authored_z": -536.382,
+      "height_m": 3.32,
+      "area_m2": 4521.860079,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98322,
+        98669
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-7_-11.dtile",
+      "authored_x": -2179.965,
+      "authored_z": -584.268,
+      "height_m": 3.32,
+      "area_m2": 3786.732658,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98586,
+        99129
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-7_-11.dtile",
+      "authored_x": -2235.037,
+      "authored_z": -571.533,
+      "height_m": 3.32,
+      "area_m2": 3359.782996,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98611,
+        98828
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-1_-2.dtile",
+      "authored_x": -338.226,
+      "authored_z": -122.234,
+      "height_m": 12.12,
+      "area_m2": 3299.441992,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98722,
+        98364
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-4_-8.dtile",
+      "authored_x": -1523.239,
+      "authored_z": -565.267,
+      "height_m": 3.32,
+      "area_m2": 2556.42444,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        99254,
+        98754
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-7_-10.dtile",
+      "authored_x": -2146.481,
+      "authored_z": -517.422,
+      "height_m": 3.32,
+      "area_m2": 2224.108124,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98803,
+        99112
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-3_-7.dtile",
+      "authored_x": -1215.77,
+      "authored_z": -496.37,
+      "height_m": 3.32,
+      "area_m2": 2221.393154,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        99049,
+        98741
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_9_5.dtile",
+      "authored_x": 2036.129,
+      "authored_z": -472.096,
+      "height_m": 3.32,
+      "area_m2": 2011.938649,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98439,
+        98629
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-1_1.dtile",
+      "authored_x": 103.127,
+      "authored_z": 219.033,
+      "height_m": 18.02,
+      "area_m2": 1984.119427,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        17858,
+        18007
+      ],
+      "colors": [
+        [
+          0.5776,
+          0.5776,
+          0.4793
+        ],
+        [
+          0.2122,
+          0.2502,
+          0.2051
+        ]
+      ],
+      "color_distance": 0.562
+    },
+    {
+      "tile": "detail_-1_1.dtile",
+      "authored_x": 128.997,
+      "authored_z": 235.46,
+      "height_m": 18.02,
+      "area_m2": 1917.797464,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        18392,
+        18378
+      ],
+      "colors": [
+        [
+          0.5776,
+          0.5776,
+          0.4793
+        ],
+        [
+          0.2122,
+          0.2502,
+          0.2051
+        ]
+      ],
+      "color_distance": 0.562
+    },
+    {
+      "tile": "detail_-8_-9.dtile",
+      "authored_x": -2237.216,
+      "authored_z": -134.417,
+      "height_m": 3.37,
+      "area_m2": 1910.834901,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        92913,
+        92229
+      ],
+      "colors": [
+        [
+          0.4735,
+          0.4397,
+          0.3515
+        ],
+        [
+          0.2051,
+          0.2159,
+          0.1746
+        ]
+      ],
+      "color_distance": 0.3917
+    },
+    {
+      "tile": "detail_-5_-8.dtile",
+      "authored_x": -1546.534,
+      "authored_z": -499.483,
+      "height_m": 3.32,
+      "area_m2": 1644.204865,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98391,
+        98518
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-7_-8.dtile",
+      "authored_x": -1789.364,
+      "authored_z": -141.001,
+      "height_m": 12.92,
+      "area_m2": 1641.14221,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        99142,
+        98880
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-4_-2.dtile",
+      "authored_x": -672.349,
+      "authored_z": 143.396,
+      "height_m": 3.32,
+      "area_m2": 1531.703885,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98607,
+        99273
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-5_-9.dtile",
+      "authored_x": -1728.571,
+      "authored_z": -472.813,
+      "height_m": 3.32,
+      "area_m2": 1492.072362,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        99132,
+        98602
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-5_-9.dtile",
+      "authored_x": -1703.997,
+      "authored_z": -486.136,
+      "height_m": 3.32,
+      "area_m2": 1492.019842,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98384,
+        98718
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-1_1.dtile",
+      "authored_x": 251.347,
+      "authored_z": 256.823,
+      "height_m": 18.52,
+      "area_m2": 1465.446814,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        177404,
+        178096
+      ],
+      "colors": [
+        [
+          0.402,
+          0.4342,
+          0.3613
+        ],
+        [
+          0.1651,
+          0.2159,
+          0.159
+        ]
+      ],
+      "color_distance": 0.3804
+    },
+    {
+      "tile": "detail_-4_-8.dtile",
+      "authored_x": -1563.278,
+      "authored_z": -551.117,
+      "height_m": 3.32,
+      "area_m2": 1443.713319,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        99231,
+        99064
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-3_-4.dtile",
+      "authored_x": -778.637,
+      "authored_z": -95.603,
+      "height_m": 13.84,
+      "area_m2": 1415.497305,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        188592,
+        189072
+      ],
+      "colors": [
+        [
+          0.4793,
+          0.4179,
+          0.2961
+        ],
+        [
+          0.162,
+          0.1981,
+          0.162
+        ]
+      ],
+      "color_distance": 0.4086
+    },
+    {
+      "tile": "detail_-9_-9.dtile",
+      "authored_x": -2254.421,
+      "authored_z": -50.126,
+      "height_m": 3.32,
+      "area_m2": 1388.240005,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98695,
+        99155
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-9_-9.dtile",
+      "authored_x": -2244.166,
+      "authored_z": -95.137,
+      "height_m": 3.37,
+      "area_m2": 1368.657077,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        92407,
+        92757
+      ],
+      "colors": [
+        [
+          0.4735,
+          0.4397,
+          0.3515
+        ],
+        [
+          0.2051,
+          0.2159,
+          0.1746
+        ]
+      ],
+      "color_distance": 0.3917
+    },
+    {
+      "tile": "detail_-4_-7.dtile",
+      "authored_x": -1369.372,
+      "authored_z": -350.356,
+      "height_m": 3.32,
+      "area_m2": 1346.883273,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98798,
+        99275
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-1_1.dtile",
+      "authored_x": 257.773,
+      "authored_z": 221.993,
+      "height_m": 18.52,
+      "area_m2": 1321.058833,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        177162,
+        177479
+      ],
+      "colors": [
+        [
+          0.402,
+          0.4342,
+          0.3613
+        ],
+        [
+          0.1651,
+          0.2159,
+          0.159
+        ]
+      ],
+      "color_distance": 0.3804
+    },
+    {
+      "tile": "detail_-7_-11.dtile",
+      "authored_x": -2256.595,
+      "authored_z": -528.907,
+      "height_m": 3.32,
+      "area_m2": 1288.392472,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98692,
+        99023
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-7_-7.dtile",
+      "authored_x": -1761.06,
+      "authored_z": 89,
+      "height_m": 13.54,
+      "area_m2": 1245.382342,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        186794,
+        187369
+      ],
+      "colors": [
+        [
+          0.3613,
+          0.4397,
+          0.4564
+        ],
+        [
+          0.1845,
+          0.227,
+          0.1946
+        ]
+      ],
+      "color_distance": 0.3808
+    },
+    {
+      "tile": "detail_-4_-5.dtile",
+      "authored_x": -1002.447,
+      "authored_z": -193.043,
+      "height_m": 3.32,
+      "area_m2": 1233.517745,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98704,
+        99117
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_1_-1.dtile",
+      "authored_x": 214.833,
+      "authored_z": -293.02,
+      "height_m": 15,
+      "area_m2": 1213.416627,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        3684,
+        3515
+      ],
+      "colors": [
+        [
+          0.5457,
+          0.5457,
+          0.4452
+        ],
+        [
+          0.1746,
+          0.2051,
+          0.1845
+        ]
+      ],
+      "color_distance": 0.5672
+    },
+    {
+      "tile": "detail_-7_-7.dtile",
+      "authored_x": -1696.247,
+      "authored_z": -99.187,
+      "height_m": 6.64,
+      "area_m2": 1192.222293,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        194970,
+        195051
+      ],
+      "colors": [
+        [
+          0.4342,
+          0.4179,
+          0.3095
+        ],
+        [
+          0.1746,
+          0.2051,
+          0.162
+        ]
+      ],
+      "color_distance": 0.3666
+    },
+    {
+      "tile": "detail_2_3.dtile",
+      "authored_x": 905.281,
+      "authored_z": 99.663,
+      "height_m": 3.32,
+      "area_m2": 1168.574647,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98640,
+        98394
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-4_-8.dtile",
+      "authored_x": -1483.188,
+      "authored_z": -550.896,
+      "height_m": 3.32,
+      "area_m2": 1140.584514,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98358,
+        98324
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_0_1.dtile",
+      "authored_x": 285.893,
+      "authored_z": 195.3,
+      "height_m": 18.52,
+      "area_m2": 1134.982606,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        177412,
+        178121
+      ],
+      "colors": [
+        [
+          0.402,
+          0.4342,
+          0.3613
+        ],
+        [
+          0.1651,
+          0.2159,
+          0.159
+        ]
+      ],
+      "color_distance": 0.3804
+    },
+    {
+      "tile": "detail_5_2.dtile",
+      "authored_x": 1088.033,
+      "authored_z": -365.171,
+      "height_m": 3.32,
+      "area_m2": 1122.313687,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98667,
+        98753
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-4_-8.dtile",
+      "authored_x": -1545.53,
+      "authored_z": -585.852,
+      "height_m": 3.32,
+      "area_m2": 1121.691407,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98673,
+        99190
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-4_-8.dtile",
+      "authored_x": -1505.716,
+      "authored_z": -592.01,
+      "height_m": 3.32,
+      "area_m2": 1121.687233,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98977,
+        98875
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-3_-2.dtile",
+      "authored_x": -532.648,
+      "authored_z": 225.903,
+      "height_m": 3.32,
+      "area_m2": 1120.812119,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        99284,
+        99144
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-4_-2.dtile",
+      "authored_x": -550.454,
+      "authored_z": 239.975,
+      "height_m": 3.32,
+      "area_m2": 1119.852008,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98329,
+        99137
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_2_3.dtile",
+      "authored_x": 882.642,
+      "authored_z": 83.43,
+      "height_m": 3.32,
+      "area_m2": 1104.928334,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        99239,
+        98333
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_5_4.dtile",
+      "authored_x": 1348.543,
+      "authored_z": -132.75,
+      "height_m": 19.14,
+      "area_m2": 1093.206149,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        192619,
+        193202
+      ],
+      "colors": [
+        [
+          0.5029,
+          0.4851,
+          0.3613
+        ],
+        [
+          0.1981,
+          0.2232,
+          0.1878
+        ]
+      ],
+      "color_distance": 0.4377
+    },
+    {
+      "tile": "detail_1_3.dtile",
+      "authored_x": 594.436,
+      "authored_z": 284.2,
+      "height_m": 30.12,
+      "area_m2": 1090.764997,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        177272,
+        177907
+      ],
+      "colors": [
+        [
+          0.4793,
+          0.4851,
+          0.3864
+        ],
+        [
+          0.2086,
+          0.2664,
+          0.1981
+        ]
+      ],
+      "color_distance": 0.3958
+    },
+    {
+      "tile": "detail_0_3.dtile",
+      "authored_x": 574.678,
+      "authored_z": 296.519,
+      "height_m": 30.12,
+      "area_m2": 1090.759761,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        178150,
+        177592
+      ],
+      "colors": [
+        [
+          0.4793,
+          0.4851,
+          0.3864
+        ],
+        [
+          0.2086,
+          0.2664,
+          0.1981
+        ]
+      ],
+      "color_distance": 0.3958
+    },
+    {
+      "tile": "detail_-1_-2.dtile",
+      "authored_x": -368.697,
+      "authored_z": -155.172,
+      "height_m": 12.12,
+      "area_m2": 1082.467146,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98741,
+        98588
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-1_-2.dtile",
+      "authored_x": -349.323,
+      "authored_z": -154.856,
+      "height_m": 12.12,
+      "area_m2": 1082.432885,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98728,
+        98654
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-7_-11.dtile",
+      "authored_x": -2256.585,
+      "authored_z": -510.173,
+      "height_m": 3.32,
+      "area_m2": 1071.381897,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98340,
+        98579
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-1_1.dtile",
+      "authored_x": 113.867,
+      "authored_z": 219.167,
+      "height_m": 24.52,
+      "area_m2": 1049.800774,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        17456,
+        17454
+      ],
+      "colors": [
+        [
+          0.5029,
+          0.521,
+          0.4287
+        ],
+        [
+          0.2582,
+          0.2874,
+          0.227
+        ]
+      ],
+      "color_distance": 0.3939
+    },
+    {
+      "tile": "detail_-1_1.dtile",
+      "authored_x": 97.133,
+      "authored_z": 233.233,
+      "height_m": 24.52,
+      "area_m2": 1049.800774,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        18010,
+        18007
+      ],
+      "colors": [
+        [
+          0.5029,
+          0.521,
+          0.4287
+        ],
+        [
+          0.2582,
+          0.2874,
+          0.227
+        ]
+      ],
+      "color_distance": 0.3939
+    },
+    {
+      "tile": "detail_-5_-6.dtile",
+      "authored_x": -1304.238,
+      "authored_z": -252.573,
+      "height_m": 3.32,
+      "area_m2": 1031.683919,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98509,
+        98781
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-3_-3.dtile",
+      "authored_x": -702.443,
+      "authored_z": 62.933,
+      "height_m": 35.14,
+      "area_m2": 1031.555379,
+      "materials": "glass/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        189168,
+        188526
+      ],
+      "colors": [
+        [
+          0.162,
+          0.1981,
+          0.162
+        ],
+        [
+          0.0595,
+          0.1195,
+          0.1095
+        ]
+      ],
+      "color_distance": 0.1394
+    },
+    {
+      "tile": "detail_5_4.dtile",
+      "authored_x": 1336.483,
+      "authored_z": -116.157,
+      "height_m": 19.14,
+      "area_m2": 1029.470724,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        192885,
+        192984
+      ],
+      "colors": [
+        [
+          0.5029,
+          0.4851,
+          0.3613
+        ],
+        [
+          0.1981,
+          0.2232,
+          0.1878
+        ]
+      ],
+      "color_distance": 0.4377
+    },
+    {
+      "tile": "detail_8_5.dtile",
+      "authored_x": 1948.524,
+      "authored_z": -298.612,
+      "height_m": 3.32,
+      "area_m2": 1021.814568,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98735,
+        98349
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-3_-3.dtile",
+      "authored_x": -716.37,
+      "authored_z": 45.93,
+      "height_m": 35.14,
+      "area_m2": 1020.693158,
+      "materials": "glass/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        188912,
+        189032
+      ],
+      "colors": [
+        [
+          0.162,
+          0.1981,
+          0.162
+        ],
+        [
+          0.0595,
+          0.1195,
+          0.1095
+        ]
+      ],
+      "color_distance": 0.1394
+    },
+    {
+      "tile": "detail_-9_-9.dtile",
+      "authored_x": -2158.699,
+      "authored_z": -34.943,
+      "height_m": 27.14,
+      "area_m2": 1017.484014,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        194877,
+        194929
+      ],
+      "colors": [
+        [
+          0.3467,
+          0.3968,
+          0.3372
+        ],
+        [
+          0.1746,
+          0.2051,
+          0.162
+        ]
+      ],
+      "color_distance": 0.3115
+    },
+    {
+      "tile": "detail_-4_-8.dtile",
+      "authored_x": -1518.451,
+      "authored_z": -515.926,
+      "height_m": 3.32,
+      "area_m2": 1011.076616,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98375,
+        99297
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_3_3.dtile",
+      "authored_x": 1010.837,
+      "authored_z": -21.493,
+      "height_m": 18.31,
+      "area_m2": 991.76289,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        192061,
+        191976
+      ],
+      "colors": [
+        [
+          0.4969,
+          0.4969,
+          0.3968
+        ],
+        [
+          0.1981,
+          0.2232,
+          0.1878
+        ]
+      ],
+      "color_distance": 0.4559
+    },
+    {
+      "tile": "detail_-5_-8.dtile",
+      "authored_x": -1715.217,
+      "authored_z": -411.929,
+      "height_m": 3.32,
+      "area_m2": 986.522808,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98791,
+        99285
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-8_-9.dtile",
+      "authored_x": -2222.265,
+      "authored_z": -148.037,
+      "height_m": 3.37,
+      "area_m2": 985.749782,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        92491,
+        92268
+      ],
+      "colors": [
+        [
+          0.4735,
+          0.4397,
+          0.3515
+        ],
+        [
+          0.2051,
+          0.2159,
+          0.1746
+        ]
+      ],
+      "color_distance": 0.3917
+    },
+    {
+      "tile": "detail_4_7.dtile",
+      "authored_x": 2632.972,
+      "authored_z": -606.611,
+      "height_m": 12.32,
+      "area_m2": 977.501445,
+      "materials": "solid/solid",
+      "facing": "same",
+      "resolution": "layer-depth",
+      "layer_priorities": [
+        31628,
+        148414
+      ],
+      "colors": [
+        [
+          0.0648,
+          0.147,
+          0.1912
+        ],
+        [
+          0.4233,
+          0.4735,
+          0.4342
+        ]
+      ],
+      "color_distance": 0.5423
+    },
+    {
+      "tile": "detail_-7_-7.dtile",
+      "authored_x": -1714.753,
+      "authored_z": -80.397,
+      "height_m": 6.64,
+      "area_m2": 975.010509,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        194906,
+        195070
+      ],
+      "colors": [
+        [
+          0.4342,
+          0.4179,
+          0.3095
+        ],
+        [
+          0.1746,
+          0.2051,
+          0.162
+        ]
+      ],
+      "color_distance": 0.3666
+    },
+    {
+      "tile": "detail_-8_-9.dtile",
+      "authored_x": -2115.149,
+      "authored_z": -67.855,
+      "height_m": 27.14,
+      "area_m2": 971.09008,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        195021,
+        195073
+      ],
+      "colors": [
+        [
+          0.3467,
+          0.3968,
+          0.3372
+        ],
+        [
+          0.1746,
+          0.2051,
+          0.162
+        ]
+      ],
+      "color_distance": 0.3115
+    },
+    {
+      "tile": "detail_4_2.dtile",
+      "authored_x": 911.812,
+      "authored_z": -330.16,
+      "height_m": 3.32,
+      "area_m2": 961.483458,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        99180,
+        99098
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-3_3.dtile",
+      "authored_x": 57.473,
+      "authored_z": 813.848,
+      "height_m": 3.32,
+      "area_m2": 958.634793,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98365,
+        98877
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-6_-7.dtile",
+      "authored_x": -1568.737,
+      "authored_z": -130.317,
+      "height_m": 9.89,
+      "area_m2": 958.391754,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        194794,
+        195142
+      ],
+      "colors": [
+        [
+          0.4342,
+          0.4179,
+          0.3095
+        ],
+        [
+          0.1746,
+          0.2051,
+          0.162
+        ]
+      ],
+      "color_distance": 0.3666
+    },
+    {
+      "tile": "detail_4_7.dtile",
+      "authored_x": 2639.286,
+      "authored_z": -600.22,
+      "height_m": 29.52,
+      "area_m2": 941.128763,
+      "materials": "solid/solid",
+      "facing": "same",
+      "resolution": "layer-depth",
+      "layer_priorities": [
+        31320,
+        147488
+      ],
+      "colors": [
+        [
+          0.0648,
+          0.147,
+          0.1912
+        ],
+        [
+          0.4233,
+          0.4735,
+          0.4342
+        ]
+      ],
+      "color_distance": 0.5423
+    },
+    {
+      "tile": "detail_-6_-7.dtile",
+      "authored_x": -1644.38,
+      "authored_z": -151.134,
+      "height_m": 3.32,
+      "area_m2": 935.258652,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98514,
+        98474
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_5_5.dtile",
+      "authored_x": 1583.91,
+      "authored_z": 58.6,
+      "height_m": 28.42,
+      "area_m2": 933.198844,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        193966,
+        193905
+      ],
+      "colors": [
+        [
+          0.4793,
+          0.4564,
+          0.3325
+        ],
+        [
+          0.1981,
+          0.2232,
+          0.1878
+        ]
+      ],
+      "color_distance": 0.3929
+    },
+    {
+      "tile": "detail_4_2.dtile",
+      "authored_x": 1006.598,
+      "authored_z": -381.278,
+      "height_m": 3.32,
+      "area_m2": 925.310961,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98987,
+        98721
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_5_5.dtile",
+      "authored_x": 1578.593,
+      "authored_z": -57.55,
+      "height_m": 30.14,
+      "area_m2": 916.857333,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        185868,
+        185999
+      ],
+      "colors": [
+        [
+          0.4397,
+          0.4452,
+          0.3763
+        ],
+        [
+          0.1529,
+          0.1812,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.4418
+    },
+    {
+      "tile": "detail_-7_-7.dtile",
+      "authored_x": -1778.577,
+      "authored_z": 57.08,
+      "height_m": 13.54,
+      "area_m2": 907.859468,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        187175,
+        187183
+      ],
+      "colors": [
+        [
+          0.3613,
+          0.4397,
+          0.4564
+        ],
+        [
+          0.1845,
+          0.227,
+          0.1946
+        ]
+      ],
+      "color_distance": 0.3808
+    },
+    {
+      "tile": "detail_5_5.dtile",
+      "authored_x": 1528.027,
+      "authored_z": -46.067,
+      "height_m": 5.14,
+      "area_m2": 907.044338,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        194024,
+        194075
+      ],
+      "colors": [
+        [
+          0.402,
+          0.3968,
+          0.3095
+        ],
+        [
+          0.1981,
+          0.2232,
+          0.1878
+        ]
+      ],
+      "color_distance": 0.2941
+    },
+    {
+      "tile": "detail_-4_0.dtile",
+      "authored_x": -393.554,
+      "authored_z": 427.651,
+      "height_m": 16.12,
+      "area_m2": 897.841463,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        169481,
+        169916
+      ],
+      "colors": [
+        [
+          0.6308,
+          0.5583,
+          0.4179
+        ],
+        [
+          0.2747,
+          0.2789,
+          0.2423
+        ]
+      ],
+      "color_distance": 0.4855
+    },
+    {
+      "tile": "detail_-5_-8.dtile",
+      "authored_x": -1687.173,
+      "authored_z": -426.786,
+      "height_m": 3.32,
+      "area_m2": 896.826164,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98808,
+        98545
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_1_1.dtile",
+      "authored_x": 382.93,
+      "authored_z": -20.877,
+      "height_m": 19.04,
+      "area_m2": 894.586366,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        185731,
+        185990
+      ],
+      "colors": [
+        [
+          0.4851,
+          0.4508,
+          0.3467
+        ],
+        [
+          0.1529,
+          0.1812,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.4636
+    },
+    {
+      "tile": "detail_0_3.dtile",
+      "authored_x": 444.267,
+      "authored_z": 140.357,
+      "height_m": 20.12,
+      "area_m2": 894.165365,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        177804,
+        177669
+      ],
+      "colors": [
+        [
+          0.4793,
+          0.4851,
+          0.3864
+        ],
+        [
+          0.2831,
+          0.4564,
+          0.3467
+        ]
+      ],
+      "color_distance": 0.2022
+    },
+    {
+      "tile": "detail_1_1.dtile",
+      "authored_x": 422.383,
+      "authored_z": -26.093,
+      "height_m": 19.04,
+      "area_m2": 869.749312,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        186067,
+        186298
+      ],
+      "colors": [
+        [
+          0.4851,
+          0.4508,
+          0.3467
+        ],
+        [
+          0.1529,
+          0.1812,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.4636
+    },
+    {
+      "tile": "detail_3_3.dtile",
+      "authored_x": 965.223,
+      "authored_z": -26.297,
+      "height_m": 18.31,
+      "area_m2": 869.044491,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        192436,
+        191686
+      ],
+      "colors": [
+        [
+          0.4969,
+          0.4969,
+          0.3968
+        ],
+        [
+          0.1981,
+          0.2232,
+          0.1878
+        ]
+      ],
+      "color_distance": 0.4559
+    },
+    {
+      "tile": "detail_-9_-9.dtile",
+      "authored_x": -2238.965,
+      "authored_z": -37.633,
+      "height_m": 3.32,
+      "area_m2": 867.620059,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98426,
+        98671
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-6_-10.dtile",
+      "authored_x": -2093.26,
+      "authored_z": -541.758,
+      "height_m": 3.32,
+      "area_m2": 867.065397,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98555,
+        99139
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_-5_-4.dtile",
+      "authored_x": -1054.234,
+      "authored_z": 106.412,
+      "height_m": 3.32,
+      "area_m2": 861.686149,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        98491,
+        98575
+      ],
+      "colors": [
+        [
+          0.4452,
+          0.4125,
+          0.314
+        ],
+        [
+          0.1845,
+          0.2051,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.3637
+    },
+    {
+      "tile": "detail_5_5.dtile",
+      "authored_x": 1527.94,
+      "authored_z": -53.66,
+      "height_m": 30.14,
+      "area_m2": 860.515487,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        185438,
+        185573
+      ],
+      "colors": [
+        [
+          0.4397,
+          0.4452,
+          0.3763
+        ],
+        [
+          0.1529,
+          0.1812,
+          0.1683
+        ]
+      ],
+      "color_distance": 0.4418
+    },
+    {
+      "tile": "detail_-7_-7.dtile",
+      "authored_x": -1654.787,
+      "authored_z": -50.44,
+      "height_m": 6.64,
+      "area_m2": 839.58365,
+      "materials": "solid/solid",
+      "facing": "opposite",
+      "resolution": "side-policy",
+      "layer_priorities": [
+        194971,
+        194899
+      ],
+      "colors": [
+        [
+          0.4342,
+          0.4179,
+          0.3095
+        ],
+        [
+          0.1746,
+          0.2051,
+          0.162
+        ]
+      ],
+      "color_distance": 0.3666
+    },
+    {
+      "tile": "detail_4_7.dtile",
+      "authored_x": 2632.972,
+      "authored_z": -606.611,
+      "height_m": 24.453,
+      "area_m2": 833.528386,
+      "materials": "solid/solid",
+      "facing": "same",
+      "resolution": "layer-depth",
+      "layer_priorities": [
+        31191,
+        147942
+      ],
+      "colors": [
+        [
+          0.0648,
+          0.147,
+          0.1912
+        ],
+        [
+          0.4233,
+          0.4735,
+          0.4342
+        ]
+      ],
+      "color_distance": 0.5423
+    }
+  ],
+  "unresolved_samples": [],
+  "tiles": [
+    {
+      "tile": "detail_-10_-1.dtile",
+      "triangles": 22246,
+      "candidate_pairs": 260152,
+      "coplanar_overlap_pairs": 22,
+      "coplanar_overlap_area_m2": 82.694071,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_-2.dtile",
+      "triangles": 24544,
+      "candidate_pairs": 273681,
+      "coplanar_overlap_pairs": 6,
+      "coplanar_overlap_area_m2": 96.733373,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_-3.dtile",
+      "triangles": 27809,
+      "candidate_pairs": 285010,
+      "coplanar_overlap_pairs": 20,
+      "coplanar_overlap_area_m2": 14.945274,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_-4.dtile",
+      "triangles": 36770,
+      "candidate_pairs": 919598,
+      "coplanar_overlap_pairs": 83,
+      "coplanar_overlap_area_m2": 1544.505654,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_-5.dtile",
+      "triangles": 45227,
+      "candidate_pairs": 1101150,
+      "coplanar_overlap_pairs": 123,
+      "coplanar_overlap_area_m2": 95.019825,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_-6.dtile",
+      "triangles": 60251,
+      "candidate_pairs": 636811,
+      "coplanar_overlap_pairs": 1352,
+      "coplanar_overlap_area_m2": 1117.674279,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_-7.dtile",
+      "triangles": 16669,
+      "candidate_pairs": 73480,
+      "coplanar_overlap_pairs": 692,
+      "coplanar_overlap_area_m2": 6315.296796,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_-8.dtile",
+      "triangles": 658,
+      "candidate_pairs": 2077,
+      "coplanar_overlap_pairs": 74,
+      "coplanar_overlap_area_m2": 4086.96193,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_-9.dtile",
+      "triangles": 4,
+      "candidate_pairs": 6,
+      "coplanar_overlap_pairs": 0,
+      "coplanar_overlap_area_m2": 0,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_0.dtile",
+      "triangles": 17865,
+      "candidate_pairs": 113602,
+      "coplanar_overlap_pairs": 0,
+      "coplanar_overlap_area_m2": 0,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-10_1.dtile",
+      "triangles": 7223,
+      "candidate_pairs": 31511,
+      "coplanar_overlap_pairs": 0,
+      "coplanar_overlap_area_m2": 0,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-11_-4.dtile",
+      "triangles": 1030,
+      "candidate_pairs": 4024,
+      "coplanar_overlap_pairs": 113,
+      "coplanar_overlap_area_m2": 2806.688509,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-11_-5.dtile",
+      "triangles": 9227,
+      "candidate_pairs": 37231,
+      "coplanar_overlap_pairs": 337,
+      "coplanar_overlap_area_m2": 10150.489891,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-11_-6.dtile",
+      "triangles": 1402,
+      "candidate_pairs": 5103,
+      "coplanar_overlap_pairs": 150,
+      "coplanar_overlap_area_m2": 7725.318387,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-11_-7.dtile",
+      "triangles": 768,
+      "candidate_pairs": 2886,
+      "coplanar_overlap_pairs": 79,
+      "coplanar_overlap_area_m2": 2760.970325,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-11_-8.dtile",
+      "triangles": 10,
+      "candidate_pairs": 8,
+      "coplanar_overlap_pairs": 1,
+      "coplanar_overlap_area_m2": 406.563127,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-12_-5.dtile",
+      "triangles": 636,
+      "candidate_pairs": 1945,
+      "coplanar_overlap_pairs": 61,
+      "coplanar_overlap_area_m2": 2666.431149,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-12_-6.dtile",
+      "triangles": 1670,
+      "candidate_pairs": 5649,
+      "coplanar_overlap_pairs": 155,
+      "coplanar_overlap_area_m2": 6368.245573,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-12_-7.dtile",
+      "triangles": 18,
+      "candidate_pairs": 20,
+      "coplanar_overlap_pairs": 1,
+      "coplanar_overlap_area_m2": 23.069952,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_-1.dtile",
+      "triangles": 77334,
+      "candidate_pairs": 2605281,
+      "coplanar_overlap_pairs": 445,
+      "coplanar_overlap_area_m2": 4437.951457,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_-2.dtile",
+      "triangles": 37361,
+      "candidate_pairs": 475600,
+      "coplanar_overlap_pairs": 1251,
+      "coplanar_overlap_area_m2": 18626.699712,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_-3.dtile",
+      "triangles": 23775,
+      "candidate_pairs": 633206,
+      "coplanar_overlap_pairs": 738,
+      "coplanar_overlap_area_m2": 8779.298412,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_-4.dtile",
+      "triangles": 3688,
+      "candidate_pairs": 20666,
+      "coplanar_overlap_pairs": 403,
+      "coplanar_overlap_area_m2": 12475.462108,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_-5.dtile",
+      "triangles": 1596,
+      "candidate_pairs": 6979,
+      "coplanar_overlap_pairs": 169,
+      "coplanar_overlap_area_m2": 4462.540713,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_0.dtile",
+      "triangles": 82596,
+      "candidate_pairs": 1004685,
+      "coplanar_overlap_pairs": 118,
+      "coplanar_overlap_area_m2": 2384.394433,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_1.dtile",
+      "triangles": 112506,
+      "candidate_pairs": 1007361,
+      "coplanar_overlap_pairs": 678,
+      "coplanar_overlap_area_m2": 22025.498401,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_2.dtile",
+      "triangles": 269716,
+      "candidate_pairs": 5057893,
+      "coplanar_overlap_pairs": 1657,
+      "coplanar_overlap_area_m2": 8435.010157,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_3.dtile",
+      "triangles": 251416,
+      "candidate_pairs": 5388796,
+      "coplanar_overlap_pairs": 1942,
+      "coplanar_overlap_area_m2": 5322.385104,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_4.dtile",
+      "triangles": 198576,
+      "candidate_pairs": 2361398,
+      "coplanar_overlap_pairs": 1935,
+      "coplanar_overlap_area_m2": 7643.025911,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_5.dtile",
+      "triangles": 6304,
+      "candidate_pairs": 36058,
+      "coplanar_overlap_pairs": 607,
+      "coplanar_overlap_area_m2": 13950.965133,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-1_6.dtile",
+      "triangles": 2259,
+      "candidate_pairs": 15031,
+      "coplanar_overlap_pairs": 249,
+      "coplanar_overlap_area_m2": 4355.994826,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_-1.dtile",
+      "triangles": 122049,
+      "candidate_pairs": 1258532,
+      "coplanar_overlap_pairs": 162,
+      "coplanar_overlap_area_m2": 104.411233,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_-2.dtile",
+      "triangles": 63906,
+      "candidate_pairs": 2628068,
+      "coplanar_overlap_pairs": 895,
+      "coplanar_overlap_area_m2": 4282.371037,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_-3.dtile",
+      "triangles": 47679,
+      "candidate_pairs": 840763,
+      "coplanar_overlap_pairs": 1870,
+      "coplanar_overlap_area_m2": 12701.509548,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_-4.dtile",
+      "triangles": 4246,
+      "candidate_pairs": 20562,
+      "coplanar_overlap_pairs": 423,
+      "coplanar_overlap_area_m2": 13457.401604,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_-5.dtile",
+      "triangles": 3264,
+      "candidate_pairs": 14751,
+      "coplanar_overlap_pairs": 352,
+      "coplanar_overlap_area_m2": 10763.359873,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_-6.dtile",
+      "triangles": 3152,
+      "candidate_pairs": 15342,
+      "coplanar_overlap_pairs": 327,
+      "coplanar_overlap_area_m2": 4676.816358,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_0.dtile",
+      "triangles": 60844,
+      "candidate_pairs": 758081,
+      "coplanar_overlap_pairs": 134,
+      "coplanar_overlap_area_m2": 8260.642471,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_1.dtile",
+      "triangles": 194858,
+      "candidate_pairs": 3001164,
+      "coplanar_overlap_pairs": 3342,
+      "coplanar_overlap_area_m2": 9204.085562,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_2.dtile",
+      "triangles": 324481,
+      "candidate_pairs": 6401345,
+      "coplanar_overlap_pairs": 2089,
+      "coplanar_overlap_area_m2": 2972.573161,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_3.dtile",
+      "triangles": 222172,
+      "candidate_pairs": 4193129,
+      "coplanar_overlap_pairs": 1515,
+      "coplanar_overlap_area_m2": 5125.009056,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_4.dtile",
+      "triangles": 11930,
+      "candidate_pairs": 53152,
+      "coplanar_overlap_pairs": 523,
+      "coplanar_overlap_area_m2": 11207.491059,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-2_5.dtile",
+      "triangles": 2031,
+      "candidate_pairs": 11135,
+      "coplanar_overlap_pairs": 216,
+      "coplanar_overlap_area_m2": 3610.987343,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_-1.dtile",
+      "triangles": 32669,
+      "candidate_pairs": 486635,
+      "coplanar_overlap_pairs": 157,
+      "coplanar_overlap_area_m2": 5403.951267,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_-2.dtile",
+      "triangles": 22706,
+      "candidate_pairs": 786514,
+      "coplanar_overlap_pairs": 88,
+      "coplanar_overlap_area_m2": 4451.821195,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_-3.dtile",
+      "triangles": 77480,
+      "candidate_pairs": 2030154,
+      "coplanar_overlap_pairs": 812,
+      "coplanar_overlap_area_m2": 9891.534764,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_-4.dtile",
+      "triangles": 40371,
+      "candidate_pairs": 127843,
+      "coplanar_overlap_pairs": 514,
+      "coplanar_overlap_area_m2": 12002.866393,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_-5.dtile",
+      "triangles": 2925,
+      "candidate_pairs": 14822,
+      "coplanar_overlap_pairs": 313,
+      "coplanar_overlap_area_m2": 11001.608223,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_-6.dtile",
+      "triangles": 3772,
+      "candidate_pairs": 19482,
+      "coplanar_overlap_pairs": 404,
+      "coplanar_overlap_area_m2": 9688.232113,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_-7.dtile",
+      "triangles": 110,
+      "candidate_pairs": 242,
+      "coplanar_overlap_pairs": 11,
+      "coplanar_overlap_area_m2": 3308.855288,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_0.dtile",
+      "triangles": 146786,
+      "candidate_pairs": 3195418,
+      "coplanar_overlap_pairs": 1271,
+      "coplanar_overlap_area_m2": 6940.054586,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_1.dtile",
+      "triangles": 213291,
+      "candidate_pairs": 5414462,
+      "coplanar_overlap_pairs": 1974,
+      "coplanar_overlap_area_m2": 4286.392769,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_2.dtile",
+      "triangles": 198507,
+      "candidate_pairs": 4342473,
+      "coplanar_overlap_pairs": 2756,
+      "coplanar_overlap_area_m2": 7502.681791,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_3.dtile",
+      "triangles": 16018,
+      "candidate_pairs": 101514,
+      "coplanar_overlap_pairs": 554,
+      "coplanar_overlap_area_m2": 12279.251094,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-3_4.dtile",
+      "triangles": 1326,
+      "candidate_pairs": 6080,
+      "coplanar_overlap_pairs": 148,
+      "coplanar_overlap_area_m2": 3425.385517,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_-1.dtile",
+      "triangles": 7204,
+      "candidate_pairs": 24809,
+      "coplanar_overlap_pairs": 255,
+      "coplanar_overlap_area_m2": 10195.603804,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_-2.dtile",
+      "triangles": 2824,
+      "candidate_pairs": 14840,
+      "coplanar_overlap_pairs": 293,
+      "coplanar_overlap_area_m2": 12165.722923,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_-3.dtile",
+      "triangles": 53270,
+      "candidate_pairs": 420664,
+      "coplanar_overlap_pairs": 1207,
+      "coplanar_overlap_area_m2": 12904.599779,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_-4.dtile",
+      "triangles": 153299,
+      "candidate_pairs": 1803942,
+      "coplanar_overlap_pairs": 1513,
+      "coplanar_overlap_area_m2": 13762.384215,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_-5.dtile",
+      "triangles": 14911,
+      "candidate_pairs": 47276,
+      "coplanar_overlap_pairs": 355,
+      "coplanar_overlap_area_m2": 18400.973721,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_-6.dtile",
+      "triangles": 1814,
+      "candidate_pairs": 8328,
+      "coplanar_overlap_pairs": 193,
+      "coplanar_overlap_area_m2": 9793.521156,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_-7.dtile",
+      "triangles": 1220,
+      "candidate_pairs": 4605,
+      "coplanar_overlap_pairs": 129,
+      "coplanar_overlap_area_m2": 10940.439359,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_-8.dtile",
+      "triangles": 602,
+      "candidate_pairs": 2549,
+      "coplanar_overlap_pairs": 66,
+      "coplanar_overlap_area_m2": 10670.436452,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_-9.dtile",
+      "triangles": 6,
+      "candidate_pairs": 7,
+      "coplanar_overlap_pairs": 0,
+      "coplanar_overlap_area_m2": 0,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_0.dtile",
+      "triangles": 160509,
+      "candidate_pairs": 4002245,
+      "coplanar_overlap_pairs": 787,
+      "coplanar_overlap_area_m2": 9617.10805,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_1.dtile",
+      "triangles": 230183,
+      "candidate_pairs": 4120907,
+      "coplanar_overlap_pairs": 1807,
+      "coplanar_overlap_area_m2": 5385.880293,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_2.dtile",
+      "triangles": 10816,
+      "candidate_pairs": 80881,
+      "coplanar_overlap_pairs": 579,
+      "coplanar_overlap_area_m2": 12048.584081,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-4_3.dtile",
+      "triangles": 192,
+      "candidate_pairs": 524,
+      "coplanar_overlap_pairs": 18,
+      "coplanar_overlap_area_m2": 1623.467645,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_-1.dtile",
+      "triangles": 155655,
+      "candidate_pairs": 2208689,
+      "coplanar_overlap_pairs": 1221,
+      "coplanar_overlap_area_m2": 7638.847641,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_-2.dtile",
+      "triangles": 26516,
+      "candidate_pairs": 999539,
+      "coplanar_overlap_pairs": 402,
+      "coplanar_overlap_area_m2": 12013.037746,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_-3.dtile",
+      "triangles": 3662,
+      "candidate_pairs": 19222,
+      "coplanar_overlap_pairs": 390,
+      "coplanar_overlap_area_m2": 12336.433449,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_-4.dtile",
+      "triangles": 80011,
+      "candidate_pairs": 676855,
+      "coplanar_overlap_pairs": 919,
+      "coplanar_overlap_area_m2": 14424.485814,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_-5.dtile",
+      "triangles": 103959,
+      "candidate_pairs": 2048120,
+      "coplanar_overlap_pairs": 1342,
+      "coplanar_overlap_area_m2": 11112.968274,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_-6.dtile",
+      "triangles": 15807,
+      "candidate_pairs": 51584,
+      "coplanar_overlap_pairs": 564,
+      "coplanar_overlap_area_m2": 12676.823416,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_-7.dtile",
+      "triangles": 1056,
+      "candidate_pairs": 3802,
+      "coplanar_overlap_pairs": 111,
+      "coplanar_overlap_area_m2": 5912.412413,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_-8.dtile",
+      "triangles": 844,
+      "candidate_pairs": 3258,
+      "coplanar_overlap_pairs": 91,
+      "coplanar_overlap_area_m2": 12195.592305,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_-9.dtile",
+      "triangles": 904,
+      "candidate_pairs": 3497,
+      "coplanar_overlap_pairs": 93,
+      "coplanar_overlap_area_m2": 6750.585754,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_0.dtile",
+      "triangles": 184053,
+      "candidate_pairs": 3090518,
+      "coplanar_overlap_pairs": 1731,
+      "coplanar_overlap_area_m2": 5247.581924,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_1.dtile",
+      "triangles": 12095,
+      "candidate_pairs": 78882,
+      "coplanar_overlap_pairs": 383,
+      "coplanar_overlap_area_m2": 9620.300675,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-5_2.dtile",
+      "triangles": 1862,
+      "candidate_pairs": 9472,
+      "coplanar_overlap_pairs": 202,
+      "coplanar_overlap_area_m2": 3907.955868,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-1.dtile",
+      "triangles": 330127,
+      "candidate_pairs": 8510840,
+      "coplanar_overlap_pairs": 1895,
+      "coplanar_overlap_area_m2": 4071.586921,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-10.dtile",
+      "triangles": 270,
+      "candidate_pairs": 823,
+      "coplanar_overlap_pairs": 26,
+      "coplanar_overlap_area_m2": 3519.720194,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-11.dtile",
+      "triangles": 24,
+      "candidate_pairs": 20,
+      "coplanar_overlap_pairs": 2,
+      "coplanar_overlap_area_m2": 11.70819,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-2.dtile",
+      "triangles": 186727,
+      "candidate_pairs": 8393149,
+      "coplanar_overlap_pairs": 598,
+      "coplanar_overlap_area_m2": 5503.105041,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-3.dtile",
+      "triangles": 2561,
+      "candidate_pairs": 13350,
+      "coplanar_overlap_pairs": 290,
+      "coplanar_overlap_area_m2": 13217.182936,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-4.dtile",
+      "triangles": 3804,
+      "candidate_pairs": 18817,
+      "coplanar_overlap_pairs": 423,
+      "coplanar_overlap_area_m2": 11041.548908,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-5.dtile",
+      "triangles": 32040,
+      "candidate_pairs": 467337,
+      "coplanar_overlap_pairs": 628,
+      "coplanar_overlap_area_m2": 9532.372426,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-6.dtile",
+      "triangles": 97712,
+      "candidate_pairs": 1738961,
+      "coplanar_overlap_pairs": 712,
+      "coplanar_overlap_area_m2": 8959.225512,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-7.dtile",
+      "triangles": 50126,
+      "candidate_pairs": 182092,
+      "coplanar_overlap_pairs": 401,
+      "coplanar_overlap_area_m2": 12866.362976,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-8.dtile",
+      "triangles": 1069,
+      "candidate_pairs": 3622,
+      "coplanar_overlap_pairs": 104,
+      "coplanar_overlap_area_m2": 9089.10097,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_-9.dtile",
+      "triangles": 3492,
+      "candidate_pairs": 15128,
+      "coplanar_overlap_pairs": 359,
+      "coplanar_overlap_area_m2": 10936.230616,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_0.dtile",
+      "triangles": 32333,
+      "candidate_pairs": 563023,
+      "coplanar_overlap_pairs": 504,
+      "coplanar_overlap_area_m2": 8496.096862,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-6_1.dtile",
+      "triangles": 1398,
+      "candidate_pairs": 6587,
+      "coplanar_overlap_pairs": 149,
+      "coplanar_overlap_area_m2": 4020.257755,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-1.dtile",
+      "triangles": 216079,
+      "candidate_pairs": 2768620,
+      "coplanar_overlap_pairs": 5729,
+      "coplanar_overlap_area_m2": 7501.216763,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-10.dtile",
+      "triangles": 1480,
+      "candidate_pairs": 5375,
+      "coplanar_overlap_pairs": 152,
+      "coplanar_overlap_area_m2": 7950.309052,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-11.dtile",
+      "triangles": 132,
+      "candidate_pairs": 358,
+      "coplanar_overlap_pairs": 14,
+      "coplanar_overlap_area_m2": 14770.398547,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-2.dtile",
+      "triangles": 98671,
+      "candidate_pairs": 1773510,
+      "coplanar_overlap_pairs": 3917,
+      "coplanar_overlap_area_m2": 2191.956816,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-3.dtile",
+      "triangles": 31781,
+      "candidate_pairs": 169110,
+      "coplanar_overlap_pairs": 109,
+      "coplanar_overlap_area_m2": 2330.686456,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-4.dtile",
+      "triangles": 32602,
+      "candidate_pairs": 216923,
+      "coplanar_overlap_pairs": 94,
+      "coplanar_overlap_area_m2": 2510.081962,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-5.dtile",
+      "triangles": 35520,
+      "candidate_pairs": 337241,
+      "coplanar_overlap_pairs": 124,
+      "coplanar_overlap_area_m2": 2986.745204,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-6.dtile",
+      "triangles": 46789,
+      "candidate_pairs": 565612,
+      "coplanar_overlap_pairs": 450,
+      "coplanar_overlap_area_m2": 5823.853164,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-7.dtile",
+      "triangles": 99739,
+      "candidate_pairs": 1768631,
+      "coplanar_overlap_pairs": 1007,
+      "coplanar_overlap_area_m2": 18525.357329,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-8.dtile",
+      "triangles": 64197,
+      "candidate_pairs": 898728,
+      "coplanar_overlap_pairs": 584,
+      "coplanar_overlap_area_m2": 9332.702596,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_-9.dtile",
+      "triangles": 6805,
+      "candidate_pairs": 150665,
+      "coplanar_overlap_pairs": 186,
+      "coplanar_overlap_area_m2": 9354.177297,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-7_0.dtile",
+      "triangles": 11250,
+      "candidate_pairs": 106831,
+      "coplanar_overlap_pairs": 74,
+      "coplanar_overlap_area_m2": 945.392025,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-1.dtile",
+      "triangles": 22091,
+      "candidate_pairs": 328472,
+      "coplanar_overlap_pairs": 4,
+      "coplanar_overlap_area_m2": 0.081176,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-10.dtile",
+      "triangles": 769,
+      "candidate_pairs": 2362,
+      "coplanar_overlap_pairs": 48,
+      "coplanar_overlap_area_m2": 2688.886159,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-2.dtile",
+      "triangles": 20936,
+      "candidate_pairs": 325439,
+      "coplanar_overlap_pairs": 33,
+      "coplanar_overlap_area_m2": 10.660749,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-3.dtile",
+      "triangles": 17512,
+      "candidate_pairs": 284540,
+      "coplanar_overlap_pairs": 0,
+      "coplanar_overlap_area_m2": 0,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-4.dtile",
+      "triangles": 22617,
+      "candidate_pairs": 401633,
+      "coplanar_overlap_pairs": 28,
+      "coplanar_overlap_area_m2": 130.282747,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-5.dtile",
+      "triangles": 25578,
+      "candidate_pairs": 533284,
+      "coplanar_overlap_pairs": 160,
+      "coplanar_overlap_area_m2": 166.653087,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-6.dtile",
+      "triangles": 33411,
+      "candidate_pairs": 459207,
+      "coplanar_overlap_pairs": 126,
+      "coplanar_overlap_area_m2": 418.82682,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-7.dtile",
+      "triangles": 56069,
+      "candidate_pairs": 574159,
+      "coplanar_overlap_pairs": 852,
+      "coplanar_overlap_area_m2": 11934.485088,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-8.dtile",
+      "triangles": 90103,
+      "candidate_pairs": 1380457,
+      "coplanar_overlap_pairs": 1212,
+      "coplanar_overlap_area_m2": 2212.354693,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_-9.dtile",
+      "triangles": 89427,
+      "candidate_pairs": 1050904,
+      "coplanar_overlap_pairs": 515,
+      "coplanar_overlap_area_m2": 15950.487575,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_0.dtile",
+      "triangles": 31346,
+      "candidate_pairs": 306893,
+      "coplanar_overlap_pairs": 0,
+      "coplanar_overlap_area_m2": 0,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-8_1.dtile",
+      "triangles": 1886,
+      "candidate_pairs": 3089,
+      "coplanar_overlap_pairs": 0,
+      "coplanar_overlap_area_m2": 0,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_-1.dtile",
+      "triangles": 20101,
+      "candidate_pairs": 272055,
+      "coplanar_overlap_pairs": 8,
+      "coplanar_overlap_area_m2": 0.153824,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_-2.dtile",
+      "triangles": 23501,
+      "candidate_pairs": 422708,
+      "coplanar_overlap_pairs": 30,
+      "coplanar_overlap_area_m2": 0.537621,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_-3.dtile",
+      "triangles": 21863,
+      "candidate_pairs": 416706,
+      "coplanar_overlap_pairs": 16,
+      "coplanar_overlap_area_m2": 0.281571,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_-4.dtile",
+      "triangles": 45256,
+      "candidate_pairs": 2567110,
+      "coplanar_overlap_pairs": 210,
+      "coplanar_overlap_area_m2": 32.4779,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_-5.dtile",
+      "triangles": 39444,
+      "candidate_pairs": 992884,
+      "coplanar_overlap_pairs": 277,
+      "coplanar_overlap_area_m2": 168.243549,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_-6.dtile",
+      "triangles": 34461,
+      "candidate_pairs": 686297,
+      "coplanar_overlap_pairs": 124,
+      "coplanar_overlap_area_m2": 424.594362,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_-7.dtile",
+      "triangles": 79306,
+      "candidate_pairs": 358250,
+      "coplanar_overlap_pairs": 1560,
+      "coplanar_overlap_area_m2": 6661.031338,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_-8.dtile",
+      "triangles": 58865,
+      "candidate_pairs": 794088,
+      "coplanar_overlap_pairs": 806,
+      "coplanar_overlap_area_m2": 5303.709477,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_-9.dtile",
+      "triangles": 8047,
+      "candidate_pairs": 86082,
+      "coplanar_overlap_pairs": 60,
+      "coplanar_overlap_area_m2": 6117.992111,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_0.dtile",
+      "triangles": 19356,
+      "candidate_pairs": 348598,
+      "coplanar_overlap_pairs": 8,
+      "coplanar_overlap_area_m2": 0.141745,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_-9_1.dtile",
+      "triangles": 20571,
+      "candidate_pairs": 120900,
+      "coplanar_overlap_pairs": 4,
+      "coplanar_overlap_area_m2": 0.081235,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_-1.dtile",
+      "triangles": 74711,
+      "candidate_pairs": 796561,
+      "coplanar_overlap_pairs": 122,
+      "coplanar_overlap_area_m2": 102.303903,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_-2.dtile",
+      "triangles": 79164,
+      "candidate_pairs": 842869,
+      "coplanar_overlap_pairs": 271,
+      "coplanar_overlap_area_m2": 5616.67696,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_-3.dtile",
+      "triangles": 6292,
+      "candidate_pairs": 32668,
+      "coplanar_overlap_pairs": 521,
+      "coplanar_overlap_area_m2": 12519.942114,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_-4.dtile",
+      "triangles": 2680,
+      "candidate_pairs": 12969,
+      "coplanar_overlap_pairs": 261,
+      "coplanar_overlap_area_m2": 5122.460941,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_0.dtile",
+      "triangles": 78150,
+      "candidate_pairs": 3223008,
+      "coplanar_overlap_pairs": 466,
+      "coplanar_overlap_area_m2": 5574.957884,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_1.dtile",
+      "triangles": 110996,
+      "candidate_pairs": 1384460,
+      "coplanar_overlap_pairs": 1645,
+      "coplanar_overlap_area_m2": 8586.369136,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_2.dtile",
+      "triangles": 115418,
+      "candidate_pairs": 1703934,
+      "coplanar_overlap_pairs": 1865,
+      "coplanar_overlap_area_m2": 11191.355037,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_3.dtile",
+      "triangles": 242289,
+      "candidate_pairs": 4350114,
+      "coplanar_overlap_pairs": 3482,
+      "coplanar_overlap_area_m2": 8857.960905,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_4.dtile",
+      "triangles": 315562,
+      "candidate_pairs": 7591822,
+      "coplanar_overlap_pairs": 3202,
+      "coplanar_overlap_area_m2": 5755.32747,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_5.dtile",
+      "triangles": 152416,
+      "candidate_pairs": 3728498,
+      "coplanar_overlap_pairs": 1145,
+      "coplanar_overlap_area_m2": 7648.410021,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_6.dtile",
+      "triangles": 10519,
+      "candidate_pairs": 47402,
+      "coplanar_overlap_pairs": 657,
+      "coplanar_overlap_area_m2": 13064.606636,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_0_7.dtile",
+      "triangles": 1278,
+      "candidate_pairs": 5248,
+      "coplanar_overlap_pairs": 129,
+      "coplanar_overlap_area_m2": 2982.288969,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_-1.dtile",
+      "triangles": 85837,
+      "candidate_pairs": 968757,
+      "coplanar_overlap_pairs": 769,
+      "coplanar_overlap_area_m2": 13545.669812,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_-2.dtile",
+      "triangles": 126476,
+      "candidate_pairs": 2425939,
+      "coplanar_overlap_pairs": 2524,
+      "coplanar_overlap_area_m2": 11847.645152,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_-3.dtile",
+      "triangles": 10483,
+      "candidate_pairs": 162426,
+      "coplanar_overlap_pairs": 246,
+      "coplanar_overlap_area_m2": 5648.875688,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_-4.dtile",
+      "triangles": 42,
+      "candidate_pairs": 81,
+      "coplanar_overlap_pairs": 2,
+      "coplanar_overlap_area_m2": 9.566981,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_0.dtile",
+      "triangles": 8905,
+      "candidate_pairs": 45333,
+      "coplanar_overlap_pairs": 215,
+      "coplanar_overlap_area_m2": 11768.183478,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_1.dtile",
+      "triangles": 134760,
+      "candidate_pairs": 3310320,
+      "coplanar_overlap_pairs": 1458,
+      "coplanar_overlap_area_m2": 14441.71164,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_2.dtile",
+      "triangles": 110918,
+      "candidate_pairs": 2552803,
+      "coplanar_overlap_pairs": 2199,
+      "coplanar_overlap_area_m2": 11202.835942,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_3.dtile",
+      "triangles": 176693,
+      "candidate_pairs": 3948590,
+      "coplanar_overlap_pairs": 2781,
+      "coplanar_overlap_area_m2": 9395.252559,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_4.dtile",
+      "triangles": 241573,
+      "candidate_pairs": 3645693,
+      "coplanar_overlap_pairs": 1395,
+      "coplanar_overlap_area_m2": 7899.696357,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_5.dtile",
+      "triangles": 187781,
+      "candidate_pairs": 5775969,
+      "coplanar_overlap_pairs": 989,
+      "coplanar_overlap_area_m2": 3363.494104,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_6.dtile",
+      "triangles": 117025,
+      "candidate_pairs": 5183148,
+      "coplanar_overlap_pairs": 901,
+      "coplanar_overlap_area_m2": 6640.794684,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_7.dtile",
+      "triangles": 2820,
+      "candidate_pairs": 15979,
+      "coplanar_overlap_pairs": 311,
+      "coplanar_overlap_area_m2": 10103.938326,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_1_8.dtile",
+      "triangles": 432,
+      "candidate_pairs": 1585,
+      "coplanar_overlap_pairs": 49,
+      "coplanar_overlap_area_m2": 3130.635419,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_-1.dtile",
+      "triangles": 30482,
+      "candidate_pairs": 402194,
+      "coplanar_overlap_pairs": 660,
+      "coplanar_overlap_area_m2": 14442.552281,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_-2.dtile",
+      "triangles": 6388,
+      "candidate_pairs": 110534,
+      "coplanar_overlap_pairs": 138,
+      "coplanar_overlap_area_m2": 6996.951694,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_-3.dtile",
+      "triangles": 3033,
+      "candidate_pairs": 431104,
+      "coplanar_overlap_pairs": 335,
+      "coplanar_overlap_area_m2": 7.670528,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_0.dtile",
+      "triangles": 28067,
+      "candidate_pairs": 396754,
+      "coplanar_overlap_pairs": 771,
+      "coplanar_overlap_area_m2": 15554.116327,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_1.dtile",
+      "triangles": 145229,
+      "candidate_pairs": 2482458,
+      "coplanar_overlap_pairs": 1675,
+      "coplanar_overlap_area_m2": 10115.194072,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_2.dtile",
+      "triangles": 186125,
+      "candidate_pairs": 3474689,
+      "coplanar_overlap_pairs": 2226,
+      "coplanar_overlap_area_m2": 22130.30435,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_3.dtile",
+      "triangles": 24000,
+      "candidate_pairs": 241903,
+      "coplanar_overlap_pairs": 457,
+      "coplanar_overlap_area_m2": 15589.682104,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_4.dtile",
+      "triangles": 148372,
+      "candidate_pairs": 1808754,
+      "coplanar_overlap_pairs": 2868,
+      "coplanar_overlap_area_m2": 14008.995262,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_5.dtile",
+      "triangles": 172691,
+      "candidate_pairs": 4554467,
+      "coplanar_overlap_pairs": 1749,
+      "coplanar_overlap_area_m2": 3178.64936,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_6.dtile",
+      "triangles": 104598,
+      "candidate_pairs": 3607334,
+      "coplanar_overlap_pairs": 619,
+      "coplanar_overlap_area_m2": 2891.951638,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_7.dtile",
+      "triangles": 2436,
+      "candidate_pairs": 17183,
+      "coplanar_overlap_pairs": 257,
+      "coplanar_overlap_area_m2": 5163.980379,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_8.dtile",
+      "triangles": 5776,
+      "candidate_pairs": 30407,
+      "coplanar_overlap_pairs": 596,
+      "coplanar_overlap_area_m2": 8331.506289,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_2_9.dtile",
+      "triangles": 2574,
+      "candidate_pairs": 13777,
+      "coplanar_overlap_pairs": 271,
+      "coplanar_overlap_area_m2": 3191.871719,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_-1.dtile",
+      "triangles": 12564,
+      "candidate_pairs": 126563,
+      "coplanar_overlap_pairs": 394,
+      "coplanar_overlap_area_m2": 7897.223078,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_0.dtile",
+      "triangles": 154259,
+      "candidate_pairs": 2875421,
+      "coplanar_overlap_pairs": 2038,
+      "coplanar_overlap_area_m2": 10151.275908,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_1.dtile",
+      "triangles": 129537,
+      "candidate_pairs": 1584861,
+      "coplanar_overlap_pairs": 2117,
+      "coplanar_overlap_area_m2": 8746.250324,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_10.dtile",
+      "triangles": 76,
+      "candidate_pairs": 114,
+      "coplanar_overlap_pairs": 6,
+      "coplanar_overlap_area_m2": 76.438659,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_2.dtile",
+      "triangles": 14768,
+      "candidate_pairs": 52513,
+      "coplanar_overlap_pairs": 452,
+      "coplanar_overlap_area_m2": 11181.082217,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_3.dtile",
+      "triangles": 93731,
+      "candidate_pairs": 2442004,
+      "coplanar_overlap_pairs": 714,
+      "coplanar_overlap_area_m2": 10731.45637,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_4.dtile",
+      "triangles": 15986,
+      "candidate_pairs": 229290,
+      "coplanar_overlap_pairs": 353,
+      "coplanar_overlap_area_m2": 13801.151895,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_5.dtile",
+      "triangles": 91910,
+      "candidate_pairs": 2146792,
+      "coplanar_overlap_pairs": 1654,
+      "coplanar_overlap_area_m2": 12003.541709,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_6.dtile",
+      "triangles": 200510,
+      "candidate_pairs": 6063657,
+      "coplanar_overlap_pairs": 1321,
+      "coplanar_overlap_area_m2": 4146.703567,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_7.dtile",
+      "triangles": 276710,
+      "candidate_pairs": 3961335,
+      "coplanar_overlap_pairs": 1486,
+      "coplanar_overlap_area_m2": 5785.651792,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_8.dtile",
+      "triangles": 206547,
+      "candidate_pairs": 843157,
+      "coplanar_overlap_pairs": 1527,
+      "coplanar_overlap_area_m2": 10303.094137,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_3_9.dtile",
+      "triangles": 3136,
+      "candidate_pairs": 13400,
+      "coplanar_overlap_pairs": 322,
+      "coplanar_overlap_area_m2": 5344.174424,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_-1.dtile",
+      "triangles": 99642,
+      "candidate_pairs": 3766997,
+      "coplanar_overlap_pairs": 356,
+      "coplanar_overlap_area_m2": 923.638702,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_-2.dtile",
+      "triangles": 1370,
+      "candidate_pairs": 2872,
+      "coplanar_overlap_pairs": 13,
+      "coplanar_overlap_area_m2": 4.049648,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_0.dtile",
+      "triangles": 93867,
+      "candidate_pairs": 1563069,
+      "coplanar_overlap_pairs": 729,
+      "coplanar_overlap_area_m2": 5258.744478,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_1.dtile",
+      "triangles": 5227,
+      "candidate_pairs": 33112,
+      "coplanar_overlap_pairs": 566,
+      "coplanar_overlap_area_m2": 13422.497839,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_10.dtile",
+      "triangles": 178,
+      "candidate_pairs": 482,
+      "coplanar_overlap_pairs": 19,
+      "coplanar_overlap_area_m2": 3130.683408,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_2.dtile",
+      "triangles": 1701,
+      "candidate_pairs": 7533,
+      "coplanar_overlap_pairs": 180,
+      "coplanar_overlap_area_m2": 12766.985971,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_3.dtile",
+      "triangles": 10464,
+      "candidate_pairs": 52045,
+      "coplanar_overlap_pairs": 310,
+      "coplanar_overlap_area_m2": 10998.662727,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_4.dtile",
+      "triangles": 80253,
+      "candidate_pairs": 1884551,
+      "coplanar_overlap_pairs": 689,
+      "coplanar_overlap_area_m2": 13942.274938,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_5.dtile",
+      "triangles": 8247,
+      "candidate_pairs": 143603,
+      "coplanar_overlap_pairs": 228,
+      "coplanar_overlap_area_m2": 10674.207158,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_6.dtile",
+      "triangles": 106213,
+      "candidate_pairs": 2509989,
+      "coplanar_overlap_pairs": 2022,
+      "coplanar_overlap_area_m2": 10419.13499,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_7.dtile",
+      "triangles": 210368,
+      "candidate_pairs": 5552996,
+      "coplanar_overlap_pairs": 3296,
+      "coplanar_overlap_area_m2": 19143.877705,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_8.dtile",
+      "triangles": 59115,
+      "candidate_pairs": 641444,
+      "coplanar_overlap_pairs": 505,
+      "coplanar_overlap_area_m2": 4790.396696,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_4_9.dtile",
+      "triangles": 732,
+      "candidate_pairs": 2615,
+      "coplanar_overlap_pairs": 77,
+      "coplanar_overlap_area_m2": 3555.583506,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_-1.dtile",
+      "triangles": 114717,
+      "candidate_pairs": 2637020,
+      "coplanar_overlap_pairs": 534,
+      "coplanar_overlap_area_m2": 405.128789,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_-2.dtile",
+      "triangles": 74696,
+      "candidate_pairs": 1062438,
+      "coplanar_overlap_pairs": 922,
+      "coplanar_overlap_area_m2": 1158.920037,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_0.dtile",
+      "triangles": 42,
+      "candidate_pairs": 64,
+      "coplanar_overlap_pairs": 3,
+      "coplanar_overlap_area_m2": 19.28299,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_1.dtile",
+      "triangles": 3567,
+      "candidate_pairs": 21300,
+      "coplanar_overlap_pairs": 381,
+      "coplanar_overlap_area_m2": 6916.320505,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_2.dtile",
+      "triangles": 2662,
+      "candidate_pairs": 13052,
+      "coplanar_overlap_pairs": 182,
+      "coplanar_overlap_area_m2": 11736.292996,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_3.dtile",
+      "triangles": 26526,
+      "candidate_pairs": 595813,
+      "coplanar_overlap_pairs": 284,
+      "coplanar_overlap_area_m2": 6647.858672,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_4.dtile",
+      "triangles": 6836,
+      "candidate_pairs": 24175,
+      "coplanar_overlap_pairs": 327,
+      "coplanar_overlap_area_m2": 11107.052674,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_5.dtile",
+      "triangles": 98471,
+      "candidate_pairs": 2607457,
+      "coplanar_overlap_pairs": 1016,
+      "coplanar_overlap_area_m2": 12912.378118,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_6.dtile",
+      "triangles": 21047,
+      "candidate_pairs": 174174,
+      "coplanar_overlap_pairs": 500,
+      "coplanar_overlap_area_m2": 7096.516018,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_7.dtile",
+      "triangles": 123790,
+      "candidate_pairs": 1956569,
+      "coplanar_overlap_pairs": 1606,
+      "coplanar_overlap_area_m2": 5434.837688,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_8.dtile",
+      "triangles": 23054,
+      "candidate_pairs": 318753,
+      "coplanar_overlap_pairs": 344,
+      "coplanar_overlap_area_m2": 3289.60733,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_5_9.dtile",
+      "triangles": 184,
+      "candidate_pairs": 396,
+      "coplanar_overlap_pairs": 18,
+      "coplanar_overlap_area_m2": 1192.841845,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_6_1.dtile",
+      "triangles": 20,
+      "candidate_pairs": 41,
+      "coplanar_overlap_pairs": 1,
+      "coplanar_overlap_area_m2": 6.598982,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_6_2.dtile",
+      "triangles": 3943,
+      "candidate_pairs": 21105,
+      "coplanar_overlap_pairs": 385,
+      "coplanar_overlap_area_m2": 7551.594388,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_6_3.dtile",
+      "triangles": 27526,
+      "candidate_pairs": 593862,
+      "coplanar_overlap_pairs": 307,
+      "coplanar_overlap_area_m2": 4788.589221,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_6_4.dtile",
+      "triangles": 3970,
+      "candidate_pairs": 20912,
+      "coplanar_overlap_pairs": 330,
+      "coplanar_overlap_area_m2": 7370.643495,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_6_5.dtile",
+      "triangles": 36462,
+      "candidate_pairs": 173719,
+      "coplanar_overlap_pairs": 2243,
+      "coplanar_overlap_area_m2": 12216.029681,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_6_6.dtile",
+      "triangles": 24383,
+      "candidate_pairs": 230816,
+      "coplanar_overlap_pairs": 300,
+      "coplanar_overlap_area_m2": 7309.130264,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_6_7.dtile",
+      "triangles": 27145,
+      "candidate_pairs": 224704,
+      "coplanar_overlap_pairs": 1178,
+      "coplanar_overlap_area_m2": 10407.711116,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_6_8.dtile",
+      "triangles": 24593,
+      "candidate_pairs": 364887,
+      "coplanar_overlap_pairs": 175,
+      "coplanar_overlap_area_m2": 2172.615822,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_7_2.dtile",
+      "triangles": 6,
+      "candidate_pairs": 7,
+      "coplanar_overlap_pairs": 0,
+      "coplanar_overlap_area_m2": 0,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_7_3.dtile",
+      "triangles": 1968,
+      "candidate_pairs": 11794,
+      "coplanar_overlap_pairs": 238,
+      "coplanar_overlap_area_m2": 2688.146559,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_7_4.dtile",
+      "triangles": 2666,
+      "candidate_pairs": 13670,
+      "coplanar_overlap_pairs": 306,
+      "coplanar_overlap_area_m2": 9290.519322,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_7_5.dtile",
+      "triangles": 1182,
+      "candidate_pairs": 4280,
+      "coplanar_overlap_pairs": 123,
+      "coplanar_overlap_area_m2": 7303.124308,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_7_6.dtile",
+      "triangles": 2296,
+      "candidate_pairs": 10393,
+      "coplanar_overlap_pairs": 238,
+      "coplanar_overlap_area_m2": 9168.42719,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_7_7.dtile",
+      "triangles": 1914,
+      "candidate_pairs": 8724,
+      "coplanar_overlap_pairs": 190,
+      "coplanar_overlap_area_m2": 4144.305834,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_8_4.dtile",
+      "triangles": 1052,
+      "candidate_pairs": 5646,
+      "coplanar_overlap_pairs": 125,
+      "coplanar_overlap_area_m2": 2480.874191,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_8_5.dtile",
+      "triangles": 1538,
+      "candidate_pairs": 8839,
+      "coplanar_overlap_pairs": 184,
+      "coplanar_overlap_area_m2": 11436.983186,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_8_6.dtile",
+      "triangles": 226,
+      "candidate_pairs": 706,
+      "coplanar_overlap_pairs": 27,
+      "coplanar_overlap_area_m2": 1818.264122,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_9_4.dtile",
+      "triangles": 26,
+      "candidate_pairs": 40,
+      "coplanar_overlap_pairs": 3,
+      "coplanar_overlap_area_m2": 69.167599,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    },
+    {
+      "tile": "detail_9_5.dtile",
+      "triangles": 854,
+      "candidate_pairs": 5744,
+      "coplanar_overlap_pairs": 107,
+      "coplanar_overlap_area_m2": 8534.782233,
+      "unresolved_blink_risk_pairs": 0,
+      "unresolved_blink_risk_area_m2": 0
+    }
+  ],
+  "result": "passed"
+}

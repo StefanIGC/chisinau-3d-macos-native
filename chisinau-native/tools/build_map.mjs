@@ -57,7 +57,7 @@ for(const name of fs.readdirSync(worldRoot).filter(name=>name.endsWith('.ctile')
     const o0=vertexOffset+i*40,o1=o0+40,o2=o1+40;
     const ny=(data.readFloatLE(o0+16)+data.readFloatLE(o1+16)+data.readFloatLE(o2+16))/3;
     if(ny<.72)continue;
-    const alpha=data.readFloatLE(o0+36),material=alpha>2?Math.floor(Math.round(alpha)/64):0;
+    const alpha=data.readFloatLE(o0+36),material=alpha>2?Math.floor((Math.floor(alpha)&511)/64):0;
     const y=(data.readFloatLE(o0+4)+data.readFloatLE(o1+4)+data.readFloatLE(o2+4))/3;
     let color=null,opacity=1;
     if(material===3){color=[80,91,96];opacity=.98;}

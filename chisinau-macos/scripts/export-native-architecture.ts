@@ -233,8 +233,14 @@ function pointOwnedByNewShell(point:number[]){
   return false;
 }
 function legacyTriangleOwned(points:number[][]){const center=[(points[0][0]+points[1][0]+points[2][0])/3,(points[0][2]+points[1][2]+points[2][2])/3];return pointOwnedByNewShell(center)||points.some(p=>pointOwnedByNewShell([p[0],p[2]]));}
-const meshes:T.Mesh[]=[],legacyCadastralMeshes=new Set<T.Mesh>();
+const meshes:T.Mesh[]=[],legacyCadastralMeshes=new Set<T.Mesh>(),meshDepthIdentity=new Map<T.Mesh,{layer:number;ordinal:number}>();
 const exportRoots=[...activeLayers.flatMap(layer=>layer.objects),...standaloneGateRoots];
+for(const [layerIndex,layer] of activeLayers.entries()){
+  let meshOrdinal=0;for(const root of layer.objects)root.traverse(object=>{
+    if(object instanceof T.Mesh&&object.geometry?.getAttribute('position'))meshDepthIdentity.set(object,{layer:layerIndex+1,ordinal:meshOrdinal++});
+  });
+}
+let gateMeshOrdinal=0;for(const root of standaloneGateRoots)root.traverse(object=>{if(object instanceof T.Mesh&&object.geometry?.getAttribute('position'))meshDepthIdentity.set(object,{layer:activeLayers.length+1,ordinal:gateMeshOrdinal++});});
 for(const root of exportRoots)root.traverse(object=>{
   if(object instanceof T.Mesh&&object.geometry?.getAttribute('position')){meshes.push(object);if(legacyCadastralRoots.has(root))legacyCadastralMeshes.add(object);}
 });
@@ -260,7 +266,7 @@ const descriptor=fs.openSync(output,'w');
 fs.writeSync(descriptor,header);
 
 const normalMatrix=new T.Matrix3();
-function packedMaterial(material:T.Material&T.MeshStandardMaterial,parkStyle?:number){
+function packedMaterial(material:T.Material&T.MeshStandardMaterial,depthPriority:number,parkStyle?:number){
   const name=(material.name??'').toLocaleLowerCase('ro');
   let kind=0;
   if(Number.isFinite(parkStyle)){
@@ -278,29 +284,36 @@ function packedMaterial(material:T.Material&T.MeshStandardMaterial,parkStyle?:nu
   else if(/apă|apa|water/.test(name))kind=7;
   const roughness=Math.max(0,Math.min(7,Math.round((material.roughness??.88)*7)));
   const metalness=Math.max(0,Math.min(7,Math.round((material.metalness??0)*7)));
-  return kind*64+roughness*8+metalness;
+  // BackSide and DoubleSide are baked into triangle winding below, allowing
+  // the runtime to use fast hardware back-face culling like the browser.
+  return kind*64+roughness*8+metalness+Math.min(262143,depthPriority)/262144;
 }
 let written=0;
-let writtenMeshes=0,suppressedLegacyCadastralTriangles=0;
+let writtenMeshes=0,suppressedLegacyCadastralTriangles=0,bakedReverseTriangles=0;
 for(const mesh of meshes){
   const geometry=mesh.geometry;
   if(!geometry.getAttribute('normal'))geometry.computeVertexNormals();
   const position=geometry.getAttribute('position'),normals=geometry.getAttribute('normal'),colors=geometry.getAttribute('color'),parkStyles=geometry.getAttribute('parkStyle'),index=geometry.index;
   const material=(Array.isArray(mesh.material)?mesh.material[0]:mesh.material) as T.Material&T.MeshStandardMaterial;
-  const base=material.color??new T.Color(1,1,1),count=index?.count??position.count,legacy=legacyCadastralMeshes.has(mesh);
+  const base=material.color??new T.Color(1,1,1),count=index?.count??position.count,legacy=legacyCadastralMeshes.has(mesh),depthIdentity=meshDepthIdentity.get(mesh)??{layer:0,ordinal:0};
   normalMatrix.getNormalMatrix(mesh.matrixWorld);
   const triangle=Array.from({length:3},()=>({source:0,point:new T.Vector3(),normal:new T.Vector3(),materialCode:0}));
   const buffer=Buffer.allocUnsafe(65535*40);let bufferOffset=0,meshWritten=0;
   for(let start=0;start<count;start+=3){
-    for(let j=0;j<3;j++){const source=index?index.getX(start+j):start+j,value=triangle[j];value.source=source;value.point.fromBufferAttribute(position,source).applyMatrix4(mesh.matrixWorld);value.normal.fromBufferAttribute(normals,source).applyMatrix3(normalMatrix).normalize();value.materialCode=packedMaterial(material,parkStyles?.getX(source));}
+    for(let j=0;j<3;j++){const source=index?index.getX(start+j):start+j,value=triangle[j];value.source=source;value.point.fromBufferAttribute(position,source).applyMatrix4(mesh.matrixWorld);value.normal.fromBufferAttribute(normals,source).applyMatrix3(normalMatrix).normalize();value.materialCode=packedMaterial(material,0,parkStyles?.getX(source));}
     if(legacy&&legacyTriangleOwned(triangle.map(v=>[v.point.x,v.point.y,v.point.z]))){suppressedLegacyCadastralTriangles++;continue;}
-    if(bufferOffset+120>buffer.length){fs.writeSync(descriptor,buffer,0,bufferOffset);bufferOffset=0;}
-    for(const value of triangle){const {source}=value,offset=bufferOffset;buffer.writeFloatLE(value.point.x,offset);buffer.writeFloatLE(value.point.y,offset+4);buffer.writeFloatLE(value.point.z,offset+8);buffer.writeFloatLE(value.normal.x,offset+12);buffer.writeFloatLE(value.normal.y,offset+16);buffer.writeFloatLE(value.normal.z,offset+20);buffer.writeFloatLE((colors?colors.getX(source):1)*base.r,offset+24);buffer.writeFloatLE((colors?colors.getY(source):1)*base.g,offset+28);buffer.writeFloatLE((colors?colors.getZ(source):1)*base.b,offset+32);buffer.writeFloatLE(value.materialCode,offset+36);bufferOffset+=40;}
-    written+=3;meshWritten+=3;
+    // Some source BufferGeometry meshes contain several coplanar coloured
+    // surfaces. Mix the triangle colour/material into the secondary rank so
+    // those faces remain deterministic even inside one mesh; the layer stays
+    // in the high byte and therefore remains the authoritative priority.
+    let priorityHash=Math.imul(depthIdentity.ordinal+1,0x45d9f3b);for(const value of triangle){const source=value.source;priorityHash=Math.imul(priorityHash^Math.round(value.point.x*1000),16777619);priorityHash=Math.imul(priorityHash^Math.round(value.point.y*1000),16777619);priorityHash=Math.imul(priorityHash^Math.round(value.point.z*1000),16777619);priorityHash=Math.imul(priorityHash^Math.round((colors?colors.getX(source):1)*base.r*4095),16777619);priorityHash=Math.imul(priorityHash^Math.round((colors?colors.getY(source):1)*base.g*4095),16777619);priorityHash=Math.imul(priorityHash^Math.round((colors?colors.getZ(source):1)*base.b*4095),16777619);priorityHash=Math.imul(priorityHash^value.materialCode,16777619);}priorityHash^=priorityHash>>>16;priorityHash=Math.imul(priorityHash,0x45d9f3b);priorityHash^=priorityHash>>>16;const depthPriority=depthIdentity.layer*1024+(priorityHash&1023);for(const value of triangle)value.materialCode+=depthPriority/262144;
+    const ab=new T.Vector3().subVectors(triangle[1].point,triangle[0].point),ac=new T.Vector3().subVectors(triangle[2].point,triangle[0].point),face=new T.Vector3().crossVectors(ab,ac),averageNormal=new T.Vector3().copy(triangle[0].normal).add(triangle[1].normal).add(triangle[2].normal),frontOrder=face.dot(averageNormal)>=0?[0,1,2]:[2,1,0];
+    const passes=material.side===T.BackSide?[{order:[frontOrder[2],frontOrder[1],frontOrder[0]],normalSign:-1}]:material.side===T.DoubleSide?[{order:frontOrder,normalSign:1},{order:[frontOrder[2],frontOrder[1],frontOrder[0]],normalSign:-1}]:[{order:frontOrder,normalSign:1}];
+    for(const pass of passes){if(bufferOffset+120>buffer.length){fs.writeSync(descriptor,buffer,0,bufferOffset);bufferOffset=0;}for(const index of pass.order){const value=triangle[index],{source}=value,offset=bufferOffset;buffer.writeFloatLE(value.point.x,offset);buffer.writeFloatLE(value.point.y,offset+4);buffer.writeFloatLE(value.point.z,offset+8);buffer.writeFloatLE(value.normal.x*pass.normalSign,offset+12);buffer.writeFloatLE(value.normal.y*pass.normalSign,offset+16);buffer.writeFloatLE(value.normal.z*pass.normalSign,offset+20);buffer.writeFloatLE((colors?colors.getX(source):1)*base.r,offset+24);buffer.writeFloatLE((colors?colors.getY(source):1)*base.g,offset+28);buffer.writeFloatLE((colors?colors.getZ(source):1)*base.b,offset+32);buffer.writeFloatLE(value.materialCode,offset+36);bufferOffset+=40;}written+=3;meshWritten+=3;if(pass.normalSign<0)bakedReverseTriangles++;}
   }
   if(bufferOffset)fs.writeSync(descriptor,buffer,0,bufferOffset);if(meshWritten)writtenMeshes++;
 }
 const countPatch=Buffer.alloc(8);countPatch.writeUInt32LE(written,0);countPatch.writeUInt32LE(writtenMeshes,4);fs.writeSync(descriptor,countPatch,0,4,8);fs.writeSync(descriptor,countPatch,4,4,16);
 fs.closeSync(descriptor);
-if(written>sourceVertexCount)throw new Error(`Architecture vertex count overflow: ${written} > ${sourceVertexCount}`);
-console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),restoredFamilies:['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete','porțile de curte'],meshes:writtenMeshes,sourceMeshes:meshes.length,vertices:written,sourceVertices:sourceVertexCount,solidShellVertices,replacementIds:replacementIds.length,ownershipSurfaces:ownershipSurfaces.length,buildingOwnershipMasks:buildingOwnershipMasks.length,suppressedLegacyCadastralTriangles,gates:{count:standaloneGateRoots.length,meshes:gateMeshes.length,vertices:gateVertices},bytes:fs.statSync(output).size,largestLayers:[...layerVertices,{name:'Porți de curte · canaturi',jobs:standaloneGateRoots.length,vertices:gateVertices}].sort((a,b)=>b.vertices-a.vertices).slice(0,24)}));
+if(written>sourceVertexCount*2)throw new Error(`Architecture vertex count overflow: ${written} > ${sourceVertexCount*2}`);
+console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),restoredFamilies:['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete','porțile de curte'],meshes:writtenMeshes,sourceMeshes:meshes.length,vertices:written,sourceVertices:sourceVertexCount,bakedReverseTriangles,solidShellVertices,replacementIds:replacementIds.length,ownershipSurfaces:ownershipSurfaces.length,buildingOwnershipMasks:buildingOwnershipMasks.length,suppressedLegacyCadastralTriangles,gates:{count:standaloneGateRoots.length,meshes:gateMeshes.length,vertices:gateVertices},bytes:fs.statSync(output).size,largestLayers:[...layerVertices,{name:'Porți de curte · canaturi',jobs:standaloneGateRoots.length,vertices:gateVertices}].sort((a,b)=>b.vertices-a.vertices).slice(0,24)}));

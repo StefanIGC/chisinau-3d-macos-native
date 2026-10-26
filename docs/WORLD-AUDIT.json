@@ -1,10 +1,10 @@
 {
-  "version": "2.14.0",
+  "version": "2.15.0",
   "compiled_world": {
     "base_tiles": 240,
     "detail_tiles": 222,
     "base_vertices": 5378085,
-    "authored_vertices": 36789297,
+    "authored_vertices": 37013127,
     "solid_shell_vertices": 701412,
     "authored_layers": 190,
     "authored_meshes": 15638,
@@ -31,7 +31,7 @@
     "collision_only_authored_buildings": 8497,
     "building_ownership_masks": 1767,
     "suppressed_legacy_cadastral_triangles": 20782,
-    "deduplicated_visible_triangles": 114963,
+    "deduplicated_visible_triangles": 41145,
     "surface_ownership_masks": 10418,
     "suppressed_legacy_geometry": {
       "roads": 274432,
@@ -156,7 +156,7 @@
         1220,
         850
       ],
-      "asphalt_triangles": 203232,
+      "asphalt_triangles": 203249,
       "min_y_m": 0,
       "max_y_m": 17.9132,
       "detail_tiles": 27
@@ -168,7 +168,7 @@
         1750,
         550
       ],
-      "asphalt_triangles": 73274,
+      "asphalt_triangles": 73282,
       "min_y_m": 0.035,
       "max_y_m": 0.485,
       "detail_tiles": 21
@@ -189,12 +189,12 @@
   "anti_blink_scan": {
     "whole_city_duplicate_visible_triangles": 0,
     "bucuresti_armeneasca_radius_m": 95,
-    "unique_authored_surface_triangles": 43296,
+    "unique_authored_surface_triangles": 43300,
     "duplicate_visible_surface_triangles": 0,
     "degenerate_duplicate_triangles_below_0_001_m2": 0,
     "nr1_lev_tolstoi": {
       "radius_m": 160,
-      "visible_triangles": 505007,
+      "visible_triangles": 505932,
       "duplicate_visible_triangles": 0
     }
   },

@@ -132,10 +132,12 @@ static float moveTowards(float value,float target,float amount) {
 }
 
 static matrix_float4x4 perspective(float fovy, float aspect, float nearPlane, float farPlane) {
-  float ys=1/std::tan(fovy*.5f),xs=ys/aspect,zs=farPlane/(nearPlane-farPlane);
+  // Reversed-Z keeps floating-point depth precision across the complete
+  // no-fog horizon instead of concentrating it next to the camera.
+  float ys=1/std::tan(fovy*.5f),xs=ys/aspect,zs=nearPlane/(farPlane-nearPlane);
   matrix_float4x4 m{};
   m.columns[0]={xs,0,0,0};m.columns[1]={0,ys,0,0};
-  m.columns[2]={0,0,zs,-1};m.columns[3]={0,0,zs*nearPlane,0};
+  m.columns[2]={0,0,zs,-1};m.columns[3]={0,0,zs*farPlane,0};
   return m;
 }
 
@@ -163,6 +165,13 @@ struct Raster { float4 position [[position]]; float3 world; float3 normal; float
 vertex Raster cityVertex(device const PackedVertex *vertices [[buffer(0)]], constant Uniforms &u [[buffer(1)]], uint id [[vertex_id]]) {
   PackedVertex v=vertices[id];
   float4 world=u.model*float4(float3(v.position),1.0);
+  if(u.viewportAndExposure.w>.5){
+    uint depthCode=uint(round(fract(v.color.w)*262144.0)),layerCode=depthCode>>10u,triangleCode=depthCode&1023u;
+    uint3 colorCode=uint3(round(clamp(float3(v.color.xyz),0.0,1.0)*4095.0));
+    uint colorRank=(colorCode.x*73856093u)^(colorCode.y*19349663u)^(colorCode.z*83492791u);
+    float depthOffsetMeters=float(layerCode)*.0015+float(triangleCode)/1023.0*.001+float(colorRank&255u)/255.0*.0004;
+    world.xyz+=normalize(u.cameraAndFogStart.xyz-world.xyz)*depthOffsetMeters;
+  }
   Raster o;o.position=u.viewProjection*world;o.world=world.xyz;
   o.normal=normalize(float3(u.model*float4(float3(v.normal),0.0)));o.color=float4(v.color)*float4(u.tintAndTime.xyz,1.0);return o;
 }
@@ -220,7 +229,8 @@ float3 materialDetail(float3 base,float3 world,float3 n,uint materialClass,float
 }
 fragment float4 cityFragment(Raster in [[stage_in]], constant Uniforms &u [[buffer(1)]],texture2d<float> asphaltTexture [[texture(0)]],texture2d<float> pavementTexture [[texture(1)]],texture2d<float> grassTexture [[texture(2)]],sampler surfaceSampler [[sampler(0)]]) {
   float3 n=normalize(in.normal),sun=normalize(u.fogEndAndSun.yzw),base=max(in.color.rgb,0.0);
-  uint packed=in.color.a>2.0?uint(round(in.color.a)):0u;
+  uint encoded=in.color.a>2.0?uint(floor(in.color.a)):0u;
+  uint packed=encoded&511u;
   uint materialClass=packed/64u,roughnessCode=(packed/8u)%8u,metalnessCode=packed%8u;
   float roughness=packed?float(roughnessCode)/7.0:(in.color.a<.5?.34:.88);
   float metalness=packed?float(metalnessCode)/7.0:(in.color.a<.5?.14:0.0);
@@ -664,7 +674,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
   MTLRenderPipelineDescriptor*skyDescriptor=[MTLRenderPipelineDescriptor new];skyDescriptor.vertexFunction=[library newFunctionWithName:@"skyVertex"];skyDescriptor.fragmentFunction=[library newFunctionWithName:@"skyFragment"];
   skyDescriptor.colorAttachments[0].pixelFormat=view.colorPixelFormat;skyDescriptor.depthAttachmentPixelFormat=view.depthStencilPixelFormat;
   _skyPipeline=[_device newRenderPipelineStateWithDescriptor:skyDescriptor error:&error];if(!_skyPipeline){NSLog(@"Metal sky pipeline error: %@",error);return nil;}
-  MTLDepthStencilDescriptor*depth=[MTLDepthStencilDescriptor new];depth.depthCompareFunction=MTLCompareFunctionLessEqual;depth.depthWriteEnabled=YES;_depth=[_device newDepthStencilStateWithDescriptor:depth];
+  MTLDepthStencilDescriptor*depth=[MTLDepthStencilDescriptor new];depth.depthCompareFunction=MTLCompareFunctionGreaterEqual;depth.depthWriteEnabled=YES;_depth=[_device newDepthStencilStateWithDescriptor:depth];
   MTLDepthStencilDescriptor*skyDepth=[MTLDepthStencilDescriptor new];skyDepth.depthCompareFunction=MTLCompareFunctionAlways;skyDepth.depthWriteEnabled=NO;_skyDepth=[_device newDepthStencilStateWithDescriptor:skyDepth];
   MTKTextureLoader*textureLoader=[[MTKTextureLoader alloc]initWithDevice:_device];NSDictionary*textureOptions=@{MTKTextureLoaderOptionSRGB:@YES,MTKTextureLoaderOptionGenerateMipmaps:@YES,MTKTextureLoaderOptionTextureUsage:@(MTLTextureUsageShaderRead)};
   auto loadSurfaceTexture=^(NSString*name){NSString*path=[resourcePath stringByAppendingPathComponent:[@"textures" stringByAppendingPathComponent:name]];NSError*textureError=nil;id<MTLTexture>texture=[textureLoader newTextureWithContentsOfURL:[NSURL fileURLWithPath:path] options:textureOptions error:&textureError];if(!texture){NSImage*source=[[NSImage alloc]initWithContentsOfFile:path];CGImageRef image=[source CGImageForProposedRect:nil context:nil hints:nil];if(image)texture=[textureLoader newTextureWithCGImage:image options:textureOptions error:&textureError];}if(!texture)NSLog(@"Surface texture %@: %@",name,textureError);return texture;};
@@ -789,11 +799,10 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
     // Two small allocations per frame avoid both a 20 MB main-thread copy and
     // the single 480 KB driver spike while sustaining 28.8 MB/s at 60 FPS.
     // Counts stay triangle-aligned.
-    // Dense authored blocks (especially BUC06 and central Șciusev) can make a
-    // 480 KB shared-buffer allocation visible as a one-frame hitch. A 240 KB
-    // ceiling keeps upload work below the frame budget on Apple Silicon while
+    // Dense authored blocks can make a larger shared-buffer allocation visible
+    // as a single 25–27 ms frame. A 180 KB ceiling leaves upload headroom while
     // two background readers continue to prefetch the next tiles.
-    constexpr uint32_t maxChunkVertices=6000;
+    constexpr uint32_t maxChunkVertices=4500;
     uint32_t count=std::min(maxChunkVertices,ready.vertexCount-ready.nextVertex);count-=count%3;
     TileBufferChunk chunk;chunk.vertexCount=count;
     chunk.buffer=[_device newBufferWithBytes:ready.bytes.get()+sizeof(TileHeader)+(size_t)ready.nextVertex*sizeof(PackedVertex) length:(size_t)count*sizeof(PackedVertex) options:MTLResourceStorageModeShared];
@@ -1244,17 +1253,18 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
     _fpsAccumulator+=rawDt;_fpsFrames++;if(_fpsAccumulator>=.5){_displayFPS=(float)(_fpsFrames/_fpsAccumulator);_fpsFrames=0;_fpsAccumulator=0;}
     [self integratePending];[self updatePlayer:dt now:now];[self updateCamera:dt];[self updateStreaming:now];[self updateHUD:now];
     MTLRenderPassDescriptor*pass=view.currentRenderPassDescriptor;id<CAMetalDrawable>drawable=view.currentDrawable;if(!pass||!drawable){[_view finishInputFrame];return;}
-    pass.colorAttachments[0].clearColor=MTLClearColorMake(.145,.285,.505,1);pass.colorAttachments[0].loadAction=MTLLoadActionClear;pass.depthAttachment.clearDepth=1;pass.depthAttachment.loadAction=MTLLoadActionClear;
-    id<MTLCommandBuffer>command=[_queue commandBuffer];id<MTLRenderCommandEncoder>encoder=[command renderCommandEncoderWithDescriptor:pass];[encoder setCullMode:MTLCullModeNone];
+    pass.colorAttachments[0].clearColor=MTLClearColorMake(.145,.285,.505,1);pass.colorAttachments[0].loadAction=MTLLoadActionClear;pass.depthAttachment.clearDepth=0;pass.depthAttachment.loadAction=MTLLoadActionClear;
+    id<MTLCommandBuffer>command=[_queue commandBuffer];id<MTLRenderCommandEncoder>encoder=[command renderCommandEncoderWithDescriptor:pass];[encoder setCullMode:MTLCullModeNone];[encoder setFrontFacingWinding:MTLWindingCounterClockwise];
     SkyUniforms sky{{_camera.x,_camera.y,_camera.z,(float)(now-_startTime)},{_cameraYaw,_cameraPitch,(float)(std::max(1.0,view.drawableSize.width)/std::max(1.0,view.drawableSize.height)),0}};
     [encoder setRenderPipelineState:_skyPipeline];[encoder setDepthStencilState:_skyDepth];[encoder setFragmentBytes:&sky length:sizeof(sky) atIndex:0];[encoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3];
     [encoder setRenderPipelineState:_pipeline];[encoder setDepthStencilState:_depth];
+    [encoder setCullMode:MTLCullModeBack];
     [encoder setFragmentTexture:_asphaltTexture atIndex:0];[encoder setFragmentTexture:_pavementTexture atIndex:1];[encoder setFragmentTexture:_grassTexture atIndex:2];[encoder setFragmentSamplerState:_surfaceSampler atIndex:0];
     float aspect=std::max(1.0,view.drawableSize.width)/std::max(1.0,view.drawableSize.height),fov=_mode==PlayerMode::Helicopter?64.f:_mode==PlayerMode::Car?61.f:58.f;matrix_float4x4 vp=simd_mul(perspective(fov*kPi/180,aspect,.12f,_fogEnd),lookAt(_camera,_cameraTarget));
-    Uniforms world{};world.viewProjection=vp;world.model=matrix_identity_float4x4;world.cameraAndFogStart={_camera.x,_camera.y,_camera.z,_fogStart};world.fogEndAndSun={_fogEnd,-85.f,110.f,65.f};world.tintAndTime={1,1,1,(float)(now-_startTime)};world.viewportAndExposure={(float)view.drawableSize.width,(float)view.drawableSize.height,1,0};
+    Uniforms world{};world.viewProjection=vp;world.model=matrix_identity_float4x4;world.cameraAndFogStart={_camera.x,_camera.y,_camera.z,_fogStart};world.fogEndAndSun={_fogEnd,-85.f,110.f,65.f};world.tintAndTime={1,1,1,(float)(now-_startTime)};world.viewportAndExposure={(float)view.drawableSize.width,(float)view.drawableSize.height,1,1};
     [encoder setVertexBytes:&world length:sizeof(world) atIndex:1];[encoder setFragmentBytes:&world length:sizeof(world) atIndex:1];
     // Base context first, authoritative photo-authored geometry second. With
-    // LessEqual depth the detailed surface wins even when a source footprint
+    // GreaterEqual reversed depth makes the detailed surface win even when a source footprint
     // is exactly coplanar with its lightweight streaming envelope.
     vector_float2 horizontalView={_cameraTarget.x-_camera.x,_cameraTarget.z-_camera.z};float horizontalLength=simd_length(horizontalView);if(horizontalLength>.001f)horizontalView/=horizontalLength;else horizontalView={0,-1};float horizontalTan=std::tan(fov*kPi/360.f)*aspect;
     PlayerState&p=[self activePlayer];for(int detailPass=0;detailPass<2;detailPass++)for(auto&tile:_tiles)if(tile.detail==(detailPass==1)&&tile.state==2&&!tile.chunks.empty()){
@@ -1264,7 +1274,7 @@ static ModelMesh loadCompiledModel(id<MTLDevice>device,const std::filesystem::pa
       tile.visibleChunks=std::min(tile.chunks.size(),tile.visibleChunks+1);
       for(size_t i=0;i<tile.visibleChunks;i++){auto&chunk=tile.chunks[i];[encoder setVertexBuffer:chunk.buffer offset:0 atIndex:0];[encoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:chunk.vertexCount];}
     }
-    [self drawActors:encoder vp:vp time:(float)(now-_startTime)];[encoder endEncoding];[command presentDrawable:drawable];[command commit];
+    [encoder setCullMode:MTLCullModeNone];[self drawActors:encoder vp:vp time:(float)(now-_startTime)];[encoder endEncoding];[command presentDrawable:drawable];[command commit];
     [_view finishInputFrame];[self finishBenchmark:now];
   }
 }

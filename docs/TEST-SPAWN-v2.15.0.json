@@ -1,0 +1,11 @@
+{
+  "test": "vehicle generation",
+  "car_generated": true,
+  "helicopter_generated": true,
+  "helicopter_grounded": true,
+  "car_distance_m": 7.00,
+  "helicopter_distance_m": 13.89,
+  "vehicle_separation_m": 8.60,
+  "finite_state": true,
+  "passed": true
+}

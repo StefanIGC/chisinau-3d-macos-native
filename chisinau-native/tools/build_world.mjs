@@ -573,13 +573,11 @@ function compileArchitectureTiles(file,header){
   function bucket(x,y){const key=`${x}/${y}`;let value=details.get(key);if(!value){value={x,y,sourceVertices:0,bytes:0,buffer:Buffer.allocUnsafe(1200000),file:path.join(architectureTempRoot,`${x}_${y}.raw`),collisions:[]};details.set(key,value);}return value;}
   function flush(value){if(!value.bytes)return;fs.appendFileSync(value.file,value.buffer.subarray(0,value.bytes));value.bytes=0;}
   function triangleGeometryHash(buffer,offset){
-    // Metal renders authored geometry without back-face culling. One triangle
-    // is therefore sufficient even when a second source emits the same three
-    // positions with reversed winding, another normal, colour or material.
-    // Millimetre quantisation also collapses sub-pixel source round-off that
-    // otherwise alternates in the depth buffer while the camera moves.
-    const signatures=[];for(let j=0;j<3;j++){const at=offset+j*40;signatures.push(`${Math.round(buffer.readFloatLE(at)*1000)},${Math.round(buffer.readFloatLE(at+4)*1000)},${Math.round(buffer.readFloatLE(at+8)*1000)}`);}signatures.sort();
-    let a=2166136261,b=2246822519;for(const signature of signatures)for(let i=0;i<signature.length;i++){const code=signature.charCodeAt(i);a=Math.imul(a^code,16777619);b=Math.imul(b^code,3266489917);}return`${a>>>0}/${b>>>0}`;
+    // Preserve opposite winding because explicit DoubleSide source materials
+    // are baked as front-facing geometry in both directions. Cyclic rotation
+    // still deduplicates identical same-facing triangles from other sources.
+    const ordered=[];for(let j=0;j<3;j++){const at=offset+j*40;ordered.push(`${Math.round(buffer.readFloatLE(at)*1000)},${Math.round(buffer.readFloatLE(at+4)*1000)},${Math.round(buffer.readFloatLE(at+8)*1000)}`);}const oriented=[ordered.join('|'),[ordered[1],ordered[2],ordered[0]].join('|'),[ordered[2],ordered[0],ordered[1]].join('|')].sort()[0];
+    let a=2166136261,b=2246822519;for(let i=0;i<oriented.length;i++){const code=oriented.charCodeAt(i);a=Math.imul(a^code,16777619);b=Math.imul(b^code,3266489917);}return`${a>>>0}/${b>>>0}`;
   }
   let position=header.headerBytes,remaining=header.vertices,processed=0,discardedDegenerateSurfaceTriangles=0;
   while(remaining){
@@ -592,7 +590,8 @@ function compileArchitectureTiles(file,header){
         transformed.push([p[0],y,p[1],tx,ny,tz,readBuffer.readFloatLE(offset+24),readBuffer.readFloatLE(offset+28),readBuffer.readFloatLE(offset+32),readBuffer.readFloatLE(offset+36)]);
       }
       const ab=[transformed[1][0]-transformed[0][0],transformed[1][1]-transformed[0][1],transformed[1][2]-transformed[0][2]],ac=[transformed[2][0]-transformed[0][0],transformed[2][1]-transformed[0][1],transformed[2][2]-transformed[0][2]],face=[ab[1]*ac[2]-ab[2]*ac[1],ab[2]*ac[0]-ab[0]*ac[2],ab[0]*ac[1]-ab[1]*ac[0]],faceLength=Math.hypot(...face)||1;if(face[1]<0)for(let k=0;k<3;k++)face[k]*=-1;for(let k=0;k<3;k++)face[k]/=faceLength;
-      const tileX=Math.floor(centerX/detailTileSize),tileY=Math.floor(centerZ/detailTileSize),target=bucket(tileX,tileY),surfaceMaterial=transformed.every(values=>[3,4,5,7].includes(Math.floor(values[9]/64))),surface=surfaceMaterial&&face[1]>.8;
+      const materialKind=value=>Math.floor((Math.floor(value)&511)/64);
+      const tileX=Math.floor(centerX/detailTileSize),tileY=Math.floor(centerZ/detailTileSize),target=bucket(tileX,tileY),surfaceMaterial=transformed.every(values=>[3,4,5,7].includes(materialKind(values[9]))),surface=surfaceMaterial&&face[1]>.8;
       if(surfaceMaterial&&surface)for(const values of transformed){values[3]=face[0];values[4]=face[1];values[5]=face[2];}
       if(target.bytes+triangleBytes>target.buffer.length)flush(target);
       for(const values of transformed)for(const value of values){target.buffer.writeFloatLE(value,target.bytes);target.bytes+=4;}
@@ -614,7 +613,7 @@ function compileArchitectureTiles(file,header){
   for(const value of details.values()){
     flush(value);const center=[(value.x+.5)*detailTileSize,(value.y+.5)*detailTileSize],collisionGrid=compileCollisionGrid(value.collisions,center),hasCollisions=value.collisions.length>0,headerBuffer=Buffer.alloc(64);headerBuffer.writeUInt32LE(0x4c495443,0);headerBuffer.writeUInt32LE(1,4);headerBuffer.writeInt32LE(value.x,8);headerBuffer.writeInt32LE(value.y,12);headerBuffer.writeFloatLE(center[0],16);headerBuffer.writeFloatLE(center[1],20);headerBuffer.writeUInt32LE(value.collisions.length/6,28);headerBuffer.writeUInt32LE(hasCollisions?collisionGrid.indices.length:0,32);headerBuffer.writeUInt32LE(hasCollisions?COLLISION_GRID_DIMENSION:0,36);headerBuffer.writeFloatLE(collisionGrid.maxHeight,40);
     const output=path.join(outputRoot,`detail_${value.x}_${value.y}.dtile`),out=fs.openSync(output,'w');fs.writeSync(out,headerBuffer);const input=fs.openSync(value.file,'r'),copy=Buffer.allocUnsafe(triangleBytes*8192),unique=Buffer.allocUnsafe(triangleBytes*8192),seen=new Set();let offset=0,uniqueBytes=0,outputVertices=0;
-    for(;;){const read=fs.readSync(input,copy,0,copy.length,offset);if(!read)break;if(read%triangleBytes)throw new Error(`Unaligned authored tile ${value.x}/${value.y}`);for(let at=0;at<read;at+=triangleBytes){const hash=triangleGeometryHash(copy,at);if(seen.has(hash)){deduplicatedVisibleTriangles++;const kind=Math.floor(copy.readFloatLE(at+36)/64);if([3,4,5,7].includes(kind))deduplicatedSurfaceTriangles++;else deduplicatedSolidTriangles++;continue;}seen.add(hash);if(uniqueBytes+triangleBytes>unique.length){fs.writeSync(out,unique,0,uniqueBytes);uniqueBytes=0;}copy.copy(unique,uniqueBytes,at,at+triangleBytes);uniqueBytes+=triangleBytes;outputVertices+=3;}offset+=read;}
+    for(;;){const read=fs.readSync(input,copy,0,copy.length,offset);if(!read)break;if(read%triangleBytes)throw new Error(`Unaligned authored tile ${value.x}/${value.y}`);for(let at=0;at<read;at+=triangleBytes){const hash=triangleGeometryHash(copy,at);if(seen.has(hash)){deduplicatedVisibleTriangles++;const kind=Math.floor((Math.floor(copy.readFloatLE(at+36))&511)/64);if([3,4,5,7].includes(kind))deduplicatedSurfaceTriangles++;else deduplicatedSolidTriangles++;continue;}seen.add(hash);if(uniqueBytes+triangleBytes>unique.length){fs.writeSync(out,unique,0,uniqueBytes);uniqueBytes=0;}copy.copy(unique,uniqueBytes,at,at+triangleBytes);uniqueBytes+=triangleBytes;outputVertices+=3;}offset+=read;}
     if(uniqueBytes)fs.writeSync(out,unique,0,uniqueBytes);fs.closeSync(input);headerBuffer.writeUInt32LE(outputVertices,24);fs.writeSync(out,headerBuffer,0,headerBuffer.length,0);compiledVertices+=outputVertices;
     const trailerBytes=value.collisions.length*4+(hasCollisions?(collisionGrid.offsets.length+collisionGrid.indices.length)*4:0),trailer=Buffer.allocUnsafe(trailerBytes);let trailerOffset=0;for(const item of value.collisions){trailer.writeFloatLE(item,trailerOffset);trailerOffset+=4;}if(hasCollisions){for(const item of collisionGrid.offsets){trailer.writeUInt32LE(item,trailerOffset);trailerOffset+=4;}for(const item of collisionGrid.indices){trailer.writeUInt32LE(item,trailerOffset);trailerOffset+=4;}}if(trailerBytes)fs.writeSync(out,trailer);fs.closeSync(out);totalBytes+=64+outputVertices*40+trailerBytes;
   }
