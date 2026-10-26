@@ -570,19 +570,18 @@ function compileArchitectureTiles(file,header){
   // of waiting for a 50–125 MB Web-Mercator tile to upload in its entirety.
   const detailTileSize=192;
   const details=new Map(),descriptor=fs.openSync(file,'r'),triangleBytes=3*10*4,batchTriangles=8192,readBuffer=Buffer.allocUnsafe(triangleBytes*batchTriangles);
-  function bucket(x,y){const key=`${x}/${y}`;let value=details.get(key);if(!value){value={x,y,vertices:0,bytes:0,buffer:Buffer.allocUnsafe(1200000),file:path.join(architectureTempRoot,`${x}_${y}.raw`),surfaceTriangles:new Set(),collisions:[]};details.set(key,value);}return value;}
+  function bucket(x,y){const key=`${x}/${y}`;let value=details.get(key);if(!value){value={x,y,sourceVertices:0,bytes:0,buffer:Buffer.allocUnsafe(1200000),file:path.join(architectureTempRoot,`${x}_${y}.raw`),collisions:[]};details.set(key,value);}return value;}
   function flush(value){if(!value.bytes)return;fs.appendFileSync(value.file,value.buffer.subarray(0,value.bytes));value.bytes=0;}
-  function surfaceTriangleHash(vertices){
-    // Identical coplanar surfaces can arrive with slightly different generated
-    // normals. Positions, colour and the material family define the visible
-    // primitive; normals must not keep a second depth-writing copy alive.
-    // Hash the exact Float32 values that the tile will store. Two source
-    // triangles can differ below Float32 precision and become identical only
-    // after serialization; comparing the Double intermediates misses them.
-    const signatures=vertices.map(v=>[Math.round(Math.fround(v[0])*1000),Math.round(Math.fround(v[1])*1000),Math.round(Math.fround(v[2])*1000),Math.round(Math.fround(v[6])*4096),Math.round(Math.fround(v[7])*4096),Math.round(Math.fround(v[8])*4096),Math.floor(v[9]/64)].join(',')).sort();
-    let a=2166136261,b=2246822519;for(const signature of signatures)for(let i=0;i<signature.length;i++){const code=signature.charCodeAt(i);a=Math.imul(a^code,16777619);b=Math.imul(b^code,3266489917);}return(a>>>0)*2097152+(b>>>11);
+  function triangleGeometryHash(buffer,offset){
+    // Metal renders authored geometry without back-face culling. One triangle
+    // is therefore sufficient even when a second source emits the same three
+    // positions with reversed winding, another normal, colour or material.
+    // Millimetre quantisation also collapses sub-pixel source round-off that
+    // otherwise alternates in the depth buffer while the camera moves.
+    const signatures=[];for(let j=0;j<3;j++){const at=offset+j*40;signatures.push(`${Math.round(buffer.readFloatLE(at)*1000)},${Math.round(buffer.readFloatLE(at+4)*1000)},${Math.round(buffer.readFloatLE(at+8)*1000)}`);}signatures.sort();
+    let a=2166136261,b=2246822519;for(const signature of signatures)for(let i=0;i<signature.length;i++){const code=signature.charCodeAt(i);a=Math.imul(a^code,16777619);b=Math.imul(b^code,3266489917);}return`${a>>>0}/${b>>>0}`;
   }
-  let position=header.headerBytes,remaining=header.vertices,processed=0,deduplicatedSurfaceTriangles=0,discardedDegenerateSurfaceTriangles=0;
+  let position=header.headerBytes,remaining=header.vertices,processed=0,discardedDegenerateSurfaceTriangles=0;
   while(remaining){
     const vertices=Math.min(remaining,batchTriangles*3),bytes=vertices*40,read=fs.readSync(descriptor,readBuffer,0,bytes,position);if(read!==bytes)throw new Error('Truncated authored architecture file.');
     for(let at=0;at<bytes;at+=triangleBytes){
@@ -594,10 +593,10 @@ function compileArchitectureTiles(file,header){
       }
       const ab=[transformed[1][0]-transformed[0][0],transformed[1][1]-transformed[0][1],transformed[1][2]-transformed[0][2]],ac=[transformed[2][0]-transformed[0][0],transformed[2][1]-transformed[0][1],transformed[2][2]-transformed[0][2]],face=[ab[1]*ac[2]-ab[2]*ac[1],ab[2]*ac[0]-ab[0]*ac[2],ab[0]*ac[1]-ab[1]*ac[0]],faceLength=Math.hypot(...face)||1;if(face[1]<0)for(let k=0;k<3;k++)face[k]*=-1;for(let k=0;k<3;k++)face[k]/=faceLength;
       const tileX=Math.floor(centerX/detailTileSize),tileY=Math.floor(centerZ/detailTileSize),target=bucket(tileX,tileY),surfaceMaterial=transformed.every(values=>[3,4,5,7].includes(Math.floor(values[9]/64))),surface=surfaceMaterial&&face[1]>.8;
-      if(surfaceMaterial){if(surface)for(const values of transformed){values[3]=face[0];values[4]=face[1];values[5]=face[2];}const hash=surfaceTriangleHash(transformed);if(target.surfaceTriangles.has(hash)){deduplicatedSurfaceTriangles++;processed+=3;continue;}target.surfaceTriangles.add(hash);}
+      if(surfaceMaterial&&surface)for(const values of transformed){values[3]=face[0];values[4]=face[1];values[5]=face[2];}
       if(target.bytes+triangleBytes>target.buffer.length)flush(target);
       for(const values of transformed)for(const value of values){target.buffer.writeFloatLE(value,target.bytes);target.bytes+=4;}
-      target.vertices+=3;processed+=3;
+      target.sourceVertices+=3;processed+=3;
     }
     position+=bytes;remaining-=vertices;
   }
@@ -611,13 +610,15 @@ function compileArchitectureTiles(file,header){
     const a=localPoint(gate.a),b=localPoint(gate.b),center=[(a[0]+b[0])*.5,(a[1]+b[1])*.5],target=bucket(Math.floor(center[0]/detailTileSize),Math.floor(center[1]/detailTileSize));
     target.collisions.push(a[0],a[1],b[0],b[1],.10,Math.max(.4,number(gate.height,2.4)+number(gate.baseOffset,0)+.12));gateCollisionSegments++;
   }
-  let totalBytes=0;
+  let totalBytes=0,deduplicatedVisibleTriangles=0,deduplicatedSurfaceTriangles=0,deduplicatedSolidTriangles=0,compiledVertices=0;
   for(const value of details.values()){
-    flush(value);const center=[(value.x+.5)*detailTileSize,(value.y+.5)*detailTileSize],collisionGrid=compileCollisionGrid(value.collisions,center),hasCollisions=value.collisions.length>0,headerBuffer=Buffer.alloc(64);headerBuffer.writeUInt32LE(0x4c495443,0);headerBuffer.writeUInt32LE(1,4);headerBuffer.writeInt32LE(value.x,8);headerBuffer.writeInt32LE(value.y,12);headerBuffer.writeFloatLE(center[0],16);headerBuffer.writeFloatLE(center[1],20);headerBuffer.writeUInt32LE(value.vertices,24);headerBuffer.writeUInt32LE(value.collisions.length/6,28);headerBuffer.writeUInt32LE(hasCollisions?collisionGrid.indices.length:0,32);headerBuffer.writeUInt32LE(hasCollisions?COLLISION_GRID_DIMENSION:0,36);headerBuffer.writeFloatLE(collisionGrid.maxHeight,40);
-    const output=path.join(outputRoot,`detail_${value.x}_${value.y}.dtile`),out=fs.openSync(output,'w');fs.writeSync(out,headerBuffer);const input=fs.openSync(value.file,'r'),copy=Buffer.allocUnsafe(4*1024*1024);let offset=0;for(;;){const read=fs.readSync(input,copy,0,copy.length,offset);if(!read)break;fs.writeSync(out,copy,0,read);offset+=read;}fs.closeSync(input);
-    const trailerBytes=value.collisions.length*4+(hasCollisions?(collisionGrid.offsets.length+collisionGrid.indices.length)*4:0),trailer=Buffer.allocUnsafe(trailerBytes);let trailerOffset=0;for(const item of value.collisions){trailer.writeFloatLE(item,trailerOffset);trailerOffset+=4;}if(hasCollisions){for(const item of collisionGrid.offsets){trailer.writeUInt32LE(item,trailerOffset);trailerOffset+=4;}for(const item of collisionGrid.indices){trailer.writeUInt32LE(item,trailerOffset);trailerOffset+=4;}}if(trailerBytes)fs.writeSync(out,trailer);fs.closeSync(out);totalBytes+=64+value.vertices*40+trailerBytes;
+    flush(value);const center=[(value.x+.5)*detailTileSize,(value.y+.5)*detailTileSize],collisionGrid=compileCollisionGrid(value.collisions,center),hasCollisions=value.collisions.length>0,headerBuffer=Buffer.alloc(64);headerBuffer.writeUInt32LE(0x4c495443,0);headerBuffer.writeUInt32LE(1,4);headerBuffer.writeInt32LE(value.x,8);headerBuffer.writeInt32LE(value.y,12);headerBuffer.writeFloatLE(center[0],16);headerBuffer.writeFloatLE(center[1],20);headerBuffer.writeUInt32LE(value.collisions.length/6,28);headerBuffer.writeUInt32LE(hasCollisions?collisionGrid.indices.length:0,32);headerBuffer.writeUInt32LE(hasCollisions?COLLISION_GRID_DIMENSION:0,36);headerBuffer.writeFloatLE(collisionGrid.maxHeight,40);
+    const output=path.join(outputRoot,`detail_${value.x}_${value.y}.dtile`),out=fs.openSync(output,'w');fs.writeSync(out,headerBuffer);const input=fs.openSync(value.file,'r'),copy=Buffer.allocUnsafe(triangleBytes*8192),unique=Buffer.allocUnsafe(triangleBytes*8192),seen=new Set();let offset=0,uniqueBytes=0,outputVertices=0;
+    for(;;){const read=fs.readSync(input,copy,0,copy.length,offset);if(!read)break;if(read%triangleBytes)throw new Error(`Unaligned authored tile ${value.x}/${value.y}`);for(let at=0;at<read;at+=triangleBytes){const hash=triangleGeometryHash(copy,at);if(seen.has(hash)){deduplicatedVisibleTriangles++;const kind=Math.floor(copy.readFloatLE(at+36)/64);if([3,4,5,7].includes(kind))deduplicatedSurfaceTriangles++;else deduplicatedSolidTriangles++;continue;}seen.add(hash);if(uniqueBytes+triangleBytes>unique.length){fs.writeSync(out,unique,0,uniqueBytes);uniqueBytes=0;}copy.copy(unique,uniqueBytes,at,at+triangleBytes);uniqueBytes+=triangleBytes;outputVertices+=3;}offset+=read;}
+    if(uniqueBytes)fs.writeSync(out,unique,0,uniqueBytes);fs.closeSync(input);headerBuffer.writeUInt32LE(outputVertices,24);fs.writeSync(out,headerBuffer,0,headerBuffer.length,0);compiledVertices+=outputVertices;
+    const trailerBytes=value.collisions.length*4+(hasCollisions?(collisionGrid.offsets.length+collisionGrid.indices.length)*4:0),trailer=Buffer.allocUnsafe(trailerBytes);let trailerOffset=0;for(const item of value.collisions){trailer.writeFloatLE(item,trailerOffset);trailerOffset+=4;}if(hasCollisions){for(const item of collisionGrid.offsets){trailer.writeUInt32LE(item,trailerOffset);trailerOffset+=4;}for(const item of collisionGrid.indices){trailer.writeUInt32LE(item,trailerOffset);trailerOffset+=4;}}if(trailerBytes)fs.writeSync(out,trailer);fs.closeSync(out);totalBytes+=64+outputVertices*40+trailerBytes;
   }
-  return{tiles:details.size,vertices:processed-(deduplicatedSurfaceTriangles+discardedDegenerateSurfaceTriangles)*3,sourceVertices:processed,deduplicatedSurfaceTriangles,discardedDegenerateSurfaceTriangles,gateCollisionSegments,bytes:totalBytes};
+  return{tiles:details.size,vertices:compiledVertices,sourceVertices:processed,deduplicatedVisibleTriangles,deduplicatedSurfaceTriangles,deduplicatedSolidTriangles,discardedDegenerateSurfaceTriangles,gateCollisionSegments,bytes:totalBytes};
 }
 const architectureTiles=compileArchitectureTiles(architectureFile,authoredArchitecture);
 
@@ -732,12 +733,14 @@ for (const item of customBuildings.values()) {
   addFootprintCollision(bucket,points,Math.max(2.8,number(item.height,number(item.levels,item.floors)*3.05||7.2)));collisionOnlyAuthoredBuildings++;
 }
 
-// A terrain slab per tile hides unloaded space under the fog and ensures the
-// player never sees holes while GPU buffers are integrated incrementally.
+// A continuous terrain safety underlay remains below both legacy and authored
+// ground. It must never be clipped by ownership masks: at -18 cm it cannot
+// z-fight with the real surfaces, but it closes every gap while a detail tile
+// is loading or where a reconstructed footprint intentionally has no floor.
 for (const bucket of tileData.values()) {
   const extent=65536;
   const corners=[[0,0],[extent,0],[extent,extent],[0,extent]].map(([x,y])=>projectedPoint(bucket.x,bucket.y,extent,{x,y}));
-  addFlatPolygon(bucket,corners,-.18,[.145,.225,.145,materialCode(5,1,0)],'terrain');
+  addFlatPolygon(bucket,corners,-.18,[.145,.225,.145,materialCode(5,1,0)]);
 }
 
 let totalVertices=0,totalCollisions=0,totalBytes=0;
@@ -758,8 +761,9 @@ for (const bucket of [...tileData.values()].sort((a,b)=>a.x-b.x||a.y-b.y)) {
 const attribution = {
   format:'Chișinău Native Tile 1', zoom:ZOOM, origin:[ORIGIN_LAT,ORIGIN_LON],
   tiles:tileData.size, vertices:totalVertices, collisions:totalCollisions, landmarkModels:landmarkCount, operaModelVertices, bytes:totalBytes,
-  authoredArchitecture:{...architectureTiles,layers:authoredArchitecture.layers,meshes:authoredArchitecture.meshes,solidShellVertices:number(architectureExport.solidShellVertices,0),replacementIds:authoredArchitecture.replacementCount,restoredFamilies:architectureExport.restoredFamilies??[],gates:architectureExport.gates??{count:0,meshes:0,vertices:0},spatiallySuppressedBuildings,collisionOnlyBuildings:collisionOnlyAuthoredBuildings},
+  authoredArchitecture:{...architectureTiles,layers:authoredArchitecture.layers,meshes:authoredArchitecture.meshes,sourceMeshes:number(architectureExport.sourceMeshes,authoredArchitecture.meshes),solidShellVertices:number(architectureExport.solidShellVertices,0),replacementIds:authoredArchitecture.replacementCount,buildingOwnershipMasks:number(architectureExport.buildingOwnershipMasks,0),suppressedLegacyCadastralTriangles:number(architectureExport.suppressedLegacyCadastralTriangles,0),restoredFamilies:architectureExport.restoredFamilies??[],gates:architectureExport.gates??{count:0,meshes:0,vertices:0},spatiallySuppressedBuildings,collisionOnlyBuildings:collisionOnlyAuthoredBuildings},
   surfaceOwnership:{masks:authoredSurfaces.length,suppressedBaseGeometry,checks:{bucurestiArmeneasca:{owned:authoredSurfaceContains(antiBlinkChecks.bucurestiArmeneasca.point),radius:antiBlinkChecks.bucurestiArmeneasca.radius,suppressed:antiBlinkChecks.bucurestiArmeneasca.suppressed}}},
+  terrainSafetyUnderlay:{continuous:true,heightM:-.18,tiles:tileData.size,triangles:tileData.size*2},
   restoredVectorFeatures,
   sources:['© OpenStreetMap contributors · ODbL 1.0','Chișinău · Centru 3D project datasets','Street View/photo-authored architecture modules','map.md placement catalog'],
   generated:new Date().toISOString(),

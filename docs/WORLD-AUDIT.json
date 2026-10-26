@@ -1,13 +1,13 @@
 {
-  "version": "2.13.0",
+  "version": "2.14.0",
   "compiled_world": {
     "base_tiles": 240,
     "detail_tiles": 222,
-    "base_vertices": 5409459,
-    "authored_vertices": 37100805,
+    "base_vertices": 5378085,
+    "authored_vertices": 36789297,
     "solid_shell_vertices": 701412,
     "authored_layers": 190,
-    "authored_meshes": 15659,
+    "authored_meshes": 15638,
     "landmark_models": 25,
     "opera_model_vertices": 15018,
     "restored_authored_families": [
@@ -29,6 +29,9 @@
     "collision_segments": 231004,
     "spatially_suppressed_osm_buildings": 2790,
     "collision_only_authored_buildings": 8497,
+    "building_ownership_masks": 1767,
+    "suppressed_legacy_cadastral_triangles": 20782,
+    "deduplicated_visible_triangles": 114963,
     "surface_ownership_masks": 10418,
     "suppressed_legacy_geometry": {
       "roads": 274432,
@@ -38,15 +41,14 @@
       "landcover": 552625,
       "trees": 1894,
       "streetFurniture": 542,
-      "terrain": 21735
+      "terrain": 0
     },
     "bucuresti_armeneasca_check": {
       "owned": true,
       "radius": 95,
       "suppressed": {
         "roads": 568,
-        "landcover": 366,
-        "terrain": 135
+        "landcover": 366
       }
     }
   },
@@ -185,10 +187,27 @@
     }
   },
   "anti_blink_scan": {
+    "whole_city_duplicate_visible_triangles": 0,
     "bucuresti_armeneasca_radius_m": 95,
     "unique_authored_surface_triangles": 43296,
     "duplicate_visible_surface_triangles": 0,
-    "degenerate_duplicate_triangles_below_0_001_m2": 0
+    "degenerate_duplicate_triangles_below_0_001_m2": 0,
+    "nr1_lev_tolstoi": {
+      "radius_m": 160,
+      "visible_triangles": 505007,
+      "duplicate_visible_triangles": 0
+    }
+  },
+  "ground_gap_scan": {
+    "compiled_base_tiles": 240,
+    "continuous_underlay_tiles": 240,
+    "underlay_triangles": 480,
+    "manifest": {
+      "continuous": true,
+      "heightM": -0.18,
+      "tiles": 240,
+      "triangles": 480
+    }
   },
   "base_fallback_road_y_m": -0.012,
   "minimum_verified_authored_road_separation_m": 0.012,

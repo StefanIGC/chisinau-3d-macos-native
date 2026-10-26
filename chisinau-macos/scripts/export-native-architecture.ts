@@ -206,12 +206,39 @@ for(const layer of activeLayers)for(const root of layer.objects){
   }
 }
 if(ownershipOutput)fs.writeFileSync(ownershipOutput,JSON.stringify({format:'Chișinău authored surface ownership 1',surfaces:ownershipSurfaces}));
-const meshes:T.Mesh[]=[];
+type OwnershipMask={rings:number[][][];minX:number;minZ:number;maxX:number;maxZ:number};
+const ownershipCell=48,buildingOwnershipMasks:OwnershipMask[]=[],buildingOwnershipGrid=new Map<string,number[]>();
+const legacyCadastralRoots=new Set(activeLayers.flatMap(layer=>layer.objects).filter(root=>root.name.startsWith('FNDG · clădiri cadastrale · ')));
+for(const layer of activeLayers)for(const root of layer.objects){
+  if(legacyCadastralRoots.has(root))continue;
+  const shells=root.userData.nativeShellRings as number[][][][]|undefined;
+  for(const rawRings of shells??[]){
+    const rings=rawRings.filter(ring=>Array.isArray(ring)&&ring.length>=3);if(!rings.length)continue;
+    const xs=rings[0].map(p=>p[0]),zs=rings[0].map(p=>p[1]),mask={rings,minX:Math.min(...xs),minZ:Math.min(...zs),maxX:Math.max(...xs),maxZ:Math.max(...zs)},index=buildingOwnershipMasks.push(mask)-1;
+    for(let x=Math.floor(mask.minX/ownershipCell);x<=Math.floor(mask.maxX/ownershipCell);x++)for(let z=Math.floor(mask.minZ/ownershipCell);z<=Math.floor(mask.maxZ/ownershipCell);z++){
+      const key=`${x}/${z}`,list=buildingOwnershipGrid.get(key)??[];list.push(index);buildingOwnershipGrid.set(key,list);
+    }
+  }
+}
+function pointInRing(point:number[],ring:number[][]){let inside=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){
+  const a=ring[i],b=ring[j],cross=(a[1]>point[1])!==(b[1]>point[1])&&point[0]<(b[0]-a[0])*(point[1]-a[1])/(b[1]-a[1]+Number.EPSILON)+a[0];if(cross)inside=!inside;
+}return inside;}
+function segmentDistance(point:number[],a:number[],b:number[]){const dx=b[0]-a[0],dz=b[1]-a[1],t=Math.max(0,Math.min(1,((point[0]-a[0])*dx+(point[1]-a[1])*dz)/(dx*dx+dz*dz||1))),x=a[0]+dx*t,z=a[1]+dz*t;return Math.hypot(point[0]-x,point[1]-z);}
+function pointOwnedByNewShell(point:number[]){
+  const candidates=buildingOwnershipGrid.get(`${Math.floor(point[0]/ownershipCell)}/${Math.floor(point[1]/ownershipCell)}`)??[];
+  for(const index of candidates){const mask=buildingOwnershipMasks[index];if(point[0]<mask.minX-.08||point[0]>mask.maxX+.08||point[1]<mask.minZ-.08||point[1]>mask.maxZ+.08)continue;
+    if(pointInRing(point,mask.rings[0])&&!mask.rings.slice(1).some(ring=>pointInRing(point,ring)))return true;
+    for(const ring of mask.rings)for(let i=0;i<ring.length;i++)if(segmentDistance(point,ring[i],ring[(i+1)%ring.length])<.08)return true;
+  }
+  return false;
+}
+function legacyTriangleOwned(points:number[][]){const center=[(points[0][0]+points[1][0]+points[2][0])/3,(points[0][2]+points[1][2]+points[2][2])/3];return pointOwnedByNewShell(center)||points.some(p=>pointOwnedByNewShell([p[0],p[2]]));}
+const meshes:T.Mesh[]=[],legacyCadastralMeshes=new Set<T.Mesh>();
 const exportRoots=[...activeLayers.flatMap(layer=>layer.objects),...standaloneGateRoots];
 for(const root of exportRoots)root.traverse(object=>{
-  if(object instanceof T.Mesh&&object.geometry?.getAttribute('position'))meshes.push(object);
+  if(object instanceof T.Mesh&&object.geometry?.getAttribute('position')){meshes.push(object);if(legacyCadastralRoots.has(root))legacyCadastralMeshes.add(object);}
 });
-const vertexCount=meshes.reduce((sum,mesh)=>sum+(mesh.geometry.index?.count??mesh.geometry.getAttribute('position').count),0);
+const sourceVertexCount=meshes.reduce((sum,mesh)=>sum+(mesh.geometry.index?.count??mesh.geometry.getAttribute('position').count),0);
 const gateMeshes:T.Mesh[]=[];for(const root of standaloneGateRoots)root.traverse(object=>{if(object instanceof T.Mesh&&object.geometry?.getAttribute('position'))gateMeshes.push(object);});
 const gateVertices=gateMeshes.reduce((sum,mesh)=>sum+(mesh.geometry.index?.count??mesh.geometry.getAttribute('position').count),0);
 const solidShellVertices=activeLayers.reduce((sum,layer)=>sum+layer.objects.reduce((layerSum,root)=>layerSum+(Number(root.userData.nativeShellVertices)||0),0),0);
@@ -224,7 +251,7 @@ const replacementIds=[...new Set(activeLayers.flatMap(layer=>layer.replacements.
 const header=Buffer.alloc(32+replacementIds.length*4);
 header.writeUInt32LE(0x48435241,0); // ARCH
 header.writeUInt32LE(1,4);
-header.writeUInt32LE(vertexCount,8);
+header.writeUInt32LE(0,8);
 header.writeUInt32LE(replacementIds.length,12);
 header.writeUInt32LE(meshes.length,16);
 header.writeUInt32LE(activeLayers.length,20);
@@ -232,7 +259,7 @@ replacementIds.forEach((id,index)=>header.writeUInt32LE(id,32+index*4));
 const descriptor=fs.openSync(output,'w');
 fs.writeSync(descriptor,header);
 
-const point=new T.Vector3(),normal=new T.Vector3(),normalMatrix=new T.Matrix3();
+const normalMatrix=new T.Matrix3();
 function packedMaterial(material:T.Material&T.MeshStandardMaterial,parkStyle?:number){
   const name=(material.name??'').toLocaleLowerCase('ro');
   let kind=0;
@@ -254,30 +281,26 @@ function packedMaterial(material:T.Material&T.MeshStandardMaterial,parkStyle?:nu
   return kind*64+roughness*8+metalness;
 }
 let written=0;
+let writtenMeshes=0,suppressedLegacyCadastralTriangles=0;
 for(const mesh of meshes){
   const geometry=mesh.geometry;
   if(!geometry.getAttribute('normal'))geometry.computeVertexNormals();
   const position=geometry.getAttribute('position'),normals=geometry.getAttribute('normal'),colors=geometry.getAttribute('color'),parkStyles=geometry.getAttribute('parkStyle'),index=geometry.index;
   const material=(Array.isArray(mesh.material)?mesh.material[0]:mesh.material) as T.Material&T.MeshStandardMaterial;
-  const base=material.color??new T.Color(1,1,1),count=index?.count??position.count;
+  const base=material.color??new T.Color(1,1,1),count=index?.count??position.count,legacy=legacyCadastralMeshes.has(mesh);
   normalMatrix.getNormalMatrix(mesh.matrixWorld);
-  for(let start=0;start<count;start+=65536){
-    const length=Math.min(65536,count-start),buffer=Buffer.allocUnsafe(length*40);
-    for(let j=0;j<length;j++){
-      const source=index?index.getX(start+j):start+j,offset=j*40;
-      point.fromBufferAttribute(position,source).applyMatrix4(mesh.matrixWorld);
-      normal.fromBufferAttribute(normals,source).applyMatrix3(normalMatrix).normalize();
-      const materialCode=packedMaterial(material,parkStyles?.getX(source));
-      buffer.writeFloatLE(point.x,offset);buffer.writeFloatLE(point.y,offset+4);buffer.writeFloatLE(point.z,offset+8);
-      buffer.writeFloatLE(normal.x,offset+12);buffer.writeFloatLE(normal.y,offset+16);buffer.writeFloatLE(normal.z,offset+20);
-      buffer.writeFloatLE((colors?colors.getX(source):1)*base.r,offset+24);
-      buffer.writeFloatLE((colors?colors.getY(source):1)*base.g,offset+28);
-      buffer.writeFloatLE((colors?colors.getZ(source):1)*base.b,offset+32);
-      buffer.writeFloatLE(materialCode,offset+36);
-    }
-    fs.writeSync(descriptor,buffer);written+=length;
+  const triangle=Array.from({length:3},()=>({source:0,point:new T.Vector3(),normal:new T.Vector3(),materialCode:0}));
+  const buffer=Buffer.allocUnsafe(65535*40);let bufferOffset=0,meshWritten=0;
+  for(let start=0;start<count;start+=3){
+    for(let j=0;j<3;j++){const source=index?index.getX(start+j):start+j,value=triangle[j];value.source=source;value.point.fromBufferAttribute(position,source).applyMatrix4(mesh.matrixWorld);value.normal.fromBufferAttribute(normals,source).applyMatrix3(normalMatrix).normalize();value.materialCode=packedMaterial(material,parkStyles?.getX(source));}
+    if(legacy&&legacyTriangleOwned(triangle.map(v=>[v.point.x,v.point.y,v.point.z]))){suppressedLegacyCadastralTriangles++;continue;}
+    if(bufferOffset+120>buffer.length){fs.writeSync(descriptor,buffer,0,bufferOffset);bufferOffset=0;}
+    for(const value of triangle){const {source}=value,offset=bufferOffset;buffer.writeFloatLE(value.point.x,offset);buffer.writeFloatLE(value.point.y,offset+4);buffer.writeFloatLE(value.point.z,offset+8);buffer.writeFloatLE(value.normal.x,offset+12);buffer.writeFloatLE(value.normal.y,offset+16);buffer.writeFloatLE(value.normal.z,offset+20);buffer.writeFloatLE((colors?colors.getX(source):1)*base.r,offset+24);buffer.writeFloatLE((colors?colors.getY(source):1)*base.g,offset+28);buffer.writeFloatLE((colors?colors.getZ(source):1)*base.b,offset+32);buffer.writeFloatLE(value.materialCode,offset+36);bufferOffset+=40;}
+    written+=3;meshWritten+=3;
   }
+  if(bufferOffset)fs.writeSync(descriptor,buffer,0,bufferOffset);if(meshWritten)writtenMeshes++;
 }
+const countPatch=Buffer.alloc(8);countPatch.writeUInt32LE(written,0);countPatch.writeUInt32LE(writtenMeshes,4);fs.writeSync(descriptor,countPatch,0,4,8);fs.writeSync(descriptor,countPatch,4,4,16);
 fs.closeSync(descriptor);
-if(written!==vertexCount)throw new Error(`Architecture vertex count mismatch: ${written} != ${vertexCount}`);
-console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),restoredFamilies:['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete','porțile de curte'],meshes:meshes.length,vertices:vertexCount,solidShellVertices,replacementIds:replacementIds.length,ownershipSurfaces:ownershipSurfaces.length,gates:{count:standaloneGateRoots.length,meshes:gateMeshes.length,vertices:gateVertices},bytes:fs.statSync(output).size,largestLayers:[...layerVertices,{name:'Porți de curte · canaturi',jobs:standaloneGateRoots.length,vertices:gateVertices}].sort((a,b)=>b.vertices-a.vertices).slice(0,24)}));
+if(written>sourceVertexCount)throw new Error(`Architecture vertex count overflow: ${written} > ${sourceVertexCount}`);
+console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),restoredFamilies:['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete','porțile de curte'],meshes:writtenMeshes,sourceMeshes:meshes.length,vertices:written,sourceVertices:sourceVertexCount,solidShellVertices,replacementIds:replacementIds.length,ownershipSurfaces:ownershipSurfaces.length,buildingOwnershipMasks:buildingOwnershipMasks.length,suppressedLegacyCadastralTriangles,gates:{count:standaloneGateRoots.length,meshes:gateMeshes.length,vertices:gateVertices},bytes:fs.statSync(output).size,largestLayers:[...layerVertices,{name:'Porți de curte · canaturi',jobs:standaloneGateRoots.length,vertices:gateVertices}].sort((a,b)=>b.vertices-a.vertices).slice(0,24)}));

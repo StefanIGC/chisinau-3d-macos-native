@@ -20,6 +20,8 @@ Joc open-world 3D al centrului Chișinăului, cu motor nativ C++20 / Objective-C
 - garduri și ziduri, cursuri de apă, aliniamente de arbori, suprafețe de drum, căi ferate și mobilier urban din datele originale;
 - modelul 3D detaliat al Teatrului de Operă, cu transformarea exactă din proiect;
 - corpuri de clădire închise sub fațadele detaliate, fără golurile produse de eliminarea pereților și acoperișurilor;
+- prioritate geometrică pentru cele 1.767 de amprente reconstruite: corpurile cadastrale vechi sunt eliminate numai unde există înlocuitorul nou, iar triunghiurile coplanare sunt deduplicate în toate clădirile;
+- teren de siguranță continuu sub toate cele 240 de dale, coborât cu 18 cm pentru a închide golurile fără blinking;
 - vizibilitate fără fog până la 7 km, cu orașul de bază păstrat la orizont;
 - prezentare Metal de până la 120 Hz pe ecranele ProMotion, cu revenire automată la rata ecranului;
 - executabil universal Apple Silicon `arm64` + Intel `x86_64`.
@@ -66,7 +68,7 @@ BIN="chisinau-native/build/Chișinău 3D Native/Chișinău 3D.app/Contents/MacOS
 "$BIN" --test-spawn
 ```
 
-Pe sistemul de verificare Apple M1 Pro, traseele fără fog Centru, Columna, Șciusev și București și testul mașinii sunt verificate la aproximativ 60 FPS. Vezi [noutățile versiunii 2.13.0](docs/RELEASE-v2.13.0.md) și [auditul lumii](docs/WORLD-AUDIT.json).
+Pe sistemul de verificare Apple M1 Pro, traseul București v2.14.0 a rulat la 119,84 FPS mediu, cu p95 de 9,61 ms și fără cadre peste 25 ms. Vezi [noutățile versiunii 2.14.0](docs/RELEASE-v2.14.0.md), [benchmarkul București](docs/BENCHMARK-BUCURESTI-v2.14.0.json) și [auditul lumii](docs/WORLD-AUDIT.json).
 
 ## Date și licențe
 

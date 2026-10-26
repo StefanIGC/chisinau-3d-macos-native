@@ -54,5 +54,8 @@ codesign --force --deep --sign - "$APP_DIR"
 codesign --verify --deep --strict "$APP_DIR"
 mkdir -p "$FINAL_DIR"
 ditto --norsrc --noextattr "$APP_DIR" "$FINAL_DIR/Chișinău 3D.app"
+xattr -cr "$FINAL_DIR/Chișinău 3D.app"
+/usr/bin/xattr -d com.apple.FinderInfo "$FINAL_DIR/Chișinău 3D.app" 2>/dev/null || true
+/usr/bin/xattr -d 'com.apple.fileprovider.fpfs#P' "$FINAL_DIR/Chișinău 3D.app" 2>/dev/null || true
 file "$APP_DIR/Contents/MacOS/Chisinau3DNative"
 du -sh "$APP_DIR"
