@@ -159,7 +159,7 @@ createBucurestiBu10(scene,ground,loaded,ready,ready);
 createBucurestiBu11(scene,ground,loaded,ready,ready,()=>true,()=>true);
 createBucurestiBu07(scene,ground,loaded,ready);
 createCentralInfill(scene,ground,loaded);
-createCourtyardGates(scene,ground,loaded);
+const courtyardGates=createCourtyardGates(scene,ground,loaded);
 createCentralStreetObjects(scene,ground,loaded);
 createOperaGrounds(scene,ground,loaded);
 createCathedralPark(scene,ground,loaded,ready,(x,z)=>ground(x,z)+.115);
@@ -188,6 +188,13 @@ scene.updateMatrixWorld(true);
 // put two buildings in the same place. Export only the authoritative layers.
 const activeLayers=layers.filter(layer=>!layer.objects.some(root=>/reprezentare\s+v\d+/i.test(root.name)));
 const excludedLayers=layers.filter(layer=>!activeLayers.includes(layer));
+// The shared courtyard registry keeps each hinged gate outside streetMesh so
+// the browser can rotate its leaves independently. The posts are registered
+// streetMesh jobs, but the 178 leaf roots are not; exporting only layer.objects
+// therefore preserved the posts and silently dropped every gate leaf. Select
+// just those standalone roots here, excluding the already registered posts.
+const registeredObjects=new Set(layers.flatMap(layer=>layer.objects));
+const standaloneGateRoots=courtyardGates.objects.filter(root=>!registeredObjects.has(root));
 type GroundRings=number[][][];
 const ownershipSurfaces:{owner:string;rings:GroundRings}[]=[];
 for(const layer of activeLayers)for(const root of layer.objects){
@@ -200,10 +207,13 @@ for(const layer of activeLayers)for(const root of layer.objects){
 }
 if(ownershipOutput)fs.writeFileSync(ownershipOutput,JSON.stringify({format:'Chișinău authored surface ownership 1',surfaces:ownershipSurfaces}));
 const meshes:T.Mesh[]=[];
-for(const layer of activeLayers)for(const root of layer.objects)root.traverse(object=>{
+const exportRoots=[...activeLayers.flatMap(layer=>layer.objects),...standaloneGateRoots];
+for(const root of exportRoots)root.traverse(object=>{
   if(object instanceof T.Mesh&&object.geometry?.getAttribute('position'))meshes.push(object);
 });
 const vertexCount=meshes.reduce((sum,mesh)=>sum+(mesh.geometry.index?.count??mesh.geometry.getAttribute('position').count),0);
+const gateMeshes:T.Mesh[]=[];for(const root of standaloneGateRoots)root.traverse(object=>{if(object instanceof T.Mesh&&object.geometry?.getAttribute('position'))gateMeshes.push(object);});
+const gateVertices=gateMeshes.reduce((sum,mesh)=>sum+(mesh.geometry.index?.count??mesh.geometry.getAttribute('position').count),0);
 const solidShellVertices=activeLayers.reduce((sum,layer)=>sum+layer.objects.reduce((layerSum,root)=>layerSum+(Number(root.userData.nativeShellVertices)||0),0),0);
 const layerVertices=activeLayers.map(layer=>({
   name:layer.objects[0]?.name.split(' · ').slice(0,-1).join(' · ')||'layer',
@@ -270,4 +280,4 @@ for(const mesh of meshes){
 }
 fs.closeSync(descriptor);
 if(written!==vertexCount)throw new Error(`Architecture vertex count mismatch: ${written} != ${vertexCount}`);
-console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),restoredFamilies:['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete'],meshes:meshes.length,vertices:vertexCount,solidShellVertices,replacementIds:replacementIds.length,ownershipSurfaces:ownershipSurfaces.length,bytes:fs.statSync(output).size,largestLayers:layerVertices.slice(0,24)}));
+console.log(JSON.stringify({format:'Chișinău authored architecture 1',layers:activeLayers.length,excludedFallbackLayers:excludedLayers.map(layer=>layer.objects[0]?.name??'fallback'),restoredFamilies:['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete','porțile de curte'],meshes:meshes.length,vertices:vertexCount,solidShellVertices,replacementIds:replacementIds.length,ownershipSurfaces:ownershipSurfaces.length,gates:{count:standaloneGateRoots.length,meshes:gateMeshes.length,vertices:gateVertices},bytes:fs.statSync(output).size,largestLayers:[...layerVertices,{name:'Porți de curte · canaturi',jobs:standaloneGateRoots.length,vertices:gateVertices}].sort((a,b)=>b.vertices-a.vertices).slice(0,24)}));

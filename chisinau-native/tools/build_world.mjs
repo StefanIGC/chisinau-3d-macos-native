@@ -493,6 +493,7 @@ const architectureOutput=execFileSync(process.execPath,[architectureBundle,archi
 if(architectureOutput)console.log(architectureOutput);
 let architectureExport={};
 try{architectureExport=JSON.parse(architectureOutput.split('\n').at(-1)??'{}');}catch{}
+const courtyardGateCatalog=readJson(path.join(dataRoot,'courtyard-gates.json'));
 
 // Every reconstructed road, pavement, courtyard and planted patch owns its
 // exact footprint. Remove legacy Streets GL and curated fallback geometry only
@@ -569,7 +570,7 @@ function compileArchitectureTiles(file,header){
   // of waiting for a 50–125 MB Web-Mercator tile to upload in its entirety.
   const detailTileSize=192;
   const details=new Map(),descriptor=fs.openSync(file,'r'),triangleBytes=3*10*4,batchTriangles=8192,readBuffer=Buffer.allocUnsafe(triangleBytes*batchTriangles);
-  function bucket(x,y){const key=`${x}/${y}`;let value=details.get(key);if(!value){value={x,y,vertices:0,bytes:0,buffer:Buffer.allocUnsafe(1200000),file:path.join(architectureTempRoot,`${x}_${y}.raw`),surfaceTriangles:new Set()};details.set(key,value);}return value;}
+  function bucket(x,y){const key=`${x}/${y}`;let value=details.get(key);if(!value){value={x,y,vertices:0,bytes:0,buffer:Buffer.allocUnsafe(1200000),file:path.join(architectureTempRoot,`${x}_${y}.raw`),surfaceTriangles:new Set(),collisions:[]};details.set(key,value);}return value;}
   function flush(value){if(!value.bytes)return;fs.appendFileSync(value.file,value.buffer.subarray(0,value.bytes));value.bytes=0;}
   function surfaceTriangleHash(vertices){
     // Identical coplanar surfaces can arrive with slightly different generated
@@ -601,12 +602,22 @@ function compileArchitectureTiles(file,header){
     position+=bytes;remaining-=vertices;
   }
   fs.closeSync(descriptor);if(processed!==header.vertices)throw new Error(`Authored architecture count mismatch: ${processed} != ${header.vertices}`);
+  // Keep gate collision resident with the same authored detail tile as its
+  // visible leaves. Closed gates block their real opening; the four gates
+  // photographed/exported open deliberately leave the passage traversable.
+  let gateCollisionSegments=0;
+  for(const gate of courtyardGateCatalog){
+    if(gate.initialOpen||!Array.isArray(gate.a)||!Array.isArray(gate.b))continue;
+    const a=localPoint(gate.a),b=localPoint(gate.b),center=[(a[0]+b[0])*.5,(a[1]+b[1])*.5],target=bucket(Math.floor(center[0]/detailTileSize),Math.floor(center[1]/detailTileSize));
+    target.collisions.push(a[0],a[1],b[0],b[1],.10,Math.max(.4,number(gate.height,2.4)+number(gate.baseOffset,0)+.12));gateCollisionSegments++;
+  }
   let totalBytes=0;
   for(const value of details.values()){
-    flush(value);const center=[(value.x+.5)*detailTileSize,(value.y+.5)*detailTileSize],headerBuffer=Buffer.alloc(64);headerBuffer.writeUInt32LE(0x4c495443,0);headerBuffer.writeUInt32LE(1,4);headerBuffer.writeInt32LE(value.x,8);headerBuffer.writeInt32LE(value.y,12);headerBuffer.writeFloatLE(center[0],16);headerBuffer.writeFloatLE(center[1],20);headerBuffer.writeUInt32LE(value.vertices,24);
-    const output=path.join(outputRoot,`detail_${value.x}_${value.y}.dtile`),out=fs.openSync(output,'w');fs.writeSync(out,headerBuffer);const input=fs.openSync(value.file,'r'),copy=Buffer.allocUnsafe(4*1024*1024);let offset=0;for(;;){const read=fs.readSync(input,copy,0,copy.length,offset);if(!read)break;fs.writeSync(out,copy,0,read);offset+=read;}fs.closeSync(input);fs.closeSync(out);totalBytes+=64+value.vertices*40;
+    flush(value);const center=[(value.x+.5)*detailTileSize,(value.y+.5)*detailTileSize],collisionGrid=compileCollisionGrid(value.collisions,center),hasCollisions=value.collisions.length>0,headerBuffer=Buffer.alloc(64);headerBuffer.writeUInt32LE(0x4c495443,0);headerBuffer.writeUInt32LE(1,4);headerBuffer.writeInt32LE(value.x,8);headerBuffer.writeInt32LE(value.y,12);headerBuffer.writeFloatLE(center[0],16);headerBuffer.writeFloatLE(center[1],20);headerBuffer.writeUInt32LE(value.vertices,24);headerBuffer.writeUInt32LE(value.collisions.length/6,28);headerBuffer.writeUInt32LE(hasCollisions?collisionGrid.indices.length:0,32);headerBuffer.writeUInt32LE(hasCollisions?COLLISION_GRID_DIMENSION:0,36);headerBuffer.writeFloatLE(collisionGrid.maxHeight,40);
+    const output=path.join(outputRoot,`detail_${value.x}_${value.y}.dtile`),out=fs.openSync(output,'w');fs.writeSync(out,headerBuffer);const input=fs.openSync(value.file,'r'),copy=Buffer.allocUnsafe(4*1024*1024);let offset=0;for(;;){const read=fs.readSync(input,copy,0,copy.length,offset);if(!read)break;fs.writeSync(out,copy,0,read);offset+=read;}fs.closeSync(input);
+    const trailerBytes=value.collisions.length*4+(hasCollisions?(collisionGrid.offsets.length+collisionGrid.indices.length)*4:0),trailer=Buffer.allocUnsafe(trailerBytes);let trailerOffset=0;for(const item of value.collisions){trailer.writeFloatLE(item,trailerOffset);trailerOffset+=4;}if(hasCollisions){for(const item of collisionGrid.offsets){trailer.writeUInt32LE(item,trailerOffset);trailerOffset+=4;}for(const item of collisionGrid.indices){trailer.writeUInt32LE(item,trailerOffset);trailerOffset+=4;}}if(trailerBytes)fs.writeSync(out,trailer);fs.closeSync(out);totalBytes+=64+value.vertices*40+trailerBytes;
   }
-  return{tiles:details.size,vertices:processed-(deduplicatedSurfaceTriangles+discardedDegenerateSurfaceTriangles)*3,sourceVertices:processed,deduplicatedSurfaceTriangles,discardedDegenerateSurfaceTriangles,bytes:totalBytes};
+  return{tiles:details.size,vertices:processed-(deduplicatedSurfaceTriangles+discardedDegenerateSurfaceTriangles)*3,sourceVertices:processed,deduplicatedSurfaceTriangles,discardedDegenerateSurfaceTriangles,gateCollisionSegments,bytes:totalBytes};
 }
 const architectureTiles=compileArchitectureTiles(architectureFile,authoredArchitecture);
 
@@ -747,7 +758,7 @@ for (const bucket of [...tileData.values()].sort((a,b)=>a.x-b.x||a.y-b.y)) {
 const attribution = {
   format:'Chișinău Native Tile 1', zoom:ZOOM, origin:[ORIGIN_LAT,ORIGIN_LON],
   tiles:tileData.size, vertices:totalVertices, collisions:totalCollisions, landmarkModels:landmarkCount, operaModelVertices, bytes:totalBytes,
-  authoredArchitecture:{...architectureTiles,layers:authoredArchitecture.layers,meshes:authoredArchitecture.meshes,solidShellVertices:number(architectureExport.solidShellVertices,0),replacementIds:authoredArchitecture.replacementCount,restoredFamilies:architectureExport.restoredFamilies??[],spatiallySuppressedBuildings,collisionOnlyBuildings:collisionOnlyAuthoredBuildings},
+  authoredArchitecture:{...architectureTiles,layers:authoredArchitecture.layers,meshes:authoredArchitecture.meshes,solidShellVertices:number(architectureExport.solidShellVertices,0),replacementIds:authoredArchitecture.replacementCount,restoredFamilies:architectureExport.restoredFamilies??[],gates:architectureExport.gates??{count:0,meshes:0,vertices:0},spatiallySuppressedBuildings,collisionOnlyBuildings:collisionOnlyAuthoredBuildings},
   surfaceOwnership:{masks:authoredSurfaces.length,suppressedBaseGeometry,checks:{bucurestiArmeneasca:{owned:authoredSurfaceContains(antiBlinkChecks.bucurestiArmeneasca.point),radius:antiBlinkChecks.bucurestiArmeneasca.radius,suppressed:antiBlinkChecks.bucurestiArmeneasca.suppressed}}},
   restoredVectorFeatures,
   sources:['© OpenStreetMap contributors · ODbL 1.0','Chișinău · Centru 3D project datasets','Street View/photo-authored architecture modules','map.md placement catalog'],

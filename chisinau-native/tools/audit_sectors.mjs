@@ -32,11 +32,17 @@ const corridors={
 };
 for(const value of Object.values(corridors))Object.assign(value,{asphalt_triangles:0,min_y_m:Infinity,max_y_m:-Infinity,detail_tiles:new Set()});
 const armeneasca=nativePoint(776.123062,470.256627),armeneascaRadius=95,armeneascaSurfaceTriangles=new Set();let armeneascaDuplicateSurfaceTriangles=0,armeneascaDegenerateDuplicateSurfaceTriangles=0;
+const gateCatalog=json('courtyard-gates.json');
+const collisionKey=(a,b)=>[a,b].map(point=>point.map(value=>Math.round(value*100)).join(',')).sort().join('|');
+const expectedGateCollisionKeys=new Set(gateCatalog.filter(gate=>!gate.initialOpen).map(gate=>collisionKey(nativePoint(...gate.a),nativePoint(...gate.b)))),compiledGateCollisionKeys=new Set();
+let authoredDetailCollisionSegments=0;
 
 for(const name of fs.readdirSync(worldRoot).filter(name=>name.endsWith('.dtile')).sort()){
   const buffer=fs.readFileSync(path.join(worldRoot,name));
   if(buffer.readUInt32LE(0)!==0x4c495443||buffer.readUInt32LE(4)!==1)throw new Error(`Invalid tile ${name}`);
+  const collisions=buffer.readUInt32LE(28);authoredDetailCollisionSegments+=collisions;
   const vertices=buffer.readUInt32LE(24),end=64+vertices*40,tileNearArmeneasca=Math.hypot(buffer.readFloatLE(16)-armeneasca[0],buffer.readFloatLE(20)-armeneasca[1])<360;
+  for(let i=0;i<collisions;i++){const at=end+i*24;compiledGateCollisionKeys.add(collisionKey([buffer.readFloatLE(at),buffer.readFloatLE(at+4)],[buffer.readFloatLE(at+8),buffer.readFloatLE(at+12)]));}
   for(let offset=64;offset+120<=end;offset+=120){
     const material=Math.floor(buffer.readFloatLE(offset+36)/64);
     if(tileNearArmeneasca&&[3,4,5,7].includes(material)){
@@ -64,6 +70,7 @@ for(const value of Object.values(corridors)){
 }
 
 const inventories={sciusev:familyInventory('sciusev-'),bucuresti:familyInventory('bucuresti-bu'),columna:familyInventory('columna-')};
+const gateInventory={catalogued:gateCatalog.length,leaves:gateCatalog.reduce((sum,gate)=>sum+(gate.singleLeaf?1:2),0),initially_open:gateCatalog.filter(gate=>gate.initialOpen).length,closed_collision_segments:gateCatalog.filter(gate=>!gate.initialOpen).length,matched_closed_collision_segments:[...expectedGateCollisionKeys].filter(key=>compiledGateCollisionKeys.has(key)).length};
 const expectedRestoredFamilies=['Guvern','Columna Pușkin–Bodoni','Parcul Catedralei','terenul Operei','parcări de biciclete'];
 const restoredVectorFeatures=manifest.restoredVectorFeatures??{};
 const surfaceOwnership=manifest.surfaceOwnership??{},suppressedBaseGeometry=surfaceOwnership.suppressedBaseGeometry??{};
@@ -77,11 +84,14 @@ const passed=inventories.sciusev.modules===16&&inventories.bucuresti.modules===1
   surfaceOwnership.masks>0&&surfaceOwnership.checks?.bucurestiArmeneasca?.owned===true&&
   surfaceOwnership.checks?.bucurestiArmeneasca?.suppressed?.landcover>0&&armeneascaDuplicateSurfaceTriangles===0&&
   ['roads','landcover','trees','terrain'].every(name=>suppressedBaseGeometry[name]>0)&&
+  manifest.authoredArchitecture?.gates?.count===gateInventory.catalogued&&manifest.authoredArchitecture?.gates?.meshes===gateInventory.leaves&&manifest.authoredArchitecture?.gates?.vertices>0&&
+  manifest.authoredArchitecture?.gateCollisionSegments===gateInventory.closed_collision_segments&&authoredDetailCollisionSegments===gateInventory.closed_collision_segments&&gateInventory.matched_closed_collision_segments===gateInventory.closed_collision_segments&&
   manifest.authoredArchitecture?.spatiallySuppressedBuildings>0&&manifest.authoredArchitecture?.collisionOnlyBuildings>0;
 const report={
-  version:'2.12.0',
+  version:'2.13.0',
   compiled_world:{base_tiles:manifest.tiles,detail_tiles:manifest.authoredArchitecture.tiles,base_vertices:manifest.vertices,authored_vertices:manifest.authoredArchitecture.vertices,solid_shell_vertices:manifest.authoredArchitecture.solidShellVertices,authored_layers:manifest.authoredArchitecture.layers,authored_meshes:manifest.authoredArchitecture.meshes,landmark_models:manifest.landmarkModels,opera_model_vertices:manifest.operaModelVertices,restored_authored_families:manifest.authoredArchitecture.restoredFamilies,restored_vector_features:restoredVectorFeatures,collision_segments:manifest.collisions,spatially_suppressed_osm_buildings:manifest.authoredArchitecture.spatiallySuppressedBuildings,collision_only_authored_buildings:manifest.authoredArchitecture.collisionOnlyBuildings,surface_ownership_masks:surfaceOwnership.masks,suppressed_legacy_geometry:suppressedBaseGeometry,bucuresti_armeneasca_check:surfaceOwnership.checks?.bucurestiArmeneasca},
   authored_sector_inventory:inventories,
+  authored_gate_inventory:{...gateInventory,exported:manifest.authoredArchitecture?.gates,compiled_detail_collision_segments:authoredDetailCollisionSegments},
   authoritative_surface_scan:corridors,
   anti_blink_scan:{bucuresti_armeneasca_radius_m:armeneascaRadius,unique_authored_surface_triangles:armeneascaSurfaceTriangles.size,duplicate_visible_surface_triangles:armeneascaDuplicateSurfaceTriangles,degenerate_duplicate_triangles_below_0_001_m2:armeneascaDegenerateDuplicateSurfaceTriangles},
   base_fallback_road_y_m:-.012,

@@ -1,13 +1,13 @@
 {
-  "version": "2.12.0",
+  "version": "2.13.0",
   "compiled_world": {
     "base_tiles": 240,
     "detail_tiles": 222,
     "base_vertices": 5409459,
-    "authored_vertices": 36472101,
+    "authored_vertices": 37100805,
     "solid_shell_vertices": 701412,
     "authored_layers": 190,
-    "authored_meshes": 15305,
+    "authored_meshes": 15659,
     "landmark_models": 25,
     "opera_model_vertices": 15018,
     "restored_authored_families": [
@@ -15,7 +15,8 @@
       "Columna Pușkin–Bodoni",
       "Parcul Catedralei",
       "terenul Operei",
-      "parcări de biciclete"
+      "parcări de biciclete",
+      "porțile de curte"
     ],
     "restored_vector_features": {
       "barriers": 6385,
@@ -131,6 +132,19 @@
         "columna-ismail-tighina.json"
       ]
     }
+  },
+  "authored_gate_inventory": {
+    "catalogued": 178,
+    "leaves": 354,
+    "initially_open": 4,
+    "closed_collision_segments": 174,
+    "matched_closed_collision_segments": 174,
+    "exported": {
+      "count": 178,
+      "meshes": 354,
+      "vertices": 628704
+    },
+    "compiled_detail_collision_segments": 174
   },
   "authoritative_surface_scan": {
     "sciusev": {
